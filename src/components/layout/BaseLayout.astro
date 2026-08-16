@@ -1,0 +1,212 @@
+---
+/**
+ * BaseLayout — the root <html> + <head> shell shared by every page.
+ *
+ * Responsibilities:
+ *   - <html lang> and theme class (no FOUC via inline script)
+ *   - global <head>: charset, viewport, title template, description, og/twitter defaults
+ *   - Organization JSON-LD (every page)
+ *   - global styles
+ *
+ * Pages should wrap themselves in LocaleLayout (which wraps this), not call this directly.
+ */
+import '~/styles/globals.css';
+import { site, siteUrl } from '~/config/site';
+import { locales } from '~/i18n/routing';
+import { organizationJsonLd } from '~/lib/seo';
+import JsonLd from '~/components/seo/JsonLd.astro';
+import CookieConsent from './CookieConsent.astro';
+import { getUi } from '~/i18n/ui';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  /** Per-page alternates for hreflang. */
+  alternates?: Array<{ hreflang: string; href: string }>;
+  /** og:image override (absolute URL). Defaults to hero.webp. */
+  image?: string;
+  /** Optional extra JSON-LD objects to inject (WebSite, Article, etc.). */
+  jsonLd?: Record<string, unknown>[];
+  /** Set to true on article pages for og:type=article. */
+  article?: boolean;
+  /** When true, emit <meta name="robots" content="noindex"> to exclude from search. */
+  noindex?: boolean;
+  /**
+   * Override the <title> suffix (defaults to site.name). Pass an empty string
+   * to suppress the suffix entirely (e.g. for the project landing page where
+   * the site.name is the demo game, not the project itself).
+   */
+  titleSuffix?: string;
+}
+
+const {
+  title,
+  description,
+  locale,
+  alternates = [],
+  image = `${siteUrl}/images/hero.webp`,
+  jsonLd = [],
+  article = false,
+  noindex = false,
+  titleSuffix,
+} = Astro.props;
+
+const suffix = titleSuffix !== undefined ? titleSuffix : site.name;
+const fullTitle = suffix && !title.includes(suffix) ? `${title} — ${suffix}` : title;
+const orgJsonLd = organizationJsonLd();
+
+// Strip ANY known locale prefix (built from routing.ts so new locales keep
+// x-default pointing at the default-locale URL — a hardcoded en|ja list
+// would silently break for forks that add languages).
+const localePrefixRe = new RegExp(`^/(${locales.join('|')})(?=/|$)`);
+
+// Optional analytics / verification / ads (env-var gated — empty = not injected).
+const gaId = import.meta.env.PUBLIC_GA_ID as string | undefined;
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN as string | undefined;
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION as string | undefined;
+const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
+
+// Consent banner labels (locale JSON `shared.*`; hardcoded fallbacks for a
+// locale whose JSON hasn't been translated yet).
+const sharedStrings = getUi(locale).shared as unknown as Record<string, any>;
+const consentLabels = {
+  title: sharedStrings.consentTitle ?? 'Cookies',
+  text: sharedStrings.consentText ?? 'We use cookies for analytics and ads.',
+  accept: sharedStrings.accept ?? 'Accept',
+  decline: sharedStrings.decline ?? 'Decline',
+};
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={new URL(Astro.url.pathname, siteUrl).href} />
+
+    {/* hreflang alternates */}
+    {alternates.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={`${siteUrl}${Astro.url.pathname.replace(localePrefixRe, '')}`}
+    />
+
+    {/* Open Graph */}
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content={String(site.ogImageWidth)} />
+    <meta property="og:image:height" content={String(site.ogImageHeight)} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, siteUrl).href} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={locale} />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content={article ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    {/* Theme color (browser chrome) */}
+    <meta name="theme-color" content="hsl(var(--brand))" />
+
+    {/* Google Search Console verification (optional) */}
+    {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+
+    {/*
+      Analytics / AdSense are injected DYNAMICALLY (consent-gated).
+      BaseLayout only defines the loader; CookieConsent.astro calls it after
+      the visitor accepts. See GDPR note in AGENTS.md. No tracking env vars
+      → this block renders nothing → zero JS.
+    */}
+    {(gaId || adsenseClient) && (
+      <script is:inline define:vars={{ gaId, adsenseClient }}>
+        window.__awLoadTrackers = () => {
+          if (window.__awTrackersLoaded) return;
+          window.__awTrackersLoaded = true;
+          if (gaId) {
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', gaId);
+          }
+          if (adsenseClient) {
+            const s = document.createElement('script');
+            s.async = true;
+            s.crossOrigin = 'anonymous';
+            s.src =
+              'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
+              adsenseClient;
+            document.head.appendChild(s);
+          }
+        };
+      </script>
+    )}
+
+    {/*
+      Cloudflare Web Analytics (optional) — cookieless, so unlike GA/AdSense
+      it needs no consent gate. Empty token = nothing injected, zero JS.
+    */}
+    {cfBeaconToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+      ></script>
+    )}
+
+    {/* JSON-LD: Organization (global) + any page-specific */}
+    <JsonLd data={orgJsonLd} />
+    {jsonLd.map((d) => <JsonLd data={d} />)}
+
+    {/* No-FOUC theme init — runs before first paint. */}
+    <script is:inline>
+      (() => {
+        let stored = null;
+        try {
+          stored = localStorage.getItem('theme');
+        } catch {
+          /* storage unavailable */
+        }
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || stored === 'black' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          if (stored === 'black') document.documentElement.classList.add('black');
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased">
+    <slot />
+    {/* Consent banner — only rendered when tracking env vars are set. */}
+    {(gaId || adsenseClient) && (
+      <CookieConsent
+        labels={{
+          title: consentLabels.title,
+          text: consentLabels.text,
+          accept: consentLabels.accept,
+          decline: consentLabels.decline,
+        }}
+      />
+    )}
+  </body>
+</html>

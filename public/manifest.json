@@ -1,0 +1,21 @@
+{
+  "name": "No Man's Sky Wiki",
+  "short_name": "NMS Wiki",
+  "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e74f1d",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Cloudflare Pages configuration for nomanssky.wiki
+#
+# Usage:
+#   pnpm build
+#   npx wrangler pages dev dist
+#
+# NOTE: while wrangler.toml exists it is the SOLE source of truth for the
+# Pages project env — the Cloudflare dashboard "Environment variables" UI
+# is IGNORED. To change env vars, edit this file and re deploy.
+#
+# Reference: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+
+name = "nomanssky-wiki"
+compatibility_date = "2026-08-11"
+pages_build_output_dir = "dist"
+
+[vars]
+# Site (must include https:// protocol — Astro validates this as a URL)
+SITE_URL = "https://nomanssky.wiki"
+# Giscus comments — blank = comments disabled until you fill your own values.
+# See docs/comments.md for how to get these from giscus.app.
+PUBLIC_GISCUS_REPO = ""
+PUBLIC_GISCUS_REPO_ID = ""
+PUBLIC_GISCUS_CATEGORY = ""
+PUBLIC_GISCUS_CATEGORY_ID = ""
+PUBLIC_GISCUS_MAPPING = "pathname"
+# Sponsor card — blank = disabled. Fill PUBLIC_SPONSOR_URL to enable.
+PUBLIC_SPONSOR_URL = ""
+PUBLIC_SPONSOR_IMAGE_URL = ""
+# Cloudflare Web Analytics beacon token (empty = disabled)
+PUBLIC_CF_BEACON_TOKEN = ""

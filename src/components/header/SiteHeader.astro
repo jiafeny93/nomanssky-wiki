@@ -1,0 +1,162 @@
+---
+/**
+ * Site header — logo, primary nav, theme toggle, language switcher.
+ * Mobile menu uses native <details> (zero JS).
+ */
+import { Icon } from 'astro-icon/components';
+import { NAVIGATION_CONFIG } from '~/config/navigation';
+import { site } from '~/config/site';
+import { type Locale, defaultLocale, locales, LOCALE_LABELS } from '~/i18n/routing';
+import { getUi } from '~/i18n/ui';
+import { localizePath } from '~/lib/url';
+import ThemeToggle from './ThemeToggle.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import SearchButton from './SearchButton.astro';
+import { landingLinkEnabled } from '~/config/project';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+  /**
+   * Locales the current page exists in (optional). Pages that DON'T fall
+   * back to English (tag pages) pass their real coverage so the language
+   * switcher never links to a 404.
+   */
+  availableLocales?: readonly Locale[];
+}
+const { locale, currentPath, availableLocales } = Astro.props;
+const ui = getUi(locale);
+const nav: Record<string, string> = ui.nav as Record<string, string>;
+
+const headerLocales = availableLocales ?? locales;
+
+const samePagePathFor = (loc: Locale) => {
+  // Strip existing locale prefix, then prepend the new one.
+  const stripped = currentPath.replace(/^\/(ja)(\/|$)/, '/') || '/';
+  return localizePath(stripped, loc);
+};
+---
+
+<header class="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur">
+  <div class="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4">
+    {/* Logo */}
+    <a
+      href={localizePath('/', locale)}
+      class="flex items-center gap-2 font-bold text-foreground"
+      aria-label={site.name}
+    >
+      <img src="/favicon.svg" width="24" height="24" alt="" class="h-6 w-6" />
+      <span class="hidden sm:inline">{site.shortName}</span>
+    </a>
+
+    {/* Desktop nav */}
+    <nav class="hidden flex-1 items-center gap-1 md:flex">
+      {
+        NAVIGATION_CONFIG.map((item) => {
+          const path = localizePath(item.path, locale);
+          const isActive = currentPath === path || currentPath.startsWith(path + '/');
+          return (
+            <a
+              href={path}
+              class:list={[
+                'rounded-md px-3 py-1.5 text-sm font-medium transition',
+                isActive
+                  ? 'bg-muted text-nav'
+                  : 'text-foreground/70 hover:bg-muted hover:text-foreground',
+              ]}
+            >
+              {nav[item.key] ?? item.key}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    {/* Right actions */}
+    <div class="ml-auto flex items-center gap-1">
+      {landingLinkEnabled && (
+        <a
+          href="/landing"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition hover:bg-muted hover:text-nav"
+          aria-label="About the AnvilWiki template"
+          title="About the AnvilWiki template"
+        >
+          <Icon name="lucide:hammer" class="h-5 w-5" />
+        </a>
+      )}
+      <SearchButton locale={locale} />
+      <ThemeToggle />
+      <LanguageSwitcher locale={locale} pathFor={samePagePathFor} availableLocales={availableLocales} />
+
+      {/* Mobile menu */}
+      <details class="relative md:hidden">
+        <summary
+          class="inline-flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-md text-foreground transition hover:bg-muted"
+        >
+          <Icon name="lucide:menu" class="h-5 w-5" />
+        </summary>
+        <div class="absolute right-0 mt-2 w-56 overflow-hidden rounded-md border bg-card shadow-lg">
+          {/* Prominent search entry — mobile readers don't know Cmd+K */}
+          <button
+            type="button"
+            data-open-search
+            class="flex w-full items-center gap-2 border-b border-border px-3 py-2.5 text-sm font-medium text-nav transition hover:bg-muted"
+          >
+            <Icon name="lucide:search" class="h-4 w-4" />
+            <span>{nav.search ?? 'Search'}</span>
+          </button>
+          {
+            NAVIGATION_CONFIG.map((item) => (
+              <a
+                href={localizePath(item.path, locale)}
+                class="block px-3 py-2 text-sm transition hover:bg-muted"
+              >
+                {nav[item.key] ?? item.key}
+              </a>
+            ))
+          }
+          {/* Language switcher for mobile — flat list, not nested dropdown */}
+          <div class="border-t border-border pt-1">
+            <div class="flex items-center gap-1 px-3 pb-1 text-xs text-muted-foreground">
+              <Icon name="lucide:globe" class="h-3 w-3" />
+              <span>{nav.language ?? 'Language'}</span>
+            </div>
+            {
+              headerLocales.map((loc) => (
+                <a
+                  href={samePagePathFor(loc)}
+                  class:list={[
+                    'block px-3 py-2 text-sm transition hover:bg-muted',
+                    loc === locale && 'font-semibold text-nav',
+                  ]}
+                >
+                  {LOCALE_LABELS[loc]}
+                </a>
+              ))
+            }
+          </div>
+          {landingLinkEnabled && (
+            <a
+              href="/landing"
+              class="mt-1 flex items-center gap-2 border-t border-border px-3 py-2 text-sm text-muted-foreground transition hover:bg-muted hover:text-nav"
+            >
+              <Icon name="lucide:hammer" class="h-4 w-4" />
+              <span>AnvilWiki Template</span>
+            </a>
+          )}
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu search entry → open the shared search dialog (SearchButton).
+  document.querySelectorAll('[data-open-search]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      (document.getElementById('search-trigger') as HTMLButtonElement | null)?.click();
+      // Close the mobile menu afterwards.
+      document.querySelectorAll('details[open]').forEach((d) => (d as HTMLDetailsElement).open = false);
+    });
+  });
+</script>
