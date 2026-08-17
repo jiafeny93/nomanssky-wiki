@@ -43,6 +43,19 @@ const wiki = defineCollection({
       gameVersion: z.string().max(20).optional(),
       /** Quick-answer summary shown before the article body (AI Overviews / featured snippet). */
       summary: z.string().max(200).optional(),
+      /**
+       * Structured FAQ — rendered as a visible Q&A section after the article
+       * body AND emitted as FAQPage JSON-LD (SERP rich-result eligibility).
+       * Answers are plain text (no Markdown).
+       */
+      faq: z
+        .array(
+          z.object({
+            question: z.string().min(1).max(120),
+            answer: z.string().min(1).max(400),
+          }),
+        )
+        .optional(),
       /** Article author name (E-E-A-T signal). Falls back to site.defaultAuthor. */
       author: z.string().optional(),
       /**

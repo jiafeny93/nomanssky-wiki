@@ -123,6 +123,9 @@ const jsonLd = [
   ...(entry.data.codes && entry.data.codes.length > 0
     ? [faqPageJsonLd((shared.codesFaq as Array<{ question: string; answer: string }>) ?? [])]
     : []),
+  // Structured frontmatter FAQ → FAQPage schema (must match the visible
+  // Q&A section rendered below the body — Google's rich-result policy).
+  ...(entry.data.faq && entry.data.faq.length > 0 ? [faqPageJsonLd(entry.data.faq)] : []),
 ];
 ---
 
@@ -287,6 +290,24 @@ const jsonLd = [
     >
       <Content />
     </div>
+
+    {/* Structured FAQ — visible Q&A section mirroring the FAQPage JSON-LD */}
+    {entry.data.faq && entry.data.faq.length > 0 && (
+      <section class="mt-10" data-pagefind-body>
+        <h2 class="text-xl font-bold">{shared.faqHeading ?? 'Frequently Asked Questions'}</h2>
+        <div class="mt-4 space-y-3">
+          {entry.data.faq.map((f: { question: string; answer: string }) => (
+            <details class="group rounded-lg border border-border bg-muted/30 p-4 open:bg-muted/10">
+              <summary class="cursor-pointer list-none font-semibold text-foreground marker:hidden">
+                <span class="mr-2 inline-block text-nav transition group-open:rotate-90">▸</span>
+                {f.question}
+              </summary>
+              <p class="mt-2 pl-5 text-sm leading-relaxed text-muted-foreground">{f.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
 
     {/* Fallback videos — only IDs NOT inlined in the body via <Video/>.
         Inline <Video> is the preferred placement; this bottom section is a

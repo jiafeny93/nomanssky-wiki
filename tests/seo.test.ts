@@ -123,5 +123,16 @@ describe('SEO helpers', () => {
       expect(t).toContain('Hello');
       expect(t).toContain('—');
     });
+
+    it('skips the suffix when the title already contains the game name', () => {
+      const t = pageTitle("No Man's Sky Freighter Guide: How to Get One Fast");
+      expect(t).toBe("No Man's Sky Freighter Guide: How to Get One Fast");
+    });
+
+    it('uses the short name suffix for long titles without the game name', () => {
+      const t = pageTitle('A Very Long Page Title That Goes Well Beyond Fifty Characters');
+      expect(t).toContain('— NMS Wiki');
+      expect(t).not.toContain('No Man');
+    });
   });
 });

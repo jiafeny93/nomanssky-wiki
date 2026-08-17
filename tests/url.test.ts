@@ -59,9 +59,11 @@ describe('url helpers', () => {
   });
 
   describe('localeFromPath', () => {
-    it('extracts the locale from a prefixed path', () => {
-      expect(localeFromPath('/ja/bosses/emberfang')).toBe('ja');
-      expect(localeFromPath('/ja')).toBe('ja');
+    it('falls back to the default locale for unknown prefixes (single-locale site)', () => {
+      // locales is ['en'] — 'ja' is no longer a configured locale, so a path
+      // carrying that prefix resolves to the default-locale fallback.
+      expect(localeFromPath('/ja/bosses/emberfang')).toBe('en');
+      expect(localeFromPath('/ja')).toBe('en');
     });
 
     it('returns the default locale when no prefix is present', () => {

@@ -1,0 +1,108 @@
+---
+title: "No Man's Sky Capital Freighter Farming: S-Class Spawns"
+description: "How to farm S-class capital freighters in No Man's Sky: economy-based spawn odds, the 3-hour/5-warp battle trigger, and the reload method that rerolls class."
+category: "starships"
+date: 2026-08-17
+lastModified: 2026-08-17
+summary: "Capital freighters spawn after 3 hours of play plus 5 warps; S-class odds are about 2% in wealthy systems and 5% in outlaw systems, and reloading a pre-warp save rerolls the class."
+tags: ["starships", "freighter", "capital-freighter", "s-class", "farming"]
+faq:
+  - question: "How often do capital freighter battles spawn?"
+    answer: "Post-warp freighter battles follow a cooldown of roughly 3 hours of playtime plus 5 warps since your last battle. Your first two rescues are always regular freighters; from the third rescue on, the victim is always a capital freighter. Battles never trigger in uncharted systems or systems with a black hole or Atlas interface, and they stop entirely if space combat is set to None."
+  - question: "What are the S-class freighter odds by economy?"
+    answer: "Community testing puts S-class capital freighter odds at roughly 0% in tier 1 (poor) economies, 1% in tier 2, 2% in tier 3 (wealthy), and 5% in outlaw systems. Outlaw freighters roll S-class more often but start with fewer slots. These figures are community-tested, not officially published, and may shift between updates."
+  - question: "How does the reload farming method work?"
+    answer: "Satisfy the 3-hour and 5-warp cooldown, save in a station next to your target system, warp in to trigger the battle, and check the freighter's class on the bridge. If it is not what you want, reload the pre-warp save and warp again. The battle re-triggers and the class rerolls, while the hull stays the same because each system has one fixed capital freighter model."
+  - question: "Can I claim pirate dreadnought freighters?"
+    answer: "Yes, since the Omega update. Once you already own a freighter, pirate dreadnought battles can appear after the standard cooldown. Disable the dreadnought's subsystems to force a surrender and you can claim the ship, or destroy it for an S-class Salvaged Fleet Unit. Letting it surrender also pays out a Cargo Bulkhead."
+  - question: "How many slots does a capital freighter have?"
+    answer: "Capital freighters spawn with 24 to 34 cargo slots and 12 to 20 technology slots, versus 15 to 19 cargo and 8 to 12 tech on regular freighters. A large S-class capital freighter runs to roughly 170 million units before trade-in credit, and freighter class can never be upgraded later — so farm the class you want before you buy."
+---
+
+The capital freighter is the ship that makes people open the galaxy map on purpose. These are the super-massive hulls — the Star Destroyer silhouettes and blocky warships looming behind pirate ambushes — and unlike regular freighters they cannot be bought from parked fleets. They only appear as the victim of a post-warp rescue battle, one at a time, with a class roll attached. That combination of rarity gate and random stat roll is what farming is for. **Last updated: August 17, 2026** — the trigger mechanics below have been stable for years and still hold in the current Cosmos-era build; the spawn odds are community-tested figures rather than official numbers, and they are labeled as such.
+
+## Capital Freighters vs Regular Freighters
+
+Every system hosts freighters you can board and buy, but those are regular system freighters. Capital freighters are a separate population with a separate acquisition path:
+
+| | Regular freighter | Capital freighter |
+| --- | --- | --- |
+| Cargo slots | 15–19 | 24–34 |
+| Technology slots | 8–12 | 12–20 |
+| Price range | ~5M–23M units | ~26M–180M units (a large S-class runs about **170M**) |
+| Where they spawn | Parked fleets, any time | Only as the victim of a post-warp rescue battle |
+| First encounter | Your first rescue is one of these | Guaranteed from your **third** rescue onward |
+
+Two rules in that table shape every farming plan. First, your first two rescued freighters are always regular freighters — the game will not hand you a capital until the third rescue, so burn those early rescues deliberately rather than hoping. Second, you can only own one freighter, and buying a new one means trading in the old one for credit toward the purchase.
+
+## How Freighter Battles Actually Trigger
+
+The rescue battle is the gate, and it runs on a specific cooldown:
+
+1. After your last freighter battle, a timer and a counter start: roughly **3 hours of playtime** and **5 warps** must both pass before the next post-warp battle can trigger.
+2. When both conditions are met, your next warp into an eligible system starts the battle immediately — five or eight pirates swarming a single freighter, with its escort fleet hanging back.
+3. Destroy every pirate and the captain hails you, inviting you aboard to buy — or, if you own no freighter yet, to take it free.
+
+The exclusions matter as much as the trigger. Post-warp battles never fire in uncharted systems, nor in systems containing a black hole or an Atlas interface, and setting space combat difficulty to None suppresses them entirely. Ambient distress battles you stumble into in inhabited systems are a different, lesser event and not a capital freighter source.
+
+One pirate subtype changes the rules once you own a freighter: pirate dreadnought battles can spawn after the same cooldown, pitting a dreadnought and its frigates against a civilian freighter. More on claiming those below.
+
+## S-Class Spawn Odds by Economy Level
+
+Freighter class is rolled when the battle spawns, weighted by the economy of the system the battle occurs in. Hello Games has never published the weights, but community testing has converged on a consistent picture (source threads on r/NoMansSkyTheGame and the community wiki):
+
+| Economy tier | Example ratings | S-class chance (community-tested) |
+| --- | --- | --- |
+| Tier 1 (poor) | Struggling, Fledgling, Low Supply | **~0%** |
+| Tier 2 (medium) | Satisfactory, Developing, Medium Supply | **~1%** |
+| Tier 3 (wealthy) | Prosperous, Opulent, High Supply, Advanced | **~2%** |
+| Outlaw system | pirate-controlled | **~5%** |
+
+Read that table with its caveats. The percentages are community-measured, not official, and Hello Games has adjusted spawn behavior in past updates, so treat them as planning numbers rather than guarantees. A-class odds scale with wealth the same way, which matters if you are happy settling for a high-slot A-class instead. The outlaw number deserves special attention: outlaw systems roll S-class freighters about five times more often than wealthy systems, but their freighters spawn with fewer cargo and technology slots — an outlaw S-class is easier to obtain and worse to own, while a wealthy-system S-class with a fat slot roll is the actual grail.
+
+## The Reload Method: Step by Step
+
+The exploit-shaped but entirely legitimate core of freighter farming is one scripted behavior: when a freighter battle triggers on warp-in, that battle is scripted into the session state. Reload a save made before the warp and the next warp triggers a battle again — with a freshly rolled class, in the same system, against the same hull. Here is the full loop:
+
+1. **Pick the system first.** Each star system has one fixed capital freighter model that it always spawns — same hull, same name, every visit — with the class rerolled each time. Shop systems before you shop classes: find a tier 3 wealthy system whose capital hull you actually want to live in.
+2. **Burn the early rescues.** Make sure you have already rescued at least two freighters, or the battle you farm will keep offering regular freighters.
+3. **Clear the cooldown.** Away from your target system, warp five times and let roughly three hours of playtime pass since your last battle.
+4. **Stage and save.** Sit in a space station adjacent to your target system, exit your ship to force the autosave, and note the restore point. On PC, copying the save file is the belt-and-braces version.
+5. **Warp in and check.** The battle triggers on arrival. Kill the pirates, land, and inspect the freighter — the analysis visor works from inside the hangar, which saves the walk to the bridge when the roll is bad.
+6. **Reload and repeat.** Not the class you want? Reload the staged save and warp in again. Each cycle takes a couple of minutes and rerolls the class while the hull stays identical.
+7. **Close when it lands.** At roughly **2% S-class odds in a wealthy economy**, expect dozens of reloads on average — the A-class rolls that appear along the way are the realistic consolation prize. Buy with units or trade in your current freighter for credit; the game autosaves the moment the purchase completes.
+
+Two failure modes to avoid: warping out of the system before deciding kills the purchase opportunity outright, and trading in your old freighter destroys its installed technology while migrating only the base build — strip anything valuable first. Community-reported workaround for the base-transfer prompt: leave a single item in the old freighter's cargo so the game asks before migrating.
+
+## Hulls, Names, and What Makes One Rare
+
+Capital freighter hulls come in a handful of families that the community named after the sci-fi ships they resemble, since the game itself assigns only procedurally generated ship names:
+
+| Community name | Look | Notes |
+| --- | --- | --- |
+| Venator (Star Destroyer) | Flat, dagger-shaped hull | The iconic capital; the only design broadly agreed to be a deliberate Star Wars homage |
+| Resurgent-class | The largest Venator variant | Extended midsection; widely treated as the rare grail hull |
+| Sentinel-class (Borg cube) | Dense vertical block | Antenna near the landing lane makes approach and takeoff fiddly |
+| Pirate Dreadnought | Oar-like protrusions, dark hull | Claimable as your own since the Omega update |
+
+Rarity in this hunt is really two rarities stacked. The hull is the fixed half — since each system owns exactly one model, finding a Resurgent or a specific paint scheme means finding the right system, and coordinate-exchange communities exist mostly to trade those locations. The class is the random half, which is what the reload loop farms. A tier 3 system with a rare hull and 34-slot S-class potential is the combination every farmer is searching for.
+
+## Pirate Dreadnoughts: The Outlaw Shortcut
+
+Once you own any freighter, a second farming lane opens. Pirate dreadnought battles spawn after the standard cooldown — in some systems reliably, in most randomly — and the dreadnought itself is a claimable capital freighter with three possible outcomes:
+
+1. **Destroy it** for an S-class Salvaged Fleet Unit, one of the best freighter upgrade drops in the game.
+2. **Force a surrender** by disabling its engines and subsystems, which pays a Cargo Bulkhead and opens the option to claim the ship outright.
+3. **Drive it off** for units and standing, the outcome nobody farms on purpose.
+
+With outlaw systems rolling S-class freighters at roughly **5%**, the dreadnought lane is statistically the fastest route to an S-class capital — with the slot-count caveat from the odds table baked in. It is a strong shortcut for players who want the class badge now and a weaker one for players who want a 34-slot flagship.
+
+## How This Page Differs From Our Freighter Guide
+
+Division of labor, to keep both pages deep instead of broad: this page covers the spawn mechanics, the odds, and the reload loop that gets an S-class capital into your hangar. The [freighter guide](/starships/freighter-guide) covers everything that happens after the purchase — freighter and frigate upgrades, derelict freighter runs, hyperdrive range stacking, and building a base aboard your flagship. If ship farming is your hobby generally, the [Sentinel Interceptor guide](/starships/sentinel-interceptor-guide) runs the same reload-and-reroll logic against planetary harmonic camps instead of warp lanes.
+
+## Related Guides
+
+- [Freighter Guide](/starships/freighter-guide) — upgrades, frigates, and freighter base building after you buy
+- [Sentinel Interceptor Guide](/starships/sentinel-interceptor-guide) — the other big farmable ship class, via harmonic camps
+- [What's New in the 2026 Updates](/guides/new-update-2026) — overview of this year's changes to ships and systems

@@ -53,7 +53,14 @@ const {
 } = Astro.props;
 
 const suffix = titleSuffix !== undefined ? titleSuffix : site.name;
-const fullTitle = suffix && !title.includes(suffix) ? `${title} — ${suffix}` : title;
+// Article titles that already contain the game name ("No Man's Sky Freighter
+// Guide…") carry the brand — appending the site name would only push the title
+// past the ~60-char SERP display window. Skip the suffix for those.
+const fullTitle = title.includes(site.game.name)
+  ? title
+  : suffix && !title.includes(suffix)
+    ? `${title} — ${suffix}`
+    : title;
 const orgJsonLd = organizationJsonLd();
 
 // Strip ANY known locale prefix (built from routing.ts so new locales keep
