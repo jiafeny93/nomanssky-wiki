@@ -1,22 +1,30 @@
 ---
 /**
- * SidebarAd — desktop-only fixed sidebar ad (AdSense).
+ * SidebarAd — desktop-only fixed sidebar ad.
  *
- * Gated on PUBLIC_ADSENSE_CLIENT + PUBLIC_ADSENSE_SLOT_SIDEBAR:
- * either empty = nothing rendered.
+ * Renders the Adsterra sidebar unit (160×600) when AD_UNITS.sidebar is
+ * configured (src/config/ads.ts); otherwise an AdSense unit, gated on
+ * PUBLIC_ADSENSE_CLIENT + PUBLIC_ADSENSE_SLOT_SIDEBAR.
+ * Either empty = nothing rendered.
  */
 import AdSenseSlot from './AdSenseSlot.astro';
+import AdsterraSlot from './AdsterraSlot.astro';
+import { AD_UNITS } from '~/config/ads';
 
 const client = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
 const slot = import.meta.env.PUBLIC_ADSENSE_SLOT_SIDEBAR as string | undefined;
-const show = !!(client && slot);
+const show = !!AD_UNITS.sidebar || !!(client && slot);
 ---
 
 {
   show && (
     <aside class="hidden w-[160px] shrink-0 lg:block">
       <div class="sticky top-20 space-y-4">
-        <AdSenseSlot position="sidebar" />
+        {AD_UNITS.sidebar ? (
+          <AdsterraSlot position="sidebar" />
+        ) : (
+          <AdSenseSlot position="sidebar" />
+        )}
       </div>
     </aside>
   )

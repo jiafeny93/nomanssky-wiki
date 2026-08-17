@@ -1,0 +1,45 @@
+---
+/**
+ * AdsterraSlot — renders a single Adsterra banner unit.
+ *
+ * Reads the unit key + size from src/config/ads.ts (AD_UNITS). When the
+ * position has no entry in AD_UNITS, the component renders nothing —
+ * beginners can deploy with no ads configured and the site works fine.
+ *
+ * Emits the exact snippet Adsterra provides: an inline `atOptions` script
+ * followed by the synchronous invoke.js loader, which document.writes the
+ * banner iframe in place. Scripts are `is:inline` (no bundling/hoisting) so
+ * multiple slots on one page each run in DOM order with their own options.
+ *
+ * Usage:
+ *   <AdsterraSlot position="sticky" />
+ *   <AdsterraSlot position="sidebar" />
+ */
+import { AD_UNITS, AD_SCRIPT_HOST, type AdPosition } from '~/config/ads';
+
+interface Props {
+  /** Which configured ad unit to render (see src/config/ads.ts). */
+  position: AdPosition;
+  /** Optional CSS class for the wrapper (e.g. centering). */
+  class?: string;
+}
+
+const { position, class: className = '' } = Astro.props;
+const unit = AD_UNITS[position];
+---
+
+{
+  unit && (
+    <div
+      class={`flex justify-center overflow-hidden ${className}`.trim()}
+      style={`min-width:${unit.width}px;min-height:${unit.height}px`}
+      data-ad-position={position}
+    >
+      <script
+        is:inline
+        set:html={`atOptions = {'key':'${unit.key}','format':'iframe','height':${unit.height},'width':${unit.width},'params':{}};`}
+      />
+      <script is:inline src={`${AD_SCRIPT_HOST}/${unit.key}/invoke.js`} />
+    </div>
+  )
+}

@@ -1,0 +1,38 @@
+---
+/**
+ * LeaderboardAd — desktop-only 728×90 banner between the article TOC and body.
+ *
+ * Renders the Adsterra leaderboard unit when AD_UNITS.leaderboard is configured
+ * (src/config/ads.ts); otherwise an AdSense unit, gated on PUBLIC_ADSENSE_CLIENT +
+ * PUBLIC_ADSENSE_SLOT_LEADERBOARD. Either empty = nothing rendered.
+ *
+ * Hidden below `md` — a 728px iframe overflows a phone viewport and triggers
+ * horizontal scroll (an instant mobile SEO penalty).
+ */
+import AdSenseSlot from './AdSenseSlot.astro';
+import AdsterraSlot from './AdsterraSlot.astro';
+import { AD_UNITS } from '~/config/ads';
+
+interface Props {
+  /** Optional label above the ad (for disclosure). */
+  label?: string;
+}
+const { label = 'Advertisement' } = Astro.props;
+
+const client = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
+const slot = import.meta.env.PUBLIC_ADSENSE_SLOT_LEADERBOARD as string | undefined;
+const show = !!AD_UNITS.leaderboard || !!(client && slot);
+---
+
+{
+  show && (
+    <div class="my-6 hidden flex-col items-center md:flex">
+      <span class="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">{label}</span>
+      {AD_UNITS.leaderboard ? (
+        <AdsterraSlot position="leaderboard" />
+      ) : (
+        <AdSenseSlot position="incontent" class="md:!block" />
+      )}
+    </div>
+  )
+}

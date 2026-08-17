@@ -2,13 +2,17 @@
 /**
  * InContentAd — a page-internal ad slot (e.g. between article sections).
  *
- * Renders a Google AdSense responsive unit (AdSense decides the best size
- * for the viewport). Gated on PUBLIC_ADSENSE_CLIENT + PUBLIC_ADSENSE_SLOT_INCONTENT:
- * either empty = nothing rendered.
+ * Renders the Adsterra incontent unit (300×250) when AD_UNITS.incontent is
+ * configured (src/config/ads.ts); otherwise an AdSense responsive unit
+ * (AdSense decides the best size for the viewport), gated on
+ * PUBLIC_ADSENSE_CLIENT + PUBLIC_ADSENSE_SLOT_INCONTENT.
+ * Either empty = nothing rendered.
  *
  * Unlike StickyBanner, this is not sticky; it sits inline with content.
  */
 import AdSenseSlot from './AdSenseSlot.astro';
+import AdsterraSlot from './AdsterraSlot.astro';
+import { AD_UNITS } from '~/config/ads';
 
 interface Props {
   /** Optional label above the ad (for disclosure). */
@@ -18,11 +22,15 @@ const { label = 'Advertisement' } = Astro.props;
 
 const client = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
 const slot = import.meta.env.PUBLIC_ADSENSE_SLOT_INCONTENT as string | undefined;
-const show = !!(client && slot);
+const show = !!AD_UNITS.incontent || !!(client && slot);
 ---
 {show && (
   <div class="my-8 flex flex-col items-center">
     <span class="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">{label}</span>
-    <AdSenseSlot position="incontent" />
+    {AD_UNITS.incontent ? (
+      <AdsterraSlot position="incontent" />
+    ) : (
+      <AdSenseSlot position="incontent" />
+    )}
   </div>
 )}

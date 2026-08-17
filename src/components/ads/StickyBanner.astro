@@ -10,15 +10,18 @@
  *
  * Includes a dismiss button (persisted in localStorage).
  *
- * Gated on PUBLIC_ADSENSE_CLIENT + PUBLIC_ADSENSE_SLOT_STICKY:
- * either empty = nothing rendered.
+ * Renders the Adsterra unit when AD_UNITS.sticky is configured (src/config/ads.ts);
+ * otherwise falls back to AdSense, gated on PUBLIC_ADSENSE_CLIENT +
+ * PUBLIC_ADSENSE_SLOT_STICKY. Either empty = nothing rendered.
  */
 import { Icon } from 'astro-icon/components';
 import AdSenseSlot from './AdSenseSlot.astro';
+import AdsterraSlot from './AdsterraSlot.astro';
+import { AD_UNITS } from '~/config/ads';
 
 const client = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
 const slot = import.meta.env.PUBLIC_ADSENSE_SLOT_STICKY as string | undefined;
-const show = !!(client && slot);
+const show = !!AD_UNITS.sticky || !!(client && slot);
 ---
 
 {
@@ -28,7 +31,11 @@ const show = !!(client && slot);
       class="sticky top-14 z-30 hidden border-b border-border bg-background/95 py-2 backdrop-blur md:block"
     >
       <div class="relative mx-auto max-w-4xl px-4">
-        <AdSenseSlot position="sticky" class="mx-auto" />
+        {AD_UNITS.sticky ? (
+          <AdsterraSlot position="sticky" class="mx-auto" />
+        ) : (
+          <AdSenseSlot position="sticky" class="mx-auto" />
+        )}
         <button
           id="dismiss-sticky"
           type="button"
