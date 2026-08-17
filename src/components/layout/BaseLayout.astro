@@ -119,8 +119,9 @@ const consentLabels = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    {/* Theme color (browser chrome) */}
-    <meta name="theme-color" content="hsl(var(--brand))" />
+    {/* Theme color (browser chrome) — concrete values; CSS vars don't resolve in meta tags */}
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(15, 81%, 51%)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(15, 76%, 47%)" />
 
     {/* Google Search Console verification (optional) */}
     {gscVerification && <meta name="google-site-verification" content={gscVerification} />}

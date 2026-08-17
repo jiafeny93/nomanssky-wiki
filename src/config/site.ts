@@ -75,6 +75,8 @@ export const site: SiteConfig = {
     genre: 'Action-adventure, survival, space exploration',
     releaseDate: '2016-08-09',
   },
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
 };
 
 /** Absolute site URL (no trailing slash). Falls back to the Astro `site` config. */
