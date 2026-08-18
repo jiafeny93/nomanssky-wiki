@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Generic Adsterra banner loader. AdsterraSlot.astro embeds this page in a
+      sandboxed iframe and passes the unit config via query params, so keys stay
+      single-sourced in src/config/ads.ts. Runs during parse: sets atOptions,
+      then document.writes the synchronous invoke.js loader — the exact timing
+      Adsterra's standard two-script snippet relies on.
+    -->
+    <script>
+      (function () {
+        var p = new URLSearchParams(location.search);
+        var key = p.get('key');
+        var host = p.get('host') || 'https://www.highperformanceformat.com';
+        var w = parseInt(p.get('w'), 10) || 320;
+        var h = parseInt(p.get('h'), 10) || 50;
+        if (!key) return;
+        window.atOptions = { key: key, format: 'iframe', height: h, width: w, params: {} };
+        document.write(
+          '<script type="text/javascript" src="' + host + '/' + key + '/invoke.js"><\/script>'
+        );
+      })();
+    </script>
+  </body>
+</html>
