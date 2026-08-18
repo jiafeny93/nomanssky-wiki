@@ -1,0 +1,151 @@
+---
+title: "Melhorias do Hiperpropulsor em No Man's Sky: Módulos e Alcance Máximo"
+description: "Como funcionam as melhorias do hiperpropulsor em No Man's Sky: limite de três módulos, propulsores de Cádmio, Emeril e Índio, alcance e células de dobra."
+category: "starships"
+image: '../../../../assets/covers/starships/hyperdrive-upgrades.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "O hiperpropulsor de fábrica salta 101 anos-luz e só para estrelas amarelas. Três módulos classe S mais propulsores coloridos empurram o alcance além de 2.000 anos-luz e abrem toda classe de estrela."
+tags: ["hyperdrive", "warp", "starships", "upgrades", "guide"]
+faq:
+  - question: "Quantos módulos de melhoria de hiperpropulsor dá para empilhar?"
+    answer: "Três. Uma nave estelar suporta até três Módulos de Melhoria de Hiperpropulsor; instalar um quarto ou mais desativa todos os módulos desse tipo até você desmontar de volta para três. Os propulsores de Cádmio, Emeril, Índio e Atlantídeo não contam contra esse limite, e é por isso que a maioria das naves de longo alcance roda os propulsores junto com uma pilha cheia de módulos."
+  - question: "Qual é o alcance máximo do hiperpropulsor em No Man's Sky?"
+    answer: "O teto documentado pela wiki é de aproximadamente 2.200 anos-luz em uma nave estelar com três módulos classe S posicionados, ou cerca de 2.500 com módulos classe X, por cima dos 101 anos-luz do propulsor base. Cargueiros alcançam aproximadamente 5.800 anos-luz com módulos de cargueiro abandonado. Números exatos variam com rolagens, atributos do casco e bônus de adjacência."
+  - question: "Ainda preciso dos propulsores de Cádmio e Emeril se tenho o de Índio?"
+    answer: "Não. O Propulsor de Índio funciona como melhoria direta: com ele instalado você pode dobrar para sistemas azuis, verdes e vermelhos sem os outros propulsores. Muitos jogadores mantêm os três mesmo assim porque cada propulsor alimenta sinergia de adjacência aos módulos vizinhos, mas para acesso a sistemas o Propulsor de Índio sozinho basta."
+  - question: "A atualização Cosmos torna as melhorias de hiperpropulsor inúteis?"
+    answer: "Não. Cosmos adiciona o voo interestelar livre como opção, não obrigação, e espera-se que os saltos de dobra instantâneos continuem sendo a escolha de eficiência. Um hiperpropulsor de longo alcance também é sua rede de segurança: se um voo livre der errado no espaço profundo, um bom propulsor e um estoque de combustível são o que levam você a algum lugar útil."
+  - question: "Até onde uma célula de dobra leva?"
+    answer: "Um salto por padrão. Cada dobra queima 20 por cento do tanque do hiperpropulsor, e uma célula de dobra restaura 25, então quatro células carregam o propulsor por completo para cinco saltos. Três módulos classe S adicionam 100 por cento de eficiência de célula cada, cortando o custo de combustível por salto a um quarto — até dez saltos de uma única célula."
+  - question: "Onde se compram módulos de melhoria de hiperpropulsor?"
+    answer: "Com mercadores de tecnologia em estações espaciais, pagando em nanitas. A seleção muda de estação para estação, então caçadores de alcance saltam entre sistemas conferindo cada mercador de tecnologia de naves. Sistemas piratas vendem módulos classe X com potencial de alcance maior, e corridas a cargueiros abandonados fornecem as versões de cargueiro."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Toda jornada longa em No Man's Sky eventualmente se torna um problema de hiperpropulsor. A galáxia abrange centenas de bilhões de sistemas estelares, um save novo mal passa de 100 anos-luz até a próxima estrela amarela, e uma economia inteira de melhorias — nanitas, módulos procedurais, propulsores de sistemas coloridos, hangares de cargueiro — existe para empurrar esse número para cima. Alcance é a diferença entre cruzar uma região da galáxia em uma tarde e passar uma semana saltando entre paradas de combustível.
+
+Este guia percorre o caminho completo de melhoria do hiperpropulsor em ordem: como o propulsor base funciona, de quais propulsores de sistemas coloridos você realmente precisa, como os módulos de melhoria classe S empilham e onde o teto rígido de três módulos morde, como posicionar tudo para os bônus de adjacência, como o combustível de dobra funciona e onde os cargueiros entram. Fecha com o que o voo interestelar livre da atualização Cosmos realmente muda para builds de dobra — que é menos do que você pode temer.
+
+**Última atualização: 18 de agosto de 2026**, válido para o lançamento em estágios da [atualização Cosmos](/cosmos-update/cosmos-update-guide); veja o nosso [acompanhamento de atualizações de 2026](/guides/new-update-2026) para os outros patches do ano.
+
+<StatBar
+  items={[
+    { value: '101 anos-luz', label: 'Alcance base do hiperpropulsor, só estrelas amarelas' },
+    { value: '3', label: 'Módulos de melhoria antes de a pilha desativar' },
+    { value: '+265 anos-luz', label: 'Bônus máximo de alcance de um módulo classe S' },
+    { value: '~5.800 anos-luz', label: 'Teto de dobra documentado de cargueiro' },
+  ]}
+/>
+
+<Callout type="info" title="Cosmos ainda está em lançamento em estágios">
+  O voo interestelar livre chega com a atualização Cosmos, anunciada em 9 de agosto de 2026, e suas
+  notas de patch estão sendo publicadas em estágios. Tudo sobre as mecânicas existentes do
+  hiperpropulsor neste guia é antigo e atual; qualquer coisa envolvendo como o voo livre interage
+  com a dobra está rotulada como pendente até a Hello Games confirmar.
+</Callout>
+
+## Como o Hiperpropulsor Base Funciona
+
+Toda nave estelar vem com um hiperpropulsor, e de fábrica ele faz duas coisas mal: alcança apenas 101 anos-luz por salto (um alcance que a atualização Synthesis subiu de um redondo 100) e só consegue mirar sistemas de estrelas amarelas — a maioria padrão da galáxia. Estrelas vermelhas, verdes, azuis e roxas simplesmente recusam seu pedido de salto até você instalar a tecnologia de propulsor certa, não importa quanto alcance você tenha.
+
+Combustível é um jogo de porcentagem. Cada dobra queima 20 por cento do tanque do hiperpropulsor, uma célula de dobra restaura 25, e quatro células carregam o propulsor por completo para cinco saltos — uma mudança da era Waypoint em relação ao antigo abastecimento de cinco células. Um propulsor totalmente carregado também deixa você saltar pelo centro da galáxia a partir de um sistema de portão, a rota clássica para uma nova galáxia.
+
+Você recebe a planta do propulsor base cedo, pela linha de missões do cargueiro destroçado que segue sua primeira construção de base, então não há motivo para voar sem um. Uma peculiaridade que vale saber antes de investir: o hiperpropulsor é uma das únicas tecnologias do jogo que pode ser fabricada mas nunca desmontada, então o espaço dele no seu inventário geral é permanente.
+
+## A Escada de Propulsores Coloridos: Cádmio, Emeril, Índio, Atlantídeo
+
+Cor de estrela é uma fechadura, e cada propulsor é uma chave. Quatro tecnologias desbloqueiam as quatro classes restritas de estrela:
+
+| Propulsor | Desbloqueia | Notas |
+| --- | --- | --- |
+| Propulsor de Cádmio | Sistemas de estrela vermelha | Primeiro degrau; estrelas vermelhas refinam em cádmio |
+| Propulsor de Emeril | Sistemas de estrela verde | Segundo degrau; precisa de emeril de estrelas verdes |
+| Propulsor de Índio | Sistemas de estrela azul | Melhoria direta — concede acesso vermelho e verde também |
+| Propulsor Atlantídeo | Sistemas de estrela roxa | Adicionado com Worlds Part II; supera o Índio em acesso |
+
+As quatro plantas vêm da Iteração: Hyperion a bordo da Anomalia Espacial, com preço em nanitas (o Propulsor de Índio custa 200), e cada propulsor é fabricado com metal cromático e um Wiring Loom. O design é um ciclo deliberado: você dobra até onde seus propulsores atuais permitem, colhe o metal daquela classe de estrela, refine-o em metal cromático e constrói a próxima chave.
+
+Dois detalhes tornam esta escada mais barata do que parece. Primeiro, os propulsores são cumulativos para acesso — o Propulsor de Índio sozinho cobre estrelas vermelhas, verdes e azuis, e o Propulsor Atlantídeo cobre tudo abaixo dele, então uma build mínima só precisa do topo que você alcançar. Segundo, nenhum dos quatro propulsores conta contra o limite de módulos de melhoria, e cada um alimenta passivamente um bônus de adjacência na tecnologia de hiperpropulsor vizinha. É por isso que a maioria das naves de endgame mantém todos os propulsores instalados mesmo depois de tecnicamente parar de precisar dos menores: eles são sinergia grátis, não espaços desperdiçados.
+
+## Módulos de Melhoria Classe S e o Limite de Três
+
+Propulsores coloridos decidem quais estrelas você pode visitar. Módulos de melhoria decidem até onde você consegue saltar, e é neles que o meta do hiperpropulsor realmente vive.
+
+Módulos são procedurais. Você compra Módulos de Hiperpropulsor lacrados de mercadores de tecnologia em estações espaciais por nanitas, abre-os e recebe uma instalação rolada cujos atributos dependem da classe:
+
+| Classe | Bônus de alcance (anos-luz) | Eficiência de célula de dobra | Fonte |
+| --- | --- | --- | --- |
+| C | 50 a 100 | Nenhuma | Mercadores de estação espacial |
+| B | 115 a 165 | Nenhuma | Mercadores de estação espacial |
+| A | 165 a 220 | +100% | Mercadores de estação espacial |
+| S | 220 a 265 | +100% | Mercadores de estação espacial |
+| X | 50 a 320 | Até +100% | Mercadores de sistema pirata |
+
+Dois atributos importam. O alcance do hiperpropulsor é a manchete — uma rolagem máxima de classe S adiciona até 265 anos-luz por módulo. A eficiência de célula de dobra é a metade silenciosa do valor: módulos classe A e classe S adicionam +100 por cento de eficiência de combustível cada, e os bônus empilham multiplicativamente, então um módulo de eficiência corta pela metade o custo de combustível por salto, dois derrubam para um terço e três para um quarto — cinco por cento de tanque por salto, ou aproximadamente dez saltos de uma única célula de dobra. Para corridas ao núcleo e saltos de galáxia, módulos de eficiência costumam poupar mais tempo que alcance puro.
+
+A seleção muda de mercador para mercador, então caçadores de alcance sérios saltam entre sistemas, conferem cada mercador de tecnologia de naves e compram apenas rolagens altas. Sistemas piratas valem o desvio: o estoque classe X deles pode rolar até 320 anos-luz, além do que qualquer módulo classe S oferece, embora o piso dessa faixa seja baixo o bastante para a maioria das rolagens X ser lixo.
+
+A regra rígida, e a que pega todo jogador novo: **três módulos no máximo**. Instale um quarto módulo de melhoria do mesmo tipo e o jogo desativa todos até você desmontar de volta para três. Não há penalidade parcial nem tela de aviso — seu alcance simplesmente despenca, e a correção é desmontar o módulo mais fraco.
+
+Uma última curiosidade de módulo que poupadores de nanitas deveriam saber: os atributos seguem uma progressão com semente atada à ordem de instalação no seu save. O terceiro módulo que você instala tira de um espaço de rolagem específico independente de qual módulo físico ele é, e é por isso que otimizadores instalam, conferem, recarregam e reordenam antes de confirmar.
+
+## Posicionamento: Adjacência Multiplica Tudo
+
+Onde a tecnologia senta na sua grade de inventário não é cosmético. Todo item da família do hiperpropulsor — módulos, propulsores coloridos, o propulsor base — alimenta um bônus de adjacência de cerca de cinco por cento em cada item vizinho, e esses bônus empilham sobre os atributos dos módulos antes que os espaços supercarregados multipliquem o resultado.
+
+As regras práticas de layout são simples. Agrupe tudo: hiperpropulsor base, três módulos e os propulsores coloridos que você mantiver devem formar um bloco só, não se espalhar por abas. Coloque seus módulos de maior alcance em espaços de inventário supercarregados (adicionados na atualização Waypoint), porque esses espaços multiplicam a tecnologia instalada neles. E mantenha os propulsores coloridos encostados no aglomerado de módulos — eles não têm atributos próprios para melhorar, mas alimentam bônus nos módulos ao lado.
+
+Uma instalação preguiçosa e espalhada e uma compacta e otimizada podem diferir em centenas de anos-luz com hardware idêntico. Antes de grindar por módulos melhores, reorganize o que você já tem.
+
+## A Matemática do Alcance: Até Onde Você Realmente Chega
+
+O alcance total de salto é o propulsor base mais os bônus de módulos mais os multiplicadores de adjacência e supercarregados, depois ajustado pelo seu casco. A progressão documentada:
+
+| Configuração | Alcance aproximado |
+| --- | --- |
+| Propulsor de fábrica, sem módulos | 101 anos-luz |
+| Três módulos classe C | 250 a 400 anos-luz |
+| Três módulos classe S, sem posicionamento | 760 a 900 anos-luz |
+| Três módulos classe S, otimizados | ~2.200 anos-luz |
+| Três rolagens altas classe X, otimizadas | ~2.500 anos-luz |
+
+O salto de "sem posicionamento" para "otimizado" é a adjacência e os espaços supercarregados fazendo o trabalho deles, e é por isso que posicionamento é uma melhoria grátis. Seu casco também importa: exploradoras carregam o melhor atributo de hiperpropulsor de qualquer classe pilotável, então as naves que saltam mais longe do jogo são exploradoras classe S com três módulos em um aglomerado compacto — o mesmo casco que o nosso [ranque de naves](/starships/best-ships) coloca no topo do jogo de alcance.
+
+Tetos exatos se movem de patch em patch conforme rolagens e multiplicadores são recalibrados, então trate qualquer coisa mais precisa que "aproximadamente 2.200 a 2.500 anos-luz em uma nave estelar" como folclore até você medir no seu próprio save.
+
+## Combustível: Células de Dobra, Warp Hypercores e Eficiência
+
+O alcance leva a glória; o combustível faz o trabalho. Uma célula de dobra é fabricada com antimatéria e recipiente de antimatéria, que por sua vez são construídos com metal cromático e carbono condensado, e oxigênio e poeira de ferrita, respectivamente.
+
+Se você prefere comprar a fabricar, o Warp Hypercore é a opção premium: um único hipernúcleo carrega um hiperpropulsor por completo sozinho — o equivalente a quatro células de dobra — e a planta dele vem de instalações fabris e centros de operações, ou do Synthesis Laboratory a bordo da anomalia. O porém é que a lista de ingredientes inclui cristais de tempestade, que só surgem durante clima extremo, então a maioria dos pilotos trata hipernúcleos como estoque de expedição em vez de combustível diário.
+
+A matemática de eficiência da seção de módulos vale repetir como regra de bolso: um propulsor sem modificações faz um salto por célula, enquanto um propulsor com três módulos classe S de eficiência faz aproximadamente dez. Disciplina de combustível é a melhoria mais barata do jogo inteiro.
+
+## Cargueiros: O Hiperpropulsor em Escala de Frota
+
+Sua nave capital tem hiperpropulsor próprio, tanque próprio e caminho próprio de melhorias, e é o motor de saltos de toda a sua operação — uma dobra de cargueiro leva junto toda nave guardada no hangar dele, o que torna a logística de frota uma questão de alcance de cargueiro.
+
+O propulsor do cargueiro começa em 100 anos-luz e é totalmente carregado por cinco células de dobra ou um hipernúcleo. Ele cresce de duas formas. A árvore de melhorias integrada — Ressonador de Núcleo de Dobra com +200 anos-luz, Injetor de Dobra Plasmático com +300 e Desfiador da Realidade com +800, além das variantes de blindagem colorida de +50 anos-luz para acesso vermelho, verde e azul — é comprada com unidades e nanitas. Os ganhos maiores vêm dos Módulos de Melhoria de Hiperpropulsor de Cargueiro, os drops procedurais de corridas a cargueiros abandonados desde a atualização Desolation, que também rolam atributos de eficiência de combustível. Um capitão dedicado caçando layouts limpos de abandonados empurra um cargueiro para aproximadamente 5.800 anos-luz — mais que o dobro de qualquer nave estelar.
+
+O ciclo completo de cargueiros abandonados, a gestão de frota e a logística de expedições de fragata estão no nosso [guia de cargueiros](/starships/freighter-guide).
+
+## Cosmos e Além: O Voo Livre Substitui a Dobra?
+
+A atualização de décimo aniversário Cosmos, anunciada em 9 de agosto de 2026, adiciona a opção de voar direto para outro sistema solar com força própria — a primeira vez na história do jogo que o hiperpropulsor tem competição.
+
+O enquadramento importa, porém: como o nosso [guia de voo interestelar](/cosmos-update/interstellar-flight-guide) coloca, o voo livre é uma opção, não uma obrigação. A Hello Games não anunciou a remoção da dobra, e a expectativa em toda a cobertura é que os saltos instantâneos continuem a escolha de eficiência enquanto o voo livre se torna a escolha cênica. Duas questões abertas valem acompanhar nas notas de patch em estágios: se o voo livre respeita as barreiras dos propulsores coloridos (dá para voar até uma estrela azul sem um Propulsor de Índio?) e qual combustível, se houver, um cruzeiro interestelar sustentado consome.
+
+Até essas respostas chegarem, a leitura prática é que as melhorias de hiperpropulsor ganham valor em vez de perdê-lo. Um propulsor de longo alcance é o plano B que resgata um voo livre que deu errado, a pista rápida para comerciantes e corredores de núcleo e a espinha dorsal de qualquer investida ao centro da galáxia. A checklist de preparação para Cosmos classifica melhorar seu hiperpropulsor e módulos como alta prioridade — o que bate com o modo como todo sistema de viagem em dez anos de atualizações tratou a qualidade do propulsor. Se você está remontando seu kit de dobra para a era de aniversário, o nosso [guia de caça a naves classe S](/starships/s-class-ships) cobre achar o casco que vale a instalação de tudo isso.
+
+## Guias Relacionados
+
+- [As Melhores Naves de No Man's Sky: Todos os Tipos Ranqueados](/starships/best-ships)
+- [Naves Classe S de No Man's Sky: Chances de Spawn e Ciclos de Caça](/starships/s-class-ships)
+- [Guia de Cargueiros: Bases, Frotas e Expedições de Fragata](/starships/freighter-guide)
+- [Voo Interestelar em No Man's Sky: Voo Livre vs Dobra](/cosmos-update/interstellar-flight-guide)
+- [Atualização Cosmos de No Man's Sky: O Guia Completo do Aniversário](/cosmos-update/cosmos-update-guide)
+- [Como Pousar em Estrelas em No Man's Sky](/cosmos-update/how-to-land-on-stars)
+- [Todas as Atualizações de No Man's Sky em 2026](/guides/new-update-2026)

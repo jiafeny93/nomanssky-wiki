@@ -1,0 +1,157 @@
+---
+title: "No Man's Sky: Como Iniciar uma Expedição (Guia para Iniciantes)"
+description: "Guia para iniciantes: como iniciar uma expedição em No Man's Sky pelo menu principal ou pelo terminal da Anomalia Espacial, com marcos e resgate de recompensas."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/how-to-start-expedition.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Expedições de No Man's Sky começam no menu de Novo Jogo ou no terminal da Anomalia Espacial. Este passo a passo cobre as duas rotas, a abertura roteirizada, marcos e recompensas."
+tags: ["expeditions", "guides", "beginners", "how-to"]
+faq:
+  - question: "Como inicio uma expedição de No Man's Sky pelo menu principal?"
+    answer: "Abra o menu principal, escolha Novo Jogo e, em vez de Normal, Criativo, Sobrevivência ou Morte Permanente, selecione o espaço de Expedição da expedição atual ou de uma passada. Confirme, e o jogo cria um save de expedição separado com equipamentos curados e a lista de marcos já ativa."
+  - question: "Existe alguma expedição ativa em No Man's Sky agora?"
+    answer: "Não. Em 18 de agosto de 2026, nenhuma expedição por tempo limitado está ativa: a Expedição 22, The Swarm, terminou em 19 de julho de 2026. Você ainda pode rejogar expedições passadas pelo terminal na Anomalia Espacial, e uma nova execução pode chegar junto da atualização de aniversário Cosmos, mas a Hello Games não confirmou nada."
+  - question: "Preciso de um save existente para iniciar uma expedição?"
+    answer: "Não. A rota do menu principal funciona para iniciantes completos e cria o save de expedição diretamente. A segunda rota, iniciar pelo Terminal de Expedição na Anomalia Espacial, exige um save existente que já tenha passado do tutorial de abertura, porque você precisa voar até a Anomalia para chegar ao terminal."
+  - question: "Como as recompensas de expedição chegam ao meu save principal?"
+    answer: "Resgate cada recompensa de fase no Terminal de Expedição durante a execução. Qualquer coisa resgatada desbloqueia para a conta inteira: carregue seu save principal, acople na Anomalia Espacial e colete de graça as naves, multiferramentas e cosméticos com o Companheiro de Síntese de Prata Veloz. Moedas e consumíveis ficam dentro do save de expedição."
+  - question: "O que acontece com meu save de expedição quando a expedição acaba?"
+    answer: "Ele se converte em um save normal que você pode continuar jogando por tempo indeterminado. Suas naves, bases e progresso ficam exatamente onde a execução os deixou, e toda recompensa resgatada antes do fechamento da janela permanece desbloqueada na sua conta para sempre."
+---
+
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Iniciar sua primeira expedição de No Man's Sky é um trabalho de cinco minutos quando você sabe onde o jogo esconde o botão — e uma confusão quando não sabe, porque a opção de expedição mora dentro do menu de Novo Jogo, o tutorial nunca a menciona e o segundo ponto de entrada é um terminal até o qual você precisa voar. **Última atualização: 18 de agosto de 2026.** Nenhuma expedição está ativa agora (a Expedição 22 fechou em 19 de julho), então este guia foi escrito para deixar você pronto no dia em que a próxima abrir — todo passo funciona igual, seja a execução novinha ou uma reexecução Redux.
+
+<StatBar
+  items={[
+    { value: '2', label: 'Formas de iniciar: menu de Novo Jogo ou terminal da Anomalia' },
+    { value: '~6 semanas', label: 'Duração típica de uma execução por tempo limitado' },
+    { value: '5–6', label: 'Fases de marcos por expedição' },
+    { value: '19/07', label: '2026 — fim da Expedição 22, próxima não anunciada' },
+  ]}
+/>
+
+A versão curta:
+
+1. **Rota do menu principal:** aperte Novo Jogo e selecione o espaço de save **Expedição** em vez de Normal, Criativo, Sobrevivência ou Morte Permanente. O jogo constrói um save separado, pula o tutorial e solta você na abertura roteirizada.
+2. **Rota do terminal:** em um save existente já passado da abertura, invoque a **Anomalia Espacial** e use o **Terminal de Expedição** perto da entrada principal para entrar na execução — e para copiar alguns itens úteis do seu save principal.
+3. **Primeiros dez minutos:** abra a aba Expedição no seu diário, leia a lista de marcos e persiga marcos até alcançar o limite da primeira fase.
+
+Para o panorama sistêmico — matemática de fases, limite e pular marcos, regras de transferência — o nosso [guia principal de expedições](/expeditions/expedition-guide) é o mergulho profundo. Esta página é a versão de entrada sem experiência: o que clicar, o que você verá e os erros que custam horas aos estreantes.
+
+## O Que uma Expedição Realmente É
+
+Uma expedição é um modo de jogo sazonal no próprio arquivo de save dedicado. Em vez do loop aberto de sandbox, você percorre uma lista fixa de objetivos chamados marcos, agrupados em fases — normalmente cinco ou seis. Alcance o limite de marcos de uma fase e as recompensas dela desbloqueiam. Quando a janela do evento fecha, tipicamente após cerca de seis semanas, tudo o que você resgatou é seu permanentemente e o save se converte em um save normal.
+
+Para um recém-chegado, estas são as diferenças de um save normal que realmente importam:
+
+| | Save normal | Save de expedição |
+| --- | --- | --- |
+| Arquivo de save | Um dos seus espaços permanentes | Um espaço sazonal separado, criado para a execução |
+| Objetivos | Abertos, você define as metas | Uma lista fixa de marcos em fases, com limites |
+| Limite de tempo | Nenhum | Uma janela limitada com contagem regressiva no terminal |
+| Equipamento inicial | O que você deixou no espaço | Equipamentos curados — todo mundo começa igual |
+| Tutorial | A linha de missões de abertura completa | Pulado — sem tutorial, sem história de Artemis |
+| Depois do fim | Continua para sempre | Vira um save normal; recompensas resgatadas desbloqueiam para a conta |
+
+O motivo pelo qual os jogadores se importam é exclusividade. Expedições distribuem naves estelares, multiferramentas, peças de exocraft, conjuntos de armadura e títulos que não podem ser obtidos no jogo normal — a [lista completa de recompensas](/expeditions/expedition-rewards-list) vai do Vetor Dourado às Pernas Mecânicas do Colosso da Expedição 21, e tudo isso está trancado atrás de saber iniciar, e terminar, uma expedição.
+
+<Callout type="warn" title="Nada está ativo agora — aprenda os passos e espere o sino">
+  Em 18 de agosto de 2026, nenhuma expedição por tempo limitado está ativa. A Expedição 22: The Swarm
+  fechou em 19 de julho de 2026, e a Hello Games não anunciou a próxima execução — a atualização de
+  décimo aniversário Cosmos é o veículo mais provável, mas isso é leitura de padrões, não uma data.
+  Tudo abaixo se aplica no momento em que a Expedição 23 abrir; o nosso
+  [rastreador da Expedição 23](/expeditions/expedition-23) trará a data de início confirmada.
+</Callout>
+
+## Rota 1: Comece pelo Menu Principal (Melhor para Primeira Vez)
+
+Esta é a rota para qualquer pessoa nova em No Man's Sky, ou que não queira carregar um save antigo primeiro — você não precisa de save normal nenhum nem de progresso prévio.
+
+1. **Na tela de título, escolha Novo Jogo.** O seletor de modos aparece: Normal, Criativo, Sobrevivência e Morte Permanente, mais as entradas de expedição.
+2. **Selecione o espaço de Expedição da execução que você quer.** Enquanto uma expedição está ativa, a atual aparece aqui ao lado dos modos de dificuldade — durante a Expedição 22, escolhê-la era tão simples quanto escolher Normal. A mesma tela também lista expedições já lançadas para rejogar ou treinar. Apenas uma expedição roda ativa por vez, mas o menu entrega o acervo.
+3. **Confirme e entre.** O jogo cria o save de expedição separado, arma a lista de marcos e pula a abertura normal — não há tutorial no modo expedição. Você é depositado direto no cenário de abertura roteirizado com equipamentos predefinidos.
+
+Duas tranquilizações. Iniciar uma expedição nunca toca seus outros saves: é um arquivo novo, separado. E se você desistir no meio, nada se perde — recarregue o save de expedição a qualquer momento enquanto a janela estiver aberta.
+
+## Rota 2: Comece pelo Terminal de Expedição na Anomalia Espacial
+
+O segundo ponto de entrada exige um save existente já passado do tutorial de abertura — você precisa estar livre para voar antes de poder usá-lo.
+
+1. **Invoque a Anomalia Espacial** da sua nave e acople.
+2. **Ache o Terminal de Expedição logo dentro da entrada principal**, no nível da praça onde ficam os vendedores. Este terminal é o centro de tudo relacionado a expedições: entrar na execução ativa, revisar a lista de marcos e — o crítico — resgatar recompensas de fase.
+3. **Entre na expedição pelo terminal.** Seu save de expedição é criado e iniciado daqui, separado do save principal com o qual você voou até lá.
+
+A rota do terminal tem uma vantagem real: transferência de itens. O terminal ao lado do de expedições deixa você copiar uma seleção de itens — módulos de melhoria, armas, recursos essenciais — do seu save estabelecido para o save de expedição novinho, suavizando os equipamentos iniciais curados. As regras exatas mudaram entre execuções, então confira o que está sendo oferecido ao iniciar; é por isso que veteranos começam pela Anomalia enquanto estreantes usam o menu.
+
+## Seus Primeiros Dez Minutos: A Abertura Roteirizada
+
+Toda expedição abre com um cenário roteirizado em vez do tutorial padrão de local de queda, e execuções recentes começaram em lugares completamente diferentes. A Expedição 22: The Swarm largou você ao lado de uma nave estelar destroçada e abriu com um teste de personalidade que designava você para uma de três equipes — Royal, Sage ou Weaver —, alimentando uma guerra em escala galáctica. A Expedição 21: Remnant começou no único planeta de salvagem que sediou a execução inteira. Titan, a expedição de mundo aquático, começou debaixo d'água. A constante: equipamentos predefinidos, um marcador na tela sobre o seu primeiro objetivo e uma lista de marcos já contando.
+
+Essa primeira hora é onde surge a pergunta "conserto a nave ou persigo marcos", e a resposta é quase sempre **os dois, na ordem certa**:
+
+1. **Abra a aba Expedição no seu diário antes de se mover.** No menu de pausa, seu diário tem uma aba Expedição listando toda fase e marco. Em The Swarm, reparar os propulsores de decolagem e os motores de pulso era um marco inicial — o reparo que você faria de qualquer jeito conta.
+2. **Siga o marcador na tela pelos beats roteirizados.** Os marcos de abertura são uma sequência guiada — investigar os destroços, fabricar os itens iniciais, reparar a nave — e eles ensinam os controles no caminho. Isto é o tutorial, só vestindo roupas de expedição.
+3. **Repare só o que os marcos pedem.** A nave inicial é uma ferramenta, não uma guarda permanente. Não minere por vinte minutos para melhorar tecnologia que a lista nunca menciona.
+4. **Resgate suas primeiras recompensas antes de sair da área de abertura.** Pagamentos iniciais de marcos incluem recursos e plantas que marcos posteriores consomem — os marcos de abertura de The Swarm alimentaram os objetivos imediatamente seguintes.
+
+Mais uma expectativa: algumas expedições trancam o final atrás de uma barra de progresso comunitária. A última etapa de The Swarm, o marco Chromatic Distortion, desbloqueava só quando toda a base de jogadores enchia um medidor compartilhado — você podia terminar seus marcos pessoais e ainda assim esperar pelo relógio da comunidade. Se sua execução travar num marco que você não consegue completar pessoalmente, provavelmente é por isso.
+
+## Lendo a Interface de Expedição
+
+A interface é enxuta quando você conhece os três lugares onde a informação mora:
+
+- **A aba Expedição no seu diário.** Toda fase, todo marco, seu contador de progresso e o limite da fase atual. É aqui que você planeja — e onde confere se um marco é exigido ou opcional, já que a maioria das fases deixa pular alguns.
+- **O Terminal de Expedição na Anomalia.** A contagem regressiva do evento mora aqui, junto da lista de marcos e — a parte que as pessoas esquecem — do resgate de recompensas. Recompensas não caem sozinhas no seu inventário; você as coleta no terminal.
+- **Marcadores na tela e notificações.** Conclusões de marcos tocam conforme você joga. Um novo ping significa que é hora de pensar em uma visita ao terminal, não num desvio imediato.
+
+A leitura mais importante é o limite da fase. Fases desbloqueiam numa contagem de marcos, não em conclusão de 100 por cento, então toda fase tem objetivos dispensáveis — jogadores novos que tentam completar tudo se exaurem em marcos opcionais. O nosso [guia de conclusão rápida](/expeditions/expedition-fast-completion) cobre o lado de roteirização.
+
+## Resgatando Recompensas e Levando-as ao Seu Save Principal
+
+Esta é a parte com prazo rígido. Recompensas são resgatadas manualmente no Terminal de Expedição — se você nunca visitar, os desbloqueios ficam lá sem resgate, e quando a janela do evento fecha, recompensas não resgatadas somem até uma reprise.
+
+O que se transfere, e como:
+
+| Tipo de recompensa | Exemplos | Como chega aos seus saves principais |
+| --- | --- | --- |
+| Naves, multiferramentas, exocraft | Vetor Dourado, Basilisk Crown, peças do Colosso | Resgate no terminal e recupere de graça com o Companheiro de Síntese de Prata Veloz na Anomalia, em qualquer modo |
+| Cosméticos | Conjuntos de armadura, pôsteres, decalques, títulos, gestos | Mesma rota — resgate no terminal, recupere com o Companheiro |
+| Plantas e melhorias | Desbloqueios de tecnologia, módulos de melhoria | Para a conta inteira depois de resgatados |
+| Moedas e consumíveis | Unidades, nanitas, Prata Veloz, materiais | Não transferem — ficam dentro do save de expedição |
+
+O ritual de transferência: termine a execução (ou as fases que você queria), resgate tudo no terminal, carregue seu save principal, invoque a Anomalia Espacial e fale com o **Companheiro de Síntese de Prata Veloz**. Toda recompensa que você resgatou está no catálogo dele com preço zero — colete sua nave, multiferramenta e conjunto de armadura e saia voando. Isto funciona em todo save, em todo modo, para sempre.
+
+## Erros de Iniciante a Evitar na Primeira Expedição
+
+| Erro | Por que dói | O que fazer |
+| --- | --- | --- |
+| Vender ou descartar os recursos iniciais | Marcos de abertura consomem exatamente esses materiais | Não toque em nada até ler a lista de marcos |
+| Nunca abrir a aba Expedição | Você vagueia como num save normal e vive voltando atrás | Abra nos primeiros dez minutos e planeje por fase |
+| Reparar e melhorar tudo na nave inicial | A nave inicial é um trampolim, não um projeto | Repare o que os marcos exigem e siga em frente |
+| Não resgatar recompensas conforme os marcos completam | Fases posteriores moem sem as melhorias grátis | Resgate no terminal depois de cada lote |
+| Tratar a execução como um save normal | Decoração de base e missões paralelas devoram a janela limitada | Expedições são corridas; o sandbox espera depois |
+| Parar com recompensas não resgatadas perto do prazo | A janela fecha e os desbloqueios não resgatados somem até uma reprise | Resgate tudo cedo e confira cada fase de novo |
+
+O meta-erro por trás dos seis: esquecer o relógio. Um save normal perdoa; uma janela de expedição não.
+
+## Então, Quando Você Pode Realmente Iniciar Uma?
+
+Em 18 de agosto de 2026: nenhuma nova. A Expedição 22: The Swarm rodou de 27 de maio a 19 de julho de 2026, e nada foi anunciado desde então. As próximas oportunidades realistas, em ordem:
+
+1. **A Expedição 23 junto ou depois da atualização Cosmos.** A atualização de décimo aniversário foi anunciada em 9 de agosto de 2026, e expedições novas historicamente chegaram com atualizações grandes — Remnant com o patch Remnant, The Swarm com a versão 6.4. A Hello Games ainda não confirmou expedição para Cosmos. Nossa [página da Expedição 23](/expeditions/expedition-23) rastreia o anúncio.
+2. **Uma reexecução Redux de uma expedição antiga.** A Hello Games periodicamente rejoga expedições passadas em janelas encurtadas — cerca de duas semanas cada — com a mesma estrutura de marcos e recompensas. A temporada de festas de 2025 rodou cinco seguidas, e um bloco parecido no fim de 2026 é a expectativa de trabalho da comunidade. O [calendário de expedições Redux](/expeditions/redux-expeditions-schedule) rastreia toda janela confirmada.
+3. **Uma rejogada pelo terminal, hoje.** Expedições passadas continuam jogáveis pelo Terminal de Expedição e pelo menu de Novo Jogo mesmo sem nada ativo, então você pode treinar o fluxo inteiro do início ao fim numa execução antiga — incluindo The Swarm — agora mesmo. O porém: rejogadas de expedições encerradas não reentregam a trilha de recompensas por tempo limitado; isso precisa de uma janela ativa ou de um Redux.
+
+Essa terceira opção é a melhor preparação: rode uma expedição antiga esta semana e, quando a contagem regressiva da Expedição 23 aparecer, você a iniciará já conhecendo o menu, o terminal, a aba do diário e o ciclo de resgate — sem prazo apertado nenhum.
+
+## Guias Relacionados
+
+- [Guia de Expedições de No Man's Sky: Fases, Recompensas e Táticas de Speedrun](/expeditions/expedition-guide) — o companheiro sistêmico desta página
+- [Expedição 22 (The Swarm): Recompensas e Como Rejogar](/expeditions/expedition-22) — a execução mais recente, marco a marco
+- [Guia de Conclusão Rápida de Expedições](/expeditions/expedition-fast-completion) — roteirização e limite de marcos
+- [Calendário das Expedições Redux](/expeditions/redux-expeditions-schedule) — toda janela de reprise confirmada
+- [Todas as Atualizações de No Man's Sky em 2026](/guides/new-update-2026) — Cosmos e o resto dos patches do ano

@@ -1,0 +1,162 @@
+---
+title: "Guia da Nave Solar de No Man's Sky: Combustível de Decolagem Grátis"
+description: "Guia da nave solar de No Man's Sky: como a recarga de combustível de decolagem funciona, onde achá-las em sistemas piratas e como pegar uma classe S."
+category: "starships"
+image: '../../../../assets/covers/starships/solar-ship-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Naves solares recarregam o combustível de decolagem pelas velas durante o voo. Encontre-as em sistemas piratas, o território delas, e cace a classe S com chance fixa de 5%."
+tags: ["solar-ship", "outlaws-update", "outlaw-systems", "launch-fuel", "starships", "2026"]
+faq:
+  - question: "Onde se encontram naves solares em No Man's Sky?"
+    answer: "Mais confiável em sistemas piratas, os territórios piratas introduzidos junto com as solares na atualização Outlaws. Regras de spawn da comunidade dizem que um espaço de shuttle tem 85% de chance de ser uma solar em um sistema pirata contra 10% em outros lugares, então a maior parte da caça acontece em estações e postos piratas. Solares também aparecem raramente em sistemas comuns."
+  - question: "Como funciona a recarga de combustível de decolagem da nave solar?"
+    answer: "Toda nave solar carrega uma tecnologia única chamada Vesper Sail. Cada decolagem ainda consome combustível de decolagem na taxa padrão, mas a vela faz recarga fotovoltaica dos propulsores de decolagem automaticamente enquanto você voa, então o tanque enche durante a viagem normal. Na prática você para de fabricar combustível de decolagem de vez, porque pulsar entre planetas já repõe o tanque."
+  - question: "Naves solares são melhores que combatentes ou exploradoras?"
+    answer: "Não melhores: com outro formato. Uma solar classe S rola bônus de dano de 60 a 75 por cento, perto das exóticas mas abaixo dos 70 a 90 de um combatente. O bônus de hiperpropulsor perde muito para o de uma exploradora, e o inventário é pequeno. Solares vencem na conveniência: zero manutenção de combustível de decolagem e o melhor motor de pulso de qualquer classe."
+  - question: "Como consigo uma nave solar classe S?"
+    answer: "De três formas. Cace primeiras ondas em sistemas piratas, que testes da comunidade dão 5% fixos de chance de classe S. Pague para subir a classe de uma solar mais barata no Starship Outfitting Terminal. Ou fabrique uma no Starship Fabricator usando um corpo, uma asa, uma vela e um núcleo de reator cuja classe define o resultado, então um núcleo classe S garante uma solar classe S."
+  - question: "Naves solares precisam de luz solar ou de uma estrela por perto para recarregar?"
+    answer: "Não. Apesar do nome, a recarga não depende de luz do dia, proximidade de estrela nem de ficar estacionada em uma superfície. Ela vem de voar. Isso a distingue da melhoria Launch Auto-Charger, que qualquer nave pode instalar e que só goteja carga de volta durante o dia enquanto pousada."
+  - question: "Naves solares aceitam melhorias normais de nave estelar?"
+    answer: "Sim. Diferente das Naves Vivas, solares são naves de tecnologia convencional: aceitam módulos padrão de motor de pulso, armas, escudos e hiperpropulsor, Aumentações de Armazenamento e os módulos classe X suspeitos vendidos por mercadores de estações piratas. Sua única peça exclusiva é a Vesper Sail, que não pode ser comprada nem movida para nenhuma outra classe de nave."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+A nave solar é a especialista em qualidade de vida de No Man's Sky: um casco marcante de asas-vela que apaga discretamente uma das tarefas mais antigas do jogo. Desde os primeiros dias, todo pouso em planeta terminava do mesmo jeito, com você reabastecendo combustível de decolagem ou torcendo o nariz enquanto o tanque rastejava para o vazio. Naves solares, introduzidas na atualização Outlaws de abril de 2022 (versão 3.85), recarregam os próprios propulsores de decolagem pelas velas enquanto voam. Pouse, saia, construa uma base, volte uma semana depois, e a decolagem já está paga.
+
+Esse único traço, somado a atributos competitivos e a uma das silhuetas mais distintas do jogo, mantém as solares em toda conversa do tipo "qual nave devo pilotar" desde então. Este guia cobre como a vela funciona, onde as solares surgem, as formas práticas de conseguir uma classe S, o catálogo de peças e uma comparação honesta contra combatentes e exploradoras.
+
+<StatBar
+  items={[
+    { value: '3.85', label: 'Atualização Outlaws que adicionou as solares, abril de 2022' },
+    { value: '25%', label: 'Combustível de decolagem por decolagem, reposto pela vela' },
+    { value: '85%', label: 'Chance de uma shuttle ser uma solar em sistemas piratas' },
+    { value: '5%', label: 'Chance fixa de classe S em sistemas piratas' },
+  ]}
+/>
+
+<Callout type="tip" title="A recarga vem de voar, não das estrelas">
+  A vela solar recarrega seus propulsores de decolagem enquanto a nave está em voo, não importa
+  a distância até a estrela mais próxima ou se é noite no planeta lá embaixo. Se você pousar em
+  algum lugar e planejar uma longa sessão de saltos pelo mesmo planeta, o tanque com que você
+  chega é o tanque que você mantém — então chegue com ele cheio.
+</Callout>
+
+**Última atualização: 18 de agosto de 2026.** As mecânicas da nave solar estão essencialmente congeladas desde a atualização Outlaws, e nada no ciclo de patches de 2026 as tocou até esta data. Os atributos abaixo seguem a documentação atual da wiki da comunidade; se a [atualização Cosmos](/cosmos-update/cosmos-update-guide) em estágios mudar algo relevante, este guia será revisto junto com o nosso [acompanhamento de atualizações de 2026](/guides/new-update-2026).
+
+## O Que É uma Nave Solar?
+
+Uma nave solar é uma classe de nave estelar de alta tecnologia com velas solares extensíveis que se desdobram automaticamente durante o voo. A Hello Games as lançou na atualização Outlaws com, nas palavras das notas de patch oficiais, "tecnologias únicas para um motor de pulso rápido e eficiente", espalhadas por uma ampla variedade de variações procedurais. Tecnicamente elas podem aparecer em qualquer lugar da galáxia, mas são dramaticamente mais comuns nos sistemas piratas que chegaram na mesma atualização, e esse pareamento não é acidente: solares são o casco assinatura das frotas de fora da lei.
+
+Quatro coisas definem a classe na prática:
+
+- **A Vesper Sail.** Toda solar carrega essa tecnologia exclusiva de motor, que melhora o desempenho de pulso e, o mais importante, permite a recarga automática do sistema de decolagem a partir do voo. Ela não pode ser comprada separadamente nem instalada em nenhuma outra classe.
+- **Um inventário pequeno, sempre.** Solares surgem apenas na faixa de inventário pequeno, aproximadamente 24 a 30 espaços de carga com 13 a 18 de tecnologia, melhorável até o teto de 110 espaços como outras naves modernas. Essa é a única fraqueza real da classe.
+- **Manobrabilidade alta.** A mesma faixa de agilidade de combatentes e exploradoras, o que as torna agradáveis de pilotar e perfeitamente usáveis em um entrevero.
+- **Um ciclo de aquisição com sabor de pirata.** Você vai passar tempo em sistemas piratas, com seus mercados negros, corretores de recompensa e ausência completa de polícia espacial.
+
+Elas são pilotadas, negociadas e desmontadas como qualquer outra nave, o que já as coloca à frente das Naves Vivas em flexibilidade. O nosso [ranque de classes de naves](/starships/best-ships) as coloca como o veículo inteligente do dia a dia em vez de especialista de endgame, e esse enquadramento sobrevive aos números.
+
+## Como a Vela Solar Funciona: Combustível de Decolagem Que Você Nunca Fabrica
+
+Combustível de decolagem é o imposto silencioso de cada pouso em No Man's Sky. Uma decolagem padrão queima **25% do tanque dos propulsores de decolagem** (o dobro em Sobrevivência e Morte Permanente), e até você instalar soluções, reabastecer significa fabricar combustível de decolagem ou alimentar os propulsores com poeira de ferrita e di-hidrogênio, para sempre.
+
+A resposta da nave solar é a **Vesper Sail**, descrita no jogo como uma vela solar de alto desempenho que gera um campo elétrico dentro das próprias velas, deixando a nave construir impulso a partir do vento solar enquanto permite a "recarga fotovoltaica dos sistemas de decolagem da nave estelar". Em termos práticos: decolagens ainda custam combustível na taxa padrão, mas enquanto você voa — seja cruzando a atmosfera, acelerando por um continente ou pulsando entre planetas —, a vela devolve esse combustível. Um salto de pulso entre planetas normalmente basta para chegar com o tanque cheio, e é por isso que donos de solares simplesmente param de pensar em combustível de decolagem dentro de uma hora depois de comprar uma.
+
+A vela carrega mais três bônus, conforme os números documentados da wiki da comunidade: aproximadamente **+80% de eficiência de combustível do motor de pulso**, **+15% de impulso** e **+11% de manobrabilidade**. Essa combinação é o motivo de as solares serem amplamente creditadas como o **melhor desempenho de motor de pulso de qualquer classe de nave**: elas pulsam mais rápido por mais tempo com o mesmo trítio, e fazem isso enquanto se reabastecem.
+
+Seja preciso sobre o que a vela não é. Ela não é o **Launch Auto-Charger**, melhoria que qualquer nave pode instalar e que devolve 4% por minuto no tanque, mas só durante o dia enquanto pousada. Não é a melhoria **Efficient Thrusters**, que corta o custo de decolagem em 20% mas ainda deixa você fabricando combustível. Essas são remendos lentos no problema; a vela apaga o problema. Ela também não é transferível: desmonte uma solar e a Vesper Sail não sai como peça reutilizável para o seu combatente.
+
+## Onde Encontrar Naves Solares: Sistemas Piratas 101
+
+As solares seguem as mesmas regras de spawn ambiente de toda nave NPC: elas pousam em estações espaciais e postos comerciais, e você as compra do piloto. O que muda é a mistura. Regras documentadas pela comunidade afirmam que todo sistema reserva espaços para sete designs de shuttle, e uma nave solar tem **85% de chance de substituir uma shuttle em sistemas piratas contra 10% de chance em todo o resto**. Em um sistema comum, solares são raras o bastante para jogadores as confundirem com exóticas. Em um sistema pirata, elas são a maior parte do que pousa.
+
+Achar sistemas piratas é uma pequena habilidade à parte:
+
+1. **Instale um scanner.** As notas de patch de Outlaws especificam que sistemas piratas são identificados no mapa da galáxia com um scanner de **Conflito ou Economia**, ambos tecnologia padrão de nave estelar. Compre qualquer um deles com um mercador de tecnologia de estação se a sua nave não tiver.
+2. **Leia o mapa.** Sistemas piratas não mostram classificação de economia onde um sistema normal lista faixas de riqueza, com autoridade pirata em vez das facções Gek, Korvax ou Vy'keen. Essa linha de economia faltando é a pista.
+3. **Espere a paisagem mudar.** Estações piratas têm NPCs próprios, um Mestre de Recompensas distribuindo missões de pirataria, comerciantes de mercado negro vendendo contrabando e um mercador de tecnologia especializado em "melhorias suspeitas de pós-venda" (módulos classe X, mais sobre eles abaixo). Não há autoridades Sentinelas patrulhando o espaço.
+4. **Planeje a rota.** Uma peculiaridade documentada das notas de patch: estações piratas não podem receber dobra direta de estações reguladas, e vice-versa. Reserve um salto extra pelo espaço aberto ao cruzar entre território pirata e espaço civilizado.
+
+Depois de acoplar, o ciclo de caça é o mesmo que caçadores de naves rodam há anos. Todo sistema tem um conjunto fixo de designs de nave gerado a partir da semente dele, então um sistema cujas primeiras ondas de pouso incluem designs solares vai continuar produzindo-os em toda visita e recarregamento, enquanto a classe e os atributos de cada nave são re-rolados a cada pouso. Estacione em uma estação ou posto comercial, observe o que pousa e recarregue seu save para embaralhar os dados; a primeira onda após um recarregamento é a eficiente de conferir.
+
+Uma nota para quem gosta de acumular tarefas: sistemas piratas também são o coração do ciclo de contrabando. Contrabando comprado barato em uma estação pirata vende com margem gorda em espaço regulado, e missões de recompensa pagam bem, então uma viagem de caça a solares normalmente se financia. A vida de pirata combina naturalmente com recrutar esquadrões e um cargueiro, ambos cobertos no nosso [guia de cargueiros](/starships/freighter-guide).
+
+## Como Conseguir uma Solar Classe S
+
+Há três rotas legítimas para uma solar de classe máxima, em ordem crescente de esforço.
+
+**Rota 1: cace os 5%.** As chances de classe seguem a economia do sistema, e sistemas piratas têm a própria linha na tabela: aproximadamente **85% classe C, 5% B, 5% A, 5% S**. Essa chance fixa de 5% de classe S é mais que o dobro dos 2% de uma economia rica, o que torna os sistemas piratas discutivelmente o melhor terreno de caça a classe S do jogo, por mais contraintuitivo que pareça. Rode o ciclo descrito acima até uma classe S pousar; com 5%, espere cerca de uma a cada vinte naves, e toda rolagem é independente.
+
+**Rota 2: compre barato e melhore a classe.** Qualquer solar, incluindo uma classe C barata, pode ser elevada pelas classes no **Starship Outfitting Terminal** de uma estação espacial, re-rolando atributos para cima dentro da faixa da classe enquanto expansões de espaços vêm junto por Aumentações de Armazenamento. Você troca unidades pela garantia que seria dados, e como uma solar cujo visual você ama vale mais que uma classe S aleatória que você tolera, muitos caçadores compram o corpo que querem e pagam para torná-lo forte.
+
+**Rota 3: fabrique exatamente o que você quer.** Desde a atualização Orbital, solares podem ser construídas do zero em um **Starship Fabricator**. A receita é agradavelmente literal: um **corpo** solar, uma **asa**, uma **vela** e um **núcleo de reator**. Peças vêm da desmontagem de solares sucateadas, e a classe do núcleo define a classe da nave pronta, então um núcleo classe S comprado de um mercador de tecnologia de naves entrega uma classe S garantida exatamente nas peças e cores que você escolheu. Exóticas, Naves Vivas e interceptadoras Sentinelas não podem ser fabricadas, o que discretamente torna as solares a classe caçável mais personalizável do jogo.
+
+Para a disciplina geral de farming de primeira onda, a etiqueta de recarregamento e a economia de espaços, o nosso [guia de naves classe S](/starships/s-class-ships) cobre o ciclo de forma independente de classe, e o [guia de locais de naves exóticas](/starships/exotic-ship-locations) ensina o pipeline de portais e glifos se você preferir viajar por portal direto para uma solar documentada pela comunidade em vez de comprar sistema por sistema.
+
+## Peças, Cores e a Visão da Cabine
+
+Naves solares são construídas a partir de um catálogo fixo de peças, e conhecê-lo torna a troca coordenada muito mais fácil, porque a comunidade dá nome a cada peça. Segundo o catálogo de peças solares mantido pela comunidade:
+
+| Espaço | Opções |
+| --- | --- |
+| Forma do corpo (6) | Raven, Arachnid (Spider), Marlin, Falcon, Turbofan Fuselage (Grouper), Jackal |
+| Vela (3) | Hex, Crescent, Rectangle |
+| Asa (6) | Razor, Shielded, Double Blade, Starburst, Talon, Grapple |
+| Ponta de asa (5) | Horza, Verta, Tristar, Torpedo, Drill |
+| Cor da vela (8) | Verde, dourado, roxo, ciano, vermelho, branco, laranja, azul |
+
+Cada atributo é independente, as cores de casco vêm em subcamadas pintadas e metálicas, e a forma do corpo define a carapaça inteira, do nariz aos propulsores. O espaço de design é enorme, e é por isso que a comunidade troca solares como endereços de portal de 12 glifos mais uma descrição de peças, a mesma convenção usada para exóticas.
+
+Duas verdades estéticas que valem saber antes de se apaixonar em um posto comercial:
+
+**A animação das velas é o ponto.** As velas se desdobram automaticamente durante o voo e brilham na cor escolhida. A maioria dos donos passa mais tempo em terceira pessoa em uma solar do que em qualquer outra nave, e é fácil entender por quê.
+
+**A visão em primeira pessoa é o calcanhar de aquiles da classe.** As mesmas velas que ficam tão bem vistas de fora ficam parcialmente na linha de visão do piloto dentro da cabine. Elas são semitransparentes, mas tópicos da comunidade descrevem a visão através delas como turva, e alguns pilotos de primeira pessoa acham certas formas de corpo genuinamente obstrutivas. Se você voa exclusivamente em primeira pessoa, inspecione a visão da cabine de uma solar antes de comprar, ou prefira formas de corpo cujas velas ficam mais baixas ou mais afastadas; pilotos de terceira pessoa podem ignorar este parágrafo inteiro.
+
+Desde a chegada da personalização de naves, você também pode desmontar naves por peças e reconstruir a solar dos seus sonhos no fabricador, misturando qualquer corpo, vela, asas e pontas em um só casco, e depois pintando. O catálogo acima é efetivamente o menu.
+
+## Atributos da Nave Solar: Como Ela Se Compara
+
+Os dados atuais da wiki da comunidade colocam a classe em perspectiva ao lado das rivais mais próximas. Todos os números são bônus de tipo classe S; o alcance base do hiperpropulsor começa em 101 anos-luz para todos antes de bônus e melhorias multiplicarem.
+
+| | Solar | Combatente | Exploradora | Exótica |
+| --- | --- | --- | --- | --- |
+| Manobrabilidade | Alta (387,5–445) | Muito alta (387,5–445) | Alta (387,5–445) | Alta (387,5–445) |
+| Bônus de dano classe S | +60–75% | +70–90% | Sem bônus | +50–75% |
+| Bônus de escudo classe S | +23–50% | +24–38% | +30–40% | +70–90% |
+| Bônus de hiperpropulsor classe S | +38–50% | +35–45% | +90–120% | +75–95% |
+| Custo de decolagem por decolagem | 25%, autorreposto | 25% | 12,5% | 25% |
+| Inventário | Só pequeno (24–30 de carga) | Pequeno a grande | Pequeno a grande | Só pequeno (24–30 de carga) |
+
+Lida como combatente: uma solar abre mão de um pouco de dano no teto em troca de nunca tocar combustível de decolagem e pulsar significativamente mais barato. Lida como exploradora: sem competição no alcance, porque o bônus de hiperpropulsor de uma exploradora é o dobro ou o triplo do de uma solar, e exploradoras ainda decolam com metade do combustível. Lida como exótica: a exótica vence em escudos e alcance de dobra por margens amplas, mas não pode ser fabricada sob encomenda, então a solar é o troféu de quem personaliza.
+
+O veredito do nosso [ranque de melhores naves](/starships/best-ships) sobrevive aos números: solares são máquinas de atributos competitivas-mas-não-excepcionais cujos verdadeiros pontos de venda são comportamentais. Zero combustível de decolagem, o melhor motor de pulso do jogo, agilidade alta e um visual que ninguém mais tem.
+
+## Equipando uma Nave Solar
+
+As solares são naves de tecnologia convencional, então o equipamento segue o manual padrão. Compre módulos de melhoria classe S de mercadores de tecnologia de estação para o motor de pulso, armas, escudos e hiperpropulsor; mantenha-os adjacentes aos sistemas-mãe nos blocos dois-por-dois já familiares para o bônus de adjacência; e empilhe Aumentações de Armazenamento rumo ao teto de 110 espaços de carga.
+
+Uma particularidade pirata: mercadores de tecnologia de estações piratas vendem **módulos classe X "suspeitos"**, que rolam entre o brilhante e o terrível. São baratos, amigáveis para quem gosta de apostar e o par temático perfeito para a nave, então espalhe alguns e fique com os vencedores. Módulos padrão de estações reguladas continuam a espinha dorsal confiável.
+
+Por fim, lembre-se de que as solares são ótimas para desmonte. Uma sessão de caça produz naves excedentes cujos corpos, asas e velas alimentam construções futuras, então acumule as peças que combinam com o seu design-alvo mesmo quando a nave que as veste é uma classe C que você jamais pilotaria.
+
+## A Nave Solar Vale a Pena?
+
+Se você joga do jeito que a maioria dos jogadores realmente joga — saltando de planeta em planeta, construindo bases, mergulhando em combate ocasionalmente e explorando longa distância raramente —, então sim, enfaticamente. A economia de combustível de decolagem é um imposto pequeno que se compõe ao longo de centenas de pousos, e a solar é a única classe que o abole permanecendo uma nave totalmente convencional e totalmente melhorável. Caçadores comparando alternativas gratuitas também deveriam olhar [interceptadoras Sentinelas](/starships/sentinel-interceptor-guide), que custam apenas uma luta em um planeta dissonante, mas uma interceptadora não pode ser fabricada sob especificação, e ela não paga a sua conta de combustível de decolagem.
+
+Uma nota prospectiva, claramente rotulada como raciocínio e não como fato confirmado: o voo interestelar livre anunciado para a atualização Cosmos tornaria cruzeiros longos entre sistemas uma atividade real, e uma nave que reabastece os próprios propulsores de decolagem simplesmente voando é uma beneficiária óbvia. Acompanhe o [guia de Cosmos](/cosmos-update/cosmos-update-guide) conforme as notas de patch em estágios chegarem.
+
+Compre a forma de corpo que você ama na classe que puder pagar, melhore ou fabrique seu caminho até a classe S, e deixe cada pouso depois disso ser problema de outra pessoa.
+
+## Guias Relacionados
+
+- [As Melhores Naves de No Man's Sky: Todos os Tipos Ranqueados](/starships/best-ships)
+- [Naves Classe S de No Man's Sky: Como Caçar as Melhores Rolagens](/starships/s-class-ships)
+- [Locais de Naves Exóticas em No Man's Sky: Portais, Glifos, Coordenadas](/starships/exotic-ship-locations)
+- [Guia da Interceptadora Sentinela: Consiga uma Nave Classe S Grátis](/starships/sentinel-interceptor-guide)
+- [Guia de Cargueiros: Bases, Frotas e Expedições de Fragata](/starships/freighter-guide)
+- [Atualização Cosmos de No Man's Sky: O Guia Completo do Aniversário](/cosmos-update/cosmos-update-guide)
+- [Todas as Atualizações de No Man's Sky em 2026](/guides/new-update-2026)
