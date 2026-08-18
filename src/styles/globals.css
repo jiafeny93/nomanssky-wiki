@@ -105,6 +105,29 @@
     @apply rounded-lg border bg-card text-card-foreground transition hover:border-nav/50 hover:shadow-md;
   }
 
+  /* Category chip — colored per category via the --chip-h custom property
+     (set inline from lib/categoryTheme). Theme-aware: darker text on light
+     surfaces, brighter on dark. */
+  .cat-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    padding: 0.125rem 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: hsl(var(--chip-h, 15) 65% 36%);
+    background-color: hsl(var(--chip-h, 15) 65% 45% / 0.1);
+    border: 1px solid hsl(var(--chip-h, 15) 65% 45% / 0.25);
+  }
+  .dark .cat-chip {
+    color: hsl(var(--chip-h, 15) 80% 68%);
+    background-color: hsl(var(--chip-h, 15) 75% 55% / 0.14);
+    border-color: hsl(var(--chip-h, 15) 75% 60% / 0.3);
+  }
+
   /* Unified section vertical rhythm — use on all homepage sections. */
   .section {
     @apply mx-auto max-w-7xl px-4 py-12 md:py-16;
@@ -118,6 +141,26 @@
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Ambient star twinkle for hero/cover art — opacity-only so it composites on
+   the GPU; disabled entirely under prefers-reduced-motion. */
+@keyframes stars-twinkle {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.stars-twinkle {
+  animation: stars-twinkle 4.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .stars-twinkle {
+    animation: none;
   }
 }
 

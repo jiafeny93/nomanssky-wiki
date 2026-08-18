@@ -1,0 +1,107 @@
+---
+/**
+ * CategoryArt — generative cosmic cover art.
+ *
+ * An original, copyright-safe space scene per article: seeded star field,
+ * category-tinted nebula, and a ringed planet. Everything is CSS gradients
+ * computed at BUILD time (deterministic per category+slug) — zero runtime JS,
+ * zero image assets, ~1KB inline.
+ *
+ * Used by: ListPage cards (when the entry has no frontmatter image) and the
+ * article header banner. Pass the entry slug so sibling cards differ.
+ */
+import { Icon } from 'astro-icon/components';
+import { NAV_BY_KEY } from '~/config/navigation';
+import { categoryHue, seededRandom, starField } from '~/lib/categoryTheme';
+
+interface Props {
+  category: string;
+  /** Varies the scene per article — pass the entry slug. */
+  slug?: string;
+  /** Container class — keep a height or aspect ratio on it. */
+  class?: string;
+  /** Show the small category badge (icon + label) bottom-left. */
+  badge?: string;
+  /** Whether the art may show its subtle star twinkle (decorative only). */
+  animate?: boolean;
+}
+
+const {
+  category,
+  slug = category,
+  class: className = 'aspect-video w-full',
+  badge,
+  animate = true,
+} = Astro.props;
+
+const hue = categoryHue(category);
+const icon = NAV_BY_KEY[category]?.icon ?? 'lucide:rocket';
+
+// Seeded placement — the same slug always renders the same scene.
+const rnd = seededRandom(`${category}/${slug}`);
+const stars = starField(`${category}/${slug}/stars`);
+
+// Planet sits in the right 60% so left-aligned text on top stays legible.
+const planetX = 56 + Math.floor(rnd() * 22); // 56–78 %
+const planetY = 16 + Math.floor(rnd() * 28); // 16–44 %
+const planetSize = 24 + Math.floor(rnd() * 16); // 24–40 % of container width
+const planetHue = hue + Math.floor(rnd() * 24) - 12;
+const ringTilt = -26 + Math.floor(rnd() * 22); // -26…-4 deg
+
+// Nebula: two soft category-tinted glows over the deep-space base.
+const nebula = [
+  `radial-gradient(60% 80% at ${12 + Math.floor(rnd() * 20)}% ${68 + Math.floor(rnd() * 22)}%, hsl(${hue} 70% 45% / 0.22), transparent 70%)`,
+  `radial-gradient(50% 60% at ${70 + Math.floor(rnd() * 20)}% ${14 + Math.floor(rnd() * 18)}%, hsl(${(hue + 40) % 360} 70% 50% / 0.15), transparent 70%)`,
+].join(', ');
+---
+
+<div
+  class={`relative overflow-hidden bg-[hsl(231_45%_6%)] ${className}`}
+  role="img"
+  aria-label={badge ? `${badge} cover art` : `${category} cover art`}
+  style={`background-image:${nebula};`}
+>
+  {/* Star layer — own element so it can twinkle independently. */}
+  <div
+    aria-hidden="true"
+    class={`absolute inset-0${animate ? ' stars-twinkle' : ''}`}
+    style={`background-image:${stars.image};animation-duration:${stars.duration};`}
+  >
+  </div>
+
+  {/* Ringed planet — back ring, sphere, front ring arc (clip before rotate
+      keeps the arc hugging the planet's lower half after the tilt). */}
+  <div
+    aria-hidden="true"
+    class="absolute"
+    style={`left:${planetX}%;top:${planetY}%;width:${planetSize}%;aspect-ratio:1/1;`}
+  >
+    <div
+      class="absolute left-1/2 top-1/2 rounded-[50%] border-2"
+      style={`width:172%;height:46%;transform:translate(-50%,-50%) rotate(${ringTilt}deg);border-color:hsl(${planetHue} 60% 62% / 0.38);`
+      }
+    >
+    </div>
+    <div
+      class="absolute inset-0 rounded-full"
+      style={`background:radial-gradient(circle at 32% 30%, hsl(${planetHue} 65% 64%), hsl(${planetHue} 60% 38%) 55%, hsl(${planetHue} 55% 14%) 100%);box-shadow:0 0 28px hsl(${planetHue} 70% 50% / 0.35);`
+      }
+    >
+    </div>
+    <div
+      class="absolute left-1/2 top-1/2 rounded-[50%] border-2"
+      style={`width:172%;height:46%;transform:translate(-50%,-50%) rotate(${ringTilt}deg);border-color:hsl(${planetHue} 60% 68% / 0.6);clip-path:polygon(-20% 50%, 120% 50%, 120% 130%, -20% 130%);`
+      }
+    >
+    </div>
+  </div>
+
+  {badge && (
+    <span
+      class="absolute bottom-2 left-2.5 inline-flex items-center gap-1.5 rounded-full bg-black/40 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white/85 backdrop-blur-sm"
+    >
+      <Icon name={icon} class="h-3 w-3" style={`color:hsl(${hue} 85% 70%);`} />
+      {badge}
+    </span>
+  )}
+</div>

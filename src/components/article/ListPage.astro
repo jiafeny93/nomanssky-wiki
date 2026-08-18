@@ -8,6 +8,7 @@
 import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import ArticleCover from '~/components/article/ArticleCover.astro';
+import CategoryArt from '~/components/article/CategoryArt.astro';
 import { NAVIGATION_CONFIG } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
@@ -85,17 +86,32 @@ const jsonLd = [
           {entries.map((entry) => {
             const slug = parseEntryId(entry.id)?.slug ?? '';
             return (
-              <a href={detailPath(category, slug, locale)} class="card p-5">
-                {entry.data.image && <ArticleCover src={entry.data.image} />}
-                <h2 class="font-semibold leading-snug">{entry.data.title}</h2>
-                <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                  {entry.data.description}
-                </p>
-                <p class="mt-3 text-xs text-muted-foreground">
-                  {entry.data.lastModified
-                    ? `${shared.lastUpdated}: ${entry.data.lastModified.toLocaleDateString(locale)}`
-                    : `${shared.publishedOn}: ${entry.data.date.toLocaleDateString(locale)}`}
-                </p>
+              <a href={detailPath(category, slug, locale)} class="card group overflow-hidden">
+                {/* Frontmatter image wins; otherwise generative cosmic art
+                    (unique per slug) so every card carries a visual. */}
+                {entry.data.image ? (
+                  <ArticleCover
+                    src={entry.data.image}
+                    class="aspect-video w-full rounded-none object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                ) : (
+                  <CategoryArt
+                    category={category}
+                    slug={slug}
+                    class="aspect-video w-full transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                )}
+                <div class="p-5">
+                  <h2 class="font-semibold leading-snug group-hover:text-nav">{entry.data.title}</h2>
+                  <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">
+                    {entry.data.description}
+                  </p>
+                  <p class="mt-3 text-xs text-muted-foreground">
+                    {entry.data.lastModified
+                      ? `${shared.lastUpdated}: ${entry.data.lastModified.toLocaleDateString(locale)}`
+                      : `${shared.publishedOn}: ${entry.data.date.toLocaleDateString(locale)}`}
+                  </p>
+                </div>
               </a>
             );
           })}

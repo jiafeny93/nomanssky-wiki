@@ -23,10 +23,11 @@ import VideoSection from '~/components/home/VideoSection.astro';
 import QuickStart from '~/components/home/QuickStart.astro';
 import ExploreModules from '~/components/home/ExploreModules.astro';
 import { site } from '~/config/site';
-import { NAVIGATION_CONFIG } from '~/config/navigation';
+import { NAVIGATION_CONFIG, NAV_BY_KEY } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getRecentEntries, parseEntryId } from '~/lib/content';
+import { categoryHue, starField } from '~/lib/categoryTheme';
 import { localizePath, listPath, detailPath } from '~/lib/url';
 
 interface Props {
@@ -39,8 +40,14 @@ const { locale, jsonLd = [], alternates = [] } = Astro.props;
 const ui = getUi(locale);
 const home = ui.home as any;
 const shared = ui.shared as unknown as Record<string, any>;
+const navLabels = ui.nav as Record<string, string>;
 
 const recent = await getRecentEntries(locale, 6);
+
+// Hero star layers — two independent fields twinkling out of phase so the
+// sky reads as having depth. Fixed seeds = stable HTML across builds.
+const heroStarsA = starField('hero/a', 34);
+const heroStarsB = starField('hero/b', 22);
 
 const meta = home.meta ?? { title: site.name, description: site.description };
 const hero = home.hero ?? {};
@@ -59,6 +66,12 @@ function trendingHref(link: QuickLink): string | null {
 function trendingLabel(link: QuickLink): string {
   return typeof link === 'string' ? link : link.label;
 }
+
+// CTA hrefs from locale JSON may be internal paths or absolute URLs —
+// only internal paths get the locale prefix.
+function linkHref(href: string): string {
+  return href.startsWith('/') ? localizePath(href, locale) : href;
+}
 ---
 
 <LocaleLayout
@@ -68,48 +81,112 @@ function trendingLabel(link: QuickLink): string {
   alternates={alternates}
   jsonLd={jsonLd}
 >
-  {/* ─────────────────────────────── Hero ─────────────────────────────── */}
-  <section class="relative flex min-h-[52vh] items-center overflow-hidden border-b border-border md:min-h-[68vh]">
-    {/* Subtle theme-color gradient backdrop — gives the hero a visual anchor
-        without requiring an image asset. Sits behind the watermark. */}
+  {/* ─────────────────────────────── Hero ───────────────────────────────
+      Deep-space scene, intentionally dark in BOTH themes — the hero IS the
+      game's setting, so it reads as a poster block above the themed page.
+      Every element is original CSS geometry (gradients + borders): no image
+      assets, no runtime JS. */}
+  <section class="relative flex min-h-[60vh] items-center overflow-hidden border-b border-border bg-[hsl(231_48%_6%)] text-white md:min-h-[72vh]">
+    {/* Base: nebula glows over a deep-space gradient. */}
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-br from-nav/8 via-transparent to-transparent"
-    />
-    {/* Faint game-name watermark — pure CSS, no image asset required. */}
-    <span
-      aria-hidden="true"
-      class="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center text-[18vw] font-black leading-none text-foreground/[0.03] md:text-[14vw]"
+      class="pointer-events-none absolute inset-0"
+      style="background:
+        radial-gradient(110% 85% at 80% 10%, hsl(265 60% 32% / 0.38), transparent 62%),
+        radial-gradient(90% 70% at 8% 92%, hsl(15 81% 45% / 0.2), transparent 65%),
+        linear-gradient(180deg, hsl(232 50% 9%), hsl(231 48% 5%));"
     >
-      {site.game.name}
-    </span>
+    </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-4 py-16 md:py-24">
-      <p class="text-sm font-semibold uppercase tracking-wider text-foreground">{hero.badge}</p>
+    {/* Two star fields, twinkling out of phase. */}
+    <div
+      aria-hidden="true"
+      class="stars-twinkle pointer-events-none absolute inset-0"
+      style={`background-image:${heroStarsA.image};animation-duration:${heroStarsA.duration};`}
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="stars-twinkle pointer-events-none absolute inset-0"
+      style={`background-image:${heroStarsB.image};animation-duration:${heroStarsB.duration};animation-delay:1.3s;`}
+    >
+    </div>
+
+    {/* Ringed planet — brand-orange gas giant with a small moon. Hidden on
+        the narrowest viewports where the type needs the full width. */}
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -right-[7%] top-[9%] hidden w-[36vw] min-w-[280px] max-w-[520px] sm:block"
+      style="aspect-ratio:1/1;"
+    >
+      <div
+        class="absolute left-1/2 top-1/2 rounded-[50%] border-2"
+        style="width:172%;height:46%;transform:translate(-50%,-50%) rotate(-16deg);border-color:hsl(25 65% 62% / 0.38);"
+      >
+      </div>
+      <div
+        class="absolute inset-0 rounded-full"
+        style="background:radial-gradient(circle at 30% 28%, hsl(28 80% 64%), hsl(18 72% 44%) 52%, hsl(222 50% 12%) 98%);
+          box-shadow:0 0 90px hsl(15 81% 50% / 0.4), inset -18px -14px 60px hsl(222 55% 8% / 0.55);"
+      >
+      </div>
+      <div
+        class="absolute left-1/2 top-1/2 rounded-[50%] border-2"
+        style="width:172%;height:46%;transform:translate(-50%,-50%) rotate(-16deg);border-color:hsl(25 70% 68% / 0.6);clip-path:polygon(-20% 50%, 120% 50%, 120% 130%, -20% 130%);"
+      >
+      </div>
+      <div
+        class="absolute rounded-full"
+        style="left:4%;top:76%;width:9%;aspect-ratio:1/1;
+          background:radial-gradient(circle at 35% 32%, hsl(210 30% 88%), hsl(215 25% 60%) 60%, hsl(220 25% 30%));
+          box-shadow:0 0 18px hsl(210 40% 70% / 0.35);"
+      >
+      </div>
+    </div>
+
+    {/* Horizon glow anchoring the section to the content below. */}
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(15_81%_45%/0.12)] to-transparent"
+    >
+    </div>
+
+    <div class="relative mx-auto w-full max-w-7xl px-4 py-20 md:py-28">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm"
+      >
+        <span class="h-1.5 w-1.5 rounded-full bg-[hsl(15_90%_60%)] shadow-[0_0_8px_hsl(15_90%_60%)]"></span>
+        {hero.badge}
+      </p>
       <h1
-        class="mt-3 max-w-3xl bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
+        class="mt-4 max-w-3xl bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-4xl font-black tracking-tight text-transparent drop-shadow-[0_2px_12px_hsl(231_50%_5%/0.8)] sm:text-5xl md:text-6xl lg:text-7xl"
       >
         {hero.title}
       </h1>
-      <p class="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">{hero.description}</p>
+      <p class="mt-5 max-w-xl text-base text-white/75 md:text-lg">{hero.description}</p>
       <div class="mt-8 flex flex-wrap gap-3">
         {
           hero.ctaPrimary && (
             <a
-              href={site.social.official}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={linkHref(typeof hero.ctaPrimary === 'string' ? '/cosmos-update' : hero.ctaPrimary.href)}
               class="btn-primary"
             >
-              <Icon name="lucide:play" class="mr-2 h-4 w-4" />
-              {hero.ctaPrimary}
+              <Icon name="lucide:rocket" class="mr-2 h-4 w-4" />
+              {typeof hero.ctaPrimary === 'string' ? hero.ctaPrimary : hero.ctaPrimary.label}
             </a>
           )
         }
         {
           hero.ctaSecondary && (
-            <a href={listPath(NAVIGATION_CONFIG[1]?.key ?? 'guides', locale)} class="btn-outline">
-              {hero.ctaSecondary}
+            <a
+              href={linkHref(
+                typeof hero.ctaSecondary === 'string'
+                  ? listPath(NAVIGATION_CONFIG[1]?.key ?? 'guides', locale)
+                  : hero.ctaSecondary.href,
+              )}
+              class="inline-flex items-center justify-center rounded-md border border-white/25 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/15"
+            >
+              {typeof hero.ctaSecondary === 'string' ? hero.ctaSecondary : hero.ctaSecondary.label}
             </a>
           )
         }
@@ -149,10 +226,17 @@ function trendingLabel(link: QuickLink): string {
                 if (!parsed) return null;
                 return (
                   <a href={detailPath(parsed.category, parsed.slug, locale)} class="card p-4">
-                    <p class="text-xs uppercase tracking-wider text-muted-foreground">
-                      {parsed.category}
-                    </p>
-                    <h3 class="mt-1 font-semibold leading-snug">{entry.data.title}</h3>
+                    <span
+                      class="cat-chip"
+                      style={`--chip-h:${categoryHue(parsed.category)};`}
+                    >
+                      <Icon
+                        name={NAV_BY_KEY[parsed.category]?.icon ?? 'lucide:book-open'}
+                        class="h-3 w-3"
+                      />
+                      {navLabels[parsed.category] ?? parsed.category}
+                    </span>
+                    <h3 class="mt-2 font-semibold leading-snug">{entry.data.title}</h3>
                     <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">
                       {entry.data.description}
                     </p>
@@ -220,21 +304,17 @@ function trendingLabel(link: QuickLink): string {
           <p class="mx-auto mt-2 max-w-xl text-muted-foreground">{closingCta.description}</p>
           <div class="mt-6 flex justify-center gap-3">
             <a
-              href={site.social.official}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={linkHref(typeof closingCta.primary === 'string' ? '/guides' : closingCta.primary.href)}
               class="btn-primary"
             >
-              {closingCta.primary}
+              {typeof closingCta.primary === 'string' ? closingCta.primary : closingCta.primary.label}
             </a>
-            {closingCta.secondary && site.social.discord && (
+            {closingCta.secondary && (
               <a
-                href={site.social.discord}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={linkHref(typeof closingCta.secondary === 'string' ? '/guides' : closingCta.secondary.href)}
                 class="btn-outline"
               >
-                {closingCta.secondary}
+                {typeof closingCta.secondary === 'string' ? closingCta.secondary : closingCta.secondary.label}
               </a>
             )}
           </div>
