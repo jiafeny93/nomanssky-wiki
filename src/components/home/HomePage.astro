@@ -21,12 +21,13 @@ import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import VideoSection from '~/components/home/VideoSection.astro';
 import QuickStart from '~/components/home/QuickStart.astro';
+import ExpeditionStatus from '~/components/home/ExpeditionStatus.astro';
 import ExploreModules from '~/components/home/ExploreModules.astro';
 import { site } from '~/config/site';
 import { NAVIGATION_CONFIG, NAV_BY_KEY } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
-import { getRecentEntries, parseEntryId } from '~/lib/content';
+import { getRecentEntries, parseEntryId, getAllEntriesByCategory } from '~/lib/content';
 import { categoryHue, starField } from '~/lib/categoryTheme';
 import { localizePath, listPath, detailPath } from '~/lib/url';
 
@@ -44,6 +45,13 @@ const navLabels = ui.nav as Record<string, string>;
 
 const recent = await getRecentEntries(locale, 6);
 
+// Total published guides across all categories — feeds the hero stats bar
+// ("value": "dynamic" slot), so the number grows with the wiki automatically.
+const perCategoryCounts = await Promise.all(
+  NAVIGATION_CONFIG.map((n) => getAllEntriesByCategory(n.key).then((es) => es.length)),
+);
+const totalGuides = perCategoryCounts.reduce((a, b) => a + b, 0);
+
 // Hero star layers — two independent fields twinkling out of phase so the
 // sky reads as having depth. Fixed seeds = stable HTML across builds.
 const heroStarsA = starField('hero/a', 34);
@@ -52,6 +60,7 @@ const heroStarsB = starField('hero/b', 22);
 const meta = home.meta ?? { title: site.name, description: site.description };
 const hero = home.hero ?? {};
 const updates = home.updates ?? { title: 'Recent Updates' };
+const expeditionStatus = home.expeditionStatus ?? {};
 const start = home.start ?? { cards: [] };
 const popular = home.popular ?? { title: 'Trending Now', quickLinks: [] };
 const explore = home.explore ?? { modules: [] };
@@ -86,7 +95,9 @@ function linkHref(href: string): string {
       game's setting, so it reads as a poster block above the themed page.
       Every element is original CSS geometry (gradients + borders): no image
       assets, no runtime JS. */}
-  <section class="relative flex min-h-[60vh] items-center overflow-hidden border-b border-border bg-[hsl(231_48%_6%)] text-white md:min-h-[72vh]">
+  <section
+    class="relative flex min-h-[60vh] flex-col overflow-hidden border-b border-border bg-[hsl(231_48%_6%)] text-white md:min-h-[72vh]"
+  >
     {/* Base: nebula glows over a deep-space gradient. */}
     <div
       aria-hidden="true"
@@ -151,7 +162,8 @@ function linkHref(href: string): string {
     >
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-4 py-20 md:py-28">
+    <div class="relative flex flex-1 items-center">
+      <div class="mx-auto w-full max-w-7xl px-4 py-16 md:py-24">
       <p
         class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm"
       >
@@ -191,8 +203,29 @@ function linkHref(href: string): string {
           )
         }
       </div>
-    </div>
-  </section>
+      </div>
+
+      {/* Stats bar — big-number facts anchoring the hero's bottom edge.
+          The "dynamic" slot shows the live guide count. */}
+      {
+        hero.stats?.length > 0 && (
+          <div class="relative border-t border-white/10 bg-black/25">
+            <dl class="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 gap-y-5 px-4 py-6 sm:grid-cols-4 md:py-7">
+              {hero.stats.map((stat: { value: string; label: string }) => (
+                <div>
+                  <dt class="text-[11px] font-semibold uppercase tracking-wider text-white/50">
+                    {stat.label}
+                  </dt>
+                  <dd class="mt-1 text-2xl font-black tracking-tight text-white md:text-3xl">
+                    {stat.value === 'dynamic' ? totalGuides : stat.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )
+      }
+    </section>
 
   {/* Trailer — only renders when a videoId is configured. */}
   {hero.videoId && <VideoSection videoId={hero.videoId} title={`${site.game.name} trailer`} />}
@@ -203,6 +236,15 @@ function linkHref(href: string): string {
     badge={start.badge}
     title={start.title}
     cards={start.cards}
+  />
+
+  {/* ─────────────────────── Expedition status ────────────────────────── */}
+  <ExpeditionStatus
+    locale={locale}
+    badge={expeditionStatus.badge}
+    title={expeditionStatus.title}
+    detail={expeditionStatus.detail}
+    cta={expeditionStatus.cta}
   />
 
   {/* ───────────────────── Recent Updates + Trending ───────────────────── */}

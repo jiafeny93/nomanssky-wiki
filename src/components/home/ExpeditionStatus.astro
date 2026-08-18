@@ -1,0 +1,67 @@
+---
+/**
+ * ExpeditionStatus — one-line live-status strip for the homepage.
+ *
+ * Expeditions are the site's most time-sensitive content, but the data
+ * (Hello Games announcements) has no feed — so this renders the verified
+ * editorial state from locale JSON: absolute dates only, never relative
+ * "X days ago" counts (they go stale on a static site). When a new run
+ * is announced, editing the JSON flips the strip.
+ *
+ * Amber pulse reads as "standby" — active-but-waiting, matching the
+ * between-expeditions reality rather than faking urgency.
+ */
+import { Icon } from 'astro-icon/components';
+import { type Locale } from '~/i18n/routing';
+import { localizePath } from '~/lib/url';
+
+interface Props {
+  locale: Locale;
+  badge?: string;
+  title?: string;
+  detail?: string;
+  cta?: { label: string; href: string };
+}
+
+const { locale, badge, title, detail, cta } = Astro.props;
+---
+
+{
+  (title || detail) && (
+    <section class="section border-t border-border" aria-label={badge ?? 'Expedition status'}>
+      <div class="flex flex-col gap-4 rounded-xl border bg-card p-5 md:flex-row md:items-center md:justify-between md:p-6">
+        <div class="flex items-start gap-4">
+          {/* Amber standby pulse */}
+          <span class="relative mt-1 flex h-3 w-3 shrink-0">
+            <span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+              style="background-color:hsl(38 92% 55%);"
+            />
+            <span
+              class="relative inline-flex h-3 w-3 rounded-full"
+              style="background-color:hsl(38 92% 55%);"
+            />
+          </span>
+          <div>
+            {badge && (
+              <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {badge}
+              </p>
+            )}
+            {title && <h2 class="mt-0.5 text-lg font-bold leading-snug">{title}</h2>}
+            {detail && <p class="mt-1 max-w-2xl text-sm text-muted-foreground">{detail}</p>}
+          </div>
+        </div>
+        {cta && (
+          <a
+            href={localizePath(cta.href, locale)}
+            class="inline-flex shrink-0 items-center gap-1.5 rounded-md border px-4 py-2 text-sm font-medium transition hover:border-nav/60 hover:text-nav"
+          >
+            {cta.label}
+            <Icon name="lucide:arrow-right" class="h-3.5 w-3.5" />
+          </a>
+        )}
+      </div>
+    </section>
+  )
+}

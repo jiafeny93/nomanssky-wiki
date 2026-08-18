@@ -19,8 +19,25 @@ faq:
   - question: "Is a Living Ship better than a normal S-class ship?"
     answer: "Different more than strictly better. You get guaranteed S-class stats, warps to red, green, and blue systems without special drives, and cheap recharge materials, but only two weapon types, no scrapping, and a slower upgrade grind through Psychonic Eggs. Most players keep one as a dedicated explorer alongside a fighter."
 ---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
 
 The Living Ship is No Man's Sky's organic starship: a creature that looks like a cross between a whale, an insect, and a warp-capable hull, grown from an egg instead of bought from a pilot. It arrived in the February 2020 Living Ship update and has stayed one of the game's most coveted trophies ever since, partly because it cannot simply be purchased, and partly because the quest to hatch one is deliberately slow. The whole chain is gated behind real-time timers, so the moment you decide you want one is the moment you should start.
+
+<StatBar
+  items={[
+    { value: '4–6 days', label: 'Real-time span of the Starbirth quest' },
+    { value: '18–26 h', label: 'Per-organ maturation timers' },
+    { value: '36+30', label: 'Cargo + tech slots at hatch' },
+    { value: 'Always S', label: 'Cannot roll C, B, or A class' },
+  ]}
+/>
+
+<Callout type="tip" title="Start the timers before you need the ship">
+  The organ maturation timers follow the real clock, not hours played — organs keep growing
+  while the game is closed. If you want a Living Ship for weekend flying, start the quest at
+  the beginning of the week and let the timers run while you do other things.
+</Callout>
 
 **Last updated: August 17, 2026.** The Starbirth questline has been essentially frozen for years, and nothing in the 2025 updates or the staged Cosmos rollout has changed it as of this writing. The steps, costs, and timers below reflect current community documentation; if a future patch touches the quest, this guide will be revised alongside our [2026 update tracker](/guides/new-update-2026).
 

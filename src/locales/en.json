@@ -136,6 +136,15 @@
       "badge": "Fresh",
       "title": "Recent updates"
     },
+    "expeditionStatus": {
+      "badge": "Expedition status",
+      "title": "No limited-time expedition is running",
+      "detail": "Expedition 22 (The Swarm) ended July 19, 2026. Based on Hello Games' pattern, Redux re-runs should return from late October — nothing announced yet, and this page updates the day one is.",
+      "cta": {
+        "label": "Expedition guide",
+        "href": "/expeditions"
+      }
+    },
     "popular": {
       "badge": "Popular",
       "title": "Most read",
@@ -182,7 +191,25 @@
         "label": "All guides",
         "href": "/guides"
       },
-      "videoId": "c-KoLySxccY"
+      "videoId": "c-KoLySxccY",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Years of free updates"
+        },
+        {
+          "value": "40+",
+          "label": "Major updates shipped"
+        },
+        {
+          "value": "18Q",
+          "label": "Planets to explore"
+        },
+        {
+          "value": "dynamic",
+          "label": "Wiki guides & counting"
+        }
+      ]
     },
     "start": {
       "badge": "Quick start",

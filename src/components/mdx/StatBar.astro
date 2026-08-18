@@ -1,0 +1,40 @@
+---
+/**
+ * StatBar — a row of key numbers ("2% S-class chance · 38 slots · …").
+ *
+ * Game guides live or die by scannable numbers; pulling the 3-5 facts a
+ * reader actually wants out of prose and into one strip is the highest
+ * signal-per-pixel element a wiki page can have. Companion to Callout:
+ * Callout carries caveats, StatBar carries data.
+ *
+ * Zero JS. Import inside an MDX article:
+ *
+ *   import StatBar from '~/components/mdx/StatBar.astro';
+ *   <StatBar items={[{ value: '2%', label: 'S-class chance' }]} />
+ */
+interface Item {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <div class="not-prose my-6 grid grid-cols-2 gap-px overflow-hidden rounded-xl border bg-border sm:grid-cols-4">
+      {items.map((item) => (
+        <div class="bg-card p-4 text-center">
+          <div class="text-2xl font-black tracking-tight text-nav">{item.value}</div>
+          <div class="mt-1 text-xs font-medium leading-snug text-muted-foreground">
+            {item.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}

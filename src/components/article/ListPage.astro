@@ -9,7 +9,7 @@ import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import ArticleCover from '~/components/article/ArticleCover.astro';
 import CategoryArt from '~/components/article/CategoryArt.astro';
-import { NAVIGATION_CONFIG } from '~/config/navigation';
+import CategoryBanner from '~/components/article/CategoryBanner.astro';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getEntriesByCategory, parseEntryId } from '~/lib/content';
@@ -29,7 +29,6 @@ const shared = ui.shared as unknown as Record<string, any>;
 const overview = (
   ui.overview as Record<string, { overviewTitle: string; overviewDescription: string }>
 )[category];
-const navItem = NAVIGATION_CONFIG.find((n) => n.key === category);
 
 const title = overview?.overviewTitle ?? nav[category] ?? category;
 const description = overview?.overviewDescription ?? `${title} guides and articles.`;
@@ -62,18 +61,14 @@ const jsonLd = [
   jsonLd={jsonLd}
 >
   <div class="space-y-6">
-    <header>
-      <nav class="text-sm text-muted-foreground" aria-label="breadcrumb">
-        <a href="/" class="hover:text-nav">{nav.home}</a>
-        <span class="mx-1">/</span>
-        <span class="text-foreground">{title}</span>
-      </nav>
-      <div class="mt-2 flex items-center gap-3">
-        {navItem && <Icon name={navItem.icon} class="h-7 w-7 text-nav" />}
-        <h1 class="text-3xl font-extrabold tracking-tight">{title}</h1>
-      </div>
-      <p class="mt-2 max-w-2xl text-muted-foreground">{description}</p>
-    </header>
+    <CategoryBanner
+      category={category}
+      title={title}
+      description={description}
+      homeLabel={nav.home}
+      count={entries.length}
+      countLabel={shared.articlesCount}
+    />
 
     {
       entries.length === 0 ? (

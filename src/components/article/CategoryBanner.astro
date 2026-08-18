@@ -1,0 +1,74 @@
+---
+/**
+ * CategoryBanner — deep-space hero for list pages.
+ *
+ * CategoryArt (fixed scene per category — NOT per article, so the page
+ * header is stable while cards vary) under white overlay text: breadcrumb,
+ * icon + h1, description, and an article-count chip. The background is
+ * deliberately theme-independent: fixed dark space + explicit white text
+ * reads correctly in both light and dark modes.
+ */
+import { Icon } from 'astro-icon/components';
+import CategoryArt from '~/components/article/CategoryArt.astro';
+import { NAVIGATION_CONFIG } from '~/config/navigation';
+import { categoryHue } from '~/lib/categoryTheme';
+
+interface Props {
+  category: string;
+  title: string;
+  description: string;
+  homeLabel: string;
+  /** Article count; omit to hide the chip. */
+  count?: number;
+  /** Unit label for the count chip (e.g. "articles"). */
+  countLabel?: string;
+}
+
+const { category, title, description, homeLabel, count, countLabel } = Astro.props;
+
+const hue = categoryHue(category);
+const navItem = NAVIGATION_CONFIG.find((n) => n.key === category);
+---
+
+<header class="relative overflow-hidden rounded-xl border border-border">
+  {/* Background art — decorative, hidden from AT (the visible h1 carries meaning). */}
+  <div aria-hidden="true" class="absolute inset-0">
+    <CategoryArt category={category} class="h-full w-full" />
+  </div>
+  {/* Left-side scrim so white text stays legible over the planet. */}
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/5"
+  >
+  </div>
+
+  <div class="relative px-5 py-8 md:px-8 md:py-10">
+    <nav class="text-xs font-medium text-white/60" aria-label="breadcrumb">
+      <a href="/" class="hover:text-white">{homeLabel}</a>
+      <span class="mx-1">/</span>
+      <span class="text-white/85">{title}</span>
+    </nav>
+
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      {
+        navItem && (
+          <Icon
+            name={navItem.icon}
+            class="h-7 w-7"
+            style={`color:hsl(${hue} 85% 78%);`}
+          />
+        )
+      }
+      <h1 class="text-2xl font-extrabold tracking-tight text-white md:text-3xl">{title}</h1>
+      {
+        typeof count === 'number' && (
+          <span class="rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-semibold text-white/85 backdrop-blur-sm">
+            {count} {countLabel}
+          </span>
+        )
+      }
+    </div>
+
+    <p class="mt-2 max-w-2xl text-sm text-white/70 md:text-base">{description}</p>
+  </div>
+</header>
