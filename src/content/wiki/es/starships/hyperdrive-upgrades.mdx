@@ -1,0 +1,152 @@
+---
+title: "Mejoras del hiperturbo: módulos, propulsores de color y alcance máximo"
+description: "Cómo funcionan las mejoras del hiperturbo en No Man's Sky: el límite de tres módulos, motores de cadmio, emerilio e indio, el cálculo de alcance y el combustible."
+category: "starships"
+image: '../../../../assets/covers/starships/hyperdrive-upgrades.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "Un hiperturbo de fábrica salta 101 años luz y solo a estrellas amarillas. Tres módulos de clase S más los motores de color superan los 2200 años luz y abren todas las clases estelares."
+tags: ["hyperdrive", "warp", "starships", "upgrades", "guide"]
+faq:
+  - question: "¿Cuántos módulos de mejora del hiperturbo se pueden apilar?"
+    answer: "Tres. Una nave estelar admite hasta tres Módulos de Mejora del Hiperturbo; instalar un cuarto o más desactiva todos los módulos de ese tipo hasta que desguaces hasta bajar a tres. Los motores de cadmio, emerilio, indio y Atlántida no cuentan contra este límite, y por eso la mayoría de naves de largo alcance llevan los motores junto a la pila completa de módulos."
+  - question: "¿Cuál es el alcance máximo del hiperturbo en No Man's Sky?"
+    answer: "El techo documentado por la wiki ronda los 2200 años luz en una nave estelar con tres módulos de clase S bien colocados, o unos 2500 con módulos de clase X, sobre los 101 años luz del motor base. Los cargueros alcanzan unos 5800 años luz con módulos de cargueros abandonados. Las cifras exactas varían con las tiradas de módulo, las estadísticas del casco y las bonificaciones de adyacencia."
+  - question: "¿Necesito los motores de cadmio y emerilio si tengo el motor de indio?"
+    answer: "No. El motor de indio funciona como mejora directa: con él instalado puedes saltar a sistemas azules, verdes y rojos sin los otros motores. Muchos jugadores mantienen los tres instalados igualmente, porque cada motor aporta sinergia de adyacencia a los módulos vecinos, pero para acceso a sistemas, el motor de indio basta por sí solo."
+  - question: "¿Vuelve inútil el hiperturbo la actualización Cosmos?"
+    answer: "No. Cosmos añade el vuelo interestelar libre como opción, no como obligación, y se espera que los saltos instantáneos sigan siendo la elección eficiente. Un hiperturbo de largo alcance es además tu red de seguridad: si un vuelo libre sale mal en espacio profundo, un buen motor y un stock de combustible son lo que te lleva a algún sitio útil."
+  - question: "¿Cuánto te lleva una célula de curvatura?"
+    answer: "Un salto por defecto. Cada salto quema el 20% del depósito del hiperturbo y una célula de curvatura restaura el 25%, así que cuatro células cargan el motor a tope para cinco saltos. Tres módulos de clase S añaden cada uno un 100% de eficiencia de célula, recortando el coste por salto a la cuarta parte: hasta diez saltos de una sola célula."
+  - question: "¿Dónde se compran módulos de mejora del hiperturbo?"
+    answer: "A los comerciantes de tecnología de las estaciones espaciales, pagando en nanitos. El surtido cambia de estación en estación, así que los cazadores de alcance van saltando de sistema revisando cada comerciante de tecnología de naves. Los sistemas forajidos venden módulos de clase X con potencial de alcance mayor, y las incursiones a cargueros abandonados surten las versiones de carguero."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Todo viaje largo en No Man's Sky acaba convertido en un problema de hiperturbo. La galaxia abarca cientos de miles de millones de sistemas estelares, una partida recién creada apenas supera los 100 años luz hasta la siguiente estrella amarilla, y toda una economía de mejora — nanitos, módulos procedurales, motores de sistemas de color, hangares de carguero — existe para empujar ese número hacia arriba. El alcance es la diferencia entre cruzar una región de la galaxia en una tarde y pasarte una semana saltando entre paradas de combustible.
+
+Esta guía recorre la ruta completa de mejora del hiperturbo en orden: cómo funciona el motor base, qué motores de sistemas de color necesitas de verdad, cómo se apilan los módulos de mejora de clase S y dónde muerde el techo duro de tres módulos, cómo colocar todo para las bonificaciones de adyacencia, cómo funciona el combustible de salto y dónde encajan los cargueros. Cierra con lo que cambia de verdad el vuelo interestelar libre de la actualización Cosmos para las configuraciones de salto — que es menos de lo que temes.
+
+**Última actualización: 18 de agosto de 2026**, vigente hasta el despliegue por fases de la [actualización Cosmos](/cosmos-update/cosmos-update-guide); mira nuestro [rastreador de actualizaciones de 2026](/guides/new-update-2026) para el resto de parches del año.
+
+<StatBar
+  items={[
+    { value: '101 AL', label: 'Alcance base del hiperturbo, solo estrellas amarillas' },
+    { value: '3', label: 'Módulos de mejora antes de que la pila se desactive' },
+    { value: '+265 AL', label: 'Bonificación máxima de alcance por módulo clase S' },
+    { value: '~5800 AL', label: 'Techo documentado de salto de carguero' },
+  ]}
+/>
+
+<Callout type="info" title="Cosmos sigue desplegándose">
+  El vuelo interestelar libre llega con la actualización Cosmos, anunciada el 9 de agosto de
+  2026, y sus notas de parche se están publicando por fases. Todo lo referente a las mecánicas
+  existentes del hiperturbo en esta guía está asentado desde hace tiempo y sigue vigente;
+  cualquier cosa que implique cómo interactúa el vuelo libre con el salto queda marcada como
+  pendiente hasta que Hello Games la confirme.
+</Callout>
+
+## Cómo funciona el hiperturbo base
+
+Toda nave estelar trae hiperturbo, y de fábrica hace dos cosas mal: alcanza solo 101 años luz por salto (un alcance que la actualización Synthesis subió desde los justos 100), y solo puede apuntar a sistemas de estrella amarilla — la mayoría normal de la galaxia. Las estrellas rojas, verdes, azules y moradas sencillamente rechazan tu petición de salto hasta que instales la tecnología de motor adecuada, por mucho alcance que tengas.
+
+El combustible es un juego de porcentajes. Cada salto quema el 20% del depósito del hiperturbo, una célula de curvatura restaura el 25%, y cuatro células cargan el motor a tope para cinco saltos — un cambio de la era Waypoint respecto al antiguo llenado de cinco células. Un motor cargado a tope también te deja atravesar el centro de la galaxia desde un sistema gateway, la ruta clásica hacia una galaxia nueva.
+
+El plano del motor base lo consigues pronto, a través de la trama del carguero accidentado que sigue a tu primera construcción de base, así que no hay razón para volar nunca sin uno. Una peculiaridad que conviene saber antes de invertir: el hiperturbo es una de las únicas tecnologías del juego que se puede fabricar pero nunca desmantelarse, así que su hueco en tu inventario general es permanente.
+
+## La escalera de motores de color: cadmio, emerilio, indio, Atlántida
+
+El color de estrella es una cerradura, y cada motor es una llave. Cuatro tecnologías abren las cuatro clases estelares restringidas:
+
+| Motor | Desbloquea | Notas |
+| --- | --- | --- |
+| Motor de cadmio | Sistemas de estrella roja | Primer peldaño; las estrellas rojas se refinan a cadmio |
+| Motor de emerilio | Sistemas de estrella verde | Segundo peldaño; necesita emerilio de estrellas verdes |
+| Motor de indio | Sistemas de estrella azul | Mejora directa: otorga también acceso rojo y verde |
+| Motor de Atlántida | Sistemas de estrella morada | Añadido con Worlds Part II; sustituye al de indio para acceso |
+
+Los cuatro planos salen de Iteración Hiperión a bordo de la Anomalía Espacial, con precio en nanitos (el motor de indio cuesta 200), y cada motor se construye con metal cromático y un wiring loom. El diseño es un bucle deliberado: saltas hasta donde te permiten tus motores actuales, cosechas el metal de esa clase estelar, lo refinas a metal cromático y construyes la siguiente llave.
+
+Dos detalles abaratan esta escalera más de lo que parece. Primero, los motores son acumulativos para el acceso — el motor de indio por sí solo cubre estrellas rojas, verdes y azules, y el motor de Atlántida cubre todo lo que hay por debajo, así que una configuración mínima solo necesita el peldaño más alto al que llegues. Segundo, ninguno de los cuatro cuenta contra el límite de módulos de mejora, y cada uno alimenta pasivamente una bonificación de adyacencia a la tecnología de hiperturbo vecina. Por eso la mayoría de naves de endgame conservan todos los motores instalados incluso cuando técnicamente dejan de necesitar los bajos: son sinergia gratis, no huecos desperdiciados.
+
+## Módulos de mejora de clase S y el límite de tres
+
+Los motores de color deciden qué estrellas puedes visitar. Los módulos de mejora deciden hasta dónde puedes saltar, y son donde vive de verdad el meta del hiperturbo.
+
+Los módulos son procedurales. Compras Módulos de Hiperturbo sellados a los comerciantes de tecnología de las estaciones espaciales por nanitos, los abres y obtienes una instalación con tirada cuyas estadísticas dependen de su clase:
+
+| Clase | Bonificación de alcance (AL) | Eficiencia de célula | Fuente |
+| --- | --- | --- | --- |
+| C | 50 a 100 | Nula | Comerciantes de estación espacial |
+| B | 115 a 165 | Nula | Comerciantes de estación espacial |
+| A | 165 a 220 | +100% | Comerciantes de estación espacial |
+| S | 220 a 265 | +100% | Comerciantes de estación espacial |
+| X | 50 a 320 | Hasta +100% | Comerciantes de sistemas forajidos |
+
+Dos estadísticas importan. El alcance del hiperturbo es el titular — una tirada alta de clase S añade hasta 265 años luz por módulo. La eficiencia de célula de curvatura es la mitad silenciosa del valor: los módulos de clase A y de clase S añaden cada uno un +100% de eficiencia de combustible, y las bonificaciones se apilan de forma multiplicativa, así que un módulo de eficiencia divide a la mitad tu coste por salto, dos lo bajan a un tercio y tres a un cuarto — un cinco por ciento de depósito por salto, o aproximadamente diez saltos de una sola célula de curvatura. Para corridas al núcleo y saltos de galaxia, los módulos de eficiencia suelen ahorrar más tiempo que el alcance puro.
+
+El surtido cambia de comerciante en comerciante, así que los cazadores de alcance serios van saltando de sistema, revisan cada comerciante de tecnología de naves estelares y compran solo tiradas altas. Los sistemas forajidos merecen el desvío: su stock de clase X puede tirar hasta 320 años luz, por encima de lo que ofrece cualquier módulo de clase S, aunque el suelo de ese rango es tan bajo que la mayoría de tiradas X son basura.
+
+La regla dura, y la que pillará a todo jugador nuevo: **máximo tres módulos**. Instala un cuarto módulo de mejora del mismo tipo y el juego desactiva todos hasta que desmanteles hasta volver a tres. No hay penalización parcial ni pantalla de aviso — tu alcance simplemente se desploma, y la solución es desguazar el módulo más flojo.
+
+Una última pieza de trivia modular que quien ahorra nanitos debería conocer: las estadísticas de los módulos siguen una progresión con semilla ligada al orden de instalación en tu partida. El tercer módulo que instalas tira de un hueco de tirada concreto sin importar qué módulo físico sea, y por eso los min-maxers instalan, comprueban, recargan y reordenan antes de comprometerse.
+
+## Colocación: la adyacencia lo multiplica todo
+
+Dónde se sienta la tecnología en tu rejilla de inventario no es cosmético. Cada objeto de la familia del hiperturbo — módulos, motores de color, motor base — aporta una bonificación de adyacencia de alrededor del cinco por ciento a cada objeto colindante, y esas bonificaciones se apilan sobre las estadísticas del módulo antes de que las ranuras supercargadas multipliquen el resultado.
+
+Las reglas prácticas de colocación son simples. Agrupa todo: el hiperturbo base, los tres módulos y los motores de color que conserves deben formar un solo bloque, no dispersarse por pestañas. Pon tus módulos de mayor alcance en huecos supercargados del inventario (añadidos en la actualización Waypoint), porque esos huecos multiplican la tecnología instalada en ellos. Y mantén los motores de color pegados al grupo de módulos — no tienen estadísticas propias que potenciar, pero alimentan bonificaciones a los módulos de al lado.
+
+Una instalación perezosa y dispersa y una compacta y optimizada pueden diferir en cientos de años luz con hardware idéntico. Antes de grindar módulos mejores, reordena lo que ya tienes.
+
+## La aritmética del alcance: hasta dónde puedes llegar realmente
+
+El alcance total de salto es el motor base más las bonificaciones de módulo más los multiplicadores de adyacencia y supercargado, y luego un empujón de tu casco. La progresión documentada:
+
+| Configuración | Alcance aproximado |
+| --- | --- |
+| Motor de fábrica, sin módulos | 101 AL |
+| Tres módulos de clase C | 250 a 400 AL |
+| Tres módulos de clase S, sin colocar | 760 a 900 AL |
+| Tres módulos de clase S, optimizados | ~2200 AL |
+| Tres tiradas altas de clase X, optimizadas | ~2500 AL |
+
+El salto de "sin colocar" a "optimizado" es la adyacencia y los huecos supercargados haciendo su trabajo, y es la razón de que la colocación sea una mejora gratis. Tu casco también cuenta: las exploradoras llevan la mejor estadística de hiperturbo de cualquier clase pilotable, así que las naves que más saltan del juego son exploradoras de clase S con tres módulos en bloque compacto — el mismo casco que nuestra [clasificación de naves](/starships/best-ships) pone en lo alto del juego de alcance.
+
+Los techos exactos se mueven de parche en parche a medida que se reajustan tiradas y multiplicadores, así que trata cualquier cosa más precisa que "aproximadamente 2200 a 2500 años luz en una nave estelar" como folclore hasta que la midas en tu propia partida.
+
+## Combustible: células de curvatura, hipernúcleos y eficiencia
+
+El alcance se lleva la gloria; el combustible hace el trabajo. Una célula de curvatura se fabrica con antimateria y carcasa de antimateria, que a su vez se construyen con metal cromático y carbono condensado, y con oxígeno y polvo de ferrito, respectivamente.
+
+Si prefieres comprar antes que fabricar, el hipernúcleo de curvatura es la opción premium: un solo hipernúcleo carga por sí solo un hiperturbo a tope — el equivalente a cuatro células de curvatura — y su plano llega de las instalaciones de fabricación y los centros de operaciones, o del Laboratorio de Síntesis a bordo de la Anomalía. La pega es que su lista de ingredientes incluye cristales de tormenta, que solo aparecen con clima extremo, así que la mayoría de pilotos tratan los hipernúcleos como stock de expedición más que como combustible diario.
+
+La aritmética de eficiencia de la sección de módulos merece repetirse como regla de oro: un motor sin modificar hace un salto por célula, mientras que un motor con tres módulos de clase S de eficiencia hace aproximadamente diez. La disciplina de combustible es la mejora más barata de todo el juego.
+
+## Cargueros: el hiperturbo a escala de flota
+
+Tu nave capital tiene su propio hiperturbo, su propio depósito y su propia ruta de mejora, y es el motor de salto de toda tu operación — un salto de carguero transporta consigo cada nave guardada en su hangar, lo que convierte la logística de flota en una cuestión de alcance de carguero.
+
+El motor del carguero parte de 100 años luz y se carga a tope con cinco células de curvatura o un hipernúcleo. Crece por dos vías. El árbol de mejoras integrado — Resonador de Núcleo de Curvatura a +200 AL, Inyector de Curvatura Plasmático a +300 AL y Destrenzador de Realidad a +800 AL, más variantes de blindaje de color de +50 AL para el acceso rojo, verde y azul — se compra con unidades y nanitos. Las ganancias mayores vienen de los Módulos de Mejora del Hiperturbo de Carguero, los botines procedurales de las incursiones a cargueros abandonados desde la actualización Desolation, que también tiran estadísticas de eficiencia de combustible. Un capitán dedicado que cace distribuciones limpias de cargueros abandonados empuja un carguero hasta aproximadamente 5800 años luz — más del doble que cualquier nave estelar.
+
+El circuito completo de cargueros abandonados, la gestión de flota y la logística de expediciones de fragatas están cubiertos en nuestra [guía de cargueros](/starships/freighter-guide).
+
+## Cosmos y más allá: ¿reemplaza el vuelo libre al salto?
+
+La actualización Cosmos del décimo aniversario, anunciada el 9 de agosto de 2026, añade la opción de volar directo a otro sistema solar con tu propia potencia — la primera vez en la historia del juego que el hiperturbo tiene competencia.
+
+El encuadre importa, sin embargo: como dice nuestra [guía de vuelo interestelar](/cosmos-update/interstellar-flight-guide), el vuelo libre es una opción, no una obligación. Hello Games no ha anunciado la retirada del salto, y la expectativa en toda la cobertura es que los saltos instantáneos sigan siendo la elección eficiente mientras el vuelo libre se convierte en la panorámica. Dos preguntas abiertas merecen seguimiento en las notas por fases: si el vuelo libre respeta las puertas de los motores de color (¿puedes volar a una estrella azul sin motor de indio?) y qué combustible, si consume alguno, exige el crucero interestelar sostenido.
+
+Hasta que lleguen esas respuestas, la lectura práctica es que las mejoras del hiperturbo ganan valor en lugar de perderlo. Un motor de largo alcance es el salvavidas que rescata un vuelo libre que ha salido mal, el carril rápido para comerciantes y corredores del núcleo, y la columna vertebral de cualquier empuje al centro de la galaxia. La lista de preparación para Cosmos sitúa mejorar tu hiperturbo y tus módulos como prioridad alta — en línea con cómo cada sistema de viaje en diez años de actualizaciones ha tratado la calidad del motor. Si estás reconstruyendo tu equipo de salto para la era del aniversario, nuestra [guía de caza de naves de clase S](/starships/s-class-ships) cubre cómo encontrar el casco que merece llevarlo todo instalado.
+
+## Guías relacionadas
+
+- [Las mejores naves de No Man's Sky, clasificadas](/starships/best-ships)
+- [Naves de clase S: probabilidades, farm y estadísticas](/starships/s-class-ships)
+- [Guía de cargueros: bases, flotas y expediciones de fragatas](/starships/freighter-guide)
+- [Vuelo interestelar de Cosmos: vuelo libre contra salto](/cosmos-update/interstellar-flight-guide)
+- [Actualización Cosmos de No Man's Sky: guía completa del aniversario](/cosmos-update/cosmos-update-guide)
+- [Cómo aterrizar en estrellas en No Man's Sky](/cosmos-update/how-to-land-on-stars)
+- [Todas las actualizaciones de No Man's Sky en 2026](/guides/new-update-2026)

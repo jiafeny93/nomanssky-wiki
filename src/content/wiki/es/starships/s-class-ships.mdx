@@ -1,0 +1,152 @@
+---
+title: "Naves de clase S: probabilidades, farm y estadísticas"
+description: "Cómo conseguir naves de clase S en No Man's Sky: probabilidades por economía, la excepción pirata del 5% y el circuito de recarga de primeras olas."
+category: "starships"
+image: '../../../../assets/covers/starships/s-class-ships.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Las naves de clase S aparecen en torno al 2% de tiradas en economías ricas de 3 estrellas, 1% en medias y 5% en sistemas piratas. Farmea primeras olas y recarga para relanzar la tirada."
+tags: ["s-class", "starships", "ship-farming", "spawn-odds", "economy"]
+faq:
+  - question: "¿Cuáles son las probabilidades de nave de clase S en No Man's Sky?"
+    answer: "En torno al 2% por nave que aterriza en economías ricas de 3 estrellas, 1% en economías medias y prácticamente cero en las pobres. Los sistemas piratas son la excepción, con un 5% aproximado medido por la comunidad desde la actualización Outlaws. Las naves exóticas se saltan la tirada: siempre aparecen en clase S."
+  - question: "¿Aparecen naves de clase S en sistemas pobres?"
+    answer: "Prácticamente nunca. La tabla documentada asigna a las economías pobres un peso del 0% en clase S, con el 60% de las naves en clase C. Los modelos de un sistema pueden llegar a tirar clase S, pero no hay razón para cazar en una economía de 1 estrella cuando una rica duplica o triplica las probabilidades."
+  - question: "¿Cuál es la forma más rápida de farmear una nave de clase S?"
+    answer: "Instala un Escáner de Economía, filtra el mapa galáctico por economías ricas de 3 estrellas, aterriza en un puesto de comercio y sal de la nave para crear un autoguardado. Escanea la primera ola de llegadas y, si no aterriza ninguna clase S, recarga el punto de restauración desde el menú de opciones. Cada recarga relanza las probabilidades, así que los ciclos rápidos ganan a la espera pasiva."
+  - question: "¿Valen su precio las naves de clase S?"
+    answer: "Normalmente sí, si piensas quedarte la nave. La clase S añade entre un 50 y un 100% al precio, pero tira en lo más alto de las bandas de daño, escudo e hiperturbo del casco y roza el máximo de huecos de inventario. Para un buque insignia a largo plazo el techo se paga; los pilotos de corto plazo pueden conformarse con una clase A y mejorar después."
+  - question: "¿Pueden los módulos de mejora poner una nave clase C a la altura de una clase S?"
+    answer: "Los módulos acortan la brecha, pero no la borran. Los módulos de clase S apilan bonificaciones porcentuales grandes sobre cualquier casco, y las ranuras supercargadas los amplifican aún más, pero la bonificación base de la clase sigue multiplicando todo lo que hay debajo. Una clase C bien mejorada rinde bien; los mismos módulos en un casco clase S siempre acaban más alto."
+  - question: "¿Ha cambiado la actualización Cosmos las probabilidades de clase S?"
+    answer: "No, a 18 de agosto de 2026. Hello Games sigue publicando las notas de Cosmos por fases, y nada de lo publicado hasta ahora toca la aparición de naves ni el peso de clases. La tabla de probabilidades de esta guía se ha mantenido estable durante las actualizaciones de 2025 y 2026, y la revisaremos si las notas por fases cambian algo."
+---
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Cada nave que aterriza en la plataforma de un puesto de comercio de No Man's Sky está tirando unos dados que tú no ves. El modelo es fijo — el parque de naves de un sistema nunca cambia —, pero la clase estampada en cada casco que llega se tira de nuevo al aparecer, desde la C en el suelo, pasando por la B y la A, hasta la S en lo alto. Una nave de clase S es el techo de esa tirada: las mejores bonificaciones base, la banda de inventario más grande y el precio más alto que el juego pone sobre un solo casco.
+
+Cazarlas es más un examen de conocimiento que un grind. Sabiendo qué economías tiran clase S, dónde ponerte y cómo relanzar la cola de llegadas, una nave de clase S te cuesta unos veinte minutos tranquilos. Hazlo a ciegas y la misma nave puede llevarte una semana. **Última actualización: 18 de agosto de 2026.** Las reglas de aparición de abajo llevan años estables, y nada del despliegue por fases de Cosmos las ha cambiado a fecha de hoy. Para qué hace cada tipo de casco con las estadísticas de clase S, mira nuestra [clasificación de tipos de naves](/starships/best-ships); para el calendario del año, nuestro [rastreador de actualizaciones de 2026](/guides/new-update-2026).
+
+<StatBar
+  items={[
+    { value: '2%', label: 'Probabilidad de clase S en una economía rica de 3 estrellas' },
+    { value: '5%', label: 'Probabilidad de clase S en sistemas piratas' },
+    { value: '1–3', label: 'Aumentos de Almacenamiento por nave clase S desguazada' },
+    { value: '+100%', label: 'Prima de precio de un caza clase S sobre uno clase C' },
+  ]}
+/>
+
+<Callout type="info" title="De dónde salen estos números">
+  Las probabilidades por nivel de economía y las primas de precio de abajo corresponden a las
+  tablas documentadas en las wikis comunitarias, que llevan años estables. La tasa de sistemas
+  piratas, las bandas de estadísticas y los retornos del desguace son mediciones comunitarias
+  más que documentación oficial, y cada una queda marcada en el sitio donde aparece.
+</Callout>
+
+## Qué es exactamente una nave de clase S
+
+La clase es el sistema de clasificación del juego para naves (y multiherramientas, cargueros y módulos de mejora): C, B, A y S. En una nave estelar hace dos cosas concretas. Decide cuántos huecos generales y de tecnología tira el casco dentro del rango que permite su modelo, y fija el multiplicador de bonificación que se aplica a las tres estadísticas base que lees al escanear una nave: daño, escudos e hiperturbo. Un caza de clase C y un caza de clase S del mismo modelo comparten el mismo fuselaje; la versión de clase S simplemente tira números más grandes en todas las columnas que importan.
+
+La clase también fija el precio. La prima documentada por la wiki sobre un casco de clase C del mismo tipo:
+
+| Tipo de nave | Clase B | Clase A | Clase S |
+| --- | --- | --- | --- |
+| Caza | +20% | +70% | +100% |
+| Nave de carga | +30% | +60% | +80% |
+| Exploradora | +10% | +25% | +50% |
+| Transbordador | +10% | +25% | +50% |
+| Carguero | +20% | +40% | +60% |
+
+Tres familias de cascos se saltan por completo la lotería de clases. Las [naves exóticas](/starships/exotic-ship-locations) siempre aparecen en clase S — la wiki deja claro que una exótica se muestra como S incluso cuando su tirada subyacente contaría como C. Las [naves vivientes](/starships/living-ship-guide) nacen directamente como clase S garantizada, porque sus estadísticas las fija la misión en la banda alta en lugar de tirarlas en una estación. Y los [interceptores Centinela](/starships/sentinel-interceptor-guide) se reclaman en sitios de accidente con las estadísticas ya tiradas, por eso los adoran los cazadores sin presupuesto. Todas las demás naves del juego tiran dados — así que aprende a leerlos.
+
+## Probabilidades de clase S por nivel de economía
+
+La clase de cada nave que llega se tira contra una tabla ponderada por la fuerza de la economía del sistema anfitrión. Los sistemas más ricos tiran más naves de clase A y S; los pobres apenas las tiran. La distribución documentada completa:
+
+| Nivel de economía | C | B | A | Probabilidad de clase S |
+| --- | --- | --- | --- | --- |
+| 1 estrella — Declining, Destitute, Struggling | 60% | 30% | 10% | ~0% |
+| 2 estrellas — Adequate, Balanced, Promising | 49% | 35% | 15% | 1% |
+| 3 estrellas — Opulenta, Acaudalada, Próspera | 30% | 40% | 28% | 2% |
+| Pirata — Mercado Negro, icono de calavera | variable | variable | variable | ~5% |
+
+Cómo leer cada fila en el mapa galáctico:
+
+1. **Las economías de 1 estrella** (Declining, Destitute, Failing, Fledgling, Low Supply, Struggling, Unsuccessful, Unpromising) tienen un peso documentado del 0% en clase S. Seis de cada diez naves son de clase C. Nunca cazes aquí.
+2. **Las economías de 2 estrellas** (Adequate, Balanced, Comfortable, Developing, Medium Supply, Promising, Satisfactory, Sustainable) tiran clase S en torno al 1%. Una de cada cien llegadas — se puede cazar, pero pagas el doble de recargas por el mismo resultado.
+3. **Las economías de 3 estrellas** (Advanced, Affluent, Booming, Flourishing, High Supply, Opulent, Prosperous, Wealthy) tiran clase S en torno al 2% y clase A al 28%, las mejores probabilidades legales del juego. Aquí ocurre toda caza seria.
+4. **Los sistemas piratas** muestran "Mercado Negro" y una calavera en lugar de estrellas. Las pruebas comunitarias desde la actualización Outlaws sitúan su tasa de clase S en torno al **5%** — dos veces y media la mejor economía legal — a cambio de espacio sin ley y estaciones que venden mercancía de contrabando en lugar del comercio normal.
+
+La diferencia entre filas se acumula: con un 2% frente a un 1%, un sistema rico alcanza tu nave de clase S con la mitad de recargas que uno medio, antes de contar las clase A de consolación, más grandes y frecuentes, que aterrizan alrededor.
+
+Para ver todo esto en el mapa, instala un módulo de nave **Escáner de Economía**. Añade un filtro de economías al mapa galáctico y te deja leer la riqueza y el nivel de conflicto de cualquier sistema antes de saltar, para encadenar sistemas ricos en lugar de adivinar. Es barato, se compra al comerciante de tecnología de naves de cualquier estación, y es el módulo de mayor valor de toda la caza.
+
+## Dónde farmear naves de clase S
+
+**Los sistemas ricos de 3 estrellas son la respuesta por defecto**, y dentro de ellos tienes dos sitios donde ponerte:
+
+- **Los puestos de comercio** son los favoritos de la comunidad. Las naves llegan más rápido a un puesto que a una estación espacial, la plataforma te deja suficientemente cerca para escanear las llegadas sin moverte, y todo el circuito se ejecuta desde una sola azotea. Encuentra uno con el escaneo de puestos del Escáner de Economía o con cartas planetarias de un cartógrafo de estación.
+- **Las estaciones espaciales** ejecutan el mismo circuito — acopla, sal de la nave dentro para el autoguardado, vigila las plataformas de aterrizaje. Las olas llegan algo más despacio y las líneas de visión son peores, pero en las estaciones no hay clima ni Centinelas que te interrumpan.
+
+**Los sistemas piratas son la respuesta de especialista.** Su tasa de clase S del 5%, medida por la comunidad, es la mejor del juego, y los sistemas piratas son también donde aparecen las [naves solares](/starships/best-ships), así que la caza vale doble como caza de naves solares. Las contrapartidas: sin calificación de economía a la que aferrarse, estaciones forajidas con su propio stock de vendedores y más peligro ambiental. Si puedes rechazar la interdicción pirata ocasional, las probabilidades valen el viaje.
+
+**Los cargueros siguen reglas totalmente aparte.** Los cargueros capitales llegan mediante eventos de batalla de rescate tras los saltos, no en olas de estación, y los capitales de clase S se farmean con su propia disciplina de guardado y recarga. Nuestra [guía de farmeo de cargueros capitales](/starships/capital-freighter-farming) cubre ese circuito, y la [guía de cargueros](/starships/freighter-guide) cubre todo lo demás sobre manejar uno.
+
+## El circuito de recarga de primeras olas, paso a paso
+
+Las naves llegan a puestos y estaciones en olas, y las primeras naves que aterrizan tras una carga son lo más rápido que hay en el juego para relanzar una tirada. El parque de naves del sistema — qué modelos existen aquí — es fijo para siempre, pero la clase, las estadísticas y el número de huecos de cada nave que llega se tira al aparecer, y recargar tu guardado relanza la cola. El circuito:
+
+1. Instala un **Escáner de Economía** y filtra el mapa galáctico por **economías ricas**.
+2. Salta a un sistema de 3 estrellas y aterriza en un **puesto de comercio**.
+3. Sal de la nave. Bajar de la nave crea un **autoguardado** — este es tu punto de reinicio.
+4. Observa la primera ola y **escanea cada nave** según llega para leer clase, estadísticas y huecos.
+5. Si no aterriza nada de clase S en las primeras olas, abre el menú de opciones y **recarga tu punto de restauración**.
+6. La cola de olas se relanza. Escanea la nueva primera ola.
+7. Repite hasta que aterrice una clase S y cómprala antes de que despegue — espera un precio de decenas de millones de unidades, según la tabla de primas de arriba.
+
+Dos hábitos hacen el circuito cómodo. Primero, escanea desde donde estés — nunca necesitas caminar hasta una nave para leer su tarjeta. Segundo, trata los fallos como inventario: cada recarga en un sistema rico también está tirando naves de clase A al 28%, y un buen casco clase A al precio adecuado es una compra legítima mientras esperas la S.
+
+El mismo circuito funciona dentro de estaciones espaciales y en sistemas piratas; solo cambia el decorado. Lo que el circuito no hace es cambiar el parque de naves de un sistema — si no te gusta ninguno de los modelos que aterrizan, salta a otro sistema rico en lugar de recargar para siempre.
+
+## Qué te dan realmente las estadísticas de clase S
+
+Los porcentajes de la tarjeta de escaneo de una nave son su bonificación de clase, y la clase S tira en lo más alto de la banda de cada tipo de casco. Los rangos clave, documentados por la comunidad tras años de escaneos:
+
+- **Los cazas** tiran las bonificaciones de daño más altas del juego — un caza de clase S puede rondar el rango de **+50% de daño**, que se multiplica a través de cada módulo de arma que instales.
+- **Las exploradoras** tiran las bonificaciones de hiperturbo más altas — una exploradora de clase S puede acercarse al **+80% de alcance de salto**, antes de cualquier mejora del motor.
+- **Las naves de carga** lideran en escudos, absorbiendo emboscadas que doblan a otros cascos, a cambio del manejo.
+- **Las exóticas** y los interceptores corren altas y equilibradas en las tres estadísticas, que es exactamente por lo que anclan lo alto de nuestra [clasificación](/starships/best-ships).
+
+La clase también manda en los huecos. Una nave de clase S tiende a tirar en o cerca del máximo de huecos generales y de tecnología que su modelo permite, así que el mismo fuselaje que llega como caza de clase C con 19 huecos puede llegar como clase S con todos los huecos.
+
+Una advertencia honesta: las bandas de bonificación se solapan entre clases vecinas. Una tirada afortunada de clase A puede superar a una desafortunada de clase S en una sola estadística. Pero a lo largo de muchas apariciones, la clase S gana de forma consistente en daño, escudos, hiperturbo y huecos a la vez — es la única clase que encabeza las cuatro cosas juntas.
+
+## Naves de clase S y módulos de mejora
+
+Los módulos de mejora tienen su propia clase, de C a S, y aquí es donde la gente se confunde. Las reglas son simples y se apilan limpio:
+
+- **La clase del casco** fija los multiplicadores de estadísticas base y el techo de huecos.
+- **Los módulos de mejora** añaden bonificaciones porcentuales sobre esas bases, y un módulo de clase S añade las mayores — cómpralos a los comerciantes de tecnología de estación o gánalos desguazando.
+- **Las ranuras de tecnología supercargadas**, los huecos brillantes de toda nave desde la rework de Waypoint, multiplican lo que sea que esté colocado en ellas. Pon ahí tus mejores módulos de clase S.
+
+¿Así que una pila de módulos de clase S puede rescatar un casco de clase C? En gran parte, sí — y para presupuestos de inicio de partida, mejorar lo que ya tienes gana a esperar un 2% de aparición. Pero el argumento del techo es matemáticamente definitivo: los módulos multiplican sobre las estadísticas base, y las bases de clase C son las más bajas de la banda. La misma carga de módulos siempre acaba más alta en un casco mejor. Compra la clase C hoy si necesitas volar ya; caza la clase S cuando estés construyendo la nave que piensas quedarte.
+
+El desguace es el circuito que paga todo esto. Cualquier nave que compres se puede desguazar en un **Starship Outfitting Terminal** de cualquier estación espacial. Retornos comunitarios para cascos de clase S: un **Aumento de Almacenamiento** casi garantizado (de uno a tres por nave), que suma huecos de inventario a cualquier nave que tengas, más módulos de mejora recuperados que puedes instalar o vender por nanitos. Compra llegadas de clase S baratas en un sistema rico, desguaza las que no quieras, y la caza se paga sola en huecos y nanitos mientras esperas el modelo que buscabas.
+
+## ¿Cambia algo de esto la actualización Cosmos?
+
+De momento, no. A 18 de agosto de 2026, Hello Games sigue publicando las notas de parche de [Cosmos](/cosmos-update/cosmos-update-guide) por fases, y nada de lo publicado ha tocado la aparición de naves, las probabilidades de clase ni el peso de las economías. Las tablas de arriba reflejan el juego vivo actual.
+
+La única interacción previsible es el viaje. El vuelo interestelar libre confirmado de Cosmos — volar a otro sistema en lugar de saltar — se espera que conviva con el hiperturbo, y nuestra [guía de vuelo interestelar](/cosmos-update/interstellar-flight-guide) compara ambos. Muevas los sistemas como los muevas, la caza en sí no cambia: destino rico, plataforma de puesto, autoguardado, recarga.
+
+## Guías relacionadas
+
+- [Las mejores naves de No Man's Sky: todos los tipos clasificados](/starships/best-ships)
+- [Ubicaciones de naves exóticas: portales, glifos, coordenadas](/starships/exotic-ship-locations)
+- [Guía del interceptor Centinela: consigue una nave de clase S gratis](/starships/sentinel-interceptor-guide)
+- [Farmeo de cargueros capitales: consigue un carguero capital de clase S](/starships/capital-freighter-farming)
+- [Guía de la nave viviente: Starbirth, crecimiento y mejoras](/starships/living-ship-guide)
+- [Vuelo interestelar: guía del vuelo libre de Cosmos](/cosmos-update/interstellar-flight-guide)
+- [Actualización Cosmos: la guía completa del aniversario](/cosmos-update/cosmos-update-guide)
+- [Todas las actualizaciones de No Man's Sky en 2026](/guides/new-update-2026)

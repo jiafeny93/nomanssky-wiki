@@ -1,0 +1,158 @@
+---
+title: "Cómo empezar una expedición en No Man's Sky (guía para principiantes)"
+description: "Guía para principiantes: cómo empezar una expedición de No Man's Sky desde el menú principal o la terminal de la Anomalía Espacial, y reclamar cada recompensa."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/how-to-start-expedition.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Las expediciones de No Man's Sky empiezan desde el menú de Nueva partida o desde la terminal de la Anomalía Espacial. Esta guía cubre ambas rutas, la apertura guionizada, los hitos y las recompensas."
+tags: ["expeditions", "guides", "beginners", "how-to"]
+faq:
+  - question: "¿Cómo inicio una expedición de No Man's Sky desde el menú principal?"
+    answer: "Abre el menú principal, elige Nueva partida y, en lugar de Normal, Creativo, Supervivencia o Permadeath, selecciona la casilla de Expedición de la corrida vigente o de una pasada. Confirma, y el juego crea una partida de expedición separada con un equipamiento curado y la lista de hitos ya activa."
+  - question: "¿Hay alguna expedición activa en No Man's Sky ahora mismo?"
+    answer: "No. A 18 de agosto de 2026 no hay ninguna expedición de tiempo limitado activa: la Expedición 22, The Swarm, terminó el 19 de julio de 2026. Todavía puedes rejugar expediciones pasadas desde la terminal de la Anomalía Espacial, y podría llegar una corrida nueva con la actualización de aniversario Cosmos, pero Hello Games no ha confirmado nada."
+  - question: "¿Necesito una partida existente para empezar una expedición?"
+    answer: "No. La ruta del menú principal funciona para recién llegados y crea la partida de expedición directamente. La segunda ruta, empezar desde la Terminal de Expediciones de la Anomalía Espacial, sí exige una partida que haya pasado el tutorial inicial, porque tienes que volar hasta la Anomalía para llegar a la terminal."
+  - question: "¿Cómo llegan las recompensas de la expedición a mi partida principal?"
+    answer: "Reclama cada recompensa de fase en la Terminal de Expediciones durante la corrida. Todo lo reclamado se desbloquea para toda la cuenta: carga tu partida principal, acopla en la Anomalía Espacial y recoge gratis las naves, multiherramientas y cosméticos del Compañero de Síntesis de Azogue. Las monedas y consumibles se quedan dentro de la partida de expedición."
+  - question: "¿Qué pasa con mi partida de expedición cuando termina la expedición?"
+    answer: "Se convierte en una partida normal que puedes seguir jugando indefinidamente. Tus naves, bases y progresos quedan exactamente donde los dejó la corrida, y cada recompensa que reclamaste antes del cierre de la ventana permanece desbloqueada en tu cuenta para siempre."
+---
+
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Empezar tu primera expedición de No Man's Sky es un trabajo de cinco minutos en cuanto sabes dónde esconde el juego el botón — y una confusión si no lo sabes, porque la opción de expedición vive dentro del menú de Nueva partida, el tutorial nunca la menciona y el segundo punto de entrada es una terminal a la que tienes que volar. **Última actualización: 18 de agosto de 2026.** No hay ninguna expedición activa ahora mismo (la Expedición 22 cerró el 19 de julio), así que esta guía está escrita para que estés listo el día que abra la siguiente — todos los pasos funcionan igual tanto si la corrida es nueva como si es una repetición Redux.
+
+<StatBar
+  items={[
+    { value: '2', label: 'Formas de empezar: menú de Nueva partida o la terminal de la Anomalía' },
+    { value: '~6 semanas', label: 'Duración típica de una corrida de tiempo limitado' },
+    { value: '5–6', label: 'Fases de hitos por expedición' },
+    { value: '19 jul', label: '2026 — cerró la Expedición 22, la próxima sin anunciar' },
+  ]}
+/>
+
+La versión corta:
+
+1. **Ruta del menú principal:** pulsa Nueva partida y selecciona la casilla de **Expedición** en lugar de Normal, Creativo, Supervivencia o Permadeath. El juego construye una partida separada, se salta el tutorial y te deja en la apertura guionizada.
+2. **Ruta de la terminal:** en una partida que haya pasado el inicio, invoca la **Anomalía Espacial** y usa la **Terminal de Expediciones** junto a la entrada principal para entrar en la corrida — y para copiar unos cuantos objetos útiles desde tu partida principal.
+3. **Primeros diez minutos:** abre la pestaña de Expedición en tu registro, lee la lista de hitos y persigue hitos hasta cruzar el umbral de la primera fase.
+
+Para el panorama a nivel de sistema — la aritmética de fases, el salto de umbrales, las reglas de transferencia — nuestra [guía de expediciones](/expeditions/expedition-guide) es el análisis a fondo. Esta página es la versión para cero experiencia: qué pulsar, qué verás y los errores que cuestan horas a los primerizos.
+
+## Qué es exactamente una expedición
+
+Una expedición es un modo de juego temporal en su propio archivo de guardado. En lugar del bucle abierto de sandbox, trabajas sobre una lista fija de objetivos llamados hitos, agrupados en fases — normalmente cinco o seis. Alcanza el umbral de hitos de una fase y se desbloquean las recompensas de esa fase. Cuando la ventana del evento cierra, típicamente tras unas seis semanas, todo lo que reclamaste es tuyo permanentemente y la partida se convierte en una partida normal.
+
+Para un recién llegado, estas son las diferencias frente a una partida normal que de verdad importan:
+
+| | Partida normal | Partida de expedición |
+| --- | --- | --- |
+| Archivo de guardado | Uno de tus huecos permanentes | Un hueco de temporada aparte, creado para la corrida |
+| Objetivos | Abiertos, te pones tú las metas | Una lista fija de hitos en fases, con umbrales |
+| Límite de tiempo | Ninguno | Una ventana limitada con cuenta regresiva en la terminal |
+| Equipo inicial | Lo que dejaste en el hueco | Un equipamiento curado — todos empiezan igual |
+| Tutorial | La cadena de misiones inicial completa | Saltado — sin tutorial ni trama de Artemis |
+| Al terminar | Continúa para siempre | Se convierte en partida normal; lo reclamado se desbloquea para toda la cuenta |
+
+La razón por la que la gente se preocupa es la exclusividad. Las expediciones reparten naves estelares, multiherramientas, piezas de exonaves, conjuntos de armadura y títulos que no se pueden obtener mediante juego normal — la [lista completa de recompensas](/expeditions/expedition-rewards-list) va del Golden Vector a las Patas Mecánicas del Coloso de la Expedición 21, y todo ello se desbloquea sabiendo cómo empezar, y terminar, una expedición.
+
+<Callout type="warn" title="No hay nada activo ahora mismo — aprende los pasos y espera la campana">
+  A 18 de agosto de 2026 no hay ninguna expedición de tiempo limitado activa. La Expedición 22:
+  The Swarm cerró el 19 de julio de 2026, y Hello Games no ha anunciado la próxima corrida — la
+  actualización de aniversario Cosmos es el vehículo más probable, pero eso es lectura de
+  patrones, no una fecha. Todo lo de abajo aplica en el momento en que abra la Expedición 23;
+  nuestro [rastreador de la Expedición 23](/expeditions/expedition-23) llevará la fecha de
+  inicio confirmada.
+</Callout>
+
+## Ruta 1: empezar desde el menú principal (la mejor para primerizos)
+
+Esta es la ruta para cualquiera nuevo en No Man's Sky, o que no quiera cargar una partida vieja primero — no necesitas partida normal ni progreso previo.
+
+1. **Desde la pantalla de título, elige Nueva partida.** Aparece el selector de modo: Normal, Creativo, Supervivencia y Permadeath, más las casillas de expedición.
+2. **Selecciona la casilla de Expedición de la corrida que quieras.** Mientras una expedición está activa, la vigente aparece aquí junto a los modos de dificultad — durante la Expedición 22, elegirla era tan simple como elegir Normal. La misma pantalla también lista expediciones ya publicadas para rejugado o práctica. Solo corre una expedición en vivo a la vez, pero el menú te da el catálogo pasado.
+3. **Confirma y entra.** El juego crea la partida de expedición separada, arma la lista de hitos y se salta la apertura normal — no hay tutorial en modo expedición. Te deposita directamente en el escenario inicial guionizado con un equipamiento prestablecido.
+
+Dos tranquilidades. Empezar una expedición nunca toca tus otras partidas: es un archivo nuevo y separado. Y si abandonas a medias, no se pierde nada — recarga la partida de expedición en cualquier momento mientras la ventana esté abierta.
+
+## Ruta 2: empezar desde la Terminal de Expediciones de la Anomalía Espacial
+
+El segundo punto de entrada exige una partida que haya pasado el tutorial inicial — necesitas poder volar libre antes de poder usarlo.
+
+1. **Invoca la Anomalía Espacial** desde tu nave y acopla.
+2. **Encuentra la Terminal de Expediciones justo tras la entrada principal**, en el nivel de la plaza donde están los vendedores. Esta terminal es el centro de todo lo relacionado con expediciones: entrar en la corrida activa, revisar la lista de hitos y — lo crítico — reclamar las recompensas de fase.
+3. **Entra en la expedición desde la terminal.** Tu partida de expedición se crea y se entra desde aquí, separada de la partida principal con la que volaste hasta la Anomalía.
+
+La ruta de la terminal tiene una ventaja real: la transferencia de objetos. La terminal junto a la de expedición te permite copiar una selección de objetos — módulos de mejora, armas, recursos esenciales — desde tu partida establecida a la partida de expedición recién creada, suavizando el equipamiento inicial curado. Las reglas exactas han cambiado entre corridas, así que comprueba qué hay disponible cuando empieces; por esto los veteranos empiezan desde la Anomalía mientras los primerizos usan el menú.
+
+## Tus primeros diez minutos: la apertura guionizada
+
+Toda expedición abre con un escenario guionizado en lugar del tutorial estándar de lugar del accidente, y las corridas recientes han empezado en sitios radicalmente distintos. La Expedición 22: The Swarm te dejaba junto a una nave estelar accidentada y abría con un test de personalidad que te asignaba a uno de tres equipos — Royal, Sage o Weaver — alimentando una guerra a escala galáctica. La Expedición 21: Remnant empezaba en el único planeta de recuperación que alojaba toda la corrida. Titan, la expedición acuática, comenzó bajo el agua. La constante: un equipamiento prestablecido, un marcador en pantalla sobre tu primer objetivo y una lista de hitos ya corriendo.
+
+Esa primera hora es donde surge la pregunta de "arreglo mi nave o persigo hitos", y la respuesta es casi siempre **ambas cosas, en el orden correcto**:
+
+1. **Abre la pestaña de Expedición de tu registro antes de moverte.** En el menú de pausa, tu registro tiene una pestaña de Expedición que lista cada fase y cada hito. En The Swarm, reparar los propulsores de despegue y los motores de impulso era un hito temprano — la reparación que harías de todos modos cuenta.
+2. **Sigue el marcador en pantalla por los beats guionizados.** Los hitos de apertura son una secuencia guiada — investigar el accidente, fabricar los objetos iniciales, reparar la nave — y te enseñan los controles sobre la marcha. Es el tutorial, solo que con ropa de expedición.
+3. **Repara solo lo que pidan los hitos.** La nave inicial es una herramienta, no una posesión. No minerías veinte minutos para mejorar tecnología que la lista nunca menciona.
+4. **Reclama tus primeras recompensas antes de dejar la zona inicial.** Los pagos tempranos incluyen recursos y planos que hitos posteriores consumen — los hitos de apertura de The Swarm alimentaban directamente los objetivos siguientes.
+
+Una expectativa más: algunas expediciones cierran el final tras una barra de progreso comunitaria. La última etapa de The Swarm, el hito Chromatic Distortion, solo se desbloqueaba cuando toda la base de jugadores llenaba un medidor compartido — podías terminar tus hitos personales y seguir esperando al reloj comunitario. Si tu corrida se atasca en un hito que no puedes completar personalmente, probablemente es eso.
+
+## Leer la interfaz de expedición
+
+La interfaz es fina en cuanto conoces los tres sitios donde vive la información:
+
+- **La pestaña de Expedición de tu registro.** Cada fase, cada hito, tu contador de progreso y el umbral de la fase actual. Aquí planificas — y aquí compruebas si un hito es obligatorio u opcional, ya que la mayoría de fases te dejan saltar algunos.
+- **La Terminal de Expediciones de la Anomalía.** La cuenta regresiva del evento vive aquí, junto a la lista de hitos y — la parte que la gente olvida — el reclamo de recompensas. Las recompensas no caen solas a tu inventario; las recoges en la terminal.
+- **Los marcadores y notificaciones en pantalla.** Los hitos completados suenan mientras juegas. Un aviso nuevo significa que toca pensar en una visita a la terminal, no un desvío inmediato.
+
+La lectura más importante es el umbral de fase. Las fases se desbloquean por número de hitos, no al completar el cien por cien, así que toda fase tiene objetivos prescindibles — los jugadores nuevos que intentan completarlo todo se agotan en hitos opcionales. Nuestra [guía de completado rápido](/expeditions/expedition-fast-completion) cubre el lado del enrutamiento.
+
+## Reclamar recompensas y llevarlas a tu partida principal
+
+Esta es la parte con fecha límite dura. Las recompensas se reclaman a mano en la Terminal de Expediciones — si nunca visitas, los desbloqueos se quedan ahí sin reclamar, y cuando la ventana del evento cierra, lo no reclamado desaparece hasta una repetición.
+
+Qué se transfiere, y cómo:
+
+| Tipo de recompensa | Ejemplos | Cómo llega a tus partidas principales |
+| --- | --- | --- |
+| Naves, multiherramientas, exonaves | Golden Vector, Basilisk Crown, piezas del Coloso | Reclama en la terminal y canjea gratis en el Compañero de Síntesis de Azogue de la Anomalía, en cualquier modo |
+| Cosméticos | Conjuntos de armadura, pósters, calcomanías, títulos, gestos | La misma ruta — reclama en la terminal, canjea en el Compañero |
+| Planos y mejoras | Desbloqueos de tecnología, módulos de mejora | Para toda la cuenta una vez reclamados |
+| Monedas y consumibles | Unidades, nanitos, azogue, materiales | No se transfieren — se quedan dentro de la partida de expedición |
+
+El ritual de transferencia: termina la corrida (o las fases que querías), reclama todo en la terminal, carga tu partida principal, invoca la Anomalía Espacial y habla con el **Compañero de Síntesis de Azogue**. Cada recompensa que reclamaste está en su catálogo a precio cero — recoge tu nave, tu multiherramienta y tu conjunto de armadura, y vete volando. Funciona en cada partida, en cada modo, para siempre.
+
+## Errores de principiante que evitar en tu primera expedición
+
+| Error | Por qué duele | Qué hacer en su lugar |
+| --- | --- | --- |
+| Vender o tirar los recursos iniciales | Los hitos de apertura consumen exactamente esos materiales | No toques nada hasta haber leído la lista de hitos |
+| No abrir nunca la pestaña de Expedición | Vagas como en una partida normal y das vueltas atrás sin parar | Ábrela en los primeros diez minutos y planifica por fases |
+| Reparar y mejorarlo todo en la nave inicial | La nave inicial es un escalón, no un proyecto | Repara lo que pidan los hitos y sigue adelante |
+| No reclamar recompensas según se completan los hitos | Las fases tardías grindan sin las mejoras gratis | Reclama en la terminal tras cada tanda |
+| Tratar la corrida como una partida normal | Decorar bases y misiones secundarias se comen la ventana limitada | Las expediciones son sprints; el sandbox espera después |
+| Parar con recompensas sin reclamar cerca del límite | La ventana cierra y lo no reclamado desaparece hasta una repetición | Reclama todo pronto y revisa cada fase dos veces |
+
+El meta-error detrás de los seis: olvidar el reloj. Una partida normal perdona; una ventana de expedición no.
+
+## ¿Y cuándo puedes empezar una de verdad?
+
+A 18 de agosto de 2026: ninguna nueva. La Expedición 22: The Swarm corrió del 27 de mayo al 19 de julio de 2026, y no se ha anunciado nada desde entonces. Las próximas oportunidades realistas, en orden:
+
+1. **La Expedición 23 junto a o tras la actualización Cosmos.** La actualización de aniversario se anunció el 9 de agosto de 2026, y las expediciones nuevas han llegado históricamente con las actualizaciones mayores — Remnant con el parche Remnant, The Swarm con la versión 6.4. Hello Games no ha confirmado una expedición para Cosmos todavía. Nuestra [página de la Expedición 23](/expeditions/expedition-23) sigue el anuncio.
+2. **Una repetición Redux de una expedición anterior.** Hello Games repite periódicamente expediciones pasadas en ventanas acortadas — unas dos semanas cada una — con la misma estructura de hitos y recompensas. La temporada navideña de 2025 corrió cinco seguidas, y un bloque similar a finales de 2026 es la expectativa de trabajo de la comunidad. El [calendario de expediciones Redux](/expeditions/redux-expeditions-schedule) sigue cada ventana confirmada.
+3. **Un rejugado desde la terminal, hoy.** Las expediciones pasadas siguen jugables desde la Terminal de Expediciones y el menú de Nueva partida incluso sin nada activo, así que puedes practicar el flujo completo de principio a fin en una corrida vieja — incluida The Swarm — ahora mismo. La pega: los rejugados de expediciones terminadas no reexpiden la pista de recompensas de tiempo limitado; eso necesita una ventana activa o un Redux.
+
+Esa tercera opción es la mejor preparación: corre una expedición vieja esta semana, y cuando aparezca la cuenta regresiva de la Expedición 23, la empezarás conociendo ya el menú, la terminal, la pestaña del registro y el circuito de reclamo — sin fecha límite encima.
+
+## Guías relacionadas
+
+- [Guía de expediciones de No Man's Sky: fases, recompensas y speedrun](/expeditions/expedition-guide) — el complemento a nivel de sistema de esta página
+- [Expedición 22 (The Swarm): recompensas y cómo rejugarla](/expeditions/expedition-22) — la corrida más reciente, hito a hito
+- [Guía de completado rápido de expediciones](/expeditions/expedition-fast-completion) — enrutamiento y salto de umbrales
+- [Calendario de expediciones Redux](/expeditions/redux-expeditions-schedule) — cada ventana de repetición confirmada
+- [Todas las actualizaciones de No Man's Sky en 2026](/guides/new-update-2026) — Cosmos y el resto de parches del año
