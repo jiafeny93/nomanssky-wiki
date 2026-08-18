@@ -1,0 +1,378 @@
+{
+  "$schema": "../../docs/home.schema.json",
+  "site": {
+    "name": "No Man's Sky Wiki",
+    "shortName": "NMS Wiki",
+    "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.",
+    "tagline": "Guides for every update, expedition, and starship",
+    "legalNotice": "No Man's Sky Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer."
+  },
+  "nav": {
+    "search": "Search",
+    "language": "Language",
+    "cosmos-update": "Cosmos Update",
+    "expeditions": "Expeditions",
+    "starships": "Starships",
+    "multitools": "Multitools",
+    "base-building": "Base Building",
+    "guides": "Guides"
+  },
+  "search": {
+    "placeholder": "Search the wiki...",
+    "noResults": "No matches found",
+    "open": "Open search"
+  },
+  "shared": {
+    "readMore": "Read more",
+    "lastUpdated": "Last updated",
+    "publishedOn": "Published",
+    "noArticles": "No articles yet. Check back soon!",
+    "relatedArticles": "Related Articles",
+    "onThisPage": "On this page",
+    "backToCategory": "Back to",
+    "browseAll": "Browse all",
+    "viewAll": "View all",
+    "commentsHeading": "Comments",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "copied": "Copied!",
+    "consentText": "We use cookies for analytics and ads to keep this site free.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "consentTitle": "Cookies",
+    "bossCard": {
+      "title": "Boss Overview",
+      "hp": "HP",
+      "weakness": "Weakness",
+      "resistant": "Resistant",
+      "location": "Location",
+      "level": "Rec. Level"
+    },
+    "codesTable": {
+      "active": "Active Codes",
+      "expired": "Expired Codes",
+      "reward": "Reward",
+      "expires": "Expires",
+      "code": "Code"
+    },
+    "codesFaq": [
+      {
+        "question": "How do I redeem codes?",
+        "answer": "Open the game, click the settings gear in the top-right, paste your code into the Redeem Code field, and confirm. Codes are case-sensitive."
+      },
+      {
+        "question": "Why do codes stop working?",
+        "answer": "Codes expire on a schedule set by the developer (usually monthly or tied to update milestones), and some are one-per-account. This page is re-tested regularly."
+      },
+      {
+        "question": "How often are new codes released?",
+        "answer": "New codes typically arrive with each major game update. Bookmark this page and check back after every patch."
+      },
+      {
+        "question": "Do codes expire?",
+        "answer": "Yes — most codes have an expiry date, shown next to each code. Expired codes move to the expired table below."
+      }
+    ],
+    "possiblyOutdated": "This guide was last checked on",
+    "outdatedNote": "— the game may have changed since. Some details could be out of date.",
+    "prevArticle": "Previous",
+    "nextArticle": "Next",
+    "minuteRead": "min read",
+    "wasThisHelpful": "Was this helpful?",
+    "feedbackThanks": "Thanks for the feedback!",
+    "relatedVideos": "Related videos",
+    "gallery": "Gallery",
+    "gameVersion": "Game version",
+    "allTags": "All Tags",
+    "tagsIndexDescription": "Browse all articles by topic.",
+    "articlesCount": "articles",
+    "recentTitle": "Recent Updates",
+    "recentDescription": "The latest articles and updates across the wiki, newest first.",
+    "sponsorTitle": "Support this wiki",
+    "sponsorText": "If these guides helped you, consider supporting the site.",
+    "sponsorButton": "Support us",
+    "notFoundSearchHint": "Try searching the wiki instead.",
+    "notFoundPopular": "Popular pages",
+    "galleryLabels": {
+      "close": "Close",
+      "prev": "Previous image",
+      "next": "Next image"
+    },
+    "quickAnswer": "Quick Answer"
+  },
+  "overview": {
+    "cosmos-update": {
+      "overviewTitle": "No Man's Sky Cosmos Update Guides",
+      "overviewDescription": "Everything about the Cosmos update — interstellar free flight, landing on stars, heat-resistant gear, patch notes, and 10th anniversary rewards."
+    },
+    "expeditions": {
+      "overviewTitle": "No Man's Sky Expedition Guides",
+      "overviewDescription": "Walkthroughs and reward lists for every expedition, including Redux re-runs and fast completion routes."
+    },
+    "starships": {
+      "overviewTitle": "No Man's Sky Starship Guides",
+      "overviewDescription": "S-class hunting, living ships, solar ships, freighter farming, and hyperdrive upgrade guides."
+    },
+    "multitools": {
+      "overviewTitle": "No Man's Sky Multitool Guides",
+      "overviewDescription": "Royal, experimental, and sentinel multitools — where to find them and how to upgrade them."
+    },
+    "base-building": {
+      "overviewTitle": "No Man's Sky Base Building Guides",
+      "overviewDescription": "Base building tips, electrical wiring, storage containers, and the best planets to build on."
+    },
+    "guides": {
+      "overviewTitle": "No Man's Sky Guides and Tips",
+      "overviewDescription": "Beginner guides, money making, farming routes, pet battling, and general tips for 2026."
+    }
+  },
+  "home": {
+    "meta": {
+      "watermark": "No Man's Sky",
+      "title": "No Man's Sky Wiki: Cosmos Update, Expeditions & Ship Guides",
+      "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips."
+    },
+    "updates": {
+      "badge": "Fresh",
+      "title": "Recent updates"
+    },
+    "expeditionStatus": {
+      "badge": "Expedition status",
+      "title": "No limited-time expedition is running",
+      "detail": "Expedition 22 (The Swarm) ended July 19, 2026. Based on Hello Games' pattern, Redux re-runs should return from late October — nothing announced yet, and this page updates the day one is.",
+      "cta": {
+        "label": "Expedition guide",
+        "href": "/expeditions"
+      }
+    },
+    "popular": {
+      "badge": "Popular",
+      "title": "Most read",
+      "quickLinks": [
+        {
+          "label": "Cosmos Update",
+          "href": "/cosmos-update"
+        },
+        {
+          "label": "Expeditions",
+          "href": "/expeditions"
+        },
+        {
+          "label": "Starships",
+          "href": "/starships"
+        },
+        {
+          "label": "Money making",
+          "href": "/guides"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Fly safe, Traveller",
+      "description": "Bookmark this wiki and check back after every update — new guides land within days of each patch.",
+      "primary": {
+        "label": "Browse all guides",
+        "href": "/guides"
+      },
+      "secondary": {
+        "label": "Official site",
+        "href": "https://www.nomanssky.com/"
+      }
+    },
+    "hero": {
+      "badge": "10th Anniversary Update",
+      "title": "No Man's Sky Wiki",
+      "description": "Up-to-date No Man's Sky guides for the Cosmos era — updates, expeditions, starships, multitools, and farming routes.",
+      "ctaPrimary": {
+        "label": "Cosmos update guide",
+        "href": "/cosmos-update"
+      },
+      "ctaSecondary": {
+        "label": "All guides",
+        "href": "/guides"
+      },
+      "videoId": "c-KoLySxccY",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Years of free updates"
+        },
+        {
+          "value": "40+",
+          "label": "Major updates shipped"
+        },
+        {
+          "value": "18Q",
+          "label": "Planets to explore"
+        },
+        {
+          "value": "dynamic",
+          "label": "Wiki guides & counting"
+        }
+      ]
+    },
+    "start": {
+      "badge": "Quick start",
+      "title": "New here? Start with these",
+      "cards": [
+        {
+          "title": "Cosmos Update",
+          "description": "Interstellar flight, landing on stars, and heat-resistant gear",
+          "icon": "lucide:orbit",
+          "href": "/cosmos-update",
+          "number": "01"
+        },
+        {
+          "title": "Expeditions",
+          "description": "Walkthroughs, rewards, and Redux re-run schedules",
+          "icon": "lucide:flag",
+          "href": "/expeditions",
+          "number": "02"
+        },
+        {
+          "title": "Starships",
+          "description": "S-class hunting, living ships, and freighter farming",
+          "icon": "lucide:rocket",
+          "href": "/starships",
+          "number": "03"
+        },
+        {
+          "title": "Money Making",
+          "description": "Units, nanites, and quicksilver farming routes",
+          "icon": "lucide:book-open",
+          "href": "/guides",
+          "number": "04"
+        }
+      ]
+    },
+    "explore": {
+      "title": "Explore the wiki",
+      "description": "Updated for 2026",
+      "modules": [
+        {
+          "order": 1,
+          "name": "2026 Update Timeline",
+          "description": "Every major update this year, newest first.",
+          "href": "/cosmos-update",
+          "displayType": "timeline",
+          "highlights": [
+            {
+              "label": "Cosmos",
+              "detail": "10th anniversary update: interstellar free flight and landing on stars",
+              "badge": "Latest"
+            },
+            {
+              "label": "6.45",
+              "detail": "Bug-fix patch (June 2026)"
+            },
+            {
+              "label": "6.36",
+              "detail": "Pet battling arrives (June 2026)"
+            },
+            {
+              "label": "The Swarm",
+              "detail": "Large-scale space battles (May 2026)"
+            },
+            {
+              "label": "Remnant",
+              "detail": "Colossus modules and Expedition 21 (February 2026)"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Expedition Rewards",
+          "description": "What every expedition gives you.",
+          "href": "/expeditions",
+          "displayType": "labeled-cards",
+          "highlights": [
+            {
+              "label": "Expedition 21: Remnant",
+              "detail": "Colossus parts, camo plating, and the Heirloom armor set"
+            },
+            {
+              "label": "Redux Re-runs",
+              "detail": "Past expeditions return for a few weeks each season"
+            },
+            {
+              "label": "Fast Completion",
+              "detail": "Finish most expeditions in a single evening"
+            },
+            {
+              "label": "All Rewards",
+              "detail": "Every item, tracked across every re-run"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "New Player Path",
+          "description": "From crash site to capital freighter.",
+          "href": "/guides",
+          "displayType": "steps",
+          "highlights": [
+            {
+              "label": "Step 1",
+              "detail": "Survive your first planet and fix your starter ship",
+              "badge": "1-2 hrs"
+            },
+            {
+              "label": "Step 2",
+              "detail": "Build a base and set up passive income",
+              "badge": "1 evening"
+            },
+            {
+              "label": "Step 3",
+              "detail": "Jump into the current expedition",
+              "badge": "Weekend"
+            },
+            {
+              "label": "Step 4",
+              "detail": "Hunt S-class ships and upgrade your freighter",
+              "badge": "Ongoing"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Quick answers about the game and this site.",
+      "items": [
+        {
+          "question": "What is the Cosmos update?",
+          "answer": "Cosmos is the No Man's Sky 10th anniversary update, announced on August 9, 2026. It adds free interstellar flight — flying between star systems without warping — and the ability to land on stars using new heat-resistant gear."
+        },
+        {
+          "question": "Can you land on stars in No Man's Sky?",
+          "answer": "Yes — landing on stars is the headline feature of the Cosmos update. You need new heat-resistant equipment to survive the approach. Our landing on stars guide covers what is confirmed so far."
+        },
+        {
+          "question": "Is No Man's Sky free to play?",
+          "answer": "No. No Man's Sky is a premium game on PC (Steam, GOG, Epic), PlayStation, Xbox, Nintendo Switch, and Mac. All major updates, including Cosmos, are free for existing owners."
+        },
+        {
+          "question": "How long do expeditions run?",
+          "answer": "Most expeditions run for about six weeks. Past expeditions return as Redux re-runs, usually around holiday seasons, so rare rewards are never permanently missable."
+        },
+        {
+          "question": "Is this wiki official?",
+          "answer": "No. This is a fan-made community site and is not affiliated with or endorsed by Hello Games. For official news, visit nomanssky.com."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "playGame": "Play No Man's Sky",
+    "officialDiscord": "Official Discord",
+    "officialYoutube": "Official YouTube",
+    "officialTwitter": "Official Twitter",
+    "officialReddit": "Official Reddit",
+    "about": "About",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "Copyright",
+    "copyrightText": "© 2026 No Man's Sky Wiki. All rights reserved."
+  }
+}

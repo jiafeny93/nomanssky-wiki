@@ -13,7 +13,7 @@
  * This is configured in astro.config.ts via `i18n.routing.prefixDefaultLocale: false`.
  */
 
-export const locales = ['en'] as const;
+export const locales = ['en', 'es', 'de', 'fr', 'pt'] as const;
 
 export type Locale = (typeof locales)[number];
 
@@ -22,6 +22,10 @@ export const defaultLocale: Locale = 'en';
 /** English label for each locale (used in language switcher). */
 export const LOCALE_LABELS: Record<Locale, string> = {
   en: 'English',
+  es: 'Español',
+  de: 'Deutsch',
+  fr: 'Français',
+  pt: 'Português',
 };
 
 /** Whether the given locale is the default (English, no URL prefix). */
