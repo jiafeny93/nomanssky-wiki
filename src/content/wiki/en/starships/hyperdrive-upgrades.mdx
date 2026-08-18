@@ -1,0 +1,151 @@
+---
+title: "No Man's Sky Hyperdrive Upgrades: Modules, Colored Drives, Max Range"
+description: "How hyperdrive upgrades work in No Man's Sky: S-class module stacking limits, Cadmium, Emeril, and Indium drives, warp range math, and warp cell fuel."
+category: "starships"
+image: '../../../../assets/covers/starships/hyperdrive-upgrades.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "A stock hyperdrive jumps 101 LY to yellow stars only. Three S-class modules plus colored drives push range past 2,000 LY and open every star class."
+tags: ["hyperdrive", "warp", "starships", "upgrades", "guide"]
+faq:
+  - question: "How many hyperdrive upgrade modules can you stack?"
+    answer: "Three. A starship supports up to three Hyperdrive Upgrade Modules; installing a fourth or more disables every module of that type until you scrap back down to three. The Cadmium, Emeril, Indium, and Atlantid drives do not count against this limit, which is why most long-range ships run the drives alongside a full stack of modules."
+  - question: "What is the maximum hyperdrive range in No Man's Sky?"
+    answer: "The wiki-documented ceiling is roughly 2,200 light-years on a starship with three S-class modules optimally placed, or around 2,500 with X-class modules, on top of the 101 LY base drive. Freighters reach approximately 5,800 LY using derelict-freighter modules. Exact figures vary with module rolls, hull stats, and adjacency bonuses."
+  - question: "Do I still need Cadmium and Emeril drives if I have the Indium Drive?"
+    answer: "No. The Indium Drive acts as a direct upgrade: with it installed you can warp to blue, green, and red systems without the other drives. Many players keep all three installed anyway because each drive adds adjacency synergy to nearby modules, but for system access the Indium Drive alone is enough."
+  - question: "Does the Cosmos update make hyperdrive upgrades pointless?"
+    answer: "No. Cosmos adds free interstellar flight as an option, not an obligation, and instant warp jumps are expected to remain the efficiency choice. A long-range hyperdrive is also your safety net: if a free flight goes wrong in deep space, a good drive and a stock of fuel are what get you somewhere useful."
+  - question: "How far does one warp cell take you?"
+    answer: "One jump by default. Each warp burns 20 percent of the hyperdrive's tank, and a warp cell restores 25 percent, so four cells fully charge the drive for five jumps. Three S-class modules each add 100 percent warp cell efficiency, cutting per-jump fuel cost to a quarter — up to ten jumps from a single cell."
+  - question: "Where do you buy hyperdrive upgrade modules?"
+    answer: "From technology merchants on space stations, paid in nanites. Selection differs from station to station, so range-hunters hop systems checking each starship tech merchant. Outlaw systems sell X-class modules with higher potential range, and derelict freighter runs supply the freighter versions."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Every long journey in No Man's Sky eventually becomes a hyperdrive problem. The galaxy spans hundreds of billions of star systems, a fresh save can barely clear 100 light-years to the next yellow star, and an entire upgrade economy — nanites, procedural modules, colored-system drives, freighter hangars — exists to push that number higher. Range is the difference between crossing a galaxy region in an afternoon and spending a week hopping between fuel stops.
+
+This guide walks the full hyperdrive upgrade path in order: how the base drive works, which colored-system drives you actually need, how S-class upgrade modules stack and where the hard three-module ceiling bites, how to place everything for adjacency bonuses, how warp fuel works, and where freighters fit in. It closes with what the Cosmos update's free interstellar flight actually changes for warp builds — which is less than you might fear.
+
+**Last updated: August 18, 2026**, current through the staged rollout of the [Cosmos update](/cosmos-update/cosmos-update-guide); see our [2026 update tracker](/guides/new-update-2026) for the year's other patches.
+
+<StatBar
+  items={[
+    { value: '101 LY', label: 'Base hyperdrive range, yellow stars only' },
+    { value: '3', label: 'Upgrade modules before the stack disables' },
+    { value: '+265 LY', label: 'Maximum S-class module range bonus' },
+    { value: '~5,800 LY', label: 'Documented freighter warp ceiling' },
+  ]}
+/>
+
+<Callout type="info" title="Cosmos is still rolling out">
+  Free interstellar flight arrives with the Cosmos update, announced August 9, 2026, and its
+  patch notes are being published in stages. Everything about existing hyperdrive mechanics in
+  this guide is long-established and current; anything involving how free flight interacts with
+  warp is labeled as pending until Hello Games confirms it.
+</Callout>
+
+## How the Base Hyperdrive Works
+
+Every starship comes with a hyperdrive, and in stock form it does two things badly: it reaches only 101 light-years per jump (a range the Synthesis update nudged up from an even 100), and it can only target yellow-star systems — the vanilla majority of the galaxy. Red, green, blue, and purple stars simply refuse your jump request until you install the right drive technology, no matter how much range you have.
+
+Fuel is a percentage game. Each warp burns 20 percent of the hyperdrive's tank, one warp cell restores 25 percent, and four cells fully charge the drive for five jumps — a Waypoint-era change from the old five-cell fill. A fully charged drive also lets you leap through the center of the galaxy from a gateway system, the classic route to a new galaxy.
+
+You get the blueprint for the base drive early, through the crashed-freighter storyline that follows your first base building, so there is no reason to ever fly without one. One quirk worth knowing before you invest: the hyperdrive is one of the only technologies in the game that can be crafted but never dismantled, so its slot in your general inventory is permanent.
+
+## The Colored Drive Ladder: Cadmium, Emeril, Indium, Atlantid
+
+Star color is a lock, and each drive is a key. Four technologies unlock the four restricted star classes:
+
+| Drive | Unlocks | Notes |
+| --- | --- | --- |
+| Cadmium Drive | Red star systems | First rung; red stars refine into cadmium |
+| Emeril Drive | Green star systems | Second rung; needs emeril from green stars |
+| Indium Drive | Blue star systems | Direct upgrade — grants red and green access too |
+| Atlantid Drive | Purple star systems | Added with Worlds Part II; supersedes Indium for access |
+
+All four blueprints come from Iteration: Hyperion aboard the Space Anomaly, priced in nanites (the Indium Drive runs 200), and each drive is built from chromatic metal and a wiring loom. The design is a deliberate loop: you warp as far as your current drives allow, harvest that star class's metal, refine it into chromatic metal, and build the next key.
+
+Two details make this ladder cheaper than it looks. First, the drives are cumulative for access — the Indium Drive alone covers red, green, and blue stars, and the Atlantid Drive covers everything below it, so a minimal build only needs the top rung you can reach. Second, none of the four drives count against the upgrade module limit, and each one passively feeds an adjacency bonus into neighboring hyperdrive technology. That is why most endgame ships keep every drive installed even after they technically stop needing the lower ones: they are free synergy, not wasted slots.
+
+## S-Class Upgrade Modules and the Three-Module Limit
+
+Colored drives decide which stars you may visit. Upgrade modules decide how far you can jump, and they are where the hyperdrive meta actually lives.
+
+Modules are procedural. You buy sealed Hyperdrive Modules from technology merchants on space stations for nanites, open them, and get a rolled installation whose stats depend on its class:
+
+| Class | Range bonus (LY) | Warp cell efficiency | Source |
+| --- | --- | --- | --- |
+| C | 50 to 100 | None | Space station merchants |
+| B | 115 to 165 | None | Space station merchants |
+| A | 165 to 220 | +100% | Space station merchants |
+| S | 220 to 265 | +100% | Space station merchants |
+| X | 50 to 320 | Up to +100% | Outlaw system merchants |
+
+Two stats matter. Hyperdrive range is the headline — a top S-class roll adds up to 265 light-years per module. Warp cell efficiency is the quiet half of the value: A-class and S-class modules each add +100 percent fuel efficiency, and the bonuses stack multiplicatively, so one efficiency module halves your per-jump fuel cost, two drop it to a third, and three drop it to a quarter — five percent of a tank per jump, or roughly ten jumps from a single warp cell. For core runs and galaxy hops, efficiency modules often save more time than raw range does.
+
+Selection differs from merchant to merchant, so serious range-hunters hop systems, check every starship technology merchant, and buy only high rolls. Outlaw systems are worth the detour: their X-class stock can roll up to 320 light-years, beyond what any S-class module offers, though the floor of that range is low enough that most X rolls are junk.
+
+The hard rule, and the one that catches every new player: **three modules maximum**. Install a fourth upgrade module of the same type and the game disables all of them until you dismantle back down to three. There is no partial penalty and no warning screen — your range simply collapses, and the fix is scrapping the weakest module.
+
+One last piece of module trivia that savers of nanites should know: module stats follow a seeded progression tied to installation order on your save. The third module you install draws from a specific roll slot regardless of which physical module it is, which is why min-maxers install, check, reload, and reorder before committing.
+
+## Placement: Adjacency Multiplies Everything
+
+Where technology sits in your inventory grid is not cosmetic. Every hyperdrive-family item — modules, the colored drives, the base drive — feeds an adjacency bonus of about five percent into each bordering item, and those bonuses stack on top of module stats before supercharged slots multiply the result.
+
+The practical layout rules are simple. Cluster everything: base hyperdrive, three modules, and whichever colored drives you keep should form one block, not scatter across tabs. Put your highest-range modules in supercharged inventory slots (added in the Waypoint update), because those slots multiply the technology installed in them. And keep the colored drives touching the module cluster — they have no stats of their own to boost, but they feed bonuses into the modules beside them.
+
+A lazy scattered installation and a tight optimized one can differ by hundreds of light-years on identical hardware. Before grinding for better modules, rearrange what you already own.
+
+## The Range Math: What You Can Actually Reach
+
+Total jump range is base drive plus module bonuses plus adjacency and supercharged multipliers, then nudged by your hull. The documented progression:
+
+| Build | Approximate range |
+| --- | --- |
+| Stock drive, no modules | 101 LY |
+| Three C-class modules | 250 to 400 LY |
+| Three S-class modules, unplaced | 760 to 900 LY |
+| Three S-class modules, optimized | ~2,200 LY |
+| Three X-class high rolls, optimized | ~2,500 LY |
+
+The jump from "unplaced" to "optimized" is adjacency and supercharged slots doing their work, and it is why placement is a free upgrade. Your hull matters too: explorers carry the best hyperdrive stat of any pilotable class, so the longest-jumping ships in the game are S-class explorers with three modules in a tight cluster — the same hull our [ship rankings](/starships/best-ships) put at the top of the range game.
+
+Exact ceilings move patch to patch as rolls and multipliers get retuned, so treat anything more precise than "roughly 2,200 to 2,500 light-years on a starship" as folklore until you measure it on your own save.
+
+## Fuel: Warp Cells, Hypercores, and Efficiency
+
+Range gets the glory; fuel does the work. A warp cell is crafted from antimatter and antimatter housing, which are themselves built from chromatic metal and condensed carbon, and oxygen and ferrite dust, respectively.
+
+If you would rather buy than craft, the Warp Hypercore is the premium option: a single hypercore fully charges a hyperdrive by itself — the equivalent of four warp cells — and its blueprint comes from manufacturing facilities and operations centres, or the Synthesis Laboratory aboard the anomaly. The catch is its ingredient list includes storm crystals, which only spawn during extreme weather, so most pilots treat hypercores as expedition stock rather than daily fuel.
+
+The efficiency math from the module section is worth repeating as a rule of thumb: an unmodified drive gets one jump per cell, while a drive with three efficiency-boosting S-class modules gets roughly ten. Fuel discipline is the cheapest upgrade in the entire game.
+
+## Freighters: The Fleet-Scale Hyperdrive
+
+Your capital ship has its own hyperdrive, its own fuel tank, and its own upgrade path, and it is the jump engine for your entire operation — a freighter warp carries every ship stored in its hangar along with it, which makes fleet logistics a freighter-range question.
+
+The freighter drive starts at 100 light-years and is fully charged by five warp cells or one hypercore. It grows two ways. The built-in upgrade tree — Warp Core Resonator at +200 LY, Plasmatic Warp Injector at +300 LY, and Reality De-threader at +800 LY, plus +50 LY colored shielding variants for red, green, and blue access — is bought with units and nanites. The bigger gains come from Freighter Hyperdrive Upgrade Modules, the procedural drops from derelict freighter runs since the Desolation update, which also roll fuel-efficiency stats. A dedicated captain chasing clean derelict layouts pushes a freighter to roughly 5,800 light-years — more than double any starship.
+
+The full derelict-freighter loop, fleet management, and frigate expedition logistics are covered in our [freighter guide](/starships/freighter-guide).
+
+## Cosmos and Beyond: Does Free Flight Replace Warping?
+
+The tenth-anniversary Cosmos update, announced August 9, 2026, adds the option to fly straight to another solar system under your own power — the first time in the game's history that the hyperdrive has had competition.
+
+The framing matters, though: as our [interstellar flight guide](/cosmos-update/interstellar-flight-guide) puts it, free flight is an option, not an obligation. Hello Games has not announced the removal of warping, and the expectation across all coverage is that instant jumps remain the efficiency choice while free flight becomes the scenic one. Two open questions are worth tracking in the staged patch notes: whether free flight respects the colored-drive gates (can you fly to a blue star without an Indium Drive?) and what fuel, if any, sustained interstellar cruising consumes.
+
+Until those answers land, the practical read is that hyperdrive upgrades gain value rather than losing it. A long-range drive is the fallback that rescues a free flight gone wrong, the fast lane for traders and core-runners, and the backbone of any galaxy-center push. The Cosmos preparation checklist ranks upgrading your hyperdrive and modules as high priority — which matches how every travel system in ten years of updates has treated drive quality. If you are rebuilding your warp kit for the anniversary era, our [S-class ship hunting guide](/starships/s-class-ships) covers finding the hull worth installing it all in.
+
+## Related Guides
+
+- [The Best Ships in No Man's Sky, Ranked](/starships/best-ships)
+- [S-Class Ship Guide: Spawn Odds and Hunting Loops](/starships/s-class-ships)
+- [Freighter Guide: Bases, Fleets, and Frigate Expeditions](/starships/freighter-guide)
+- [Cosmos Interstellar Flight: Free Flight vs Warping](/cosmos-update/interstellar-flight-guide)
+- [No Man's Sky Cosmos Update: Complete Anniversary Guide](/cosmos-update/cosmos-update-guide)
+- [How to Land on Stars in No Man's Sky](/cosmos-update/how-to-land-on-stars)
+- [Every No Man's Sky Update in 2026](/guides/new-update-2026)

@@ -1,0 +1,162 @@
+---
+title: "No Man's Sky Solar Ship Guide: Free Launch Fuel and S-Class Hunting"
+description: "No Man's Sky solar ship guide: how solar sail launch fuel recharging works, where to find solars in outlaw systems, and how to get an S-class."
+category: "starships"
+image: '../../../../assets/covers/starships/solar-ship-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Solar ships recharge launch fuel automatically through their sails while flying. Find them in outlaw systems, where they replace most shuttle traffic, and hunt S-classes at a flat 5% spawn chance."
+tags: ["solar-ship", "outlaws-update", "outlaw-systems", "launch-fuel", "starships", "2026"]
+faq:
+  - question: "Where do you find solar ships in No Man's Sky?"
+    answer: "Most reliably in outlaw systems, the pirate-controlled systems introduced alongside solars in the Outlaws update. Community-documented spawn rules say a shuttle slot has an 85% chance to be a solar in an outlaw system versus only 10% elsewhere, so most hunting happens at outlaw stations and trading posts. Solars do appear rarely in ordinary systems too."
+  - question: "How does solar ship launch fuel recharging actually work?"
+    answer: "Every solar ship carries a unique technology called the Vesper Sail. Each takeoff still draws launch fuel at the standard rate, but the sail performs photovoltaic recharging of the launch thrusters automatically while you fly, so the tank refills during normal travel. In practice you stop crafting launch fuel entirely, because pulsing between planets tops the tank back off."
+  - question: "Are solar ships better than fighters or explorers?"
+    answer: "Not better, differently shaped. An S-class solar rolls a damage bonus of roughly 60 to 75 percent, close to exotic territory but under a fighter's 70 to 90 percent, with high maneuverability matching both. Its hyperdrive bonus trails an explorer's badly, and its inventory is small. Solars win on convenience: no launch fuel upkeep, and the best pulse engine performance of any class."
+  - question: "How do I get an S-class solar ship?"
+    answer: "Three ways. Hunt first waves in outlaw systems, which community testing gives a flat 5% S-class spawn chance regardless of economy. Pay to raise a cheaper solar's class at the Starship Outfitting Terminal. Or fabricate one at a Starship Fabricator using one body, one wing, one sail, and a reactor core whose class sets the result, so an S-class core guarantees an S-class solar."
+  - question: "Do solar ships need sunlight or a nearby star to recharge?"
+    answer: "No. Despite the name, the recharge is not tied to daylight, star proximity, or sitting parked on a surface. It comes from flying. That distinguishes it from the Launch Auto-Charger upgrade any ship can install, which only trickles charge back during daytime while landed."
+  - question: "Can solar ships use normal starship upgrades?"
+    answer: "Yes. Unlike Living Ships, solars are conventional technology ships: they accept standard pulse engine, weapon, shield, and hyperdrive upgrade modules, Storage Augmentations, and the suspicious X-class modules sold by outlaw station merchants. Their one exclusive piece is the Vesper Sail, which cannot be bought or moved to any other ship class."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+The solar ship is No Man's Sky's quality-of-life specialist: a striking, sail-winged hull that quietly deletes one of the game's oldest chores. Since the earliest days, every planetfall has ended the same way, with you topping up launch fuel or wincing as the tank creeps toward empty. Solar ships, introduced in the Outlaws update of April 2022 (version 3.85), recharge their own launch thrusters through their sails while they fly. Land, hop out, build a base, come back a week later, and the takeoff is already paid for.
+
+That single trait, plus competitive stats and one of the most distinctive silhouettes in the game, has kept solars in every "which ship should I fly" conversation since. This guide covers how the sail works, where solars spawn, the practical ways to land an S-class, the parts catalogue, and an honest comparison against fighters and explorers.
+
+<StatBar
+  items={[
+    { value: '3.85', label: 'Outlaws update that added solars, April 2022' },
+    { value: '25%', label: 'Launch fuel per takeoff, refilled by the sail' },
+    { value: '85%', label: 'Chance a shuttle is a solar in outlaw systems' },
+    { value: '5%', label: 'Flat S-class spawn chance in outlaw systems' },
+  ]}
+/>
+
+<Callout type="tip" title="The recharge comes from flying, not from stars">
+  The solar sail recharges your launch thrusters while the ship is in flight, no matter
+  how far you are from the nearest star or whether it is nighttime on the planet below.
+  If you land somewhere and plan a long session of hopping around one planet, the tank
+  you arrive with is the tank you keep, so arrive with a full one.
+</Callout>
+
+**Last updated: August 18, 2026.** The solar ship's mechanics have been essentially frozen since the Outlaws update, and nothing in the 2026 patch cycle has touched them as of this writing. Stats below follow current community wiki documentation; if the staged [Cosmos update](/cosmos-update/cosmos-update-guide) changes anything relevant, this guide will be revised alongside our [2026 update tracker](/guides/new-update-2026).
+
+## What Is a Solar Ship?
+
+A solar ship is a high-tech starship class with extendable solar sails that deploy automatically during flight. Hello Games shipped them in the Outlaws update with, in the official patch notes' words, "unique technologies for a fast and efficient Pulse Engine," spread across a wide range of procedurally generated variations. They can technically appear anywhere in the galaxy, but they are dramatically more common in the pirate-controlled outlaw systems that arrived in the same update, and that pairing is no accident: solars are the outlaw fleets' signature hull.
+
+Four things define the class in practice:
+
+- **The Vesper Sail.** Every solar carries this exclusive engine technology, which boosts pulse performance and, critically, enables automatic recharging of the launch system from flight. It cannot be bought separately or installed on any other class.
+- **A small inventory, always.** Solars spawn only in the small inventory tier, roughly 24 to 30 cargo slots with 13 to 18 tech slots, upgradeable to a 110-slot cargo ceiling like other modern ships. This is the class's one real weakness.
+- **High maneuverability.** The same agility band as fighters and explorers, which makes them pleasant to fly and perfectly usable in a scrap.
+- **A pirate-flavored acquisition loop.** You will be spending time in outlaw systems, with their black markets, bounty brokers, and complete absence of space police.
+
+They are piloted, traded in, and scrapped like any other ship, which already puts them ahead of Living Ships in flexibility. Our [ship class rankings](/starships/best-ships) slot them as the smart daily driver rather than an endgame specialist, and that framing holds up under the numbers.
+
+## How the Solar Sail Works: Launch Fuel You Never Craft
+
+Launch fuel is the quiet tax on every landing in No Man's Sky. A standard takeoff burns **25% of the launch thruster tank** (doubled in Survival and Permadeath), and until you install workarounds, refilling it means crafting launch fuel or feeding the thrusters ferrite dust and di-hydrogen, forever.
+
+The solar ship's answer is the **Vesper Sail**, described in-game as a high-performance solar sail that generates an electric field within the sails themselves, letting the ship build momentum from the solar wind while enabling "photovoltaic recharge of the starship's launch systems." In plain terms: takeoffs still cost launch fuel at the standard rate, but while you fly, whether cruising atmosphere, boosting across a continent, or pulsing between planets, the sail pours that fuel back in. One pulse jump between planets is typically enough to arrive with a full tank, which is why solar owners simply stop thinking about launch fuel within an hour of buying one.
+
+The sail carries three more bonuses on top, per the community wiki's documented figures: roughly **+80% pulse drive fuel efficiency**, **+15% boost**, and **+11% maneuverability**. That combination is why solars are widely credited with the **best pulse engine performance of any ship class**: they pulse faster for longer on the same tritium, and they do it while refueling themselves.
+
+Be precise about what the sail is not. It is not the **Launch Auto-Charger**, an upgrade any ship can install that trickles 4% per minute back into the tank, but only during daylight while parked. It is not the **Efficient Thrusters** upgrade, which cuts launch cost by 20% but still leaves you crafting fuel. Those are slow patches on the problem; the sail deletes the problem. It is also not transferable: scrap a solar and the Vesper Sail does not come out as a reusable part for your fighter.
+
+## Where to Find Solar Ships: Outlaw Systems 101
+
+Solars follow the same ambient-spawn rules as every NPC ship: they land at space stations and trading posts, and you buy them from the pilot. What changes is the mix. Community-documented spawn rules state that every system reserves slots for seven shuttle designs, and a solar ship has an **85% chance to replace a shuttle in outlaw systems versus a 10% chance everywhere else**. In an ordinary system, solars are rare enough that players mistake them for exotics. In an outlaw system, they are most of what lands.
+
+Finding outlaw systems is its own small skill:
+
+1. **Fit a scanner.** The Outlaws patch notes specify that outlaw systems are identified on the galaxy map with a **Conflict or Economy scanner**, both standard starship technology. Buy either from a station technology merchant if your ship lacks them.
+2. **Read the map.** Outlaw systems show no economy rating where a normal system lists wealth tiers, with pirate authority instead of Gek, Korvax, or Vy'keen factions. That missing economy line is the tell.
+3. **Expect the scenery to change.** Outlaw stations have their own NPCs, a Bounty Master handing out piracy missions, black market traders selling contraband, and a technology merchant specializing in "suspicious aftermarket upgrades" (X-class modules, more on those below). There are no Sentinel authorities patrolling the space.
+4. **Plan your route.** One documented quirk from the patch notes: outlaw stations cannot be warped to directly from regulated stations, and vice versa. Budget an extra hop through open space when crossing between pirate territory and civilized space.
+
+Once docked, the hunting loop is the same one ship hunters have run for years. Every system has a fixed pool of ship designs generated from its seed, so a system whose early landing waves include solar designs will keep producing them on every visit and reload, while each ship's class and stats re-roll every time it lands. Park at a station or trading post, watch what lands, and reload your save to shuffle the dice; the first wave after a reload is the efficient one to check.
+
+A note for multitaskers: outlaw systems are also the heart of the smuggling loop. Contraband bought cheap at a pirate station sells at a fat markup in regulated space, and bounty missions pay well, so a solar-hunting trip usually funds itself. The pirate life pairs naturally with squadron recruitment and a freighter, both covered in our [freighter guide](/starships/freighter-guide).
+
+## How to Get an S-Class Solar
+
+There are three legitimate routes to a max-class solar, in increasing order of effort.
+
+**Route 1: Hunt the 5%.** Spawn-class odds follow the system's economy, and outlaw systems have their own row in the table: roughly **85% C-class, 5% B, 5% A, 5% S**. That flat 5% S-class chance is more than double the 2% of a wealthy economy, which makes outlaw systems arguably the best S-class hunting grounds in the game, counterintuitive as that feels. Run the loop described above until an S-class touches down; at 5%, expect roughly one per twenty ships, and every roll is independent.
+
+**Route 2: Buy low, upgrade the class.** Any solar, including a cheap C-class, can be raised through the classes at the **Starship Outfitting Terminal** on a space station, re-rolling stats upward within the class band while slot expansions ride along via Storage Augmentations. You trade units for the guarantee that would otherwise be dice, and since a solar you love the look of is worth more than a random S you tolerate, plenty of hunters buy the body they want and pay to make it strong.
+
+**Route 3: Fabricate exactly what you want.** Since the Orbital update, solars can be built from scratch at a **Starship Fabricator**. The recipe is pleasingly literal: one solar **body**, one **wing**, one **sail**, and a **reactor core**. Parts come from scrapping salvaged solars, and the core's class sets the finished ship's class, so an S-class core bought from a starship technology merchant hands you a guaranteed S-class in precisely the parts and colors you chose. Exotics, Living Ships, and Sentinel interceptors cannot be fabricated at all, which quietly makes solars the most customizable huntable class in the game.
+
+For the general first-wave farming discipline, reload etiquette, and slot economics, our [S-class ship guide](/starships/s-class-ships) covers the loop class-agnostically, and the [exotic ship locations guide](/starships/exotic-ship-locations) teaches the portal-and-glyph pipeline if you would rather portal directly to a community-documented solar than shop system by system.
+
+## Parts, Colors, and the Cockpit View
+
+Solar ships are built from a fixed parts catalogue, and knowing it makes coordination trading vastly easier, because the community names every part. Per the community-maintained Solar Parts Catalogue:
+
+| Slot | Options |
+| --- | --- |
+| Body shape (6) | Raven, Arachnid (Spider), Marlin, Falcon, Turbofan Fuselage (Grouper), Jackal |
+| Sail (3) | Hex, Crescent, Rectangle |
+| Wing (6) | Razor, Shielded, Double Blade, Starburst, Talon, Grapple |
+| Wing tip (5) | Horza, Verta, Tristar, Torpedo, Drill |
+| Sail colour (8) | Green, gold, purple, cyan, red, white, orange, blue |
+
+Every attribute is independent, hull colours come in painted and metallic undercoats, and the body shape sets the whole carapace, nose to boosters. The design space is enormous, which is why the community trade in solars as 12-glyph portal addresses plus a parts description, the same convention used for exotics.
+
+Two aesthetic truths worth knowing before you fall in love at a trading post:
+
+**The sail animation is the point.** Sails fold out automatically during flight and glow in their chosen colour. Most owners spend more time in third person in a solar than in any other ship, and it is easy to see why.
+
+**First-person visibility is the class's sore spot.** The same sails that look so good from outside sit partly in the pilot's sightline from the cockpit. They are semi-transparent, but community threads describe the view through them as murky, and some first-person pilots find certain body shapes genuinely obstructive. If you fly exclusively in first person, inspect a solar's cockpit view before buying, or lean toward body shapes whose sails sit lower or further outboard; third-person flyers can ignore this paragraph entirely.
+
+Since ship customization arrived, you can also scrap ships for parts and rebuild your dream solar at the fabricator, mixing any body, sail, wings, and tips into one hull, then painting it. The catalogue above is effectively the menu.
+
+## Solar Ship Stats: How It Compares
+
+Current community wiki data puts the class in perspective next to its nearest rivals. All figures are S-class type bonuses; base hyperdrive range starts at 101 light-years for everyone before bonuses and upgrades multiply in.
+
+| | Solar | Fighter | Explorer | Exotic |
+| --- | --- | --- | --- | --- |
+| Maneuverability | High (387.5–445) | Very High (387.5–445) | High (387.5–445) | High (387.5–445) |
+| S-class damage bonus | +60–75% | +70–90% | No bonus | +50–75% |
+| S-class shield bonus | +23–50% | +24–38% | +30–40% | +70–90% |
+| S-class hyperdrive bonus | +38–50% | +35–45% | +90–120% | +75–95% |
+| Launch cost per takeoff | 25%, self-refilled | 25% | 12.5% | 25% |
+| Inventory | Small only (24–30 cargo) | Small to large | Small to large | Small only (24–30 cargo) |
+
+Read as a fighter: a solar gives up a little top-end damage in exchange for never touching launch fuel and pulsing meaningfully cheaper. Read as an explorer: no contest at range, because an explorer's hyperdrive bonus is double or triple a solar's, and explorers also take off on half the launch fuel. Read as an exotic: the exotic wins on shields and warp range by wide margins, but cannot be fabricated to order, so the solar is the customizer's trophy.
+
+The verdict our [best ships rankings](/starships/best-ships) landed on survives the numbers: solars are competitive-but-not-exceptional stat sticks whose real selling points are behavioral. No launch fuel, the game's best pulse engine, high agility, and a look nobody else has.
+
+## Outfitting a Solar Ship
+
+Solars are conventional technology ships, so outfitting follows the standard playbook. Buy S-class upgrade modules from station technology merchants for your pulse engine, weapons, shields, and hyperdrive; keep them adjacent to their parent systems in the now-familiar two-by-two blocks for the adjacency bonus; and stack Storage Augmentations toward the 110-slot cargo ceiling.
+
+One outlaw-specific wrinkle: pirate station technology merchants sell **X-class "suspicious" modules**, which roll wildly between brilliant and terrible. They are cheap, gamble-friendly, and the thematic match for the ship, so sprinkle a few in and keep the winners. Standard modules from regulated stations remain the reliable backbone.
+
+Finally, remember that solars are excellent scrap. A hunting session produces surplus ships whose bodies, wings, and sails feed future builds, so hoard the parts that match your target design even when the ship wearing them is a C-class you would never fly.
+
+## Is the Solar Ship Worth It?
+
+If you play the way most players actually play, planet-hopping, base-building, dipping into combat occasionally and long-range exploration rarely, then yes, emphatically. The launch fuel economy is a small tax that compounds across hundreds of landings, and the solar is the only class that abolishes it while remaining a fully conventional, fully upgradeable ship. Hunters comparing free alternatives should also look at [Sentinel interceptors](/starships/sentinel-interceptor-guide), which cost nothing but a fight on a dissonant planet, but an interceptor cannot be fabricated to spec, and it does not pay your launch fuel bill.
+
+One forward-looking note, clearly labeled as reasoning rather than confirmed fact: the Cosmos update's announced interstellar free flight would make long cruises between systems a real activity, and a ship that refuels its launch thrusters simply by flying is an obvious beneficiary. Watch the [Cosmos guide](/cosmos-update/cosmos-update-guide) as the staged patch notes land.
+
+Buy the body shape you love at whatever class you can afford, upgrade or fabricate your way to S, and let every landing after that be somebody else's problem.
+
+## Related Guides
+
+- [The Best Ships in No Man's Sky: Every Type Ranked](/starships/best-ships)
+- [No Man's Sky S-Class Ships: How to Hunt the Best Rolls](/starships/s-class-ships)
+- [Exotic Ship Locations: Portals, Glyphs, Coordinates](/starships/exotic-ship-locations)
+- [Sentinel Interceptor Guide: Claim a Free S-Class Ship](/starships/sentinel-interceptor-guide)
+- [Freighter Guide: Bases, Fleets, and Frigate Expeditions](/starships/freighter-guide)
+- [Cosmos Update: The Complete Anniversary Guide](/cosmos-update/cosmos-update-guide)
+- [Every No Man's Sky Update in 2026](/guides/new-update-2026)

@@ -1,0 +1,152 @@
+---
+title: "No Man's Sky S-Class Ships: Spawn Odds, Farming & Stats (2026)"
+description: "How to get an S-class ship in No Man's Sky: spawn odds by economy tier, the 5% pirate system exception, and the first-wave reload loop that finds them fast."
+category: "starships"
+image: '../../../../assets/covers/starships/s-class-ships.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "S-class ships spawn in about 2% of rolls in wealthy 3-star economies, 1% in average economies, and 5% in pirate systems. Farm trading post first waves and reload to re-roll."
+tags: ["s-class", "starships", "ship-farming", "spawn-odds", "economy"]
+faq:
+  - question: "What are the S-class ship odds in No Man's Sky?"
+    answer: "About 2% per arriving ship in wealthy 3-star economies, 1% in average economies, and effectively zero in poor ones. Pirate systems are the exception at roughly 5%, community-tested since the Outlaws update. Exotic ships skip the roll entirely because they always spawn S-class."
+  - question: "Do S-class ships spawn in poor systems?"
+    answer: "Effectively never. The documented spawn table gives poor economies a 0% S-class weighting, with 60% of ships spawning C-class. The ship models in any system can technically roll S, but there is no reason to hunt in a 1-star economy when a wealthy one doubles or triples the odds."
+  - question: "What is the fastest way to farm an S-class ship?"
+    answer: "Install an Economy Scanner, filter the galaxy map for wealthy 3-star economies, land at a trading outpost, and step out of your ship to create an autosave. Scan the first wave of arriving ships, and if no S-class lands, reload the restore point from the options menu. Each reload re-rolls the class odds, so fast cycles beat passive waiting."
+  - question: "Are S-class ships worth the price?"
+    answer: "Usually yes if you plan to keep the ship. S-class adds 50 to 100 percent to the price but rolls the top of the hull's damage, shield, and hyperdrive bands and near-maximum inventory slots. For a long-term flagship the ceiling is worth paying for; short-term pilots can settle for A-class and upgrade later."
+  - question: "Can upgrade modules make a C-class ship as good as S-class?"
+    answer: "Modules close the gap but never erase it. S-class upgrade modules stack large percentage bonuses on any hull, and supercharged tech slots amplify them further, but the core class bonus still multiplies everything underneath. A fully upgraded C-class ship performs well; the same modules on an S-class hull always end higher."
+  - question: "Has the Cosmos update changed S-class spawn rates?"
+    answer: "Not as of August 18, 2026. Hello Games is still releasing Cosmos patch notes in stages, and nothing published so far touches ship spawning or class weighting. The odds table in this guide has been stable through the 2025 and 2026 updates, and we will revise it if staged notes change anything."
+---
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Every ship that touches down on a No Man's Sky trading post pad is rolling dice you cannot see. The model is fixed — a system's ship pool never changes — but the class stamped on each arriving hull is rolled fresh at spawn, from C at the bottom through B and A up to S at the top. An S-class ship is the ceiling of that roll: the best core stat bonuses, the biggest inventory band, and the heaviest price tag the game puts on a single hull.
+
+Hunting them is a knowledge check more than a grind. Know which economies roll S-class, know where to stand, and know how to re-roll the arrival queue, and an S-class ship costs you a relaxed twenty minutes. Do it blind and the same ship can take a week. **Last updated: August 18, 2026.** The spawn rules below have been stable for years, and nothing in the staged Cosmos rollout has changed them as of this writing. For what each hull type does with S-class stats, see our [ship class rankings](/starships/best-ships); for the year's update timeline, our [2026 update tracker](/guides/new-update-2026).
+
+<StatBar
+  items={[
+    { value: '2%', label: 'S-class odds in a wealthy 3-star economy' },
+    { value: '5%', label: 'S-class odds in pirate systems' },
+    { value: '1–3', label: 'Storage Augmentations per scrapped S-class' },
+    { value: '+100%', label: 'S-class fighter price premium over C-class' },
+  ]}
+/>
+
+<Callout type="info" title="Where these numbers come from">
+  The economy-tier odds and price premiums below match the tables documented on the community
+  wikis, which have been stable for years. The pirate system rate, the stat bands, and the
+  scrapping returns are community-tested rather than officially documented, and each is flagged
+  inline where it appears.
+</Callout>
+
+## What an S-Class Ship Actually Is
+
+Class is the game's ranking system for ships (and multitools, freighters, and upgrade modules): C, B, A, and S. For a starship it does two concrete things. It decides how many general and technology slots the hull rolls within its model's allowed range, and it sets the bonus multiplier applied to the three core stats you read when you scan a ship — damage, shields, and hyperdrive. A C-class fighter and an S-class fighter of the same model share the same airframe; the S-class version simply rolls bigger numbers in every column that matters.
+
+Class also sets the price. The wiki-documented premium over a C-class hull of the same type:
+
+| Ship type | B-class | A-class | S-class |
+| --- | --- | --- | --- |
+| Fighter | +20% | +70% | +100% |
+| Hauler | +30% | +60% | +80% |
+| Explorer | +10% | +25% | +50% |
+| Shuttle | +10% | +25% | +50% |
+| Freighter | +20% | +40% | +60% |
+
+Three hull families skip the class lottery entirely. [Exotic ships](/starships/exotic-ship-locations) always spawn S-class — the wiki is explicit that an exotic displays as S even when its underlying roll would have counted as C. [Living ships](/starships/living-ship-guide) hatch as guaranteed S-class, because their stats are fixed at the top band by the questline rather than rolled at a station. And [Sentinel interceptors](/starships/sentinel-interceptor-guide) are claimed at crash sites with their stats already rolled, which is why budget hunters love them. Every other ship in the game rolls dice — so learn the dice.
+
+## S-Class Spawn Odds by Economy Tier
+
+The class of each arriving ship is rolled against a table weighted by the host system's economy strength. Wealthier systems roll more A- and S-class ships; poor ones barely roll them at all. The full documented distribution:
+
+| Economy tier | C | B | A | S-class chance |
+| --- | --- | --- | --- | --- |
+| 1-star — Declining, Destitute, Struggling | 60% | 30% | 10% | ~0% |
+| 2-star — Adequate, Balanced, Promising | 49% | 35% | 15% | 1% |
+| 3-star — Opulent, Affluent, Prosperous | 30% | 40% | 28% | 2% |
+| Pirate — Black Market, skull icon | varies | varies | varies | ~5% |
+
+How to read each row on the galaxy map:
+
+1. **1-star economies** (Declining, Destitute, Failing, Fledgling, Low Supply, Struggling, Unsuccessful, Unpromising) carry a documented 0% S-class weighting. Six in ten ships are C-class. Never hunt here.
+2. **2-star economies** (Adequate, Balanced, Comfortable, Developing, Medium Supply, Promising, Satisfactory, Sustainable) roll about 1% S-class. One in a hundred arrivals — huntable, but you are paying double the reloads for the same result.
+3. **3-star economies** (Advanced, Affluent, Booming, Flourishing, High Supply, Opulent, Prosperous, Wealthy) roll about 2% S-class and 28% A-class, the best legal odds in the game. This is where every serious hunt happens.
+4. **Pirate systems** show "Black Market" and a skull icon instead of a star rating. Community testing since the Outlaws update puts their S-class rate at roughly **5%** — two and a half times the best legal economy — at the cost of lawless space and stations that sell smuggled goods instead of normal trade items.
+
+The difference between rows compounds: at 2% versus 1%, a wealthy system reaches your S-class ship in half the reloads of an average one, before counting the bigger A-class consolation prizes landing around it.
+
+To see any of this on the map, install an **Economy Scanner** starship module. It adds an economy filter to the galaxy map and lets you read any system's wealth and conflict level before warping, so you can chain wealthy systems instead of guessing. It is cheap, bought from any station's ship technology merchant, and the highest-value module in the entire hunt.
+
+## Where to Farm S-Class Ships
+
+**Wealthy 3-star systems are the default answer**, and within them you have two places to stand:
+
+- **Trading outposts** are the community favorite. Ships arrive faster at an outpost than at a space station, the pad puts you close enough to scan arrivals without moving, and the whole loop runs from one rooftop. Find one with the Economy Scanner's outpost scan or a planetary chart from a station cartographer.
+- **Space stations** run the identical loop — dock, exit your ship inside to autosave, watch the landing pads. Waves arrive a little slower and the sightlines are worse, but stations have no weather or sentinels interrupting you.
+
+**Pirate systems are the specialist answer.** The 5% community-tested S-class rate is the best in the game, and pirate systems are also where [solar ships](/starships/best-ships) spawn, so the hunt doubles as a solar ship hunt. The tradeoffs: no economy rating to lean on, outlaw stations with their own vendor stock, and more ambient danger. If you can fight off the occasional pirate interdiction, the odds are worth the trip.
+
+**Freighters follow entirely separate rules.** Capital freighters arrive through rescue battle events after warp jumps, not station waves, and S-class capitals are farmed with their own save-and-reload discipline. Our [capital freighter farming guide](/starships/capital-freighter-farming) covers that loop, and the [freighter guide](/starships/freighter-guide) covers everything else about running one.
+
+## The First-Wave Reload Loop, Step by Step
+
+Ships arrive at outposts and stations in waves, and the first ships to land after a load are the fastest thing in the game to re-roll. The system's ship pool — which models exist here — is fixed forever, but the class, stats, and slot count of each arriving ship are rolled at spawn, and reloading your save re-rolls the queue. The loop:
+
+1. Install an **Economy Scanner** and filter the galaxy map for **wealthy economies**.
+2. Warp to a 3-star system and land at a **trading outpost**.
+3. Step out of your ship. Exiting your ship creates an **autosave** — this is your reset point.
+4. Watch the first wave land and **scan each ship** as it arrives to read class, stats, and slots.
+5. If nothing S-class lands within the first couple of waves, open the options menu and **reload your restore point**.
+6. The wave queue re-rolls. Scan the new first wave.
+7. Repeat until an S-class lands, then buy it before it departs — expect a price in the tens of millions of units, per the premium table above.
+
+Two habits make the loop painless. First, scan from where you stand — you never need to walk to a ship to read its card. Second, treat the failures as inventory: every reload in a wealthy system is also rolling 28% A-class ships, and a good A-class hull at the right price is a legitimate buy while you wait for the S.
+
+The same loop works inside space stations and in pirate systems; only the scenery changes. What the loop does not do is change a system's ship pool — if you dislike every model that lands, warp to a different wealthy system rather than reloading forever.
+
+## What S-Class Stats Actually Get You
+
+The percentages on a ship's scan card are its class bonus, and S-class rolls the top of each hull type's band. The headline ranges, community-documented from years of scans:
+
+- **Fighters** roll the highest damage bonuses in the game — an S-class fighter can reach roughly the **+50% damage** range, which multiplies through every weapon module you install.
+- **Explorers** roll the highest hyperdrive bonuses — S-class explorers can approach **+80% warp range**, before any drive upgrades.
+- **Haulers** lead on shields, tanking ambushes that fold other hulls, at the cost of handling.
+- **Exotics** and interceptors run high and balanced across all three stats, which is exactly why they anchor the top of our [rankings](/starships/best-ships).
+
+Class also drives slots. An S-class ship tends to roll at or near the maximum general and technology slot count its model allows, so the same airframe that arrives as a 19-slot C-class fighter can arrive as a full-slot S-class.
+
+One honest caveat: the bonus bands overlap between adjacent classes. A lucky A-class roll can beat an unlucky S-class roll on a single stat. Over many spawns, though, S-class wins consistently across damage, shields, hyperdrive, and slots together — it is the only class that tops all four at once.
+
+## S-Class Ships and Upgrade Modules
+
+Upgrade modules have their own class rating, C through S, and this is where players get confused. The rules are simple and stack cleanly:
+
+- The **hull's class** sets the core stat multipliers and the slot ceiling.
+- **Upgrade modules** add percentage bonuses on top of those cores, and an S-class module adds the most — buy them from station technology merchants or earn them from scrapping.
+- **Supercharged tech slots**, the glowing slots on every ship since the Waypoint rework, multiply whatever sits in them. Put your best S-class modules there.
+
+So can a stack of S-class modules rescue a C-class hull? Mostly, yes — and for early-game budgets, upgrading what you own beats waiting on a 2% spawn. But the ceiling argument is mathematically final: modules multiply on top of core stats, and C-class cores are the lowest in the band. The same module loadout always ends higher on a better hull. Buy the C-class now if you need to fly today; hunt the S-class when you are building the ship you plan to keep.
+
+Scrapping is the loop that funds all of this. Any ship you buy can be dismantled at a **Starship Outfitting Terminal** on any space station. Community-tested returns for S-class hulls: a near-guaranteed **Storage Augmentation** (one to three per ship), which adds inventory slots to any ship you own, plus recovered upgrade modules you can install or sell for nanites. Buy cheap S-class arrivals in a wealthy system, scrap what you do not want, and the hunt pays for itself in slots and nanites while you wait for the model you came for.
+
+## Does the Cosmos Update Change Any of This?
+
+Not so far. As of August 18, 2026, Hello Games is still releasing [Cosmos](/cosmos-update/cosmos-update-guide) patch notes in stages, and nothing published has touched ship spawning, class odds, or economy weighting. The tables above reflect the current live game.
+
+The one foreseeable interaction is travel. Cosmos's confirmed interstellar free flight — flying to another system instead of warping — is expected to coexist with the hyperdrive, and our [interstellar flight guide](/cosmos-update/interstellar-flight-guide) compares the two. However you move between systems, the hunt itself stays the same: wealthy destination, outpost pad, autosave, reload.
+
+## Related Guides
+
+- [The Best Ships in No Man's Sky: Every Type Ranked](/starships/best-ships)
+- [Exotic Ship Locations: Portals, Glyphs, Coordinates](/starships/exotic-ship-locations)
+- [Sentinel Interceptor Guide: Claim a Free S-Class Ship](/starships/sentinel-interceptor-guide)
+- [Capital Freighter Farming: Get an S-Class Capital Ship](/starships/capital-freighter-farming)
+- [Living Ship Guide: Starbirth, Growth, and Upgrades](/starships/living-ship-guide)
+- [Interstellar Flight: Cosmos Free Flight Guide](/cosmos-update/interstellar-flight-guide)
+- [Cosmos Update: The Complete Anniversary Guide](/cosmos-update/cosmos-update-guide)
+- [Every No Man's Sky Update in 2026](/guides/new-update-2026)
