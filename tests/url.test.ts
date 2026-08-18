@@ -6,6 +6,15 @@ import {
   homeUrl,
   localeFromPath,
 } from '~/lib/url';
+import { locales, defaultLocale, type Locale } from '~/i18n/routing';
+
+/**
+ * Non-default-locale coverage is driven by the routing config: when the
+ * site is single-locale there is nothing to prefix (those blocks skip),
+ * and the day a second locale is added they run again automatically —
+ * no hardcoded 'ja' residue like the old version had.
+ */
+const secondLocale = locales.find((l): l is Locale => l !== defaultLocale);
 
 describe('url helpers', () => {
   describe('localizePath', () => {
@@ -14,14 +23,17 @@ describe('url helpers', () => {
       expect(localizePath('/bosses/emberfang', 'en')).toBe('/bosses/emberfang');
     });
 
-    it('prepends the locale prefix for non-default locales', () => {
-      expect(localizePath('/bosses', 'ja')).toBe('/ja/bosses');
-      expect(localizePath('/bosses/emberfang', 'ja')).toBe('/ja/bosses/emberfang');
+    describe.skipIf(!secondLocale)('non-default locales', () => {
+      it('prepends the locale prefix', () => {
+        const l = secondLocale as Locale;
+        expect(localizePath('/bosses', l)).toBe(`/${l}/bosses`);
+        expect(localizePath('/bosses/emberfang', l)).toBe(`/${l}/bosses/emberfang`);
+        expect(localizePath('about', l)).toBe(`/${l}/about`);
+      });
     });
 
     it('ensures leading slash on input without one', () => {
       expect(localizePath('about', 'en')).toBe('/about');
-      expect(localizePath('about', 'ja')).toBe('/ja/about');
     });
   });
 
@@ -29,41 +41,44 @@ describe('url helpers', () => {
     it('returns / for default locale', () => {
       expect(homeUrl('en')).toBe('/');
     });
-    it('returns /ja for non-default locale', () => {
-      expect(homeUrl('ja')).toBe('/ja');
+    it.skipIf(!secondLocale)('returns the prefixed root for non-default locale', () => {
+      expect(homeUrl(secondLocale as Locale)).toBe(`/${secondLocale}`);
     });
   });
 
   describe('listPath', () => {
-    it('builds the correct list URL for each locale', () => {
+    it('builds the correct list URL for the default locale', () => {
       expect(listPath('bosses', 'en')).toBe('/bosses');
-      expect(listPath('bosses', 'ja')).toBe('/ja/bosses');
       expect(listPath('codes', 'en')).toBe('/codes');
+    });
+    it.skipIf(!secondLocale)('prefixes non-default locales', () => {
+      expect(listPath('bosses', secondLocale as Locale)).toBe(`/${secondLocale}/bosses`);
     });
   });
 
   describe('detailPath', () => {
-    it('builds the correct article URL for each locale', () => {
+    it('builds the correct article URL for the default locale', () => {
       expect(detailPath('bosses', 'emberfang', 'en')).toBe('/bosses/emberfang');
-      expect(detailPath('bosses', 'emberfang', 'ja')).toBe('/ja/bosses/emberfang');
-    });
-
-    it('handles nested slugs', () => {
       expect(detailPath('guides', 'early-game/beginner', 'en')).toBe(
         '/guides/early-game/beginner',
       );
-      expect(detailPath('guides', 'early-game/beginner', 'ja')).toBe(
-        '/ja/guides/early-game/beginner',
+    });
+
+    it.skipIf(!secondLocale)('prefixes and handles nested slugs for non-default locales', () => {
+      const l = secondLocale as Locale;
+      expect(detailPath('bosses', 'emberfang', l)).toBe(`/${l}/bosses/emberfang`);
+      expect(detailPath('guides', 'early-game/beginner', l)).toBe(
+        `/${l}/guides/early-game/beginner`,
       );
     });
   });
 
   describe('localeFromPath', () => {
     it('falls back to the default locale for unknown prefixes (single-locale site)', () => {
-      // locales is ['en'] — 'ja' is no longer a configured locale, so a path
-      // carrying that prefix resolves to the default-locale fallback.
-      expect(localeFromPath('/ja/bosses/emberfang')).toBe('en');
-      expect(localeFromPath('/ja')).toBe('en');
+      // 'xx' is never a configured locale, so a path carrying that prefix
+      // resolves to the default-locale fallback — whatever locales exist.
+      expect(localeFromPath('/xx/bosses/emberfang')).toBe('en');
+      expect(localeFromPath('/xx')).toBe('en');
     });
 
     it('returns the default locale when no prefix is present', () => {

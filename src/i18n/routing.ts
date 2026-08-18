@@ -33,3 +33,16 @@ export function isDefaultLocale(locale: string): boolean {
 export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
+
+/**
+ * Locales whose text is CJK (no word spaces). Reading-time and other
+ * text metrics must go by character count for these, not word count.
+ * Listed as plain strings so unconfigured locales don't widen `Locale` —
+ * a CJK entry here lights up automatically the day it joins `locales`.
+ */
+const CJK_LOCALES: readonly string[] = ['ja', 'zh', 'zh-tw', 'ko'];
+
+/** Whether the locale's text should be measured in characters (CJK). */
+export function isCJKLocale(locale: string): boolean {
+  return CJK_LOCALES.includes(locale);
+}

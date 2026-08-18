@@ -1,6 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { videoObjectJsonLd, urlListJsonLd, imageObjectJsonLd } from '~/lib/seo';
 import { slugifyTag, tagPath, tagsPath, recentPath } from '~/lib/url';
+import { locales, defaultLocale, type Locale } from '~/i18n/routing';
+
+/** First non-default locale from routing config; prefix tests skip when absent. */
+const secondLocale = locales.find((l): l is Locale => l !== defaultLocale);
 
 describe('slugifyTag', () => {
   it('lowercases and hyphenates whitespace', () => {
@@ -23,10 +27,11 @@ describe('tag/recent URL helpers', () => {
     expect(tagPath('fire-boss', 'en')).toBe('/tags/fire-boss');
     expect(recentPath('en')).toBe('/recent');
   });
-  it('prefixes non-default locales', () => {
-    expect(tagsPath('ja')).toBe('/ja/tags');
-    expect(tagPath('fire-boss', 'ja')).toBe('/ja/tags/fire-boss');
-    expect(recentPath('ja')).toBe('/ja/recent');
+  it.skipIf(!secondLocale)('prefixes non-default locales', () => {
+    const l = secondLocale as Locale;
+    expect(tagsPath(l)).toBe(`/${l}/tags`);
+    expect(tagPath('fire-boss', l)).toBe(`/${l}/tags/fire-boss`);
+    expect(recentPath(l)).toBe(`/${l}/recent`);
   });
 });
 

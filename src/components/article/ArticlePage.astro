@@ -29,7 +29,7 @@ import BackToTop from '~/components/article/BackToTop.astro';
 import WikiSidebar from '~/components/sidebar/WikiSidebar.astro';
 import { NAVIGATION_CONFIG } from '~/config/navigation';
 import { siteUrl } from '~/config/site';
-import { type Locale } from '~/i18n/routing';
+import { type Locale, isCJKLocale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getRelatedEntries, getEntriesByCategory, isPossiblyOutdated, parseEntryId, slugifyTag, type WikiEntry, type ResolvedEntry } from '~/lib/content';
 import { categoryHue } from '~/lib/categoryTheme';
@@ -81,10 +81,9 @@ const outdated = isPossiblyOutdated(category, entry.data.lastModified, entry.dat
 // Reading time estimate: ~200 wpm for space-separated languages,
 // ~400 chars/min for CJK (no spaces). Author-facing, purely informational.
 const bodyText = entry.body ?? '';
-const readMinutes =
-  locale === 'ja'
-    ? Math.max(1, Math.ceil(bodyText.replace(/\s+/g, '').length / 400))
-    : Math.max(1, Math.ceil(bodyText.trim().split(/\s+/).filter(Boolean).length / 200));
+const readMinutes = isCJKLocale(locale)
+  ? Math.max(1, Math.ceil(bodyText.replace(/\s+/g, '').length / 400))
+  : Math.max(1, Math.ceil(bodyText.trim().split(/\s+/).filter(Boolean).length / 200));
 
 // Prev/next within the same category (newest-first list → newer = idx-1).
 const categoryEntries = await getEntriesByCategory(category, locale);

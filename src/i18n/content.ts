@@ -82,7 +82,8 @@ export async function getEntryWithFallback(
 
   // 2. Fall back to English (default locale).
   if (locale !== defaultLocale) {
-    const fallback = await getEntry('wiki', `${defaultLocale}/${category}/${slug}`);
+    const fallbackId = `${defaultLocale}/${category}/${slug}`;
+    const fallback = await getEntry('wiki', fallbackId);
     if (fallback && isPublished(fallback)) {
       return { entry: fallback, servedLocale: defaultLocale, isFallback: true };
     }
