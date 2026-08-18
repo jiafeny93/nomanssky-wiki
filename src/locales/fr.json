@@ -3,242 +3,242 @@
   "site": {
     "name": "No Man's Sky Wiki",
     "shortName": "NMS Wiki",
-    "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.",
-    "tagline": "Guides for every update, expedition, and starship",
-    "legalNotice": "No Man's Sky Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer."
+    "description": "Guides et wiki No Man's Sky : couverture de la mise à jour Cosmos, guides des expéditions, vaisseaux et multi-outils, construction de bases et astuces de farm.",
+    "tagline": "Des guides pour chaque mise à jour, expédition et vaisseau",
+    "legalNotice": "No Man's Sky Wiki est un site communautaire créé par des fans. Sans affiliation avec ni approbation du développeur du jeu."
   },
   "nav": {
-    "search": "Search",
-    "language": "Language",
-    "cosmos-update": "Cosmos Update",
-    "expeditions": "Expeditions",
-    "starships": "Starships",
-    "multitools": "Multitools",
-    "base-building": "Base Building",
+    "search": "Rechercher",
+    "language": "Langue",
+    "cosmos-update": "Mise à jour Cosmos",
+    "expeditions": "Expéditions",
+    "starships": "Vaisseaux",
+    "multitools": "Multi-outils",
+    "base-building": "Construction de bases",
     "guides": "Guides"
   },
   "search": {
-    "placeholder": "Search the wiki...",
-    "noResults": "No matches found",
-    "open": "Open search"
+    "placeholder": "Rechercher dans le wiki...",
+    "noResults": "Aucun résultat",
+    "open": "Ouvrir la recherche"
   },
   "shared": {
-    "readMore": "Read more",
-    "lastUpdated": "Last updated",
-    "publishedOn": "Published",
-    "noArticles": "No articles yet. Check back soon!",
-    "relatedArticles": "Related Articles",
-    "onThisPage": "On this page",
-    "backToCategory": "Back to",
-    "browseAll": "Browse all",
-    "viewAll": "View all",
-    "commentsHeading": "Comments",
-    "share": "Share",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "consentText": "We use cookies for analytics and ads to keep this site free.",
-    "accept": "Accept",
-    "decline": "Decline",
+    "readMore": "Lire la suite",
+    "lastUpdated": "Dernière mise à jour",
+    "publishedOn": "Publié le",
+    "noArticles": "Pas encore d'articles. Revenez bientôt !",
+    "relatedArticles": "Articles associés",
+    "onThisPage": "Sur cette page",
+    "backToCategory": "Retour à",
+    "browseAll": "Tout parcourir",
+    "viewAll": "Voir tout",
+    "commentsHeading": "Commentaires",
+    "share": "Partager",
+    "copyLink": "Copier le lien",
+    "copied": "Copié !",
+    "consentText": "Nous utilisons des cookies pour les statistiques et la publicité afin de garder ce site gratuit.",
+    "accept": "Accepter",
+    "decline": "Refuser",
     "consentTitle": "Cookies",
     "bossCard": {
-      "title": "Boss Overview",
-      "hp": "HP",
-      "weakness": "Weakness",
-      "resistant": "Resistant",
-      "location": "Location",
-      "level": "Rec. Level"
+      "title": "Aperçu du boss",
+      "hp": "PV",
+      "weakness": "Faiblesse",
+      "resistant": "Résistant",
+      "location": "Lieu",
+      "level": "Niveau conseillé"
     },
     "codesTable": {
-      "active": "Active Codes",
-      "expired": "Expired Codes",
-      "reward": "Reward",
-      "expires": "Expires",
+      "active": "Codes actifs",
+      "expired": "Codes expirés",
+      "reward": "Récompense",
+      "expires": "Expire le",
       "code": "Code"
     },
     "codesFaq": [
       {
-        "question": "How do I redeem codes?",
-        "answer": "Open the game, click the settings gear in the top-right, paste your code into the Redeem Code field, and confirm. Codes are case-sensitive."
+        "question": "Comment utiliser les codes ?",
+        "answer": "Ouvrez le jeu, cliquez sur l'engrenage des paramètres en haut à droite, collez votre code dans le champ Utiliser un code, puis confirmez. Les codes sont sensibles à la casse."
       },
       {
-        "question": "Why do codes stop working?",
-        "answer": "Codes expire on a schedule set by the developer (usually monthly or tied to update milestones), and some are one-per-account. This page is re-tested regularly."
+        "question": "Pourquoi les codes cessent-ils de fonctionner ?",
+        "answer": "Les codes expirent selon un calendrier fixé par le développeur (généralement chaque mois ou lié aux jalons de mise à jour), et certains sont à usage unique par compte. Cette page est revérifiée régulièrement."
       },
       {
-        "question": "How often are new codes released?",
-        "answer": "New codes typically arrive with each major game update. Bookmark this page and check back after every patch."
+        "question": "À quelle fréquence de nouveaux codes sont-ils publiés ?",
+        "answer": "De nouveaux codes arrivent généralement avec chaque grande mise à jour du jeu. Ajoutez cette page à vos favoris et revenez après chaque patch."
       },
       {
-        "question": "Do codes expire?",
-        "answer": "Yes — most codes have an expiry date, shown next to each code. Expired codes move to the expired table below."
+        "question": "Les codes ont-ils une date d'expiration ?",
+        "answer": "Oui — la plupart des codes ont une date d'expiration, indiquée à côté de chaque code. Les codes expirés passent dans le tableau des codes expirés ci-dessous."
       }
     ],
-    "possiblyOutdated": "This guide was last checked on",
-    "outdatedNote": "— the game may have changed since. Some details could be out of date.",
-    "prevArticle": "Previous",
-    "nextArticle": "Next",
-    "minuteRead": "min read",
-    "wasThisHelpful": "Was this helpful?",
-    "feedbackThanks": "Thanks for the feedback!",
-    "relatedVideos": "Related videos",
-    "gallery": "Gallery",
-    "gameVersion": "Game version",
-    "allTags": "All Tags",
-    "tagsIndexDescription": "Browse all articles by topic.",
+    "possiblyOutdated": "Ce guide a été vérifié pour la dernière fois le",
+    "outdatedNote": "— le jeu a pu changer depuis. Certains détails peuvent être obsolètes.",
+    "prevArticle": "Précédent",
+    "nextArticle": "Suivant",
+    "minuteRead": "min de lecture",
+    "wasThisHelpful": "Cet article vous a-t-il aidé ?",
+    "feedbackThanks": "Merci pour votre retour !",
+    "relatedVideos": "Vidéos associées",
+    "gallery": "Galerie",
+    "gameVersion": "Version du jeu",
+    "allTags": "Tous les tags",
+    "tagsIndexDescription": "Parcourez tous les articles par sujet.",
     "articlesCount": "articles",
-    "recentTitle": "Recent Updates",
-    "recentDescription": "The latest articles and updates across the wiki, newest first.",
-    "sponsorTitle": "Support this wiki",
-    "sponsorText": "If these guides helped you, consider supporting the site.",
-    "sponsorButton": "Support us",
-    "notFoundSearchHint": "Try searching the wiki instead.",
-    "notFoundPopular": "Popular pages",
+    "recentTitle": "Mises à jour récentes",
+    "recentDescription": "Les derniers articles et mises à jour du wiki, du plus récent au plus ancien.",
+    "sponsorTitle": "Soutenir ce wiki",
+    "sponsorText": "Si ces guides vous ont aidé, pensez à soutenir le site.",
+    "sponsorButton": "Nous soutenir",
+    "notFoundSearchHint": "Essayez plutôt la recherche du wiki.",
+    "notFoundPopular": "Pages populaires",
     "galleryLabels": {
-      "close": "Close",
-      "prev": "Previous image",
-      "next": "Next image"
+      "close": "Fermer",
+      "prev": "Image précédente",
+      "next": "Image suivante"
     },
-    "quickAnswer": "Quick Answer"
+    "quickAnswer": "Réponse rapide"
   },
   "overview": {
     "cosmos-update": {
-      "overviewTitle": "No Man's Sky Cosmos Update Guides",
-      "overviewDescription": "Everything about the Cosmos update — interstellar free flight, landing on stars, heat-resistant gear, patch notes, and 10th anniversary rewards."
+      "overviewTitle": "Guides de la mise à jour No Man's Sky Cosmos",
+      "overviewDescription": "Tout sur la mise à jour Cosmos — vol interstellaire libre, atterrissages sur les étoiles, équipement résistant à la chaleur, notes de mise à jour et récompenses du 10e anniversaire."
     },
     "expeditions": {
-      "overviewTitle": "No Man's Sky Expedition Guides",
-      "overviewDescription": "Walkthroughs and reward lists for every expedition, including Redux re-runs and fast completion routes."
+      "overviewTitle": "Guides des expéditions de No Man's Sky",
+      "overviewDescription": "Guides et listes de récompenses pour chaque expédition, y compris les rediffusions Redux et les itinéraires de complétion rapide."
     },
     "starships": {
-      "overviewTitle": "No Man's Sky Starship Guides",
-      "overviewDescription": "S-class hunting, living ships, solar ships, freighter farming, and hyperdrive upgrade guides."
+      "overviewTitle": "Guides des vaisseaux de No Man's Sky",
+      "overviewDescription": "Chasse aux vaisseaux de classe S, vaisseaux vivants, vaisseaux solaires, farm de fretteurs et guides d'amélioration de l'hyperpropulseur."
     },
     "multitools": {
-      "overviewTitle": "No Man's Sky Multitool Guides",
-      "overviewDescription": "Royal, experimental, and sentinel multitools — where to find them and how to upgrade them."
+      "overviewTitle": "Guides des multi-outils de No Man's Sky",
+      "overviewDescription": "Multi-outils royaux, expérimentaux et sentinelles — où les trouver et comment les améliorer."
     },
     "base-building": {
-      "overviewTitle": "No Man's Sky Base Building Guides",
-      "overviewDescription": "Base building tips, electrical wiring, storage containers, and the best planets to build on."
+      "overviewTitle": "Guides de construction de bases de No Man's Sky",
+      "overviewDescription": "Astuces de construction, câblage électrique, conteneurs de stockage et meilleures planètes pour construire."
     },
     "guides": {
-      "overviewTitle": "No Man's Sky Guides and Tips",
-      "overviewDescription": "Beginner guides, money making, farming routes, pet battling, and general tips for 2026."
+      "overviewTitle": "Guides et astuces de No Man's Sky",
+      "overviewDescription": "Guides pour débutants, gains d'unités, routes de farm, combats d'animaux de compagnie et astuces générales pour 2026."
     }
   },
   "home": {
     "meta": {
       "watermark": "No Man's Sky",
-      "title": "No Man's Sky Wiki: Cosmos Update, Expeditions & Ship Guides",
-      "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips."
+      "title": "No Man's Sky Wiki : mise à jour Cosmos, expéditions et guides de vaisseaux",
+      "description": "Guides et wiki No Man's Sky : couverture de la mise à jour Cosmos, guides des expéditions, vaisseaux et multi-outils, construction de bases et astuces de farm."
     },
     "updates": {
-      "badge": "Fresh",
-      "title": "Recent updates"
+      "badge": "Nouveau",
+      "title": "Mises à jour récentes"
     },
     "expeditionStatus": {
-      "badge": "Expedition status",
-      "title": "No limited-time expedition is running",
-      "detail": "Expedition 22 (The Swarm) ended July 19, 2026. Based on Hello Games' pattern, Redux re-runs should return from late October — nothing announced yet, and this page updates the day one is.",
+      "badge": "Statut des expéditions",
+      "title": "Aucune expédition limitée en cours",
+      "detail": "L'Expédition 22 (The Swarm) s'est terminée le 19 juillet 2026. D'après le rythme de Hello Games, les rediffusions Redux devraient revenir à partir de fin octobre — rien d'annoncé pour l'instant, et cette page est mise à jour le jour même où l'une d'elles l'est.",
       "cta": {
-        "label": "Expedition guide",
+        "label": "Guide des expéditions",
         "href": "/expeditions"
       }
     },
     "popular": {
-      "badge": "Popular",
-      "title": "Most read",
+      "badge": "Populaire",
+      "title": "Les plus lus",
       "quickLinks": [
         {
-          "label": "Cosmos Update",
+          "label": "Mise à jour Cosmos",
           "href": "/cosmos-update"
         },
         {
-          "label": "Expeditions",
+          "label": "Expéditions",
           "href": "/expeditions"
         },
         {
-          "label": "Starships",
+          "label": "Vaisseaux",
           "href": "/starships"
         },
         {
-          "label": "Money making",
+          "label": "Gagner des unités",
           "href": "/guides"
         }
       ]
     },
     "closingCta": {
-      "title": "Fly safe, Traveller",
-      "description": "Bookmark this wiki and check back after every update — new guides land within days of each patch.",
+      "title": "Bon vol, Voyageur",
+      "description": "Ajoutez ce wiki à vos favoris et revenez après chaque mise à jour — de nouveaux guides arrivent quelques jours après chaque patch.",
       "primary": {
-        "label": "Browse all guides",
+        "label": "Voir tous les guides",
         "href": "/guides"
       },
       "secondary": {
-        "label": "Official site",
+        "label": "Site officiel",
         "href": "https://www.nomanssky.com/"
       }
     },
     "hero": {
-      "badge": "10th Anniversary Update",
+      "badge": "Mise à jour du 10e anniversaire",
       "title": "No Man's Sky Wiki",
-      "description": "Up-to-date No Man's Sky guides for the Cosmos era — updates, expeditions, starships, multitools, and farming routes.",
+      "description": "Guides No Man's Sky à jour pour l'ère Cosmos — mises à jour, expéditions, vaisseaux, multi-outils et routes de farm.",
       "ctaPrimary": {
-        "label": "Cosmos update guide",
+        "label": "Guide de la mise à jour Cosmos",
         "href": "/cosmos-update"
       },
       "ctaSecondary": {
-        "label": "All guides",
+        "label": "Tous les guides",
         "href": "/guides"
       },
       "videoId": "c-KoLySxccY",
       "stats": [
         {
           "value": "10",
-          "label": "Years of free updates"
+          "label": "Années de mises à jour gratuites"
         },
         {
           "value": "40+",
-          "label": "Major updates shipped"
+          "label": "Mises à jour majeures livrées"
         },
         {
           "value": "18Q",
-          "label": "Planets to explore"
+          "label": "Planètes à explorer"
         },
         {
           "value": "dynamic",
-          "label": "Wiki guides & counting"
+          "label": "Guides et ça continue"
         }
       ]
     },
     "start": {
-      "badge": "Quick start",
-      "title": "New here? Start with these",
+      "badge": "Démarrage rapide",
+      "title": "Nouveau ici ? Commencez par là",
       "cards": [
         {
-          "title": "Cosmos Update",
-          "description": "Interstellar flight, landing on stars, and heat-resistant gear",
+          "title": "Mise à jour Cosmos",
+          "description": "Vol interstellaire, atterrissages sur les étoiles et équipement thermique",
           "icon": "lucide:orbit",
           "href": "/cosmos-update",
           "number": "01"
         },
         {
-          "title": "Expeditions",
-          "description": "Walkthroughs, rewards, and Redux re-run schedules",
+          "title": "Expéditions",
+          "description": "Guides, récompenses et calendriers des Redux",
           "icon": "lucide:flag",
           "href": "/expeditions",
           "number": "02"
         },
         {
-          "title": "Starships",
-          "description": "S-class hunting, living ships, and freighter farming",
+          "title": "Vaisseaux",
+          "description": "Chasse aux vaisseaux de classe S, vaisseaux vivants et farm de fretteurs",
           "icon": "lucide:rocket",
           "href": "/starships",
           "number": "03"
         },
         {
-          "title": "Money Making",
-          "description": "Units, nanites, and quicksilver farming routes",
+          "title": "Gagner des unités",
+          "description": "Routes de farm d'unités, de nanites et de vif-argent",
           "icon": "lucide:book-open",
           "href": "/guides",
           "number": "04"
@@ -246,133 +246,133 @@
       ]
     },
     "explore": {
-      "title": "Explore the wiki",
-      "description": "Updated for 2026",
+      "title": "Explorer le wiki",
+      "description": "À jour pour 2026",
       "modules": [
         {
           "order": 1,
-          "name": "2026 Update Timeline",
-          "description": "Every major update this year, newest first.",
+          "name": "Chronologie des mises à jour 2026",
+          "description": "Chaque grande mise à jour de l'année, de la plus récente à la plus ancienne.",
           "href": "/cosmos-update",
           "displayType": "timeline",
           "highlights": [
             {
               "label": "Cosmos",
-              "detail": "10th anniversary update: interstellar free flight and landing on stars",
-              "badge": "Latest"
+              "detail": "Mise à jour du 10e anniversaire : vol interstellaire libre et atterrissages sur les étoiles",
+              "badge": "Dernière"
             },
             {
               "label": "6.45",
-              "detail": "Bug-fix patch (June 2026)"
+              "detail": "Patch de corrections (juin 2026)"
             },
             {
               "label": "6.36",
-              "detail": "Pet battling arrives (June 2026)"
+              "detail": "Arrivée des combats d'animaux de compagnie (juin 2026)"
             },
             {
               "label": "The Swarm",
-              "detail": "Large-scale space battles (May 2026)"
+              "detail": "Combats spatiaux à grande échelle (mai 2026)"
             },
             {
               "label": "Remnant",
-              "detail": "Colossus modules and Expedition 21 (February 2026)"
+              "detail": "Modules du Colosse et Expédition 21 (février 2026)"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Expedition Rewards",
-          "description": "What every expedition gives you.",
+          "name": "Récompenses d'expédition",
+          "description": "Ce que chaque expédition vous donne.",
           "href": "/expeditions",
           "displayType": "labeled-cards",
           "highlights": [
             {
-              "label": "Expedition 21: Remnant",
-              "detail": "Colossus parts, camo plating, and the Heirloom armor set"
+              "label": "Expédition 21 : Remnant",
+              "detail": "Pièces du Colosse, camouflage et ensemble d'armure Héritage"
             },
             {
-              "label": "Redux Re-runs",
-              "detail": "Past expeditions return for a few weeks each season"
+              "label": "Rediffusions Redux",
+              "detail": "Les expéditions passées reviennent quelques semaines chaque saison"
             },
             {
-              "label": "Fast Completion",
-              "detail": "Finish most expeditions in a single evening"
+              "label": "Complétion rapide",
+              "detail": "Terminez la plupart des expéditions en une seule soirée"
             },
             {
-              "label": "All Rewards",
-              "detail": "Every item, tracked across every re-run"
+              "label": "Toutes les récompenses",
+              "detail": "Chaque objet, suivi à travers chaque rediffusion"
             }
           ]
         },
         {
           "order": 3,
-          "name": "New Player Path",
-          "description": "From crash site to capital freighter.",
+          "name": "Parcours du nouveau joueur",
+          "description": "Du site du crash au fretteur capital.",
           "href": "/guides",
           "displayType": "steps",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Survive your first planet and fix your starter ship",
-              "badge": "1-2 hrs"
+              "label": "Étape 1",
+              "detail": "Survivez sur votre première planète et réparez votre vaisseau de départ",
+              "badge": "1-2 h"
             },
             {
-              "label": "Step 2",
-              "detail": "Build a base and set up passive income",
-              "badge": "1 evening"
+              "label": "Étape 2",
+              "detail": "Construisez une base et mettez en place un revenu passif",
+              "badge": "1 soirée"
             },
             {
-              "label": "Step 3",
-              "detail": "Jump into the current expedition",
-              "badge": "Weekend"
+              "label": "Étape 3",
+              "detail": "Lancez-vous dans l'expédition en cours",
+              "badge": "Week-end"
             },
             {
-              "label": "Step 4",
-              "detail": "Hunt S-class ships and upgrade your freighter",
-              "badge": "Ongoing"
+              "label": "Étape 4",
+              "detail": "Cherchez des vaisseaux de classe S et améliorez votre fretteur",
+              "badge": "En continu"
             }
           ]
         }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "Quick answers about the game and this site.",
+      "title": "Foire aux questions",
+      "description": "Réponses rapides sur le jeu et ce site.",
       "items": [
         {
-          "question": "What is the Cosmos update?",
-          "answer": "Cosmos is the No Man's Sky 10th anniversary update, announced on August 9, 2026. It adds free interstellar flight — flying between star systems without warping — and the ability to land on stars using new heat-resistant gear."
+          "question": "Qu'est-ce que la mise à jour Cosmos ?",
+          "answer": "Cosmos est la mise à jour du 10e anniversaire de No Man's Sky, annoncée le 9 août 2026. Elle ajoute le vol interstellaire libre — voler entre les systèmes stellaires sans sauter en distorsion — et la possibilité de se poser sur les étoiles grâce à un nouvel équipement résistant à la chaleur."
         },
         {
-          "question": "Can you land on stars in No Man's Sky?",
-          "answer": "Yes — landing on stars is the headline feature of the Cosmos update. You need new heat-resistant equipment to survive the approach. Our landing on stars guide covers what is confirmed so far."
+          "question": "Peut-on se poser sur les étoiles dans No Man's Sky ?",
+          "answer": "Oui — se poser sur les étoiles est la fonctionnalité phare de la mise à jour Cosmos. Il vous faut le nouvel équipement résistant à la chaleur pour survivre à l'approche. Notre guide des atterrissages stellaires couvre ce qui est confirmé à ce jour."
         },
         {
-          "question": "Is No Man's Sky free to play?",
-          "answer": "No. No Man's Sky is a premium game on PC (Steam, GOG, Epic), PlayStation, Xbox, Nintendo Switch, and Mac. All major updates, including Cosmos, are free for existing owners."
+          "question": "No Man's Sky est-il free-to-play ?",
+          "answer": "Non. No Man's Sky est un jeu premium sur PC (Steam, GOG, Epic), PlayStation, Xbox, Nintendo Switch et Mac. Toutes les mises à jour majeures, Cosmos compris, sont gratuites pour les propriétaires existants."
         },
         {
-          "question": "How long do expeditions run?",
-          "answer": "Most expeditions run for about six weeks. Past expeditions return as Redux re-runs, usually around holiday seasons, so rare rewards are never permanently missable."
+          "question": "Combien de temps durent les expéditions ?",
+          "answer": "La plupart des expéditions durent environ six semaines. Les expéditions passées reviennent en rediffusions Redux, généralement autour des fêtes, donc les récompenses rares ne sont jamais définitivement manquées."
         },
         {
-          "question": "Is this wiki official?",
-          "answer": "No. This is a fan-made community site and is not affiliated with or endorsed by Hello Games. For official news, visit nomanssky.com."
+          "question": "Ce wiki est-il officiel ?",
+          "answer": "Non. C'est un site communautaire créé par des fans, sans affiliation avec ni approbation de Hello Games. Pour les actualités officielles, visitez nomanssky.com."
         }
       ]
     }
   },
   "footer": {
-    "playGame": "Play No Man's Sky",
-    "officialDiscord": "Official Discord",
-    "officialYoutube": "Official YouTube",
-    "officialTwitter": "Official Twitter",
-    "officialReddit": "Official Reddit",
-    "about": "About",
+    "playGame": "Jouer à No Man's Sky",
+    "officialDiscord": "Discord officiel",
+    "officialYoutube": "Chaîne YouTube officielle",
+    "officialTwitter": "Twitter officiel",
+    "officialReddit": "Reddit officiel",
+    "about": "À propos",
     "faq": "FAQ",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
     "copyright": "Copyright",
-    "copyrightText": "© 2026 No Man's Sky Wiki. All rights reserved."
+    "copyrightText": "© 2026 No Man's Sky Wiki. Tous droits réservés."
   }
 }
