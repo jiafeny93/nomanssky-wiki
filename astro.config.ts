@@ -64,7 +64,7 @@ const lastmodMap = buildLastmodMap();
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://anvilwiki.pages.dev',
+  site: process.env.SITE_URL || 'https://nomanssky.wiki',
   output: 'static',
   trailingSlash: 'never',
   image: {

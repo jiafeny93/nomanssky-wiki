@@ -181,7 +181,8 @@
       "ctaSecondary": {
         "label": "All guides",
         "href": "/guides"
-      }
+      },
+      "videoId": "c-KoLySxccY"
     },
     "start": {
       "badge": "Quick start",
@@ -191,25 +192,29 @@
           "title": "Cosmos Update",
           "description": "Interstellar flight, landing on stars, and heat-resistant gear",
           "icon": "lucide:orbit",
-          "href": "/cosmos-update"
+          "href": "/cosmos-update",
+          "number": "01"
         },
         {
           "title": "Expeditions",
           "description": "Walkthroughs, rewards, and Redux re-run schedules",
           "icon": "lucide:flag",
-          "href": "/expeditions"
+          "href": "/expeditions",
+          "number": "02"
         },
         {
           "title": "Starships",
           "description": "S-class hunting, living ships, and freighter farming",
           "icon": "lucide:rocket",
-          "href": "/starships"
+          "href": "/starships",
+          "number": "03"
         },
         {
           "title": "Money Making",
           "description": "Units, nanites, and quicksilver farming routes",
           "icon": "lucide:book-open",
-          "href": "/guides"
+          "href": "/guides",
+          "number": "04"
         }
       ]
     },

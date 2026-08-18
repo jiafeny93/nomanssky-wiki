@@ -44,9 +44,11 @@ const { locale, badge = 'Start Here', title = 'Quick Start', cards = [] } = Astr
             <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-nav/10 text-nav">
               <Icon name={card.icon} class="h-6 w-6" />
             </span>
-            <span class="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-              {card.number}
-            </span>
+            {card.number && (
+              <span class="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                {card.number}
+              </span>
+            )}
           </div>
           <h3 class="mt-4 font-semibold leading-snug">{card.title}</h3>
           <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">{card.description}</p>
