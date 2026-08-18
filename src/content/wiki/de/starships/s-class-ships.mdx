@@ -1,0 +1,152 @@
+---
+title: "No Man's Sky S-Klasse-Schiffe: Spawn-Chancen, Farming & Werte (2026)"
+description: "So bekommst du ein S-Klasse-Schiff in No Man's Sky: Spawn-Chancen nach Wirtschaftsstufe, die 5%-Chance in Piratensystemen und die Erstwellen-Reload-Schleife."
+category: "starships"
+image: '../../../../assets/covers/starships/s-class-ships.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "S-Klasse-Schiffe erscheinen in reichen 3-Sterne-Wirtschaften zu etwa 2%, in durchschnittlichen zu 1% und in Piratensystemen zu 5%. Farme Erstwellen am Handelsposten und reloade für den Neuwurf."
+tags: ["s-class", "starships", "ship-farming", "spawn-odds", "economy"]
+faq:
+  - question: "Was sind die S-Klasse-Chancen für Schiffe in No Man's Sky?"
+    answer: "Etwa 2% pro ankommendem Schiff in reichen 3-Sterne-Wirtschaften, 1% in durchschnittlichen und praktisch null in armen. Piratensysteme sind die Ausnahme mit rund 5%, community-getestet seit dem Outlaws-Update. Exoten überspringen den Wurf komplett, weil sie immer in der S-Klasse spawnen."
+  - question: "Spawnen S-Klasse-Schiffe in armen Systemen?"
+    answer: "Praktisch nie. Die dokumentierte Spawn-Tabelle gibt armen Wirtschaften eine S-Klasse-Gewichtung von 0%, und 60% der Schiffe spawnen als C-Klasse. Die Schiffsmodelle eines Systems können theoretisch S würfeln, aber es gibt keinen Grund, in einer 1-Sterne-Wirtschaft zu jagen, wenn eine reiche die Chancen verdoppelt oder verdreifacht."
+  - question: "Wie farmt man ein S-Klasse-Schiff am schnellsten?"
+    answer: "Baue einen Wirtschaftsscanner ein, filtere die Galaxiekarte nach reichen 3-Sterne-Wirtschaften, lande an einem Handelsposten und steige aus dem Schiff, um einen Autosave zu setzen. Scanne die erste Welle landender Schiffe, und wenn keine S-Klasse landet, lade den Wiederherstellungspunkt aus dem Optionsmenü. Jeder Reload würfelt die Chancen neu — schnelle Zyklen schlagen passives Warten."
+  - question: "Sind S-Klasse-Schiffe den Preis wert?"
+    answer: "Meistens ja, wenn du das Schiff behalten willst. Die S-Klasse kostet 50 bis 100 Prozent mehr, würfelt aber die Spitze der Schadens-, Schild- und Hyperantriebsbänder der Hülle und nahezu maximale Inventarslots. Für ein langfristiges Flaggschiff lohnt sich die Obergrenze; kurzfristige Piloten können mit A-Klasse Vorlieb nehmen und später aufrüsten."
+  - question: "Können Upgrade-Module ein C-Klasse-Schiff auf S-Klasse-Niveau heben?"
+    answer: "Module schließen die Lücke, löschen sie aber nie. S-Klasse-Upgrade-Module stapeln hohe Prozentboni auf jeder Hülle, und Supercharged-Slots verstärken sie weiter, aber der Kernklassen-Bonus multipliziert alles darunter. Eine voll ausgebaute C-Klasse performt gut; dieselben Module auf einer S-Klasse-Hülle enden immer höher."
+  - question: "Hat das Cosmos-Update die S-Klasse-Spawnraten geändert?"
+    answer: "Nicht Stand 18. August 2026. Hello Games veröffentlicht die Cosmos-Patchnotes weiterhin gestaffelt, und nichts davon berührt Schiff-Spawns oder Klassengewichtung. Die Chancentabelle in diesem Guide ist durch die Updates 2025 und 2026 stabil geblieben; wir überarbeiten sie, sobald gestaffelte Notes etwas ändern."
+---
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Jedes Schiff, das in No Man's Sky auf einer Handelsposten-Plattform aufsetzt, würfelt an Würfeln, die du nicht siehst. Das Modell ist fix — der Schiffspool eines Systems ändert sich nie —, aber die Klasse, die jeder ankommenden Hülle aufgestempelt wird, wird beim Spawn neu gewürfelt: von C unten über B und A bis S oben. Ein S-Klasse-Schiff ist die Spitze dieses Wurfs: die besten Kernwert-Boni, das größte Inventarband und der schwerste Preisschild, den das Spiel an eine einzelne Hülle hängt.
+
+Die Jagd darauf ist eher ein Wissens-Check als ein Grind. Weißt du, welche Wirtschaften S-Klasse würfeln, wo du stehen musst und wie du die Ankunfts-Schlange neu würfelst, kostet dich ein S-Klasse-Schiff entspannte zwanzig Minuten. Gehst du blind vor, kann dasselbe Schiff eine Woche dauern. **Zuletzt aktualisiert: 18. August 2026.** Die Spawn-Regeln unten sind seit Jahren stabil, und nichts in der gestaffelten Cosmos-Auslieferung hat sie bis hierher geändert. Was jede Hüllenklasse mit S-Klasse-Werten anfängt, steht in unserem [Schiffs-Klassen-Ranking](/starships/best-ships); die Update-Chronik des Jahres in unserem [2026-Update-Tracker](/guides/new-update-2026).
+
+<StatBar
+  items={[
+    { value: '2%', label: 'S-Klasse-Chance in reicher 3-Sterne-Wirtschaft' },
+    { value: '5%', label: 'S-Klasse-Chance in Piratensystemen' },
+    { value: '1–3', label: 'Lagererweiterungen pro verschrotteter S-Klasse' },
+    { value: '+100%', label: 'Aufschlag für S-Klasse-Jäger über C-Klasse' },
+  ]}
+/>
+
+<Callout type="info" title="Woher diese Zahlen stammen">
+  Die Chancen nach Wirtschaftsstufe und die Preisaufschläge unten entsprechen den Tabellen
+  der Community-Wikis, die seit Jahren stabil sind. Die Piratensystem-Rate, die Wertebänder
+  und die Verschrottungs-Erträge sind community-getestet statt offiziell dokumentiert und
+  werden an Ort und Stelle markiert.
+</Callout>
+
+## Was ein S-Klasse-Schiff wirklich ist
+
+Die Klasse ist das Rangsystem des Spiels für Schiffe (und Multiwerkzeuge, Frachter und Upgrade-Module): C, B, A und S. Für ein Raumschiff tut sie zwei konkrete Dinge. Sie bestimmt, wie viele General- und Technologie-Slots die Hülle innerhalb des erlaubten Bereichs ihres Modells würfelt, und sie setzt den Bonus-Multiplikator auf die drei Kernwerte, die du beim Scannen eines Schiffs liest — Schaden, Schilde und Hyperantrieb. Ein C-Klasse-Jäger und ein S-Klasse-Jäger desselben Modells teilen dieselbe Zelle; die S-Klasse-Version würfelt einfach größere Zahlen in jeder Spalte, die zählt.
+
+Die Klasse setzt auch den Preis. Der im Wiki dokumentierte Aufschlag über eine C-Klasse-Hülle desselben Typs:
+
+| Schiffstyp | B-Klasse | A-Klasse | S-Klasse |
+| --- | --- | --- | --- |
+| Jäger | +20% | +70% | +100% |
+| Transporter | +30% | +60% | +80% |
+| Entdecker | +10% | +25% | +50% |
+| Shuttle | +10% | +25% | +50% |
+| Frachter | +20% | +40% | +60% |
+
+Drei Hüllen-Familien überspringen die Klassen-Lotterie komplett. [Exoten](/starships/exotic-ship-locations) spawnen immer in der S-Klasse — das Wiki stellt ausdrücklich klar, dass ein Exot als S angezeigt wird, selbst wenn sein zugrunde liegender Wurf als C gezählt hätte. [Lebende Schiffe](/starships/living-ship-guide) schlüpfen als garantierte S-Klasse, weil ihre Werte von der Questreihe am oberen Band fixiert werden statt an einer Station gewürfelt. Und [Wächter-Abfangjäger](/starships/sentinel-interceptor-guide) werden an Absturzstellen mit bereits ausgewürfelten Werten beansprucht — deshalb lieben sie Jäger ohne Budget. Jedes andere Schiff im Spiel würfelt — lerne also die Würfel kennen.
+
+## S-Klasse-Spawn-Chancen nach Wirtschaftsstufe
+
+Die Klasse jedes ankommenden Schiffs wird gegen eine Tabelle gewürfelt, die nach der Wirtschaftsstärke des Gastsystems gewichtet ist. Reichere Systeme würfeln mehr A- und S-Klasse-Schiffe, arme kaum welche. Die vollständige dokumentierte Verteilung:
+
+| Wirtschaftsstufe | C | B | A | S-Klasse-Chance |
+| --- | --- | --- | --- | --- |
+| 1 Stern — Declining, Destitute, Struggling | 60% | 30% | 10% | ~0% |
+| 2 Sterne — Adequate, Balanced, Promising | 49% | 35% | 15% | 1% |
+| 3 Sterne — Opulent, Affluent, Prosperous | 30% | 40% | 28% | 2% |
+| Piraten — Black Market, Totenkopf-Symbol | variiert | variiert | variiert | ~5% |
+
+So liest du jede Zeile auf der Galaxiekarte:
+
+1. **1-Sterne-Wirtschaften** (Declining, Destitute, Failing, Fledgling, Low Supply, Struggling, Unsuccessful, Unpromising) tragen eine dokumentierte S-Klasse-Gewichtung von 0%. Sechs von zehn Schiffen sind C-Klasse. Jage hier nie.
+2. **2-Sterne-Wirtschaften** (Adequate, Balanced, Comfortable, Developing, Medium Supply, Promising, Satisfactory, Sustainable) würfeln etwa 1% S-Klasse. Eine hundert Ankünfte — jagbar, aber du bezahlst doppelte Reloads für dasselbe Ergebnis.
+3. **3-Sterne-Wirtschaften** (Advanced, Affluent, Booming, Flourishing, High Supply, Opulent, Prosperous, Wealthy) würfeln etwa 2% S-Klasse und 28% A-Klasse — die besten legalen Chancen im Spiel. Hier findet jede ernsthafte Jagd statt.
+4. **Piratensysteme** zeigen „Black Market" und ein Totenkopf-Symbol statt einer Sterne-Bewertung. Community-Tests seit dem Outlaws-Update legen ihre S-Klasse-Rate bei rund **5%** — das Zweieinhalbfache der besten legalen Wirtschaft — zum Preis von gesetzlosem Weltraum und Stationen, die Schmuggelware statt normaler Handelsgüter verkaufen.
+
+Der Unterschied zwischen den Zeilen summiert sich: Bei 2% gegen 1% erreicht ein reiches System dein S-Klasse-Schiff mit der Hälfte der Reloads eines durchschnittlichen, bevor du die größeren A-Klasse-Trostpreise einrechnest, die daneben landen.
+
+Um all das auf der Karte zu sehen, baue ein **Wirtschaftsscanner**-Raumschiffmodul ein. Es ergänzt einen Wirtschaftsfilter für die Galaxiekarte und lässt dich Reichtum und Konfliktniveau jedes Systems vor dem Warp lesen, sodass du reiche Systeme ketten kannst, statt zu raten. Es ist billig, bei jedem Schiffs-Technologiehändler einer Station erhältlich und das wertvollste Modul der gesamten Jagd.
+
+## Wo du S-Klasse-Schiffe farmst
+
+**Reiche 3-Sterne-Systeme sind die Standard-Antwort**, und in ihnen hast du zwei Standorte:
+
+- **Handelsposten** sind der Community-Favorit. Schiffe landen an einem Handelsposten schneller als an einer Raumstation, die Plattform stellt dich nah genug an die Ankünfte, um zu scannen, ohne dich zu bewegen, und die ganze Schleife läuft von einem Dach aus. Finde eines mit dem Außenposten-Scan des Wirtschaftsscanners oder einer Planetenkarte vom Stations-Kartografen.
+- **Raumstationen** laufen mit derselben Schleife — andocken, im Inneren aus dem Schiff steigen für den Autosave, die Landeplattformen beobachten. Wellen kommen etwas langsamer und die Sichtlinien sind schlechter, aber Stationen haben kein Wetter und keine Wächter, die dich stören.
+
+**Piratensysteme sind die Spezialisten-Antwort.** Die community-getestete S-Klasse-Rate von 5% ist die beste im Spiel, und Piratensysteme sind außerdem der Ort, an dem [Solarschiffe](/starships/best-ships) spawnen — die Jagd ist also zugleich eine Solarschiff-Jagd. Die Abstriche: keine Wirtschaftsbewertung zum Verlassen, Gesetzlosen-Stationen mit eigenem Händlersortiment und mehr Gefahr in der Umgebung. Wenn du den gelegentlichen Piraten-Abfangangriff abwehren kannst, sind die Chancen die Reise wert.
+
+**Frachter folgen völlig eigenen Regeln.** Kapitalfrachter erscheinen über Rettungsschlacht-Events nach Warp-Sprüngen, nicht über Stations-Wellen, und S-Klasse-Kapitale werden mit eigener Speicher-und-Reload-Disziplin gefarmt. Unser [Kapitalfrachter-Farming-Guide](/starships/capital-freighter-farming) behandelt diese Schleife, und der [Frachter-Guide](/starships/freighter-guide) alles übrige zum Betrieb.
+
+## Die Erstwellen-Reload-Schleife, Schritt für Schritt
+
+Schiffe treffen an Handelsposten und Stationen in Wellen ein, und die ersten Schiffe, die nach einem Ladevorgang landen, sind das schnellste Re-Roll-Werkzeug des Spiels. Der Schiffspool des Systems — welche Modelle es hier gibt — ist für immer fix, aber Klasse, Werte und Slotzahl jedes ankommenden Schiffs werden beim Spawn gewürfelt, und das Neuladen deines Speicherstands würfelt die Schlange neu. Die Schleife:
+
+1. Baue einen **Wirtschaftsscanner** ein und filtere die Galaxiekarte nach **reichen Wirtschaften**.
+2. Warpe in ein 3-Sterne-System und lande an einem **Handelsposten**.
+3. Steige aus dem Schiff. Das Aussteigen erzeugt einen **Autosave** — das ist dein Reset-Punkt.
+4. Beobachte, wie die erste Welle landet, und **scanne jedes Schiff** bei der Ankunft, um Klasse, Werte und Slots zu lesen.
+5. Landet innerhalb der ersten Wellen keine S-Klasse, öffne das Optionsmenü und **lade deinen Wiederherstellungspunkt**.
+6. Die Wellen-Schlange würfelt neu. Scanne die neue erste Welle.
+7. Wiederhole das, bis eine S-Klasse landet, und kaufe sie, bevor sie abfliegt — erwarte einen Preis im Bereich zweistelliger Millionen Units, gemäß der Aufschlagstabelle oben.
+
+Zwei Gewohnheiten machen die Schleife schmerzlos. Erstens: scanne von deinem Standort aus — du musst nie zu einem Schiff laufen, um seine Karte zu lesen. Zweitens: behandle Fehlversuche als Inventar — jeder Reload in einem reichen System würfelt auch 28% A-Klasse-Schiffe, und eine gute A-Klasse-Hülle zum richtigen Preis ist ein legitimer Kauf, während du auf die S-Klasse wartest.
+
+Dieselbe Schleife funktioniert in Raumstationen und in Piratensystemen; nur die Kulisse wechselt. Was die Schleife nicht tut, ist den Schiffspool eines Systems zu ändern — wenn dir jedes Modell missfällt, das landet, warpe in ein anderes reiches System, statt endlos zu reloaden.
+
+## Was S-Klasse-Werte dir wirklich bringen
+
+Die Prozente auf der Scan-Karte eines Schiffs sind sein Klassenbonus, und die S-Klasse würfelt die Spitze des Bands jedes Hüllentyps. Die Kern-Spannen, community-dokumentiert aus Jahren von Scans:
+
+- **Jäger** würfeln die höchsten Schadensboni im Spiel — ein S-Klasse-Jäger erreicht grob den **+50% Schaden**-Bereich, der durch jedes Waffenmodul multipliziert wird, das du einbaust.
+- **Entdecker** würfeln die höchsten Hyperantriebsboni — S-Klasse-Entdecker können auf **+80% Warpreichweite** kommen, vor jedem Triebwerks-Upgrade.
+- **Transporter** führen bei den Schilden und stecken Hinterhalte ein, die andere Hüllen falten — auf Kosten des Handlings.
+- **Exoten** und Abfangjäger würfeln hoch und ausgewogen über alle drei Werte — genau deshalb stehen sie an der Spitze unseres [Rankings](/starships/best-ships).
+
+Die Klasse treibt auch die Slots. Ein S-Klasse-Schiff würfelt tendenziell an oder nahe der maximalen General- und Technologie-Slotzahl, die sein Modell erlaubt — dieselbe Zelle, die als 19-Slot-C-Klasse-Jäger ankommt, kann als voll bestückte S-Klasse ankommen.
+
+Ein ehrlicher Vorbehalt: Die Bonus-Bänder benachbarter Klassen überlappen. Ein glücklicher A-Klasse-Wurf kann einen unglücklichen S-Klasse-Wurf bei einem einzelnen Wert schlagen. Über viele Spawns hinweg gewinnt die S-Klasse aber konsistent über Schaden, Schilde, Hyperantrieb und Slots zusammen — sie ist die einzige Klasse, die alle vier gleichzeitig toppelt.
+
+## S-Klasse-Schiffe und Upgrade-Module
+
+Upgrade-Module haben eine eigene Klassen-Bewertung, C bis S, und hier geraten Spieler durcheinander. Die Regeln sind simpel und stapeln sich sauber:
+
+- Die **Klasse der Hülle** setzt die Kernwert-Multiplikatoren und die Slot-Obergrenze.
+- **Upgrade-Module** addieren Prozentboni auf diese Kerne, und ein S-Klasse-Modul addiert am meisten — kaufe sie bei Stations-Technologiehändlern oder verdiente sie beim Verschrotten.
+- **Supercharged-Slots**, die leuchtenden Slots jedes Schiffs seit der Waypoint-Überarbeitung, multiplizieren, was in ihnen steckt. Setze deine besten S-Klasse-Module dorthinein.
+
+Kann also ein Stapel S-Klasse-Module eine C-Klasse-Hülle retten? Größtenteils ja — und fürs Frühspiel schlägt Aufrüsten des Vorhandenen das Warten auf einen 2%-Spawn. Aber das Obergrenzen-Argument ist mathematisch endgültig: Module multiplizieren auf den Kernwerten, und C-Klasse-Kerne sind die niedrigsten im Band. Dieselbe Modulladung endet auf einer besseren Hülle immer höher. Kaufe die C-Klasse jetzt, wenn du heute fliegen musst; jage die S-Klasse, wenn du das Schiff baust, das du behalten willst.
+
+Das Verschrotten finanziert all das. Jedes gekaufte Schiff lässt sich am **Starship-Outfitting-Terminal** jeder Raumstation zerlegen. Community-getestete Erträge für S-Klasse-Hüllen: eine fast garantierte **Lagererweiterung** (eine bis drei pro Schiff), die Inventarslots zu jedem deiner Schiffe hinzufügt, plus geborgene Upgrade-Module, die du einbauen oder für Naniten verkaufen kannst. Kaufe günstige S-Klasse-Ankünfte in einem reichen System, verschroth, was du nicht willst, und die Jagd zahlt sich in Slots und Naniten aus, während du auf das Modell wartest, dessentwegen du kamst.
+
+## Ändert das Cosmos-Update etwas daran?
+
+Bislang nicht. Stand 18. August 2026 veröffentlicht Hello Games die [Cosmos](/cosmos-update/cosmos-update-guide)-Patchnotes weiterhin gestaffelt, und nichts Veröffentlichtes hat Schiff-Spawns, Klassen-Chancen oder Wirtschaftsgewichtung berührt. Die Tabellen oben spiegeln das aktuelle Live-Spiel.
+
+Die eine absehbare Wechselwirkung ist das Reisen. Cosmos bestätigter interstellarer Freiflug — zu einem anderen System fliegen statt zu warpen — soll neben dem Hyperantrieb bestehen, und unser [Guide zum interstellaren Flug](/cosmos-update/interstellar-flight-guide) vergleicht beide. Wie auch immer du zwischen Systemen reist, die Jagd selbst bleibt gleich: reiches Ziel, Handelsposten-Plattform, Autosave, Reload.
+
+## Verwandte Guides
+
+- [Die besten Schiffe in No Man's Sky: Alle Typen im Ranking](/starships/best-ships)
+- [Exoten-Fundorte: Portale, Glyphen, Koordinaten](/starships/exotic-ship-locations)
+- [Wächter-Abfangjäger-Guide: Sichere dir ein kostenloses S-Klasse-Schiff](/starships/sentinel-interceptor-guide)
+- [Kapitalfrachter-Farming: Hole dir ein S-Klasse-Kapitalschiff](/starships/capital-freighter-farming)
+- [Lebendes-Schiff-Guide: Sterngeburt, Wachstum und Upgrades](/starships/living-ship-guide)
+- [Interstellarer Flug: Cosmos-Guide zum freien Flug](/cosmos-update/interstellar-flight-guide)
+- [Cosmos-Update: Der komplette Jubiläums-Guide](/cosmos-update/cosmos-update-guide)
+- [Alle No-Man's-Sky-Updates 2026](/guides/new-update-2026)

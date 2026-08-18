@@ -1,0 +1,151 @@
+---
+title: "No Man's Sky Hyperantrieb-Upgrades: Module, Farbtriebe, maximale Reichweite"
+description: "So funktionieren Hyperantrieb-Upgrades in No Man's Sky: Drei-Module-Limit, Cadmium-, Emeril- und Indium-Antriebe, Reichweiten-Mathe und Hyperraumzellen."
+category: "starships"
+image: '../../../../assets/covers/starships/hyperdrive-upgrades.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "Der Serien-Hyperantrieb springt 101 Lichtjahre, nur zu gelben Sternen. Drei S-Klasse-Module plus Farbtriebe drücken die Reichweite über 2.000 Lichtjahre und öffnen jede Sternklasse."
+tags: ["hyperdrive", "warp", "starships", "upgrades", "guide"]
+faq:
+  - question: "Wie viele Hyperantrieb-Upgrade-Module kann man stapeln?"
+    answer: "Drei. Ein Raumschiff trägt bis zu drei Hyperantrieb-Upgrade-Module; ein viertes oder mehr deaktiviert jedes Modul dieses Typs, bis du wieder auf drei zurückbaust. Cadmium-, Emeril-, Indium- und Atlantid-Antrieb zählen nicht gegen dieses Limit — deshalb fahren Langstrecken-Schiffe meist die Antriebe neben einem vollen Modulstapel."
+  - question: "Was ist die maximale Hyperantriebsreichweite in No Man's Sky?"
+    answer: "Die im Wiki dokumentierte Obergrenze liegt bei rund 2.200 Lichtjahren auf einem Raumschiff mit drei optimal platzierten S-Klasse-Modulen, oder etwa 2.500 mit X-Klasse-Modulen, über dem 101-LJ-Basisantrieb. Frachter erreichen mit Modulen aus verlassenen Frachtern etwa 5.800 Lichtjahre. Exakte Werte variieren mit Modulwürfen, Hüllenwerten und Nachbarschafts-Boni."
+  - question: "Brauche ich Cadmium- und Emeril-Antrieb noch, wenn ich den Indium-Antrieb habe?"
+    answer: "Nein. Der Indium-Antrieb ist ein direktes Upgrade: Mit ihm kannst du zu blauen, grünen und roten Systemen warpen, ohne die anderen Antriebe. Viele Spieler behalten trotzdem alle drei installiert, weil jeder Antrieb Nachbarschafts-Synergien an benachbarte Module füttert — aber für den Systemzugriff reicht der Indium-Antrieb allein."
+  - question: "Macht das Cosmos-Update Hyperantrieb-Upgrades überflüssig?"
+    answer: "Nein. Cosmos fügt den freien interstellaren Flug als Option hinzu, nicht als Pflicht, und sofortige Warpsprünge bleiben voraussichtlich die Effizienz-Wahl. Ein Langstrecken-Hyperantrieb ist außerdem dein Sicherheitsnetz: Geht ein Freiflug im tiefen Weltraum schief, bringen dich ein guter Antrieb und ein Treibstoffvorrat zurück in nützliche Gefilde."
+  - question: "Wie weit bringt mich eine Hyperraumzelle?"
+    answer: "Standardmäßig einen Sprung. Jeder Warp verbrennt 20 Prozent des Hyperantriebstanks, und eine Hyperraumzelle stellt 25 Prozent wieder her — vier Zellen laden den Antrieb vollständig für fünf Sprünge. Drei S-Klasse-Module mit je 100 Prozent Hyperraumzellen-Effizienz senken die Kosten pro Sprung auf ein Viertel: bis zu zehn Sprünge aus einer einzigen Zelle."
+  - question: "Wo kauft man Hyperantrieb-Upgrade-Module?"
+    answer: "Bei Technologiehändlern auf Raumstationen, bezahlt in Naniten. Das Sortiment unterscheidet sich von Station zu Station, weshalb Reichweiten-Jäger Systeme hüpfen und jeden Raumschiff-Tech-Händler prüfen. Gesetzlose Systeme verkaufen X-Klasse-Module mit höherer potenzieller Reichweite, und Läufe durch verlassene Frachter liefern die Frachter-Versionen."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Jede lange Reise in No Man's Sky wird irgendwann zu einem Hyperantrieb-Problem. Die Galaxie umfasst hunderte Milliarden Sternensysteme, ein frischer Speicherstand schafft kaum 100 Lichtjahre zum nächsten gelben Stern, und eine ganze Upgrade-Wirtschaft — Naniten, prozedurale Module, Farbsystem-Antriebe, Frachter-Hangars — existiert, um diese Zahl zu drücken. Reichweite ist der Unterschied zwischen dem Durchqueren einer Galaxieregion an einem Nachmittag und einer Woche Hüpfen zwischen Tankstopps.
+
+Dieser Guide geht den kompletten Hyperantrieb-Upgrade-Pfad in Ordnung durch: wie der Basisantrieb funktioniert, welche Farbsystem-Antriebe du wirklich brauchst, wie S-Klasse-Upgrade-Module stapeln und wo die harte Drei-Module-Decke zubeißt, wie du alles für Nachbarschafts-Boni platzierst, wie Warptreibstoff funktioniert und wohin Frachter gehören. Zum Schluss: Was der freie interstellare Flug des Cosmos-Updates für Warp-Builds tatsächlich ändert — weniger, als du befürchtest.
+
+**Zuletzt aktualisiert: 18. August 2026**, aktuell bis zur gestaffelten Auslieferung des [Cosmos-Updates](/cosmos-update/cosmos-update-guide); die anderen Patches des Jahres stehen in unserem [2026-Update-Tracker](/guides/new-update-2026).
+
+<StatBar
+  items={[
+    { value: '101 LJ', label: 'Basis-Reichweite des Hyperantriebs, nur gelbe Sterne' },
+    { value: '3', label: 'Upgrade-Module, bis der Stapel deaktiviert' },
+    { value: '+265 LJ', label: 'Maximaler Reichweitenbonus eines S-Klasse-Moduls' },
+    { value: '~5.800 LJ', label: 'Dokumentierte Warp-Obergrenze für Frachter' },
+  ]}
+/>
+
+<Callout type="info" title="Cosmos rollt noch aus">
+  Der freie interstellare Flug kommt mit dem Cosmos-Update, angekündigt am 9. August 2026, und
+  seine Patchnotes erscheinen gestaffelt. Alles zu den bestehenden Hyperantrieb-Mechaniken in
+  diesem Guide ist lange etabliert und aktuell; alles, was das Zusammenspiel von Freiflug und
+  Warp betrifft, ist als offen markiert, bis Hello Games es bestätigt.
+</Callout>
+
+## Wie der Basis-Hyperantrieb funktioniert
+
+Jedes Raumschiff kommt mit einem Hyperantrieb, und im Serienzustand tut er zwei Dinge schlecht: Er erreicht nur 101 Lichtjahre pro Sprung (eine Reichweite, die das Synthesis-Update von glatten 100 hochschob), und er kann nur gelbe Sternensysteme ansteuern — die Vanille-Mehrheit der Galaxie. Rote, grüne, blaue und violette Sterne lehnen deinen Sprungwunsch schlicht ab, bis du die richtige Antriebstechnologie installierst, egal wie viel Reichweite du hast.
+
+Treibstoff ist ein Prozent-Spiel. Jeder Warp verbrennt 20 Prozent des Hyperantriebstanks, eine Hyperraumzelle stellt 25 Prozent wieder her, und vier Zellen laden den Antrieb vollständig für fünf Sprünge — eine Änderung aus der Waypoint-Ära gegenüber dem alten Fünf-Zellen-Volltank. Ein voll geladener Antrieb lässt dich außerdem durch das Zentrum der Galaxie von einem Gateway-System springen, die klassische Route in eine neue Galaxie.
+
+Den Bauplan für den Basisantrieb bekommst du früh — über die Frachter-Wrack-Storyline, die auf dein erstes Basenbauen folgt —, also gibt es keinen Grund, je ohne ihn zu fliegen. Eine Eigenheit solltest du vor der Investition kennen: Der Hyperantrieb ist eine der wenigen Technologien im Spiel, die sich craften, aber nie zerlegen lässt; sein Slot im Generalinventar ist permanent.
+
+## Die Farbtriebwerks-Leiter: Cadmium, Emeril, Indium, Atlantid
+
+Sternfarbe ist ein Schloss, und jeder Antrieb ist ein Schlüssel. Vier Technologien erschließen die vier gesperrten Sternklassen:
+
+| Antrieb | Schaltet frei | Hinweise |
+| --- | --- | --- |
+| Cadmium-Antrieb | Rote Sternsysteme | Erste Sprosse; rote Sterne raffinieren zu Cadmium |
+| Emeril-Antrieb | Grüne Sternsysteme | Zweite Sprosse; braucht Emeril von grünen Sternen |
+| Indium-Antrieb | Blaue Sternsysteme | Direktes Upgrade — gibt auch Rot- und Grün-Zugriff |
+| Atlantid-Antrieb | Violette Sternsysteme | Mit Worlds Part II gekommen; löst Indium beim Zugriff ab |
+
+Alle vier Baupläne kommen von Iteration: Hyperion an Bord der Weltraumanomalie, bezahlt in Naniten (der Indium-Antrieb kostet 200), und jeder Antrieb ist aus chromatischem Metall und einem Wiring Loom gebaut. Das Design ist eine absichtliche Schleife: Du warpst so weit, wie deine aktuellen Antriebe erlauben, erntest das Metall dieser Sternklasse, raffinierst es zu chromatischem Metall und baust den nächsten Schlüssel.
+
+Zwei Details machen diese Leiter günstiger, als sie aussieht. Erstens sind die Antriebe beim Zugriff kumulativ — der Indium-Antrieb allein deckt rote, grüne und blaue Sterne ab, und der Atlantid-Antrieb deckt alles unter sich ab, ein minimaler Ausbau braucht also nur die oberste erreichbare Sprosse. Zweitens zählt keiner der vier Antriebe gegen das Upgrade-Module-Limit, und jeder speist passiv einen Nachbarschafts-Bonus in angrenzende Hyperantrieb-Technologie ein. Deshalb behalten die meisten Endgame-Schiffe jeden Antrieb installiert, selbst nachdem sie die unteren streng genommen nicht mehr brauchen: Sie sind freie Synergie, keine verschwendeten Slots.
+
+## S-Klasse-Upgrade-Module und das Drei-Module-Limit
+
+Farbtriebe entscheiden, welche Sterne du besuchen darfst. Upgrade-Module entscheiden, wie weit du springen kannst — und in ihnen lebt die Hyperantrieb-Meta tatsächlich.
+
+Module sind prozedural. Du kaufst versiegelte Hyperantrieb-Module bei Technologiehändlern auf Raumstationen für Naniten, öffnest sie und erhältst eine Installation mit gewürfelten Werten, abhängig von ihrer Klasse:
+
+| Klasse | Reichweitenbonus (LJ) | Hyperraumzellen-Effizienz | Quelle |
+| --- | --- | --- | --- |
+| C | 50 bis 100 | Keine | Händler auf Raumstationen |
+| B | 115 bis 165 | Keine | Händler auf Raumstationen |
+| A | 165 bis 220 | +100% | Händler auf Raumstationen |
+| S | 220 bis 265 | +100% | Händler auf Raumstationen |
+| X | 50 bis 320 | Bis +100% | Händler in gesetzlosen Systemen |
+
+Zwei Werte zählen. Hyperantriebsreichweite ist die Schlagzeile — ein Top-S-Klasse-Wurf addiert bis zu 265 Lichtjahre pro Modul. Hyperraumzellen-Effizienz ist die stille Hälfte des Werts: A- und S-Klasse-Module geben je +100 Prozent Treibstoffeffizienz, und die Boni stapeln sich multiplikativ — ein Effizienzmodul halbiert deine Treibstoffkosten pro Sprung, zwei drücken sie auf ein Drittel, drei auf ein Viertel: fünf Prozent Tank pro Sprung, oder rund zehn Sprünge aus einer einzigen Hyperraumzelle. Für Kern-Läufe und Galaxie-Hüpfer sparen Effizienzmodule oft mehr Zeit als rohe Reichweite.
+
+Das Sortiment unterscheidet sich von Händler zu Händler, deshalb hüpfen ernsthafte Reichweiten-Jäger Systeme, prüfen jeden Raumschiff-Technologiehändler und kaufen nur hohe Würfe. Gesetzlose Systeme sind den Umweg wert: Ihr X-Klasse-Sortiment kann bis zu 320 Lichtjahre würfeln — über jedem S-Klasse-Modul —, allerdings ist der Boden dieser Spanne so niedrig, dass die meisten X-Würfe Schrott sind.
+
+Die harte Regel, die jeden neuen Spieler erwischt: **maximal drei Module**. Installiere ein viertes Upgrade-Modul desselben Typs, deaktiviert das Spiel alle, bis du wieder auf drei zurückbaust. Es gibt keine Teilstrafe und keinen Warnbildschirm — deine Reichweite bricht einfach ein, und die Lösung ist, das schwächste Modul zu verschrotten.
+
+Ein letztes Stück Modul-Trivia für Naniten-Sparer: Modulwerte folgen einer geseedeten Progression, gekoppelt an die Installationsreihenfolge auf deinem Speicherstand. Das dritte Modul, das du installierst, zieht aus einem bestimmten Wurf-Slot, egal welches physische Modul es ist — deshalb installieren Min-Maxer, prüfen, neu laden und umsortieren, bevor sie festlegen.
+
+## Platzierung: Nachbarschaft multipliziert alles
+
+Wo Technologie in deinem Inventar-Grid sitzt, ist nicht kosmetisch. Jedes Element der Hyperantrieb-Familie — Module, Farbtriebe, Basisantrieb — speist einen Nachbarschafts-Bonus von rund fünf Prozent in jedes angrenzende Element, und diese Boni stapeln sich über den Modulwerten, bevor Supercharged-Slots das Ergebnis multiplizieren.
+
+Die praktischen Layout-Regeln sind simpel. Klumpen alles: Basis-Hyperantrieb, drei Module und die Farbtriebe, die du behältst, sollten einen Block bilden, nicht über Tabs verstreut liegen. Setze deine reichweitenstärksten Module in Supercharged-Inventar-Slots (mit dem Waypoint-Update eingeführt), weil diese Slots die darin installierte Technologie multiplizieren. Und halte die Farbtriebe am Modul-Klumpen — sie haben keine eigenen Werte zu boosten, speisen aber Boni in die Module neben sich.
+
+Eine faule verstreute Installation und eine enge optimierte können auf identischer Hardware hunderte Lichtjahre Unterschied machen. Bevor du nach besseren Modulen grindest, richte um, was du schon besitzt.
+
+## Die Reichweiten-Mathe: Was du wirklich erreichst
+
+Die Gesamtsprungweite ist Basisantrieb plus Modulboni plus Nachbarschafts- und Supercharged-Multiplikatoren, anschließend von deiner Hülle vom Schiffs-Rumpf nachjustiert. Die dokumentierte Progression:
+
+| Ausbau | Ungefähre Reichweite |
+| --- | --- |
+| Serienantrieb, keine Module | 101 LJ |
+| Drei C-Klasse-Module | 250 bis 400 LJ |
+| Drei S-Klasse-Module, unplatziert | 760 bis 900 LJ |
+| Drei S-Klasse-Module, optimiert | ~2.200 LJ |
+| Drei X-Klasse-Hochwürfe, optimiert | ~2.500 LJ |
+
+Der Sprung von „unplatziert" zu „optimiert" ist Nachbarschaft und Supercharged-Slots bei der Arbeit — und der Grund, warum Platzierung ein Gratis-Upgrade ist. Deine Hülle zählt auch: Entdecker tragen den besten Hyperantriebswert aller fliegbaren Klassen, deshalb sind die weitestspringenden Schiffe des Spiels S-Klasse-Entdecker mit drei Modulen in engem Klumpen — dieselbe Hülle, die unser [Schiffs-Ranking](/starships/best-ships) an die Spitze des Reichweitenspiels setzt.
+
+Exakte Obergrenzen verschieben sich von Patch zu Patch, wenn Würfe und Multiplikatoren neu gestimmt werden — behandle alles Präzisere als „grob 2.200 bis 2.500 Lichtjahre auf einem Raumschiff" als Folklore, bis du es auf deinem eigenen Speicherstand nachmisst.
+
+## Treibstoff: Hyperraumzellen, Hypercores und Effizienz
+
+Reichweite bekommt den Ruhm; Treibstoff macht die Arbeit. Eine Hyperraumzelle ist aus Antimaterie und Antimateriegehäuse gecraftet, die selbst aus chromatischem Metall und kondensiertem Kohlenstoff beziehungsweise Sauerstoff und Ferritstaub bestehen.
+
+Lieber kaufen als craften? Der Warp Hypercore ist die Premium-Option: Ein einzelner Hypercore lädt einen Hyperantrieb komplett allein — das Äquivalent von vier Hyperraumzellen —, und sein Bauplan kommt aus Fabriken und Operationszentralen oder dem Synthese-Labor an Bord der Anomalie. Der Haken: Seine Zutatenliste enthält Sturmkristalle, die nur bei Extremwetter spawnen, weshalb die meisten Piloten Hypercores als Expeditions- statt als Alltagstreibstoff behandeln.
+
+Die Effizienz-Mathe aus dem Modul-Abschnitt verdient eine Wiederholung als Faustregel: Ein unveränderter Antrieb bekommt einen Sprung pro Zelle, ein Antrieb mit drei effizienzsteigernden S-Klasse-Modulen etwa zehn. Treibstoff-Disziplin ist das günstigste Upgrade des gesamten Spiels.
+
+## Frachter: Der Hyperantrieb im Flottenmaßstab
+
+Dein Kapitalschiff hat einen eigenen Hyperantrieb, einen eigenen Tank und einen eigenen Upgrade-Pfad — und es ist die Sprungmaschine deiner gesamten Operation: Ein Frachter-Warp nimmt jedes Schiff mit, das in seinem Hangar lagert, was Flottenlogistik zu einer Frage der Frachter-Reichweite macht.
+
+Der Frachterantrieb startet bei 100 Lichtjahren und wird von fünf Hyperraumzellen oder einem Hypercore vollgeladen. Er wächst auf zwei Wegen. Der eingebaute Upgrade-Baum — Warp Core Resonator mit +200 LJ, Plasmatic Warp Injector mit +300 LJ und Reality De-threader mit +800 LJ, plus +50-LJ-Farbschilde-Varianten für Rot-, Grün- und Blau-Zugriff — wird mit Units und Naniten gekauft. Die größeren Gewinne kommen von Frachter-Hyperantrieb-Upgrade-Modulen, den prozeduralen Drops aus Läufen durch verlassene Frachter seit dem Desolation-Update, die zusätzlich Treibstoffeffizienz würfeln. Ein engagierter Kapitän mit sauberen Verlassenen-Frachter-Layouts drückt einen Frachter auf rund 5.800 Lichtjahre — mehr als das Doppelte jedes Raumschiffs.
+
+Die komplette Verlassenen-Frachter-Schleife, Flottenmanagement und Fregatten-Expeditions-Logistik behandelt unser [Frachter-Guide](/starships/freighter-guide).
+
+## Cosmos und danach: Ersetzt Freiflug das Warpen?
+
+Das zehnjährige Jubiläumsupdate Cosmos, angekündigt am 9. August 2026, fügt die Option hinzu, unter eigener Kraft direkt in ein anderes Sonnensystem zu fliegen — das erste Mal in der Geschichte des Spiels, dass der Hyperantrieb Konkurrenz hat.
+
+Die Einordnung zählt allerdings: Wie unser [Guide zum interstellaren Flug](/cosmos-update/interstellar-flight-guide) es formuliert, ist Freiflug eine Option, keine Pflicht. Hello Games hat keine Abschaffung des Warpens angekündigt, und die Erwartung über die gesamte Berichterstattung hinweg ist, dass sofortige Sprünge die Effizienz-Wahl bleiben, während Freiflug die malerische wird. Zwei offene Fragen lohnen die Verfolgung in den gestaffelten Patchnotes: ob Freiflug die Farbtrieb-Gates respektiert (kannst du ohne Indium-Antrieb zu einem blauen Stern fliegen?) und welchen Treibstoff, wenn überhaupt, anhaltendes interstellares Cruisen verbraucht.
+
+Bis diese Antworten da sind, lautet die praktische Lesart: Hyperantrieb-Upgrades gewinnen an Wert, statt ihn zu verlieren. Ein Langstrecken-Antrieb ist das Sicherheitsnetz, das einen schiefgelaufenen Freiflug rettet, die Schnellspur für Händler und Kern-Läufer und das Rückgrat jedes Vorstoßes zum Galaxienzentrum. Die Cosmos-Vorbereitungs-Checkliste stuft Hyperantrieb- und Modul-Upgrades als hohe Priorität ein — passend dazu, wie jedes Reisesystem in zehn Jahren Updates die Antriebsqualität behandelt hat. Baust du dein Warp-Kit für die Jubiläums-Ära neu auf, behandelt unser [S-Klasse-Schiffs-Jagd-Guide](/starships/s-class-ships), wie du die Hülle findest, in die sich das alles einbaut.
+
+## Verwandte Guides
+
+- [Die besten Schiffe in No Man's Sky: Alle Typen im Ranking](/starships/best-ships)
+- [S-Klasse-Schiffe: Spawn-Chancen, Farming & Werte](/starships/s-class-ships)
+- [Frachter-Guide: Basen, Flotten und Fregatten-Expeditionen](/starships/freighter-guide)
+- [Interstellarer Flug: Cosmos-Guide zum freien Flug](/cosmos-update/interstellar-flight-guide)
+- [Cosmos-Update: Der komplette Jubiläums-Guide](/cosmos-update/cosmos-update-guide)
+- [Auf Sternen landen in No Man's Sky](/cosmos-update/how-to-land-on-stars)
+- [Alle No-Man's-Sky-Updates 2026](/guides/new-update-2026)

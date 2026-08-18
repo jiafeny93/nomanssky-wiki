@@ -1,0 +1,155 @@
+---
+title: "No Man's Sky Expedition schnell abschließen: Der Zwei-Tage-Guide"
+description: "No-Man's-Sky-Expeditionen schnell abschließen: die kürzesten Meilenstein-Routen, Teleport-Abkürzungen, Multiplayer-Regeln und ein Zwei-Tage-Zeitplan für jeden Lauf."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/expedition-fast-completion.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+tags: ["expeditions", "speedrun", "guides", "milestones", "multiplayer"]
+summary: "Jede No-Man's-Sky-Expedition in zwei fokussierten Tagen schaffen: Meilenstein-Liste zuerst lesen, Ziele entlang der Rendezvous-Route ketten, Belohnungen ständig abholen, Blocker früh vorbereiten."
+faq:
+  - question: "Wie schnell kann man eine No-Man's-Sky-Expedition abschließen?"
+    answer: "Trainierte Speedrunner halten Full-Run-Rekorde bei knapp neunzig Minuten: Der Expedition-1-Pioneers-Rekord auf speedrun.com steht bei 1 Stunde 29 Minuten, und Video-Routen existieren für Läufe in etwa 90 Minuten. Mit Community-Route und normalem Tempo rechne mit zwei bis vier Stunden; ein entspannter Erstläufer braucht meist sechs bis zehn, verteilt über das Event-Fenster."
+  - question: "Teilt sich Expeditions-Fortschritt zwischen Spielern in einer Gruppe?"
+    answer: "Nein. Meilenstein-Fortschritt gilt pro Spieler: Jedes Gruppenmitglied muss die eigenen Ziele erfüllen und eigene Belohnungen abholen, kein Teammate trägt die Checkliste. Gruppen helfen trotzdem über Fahrten, Basen, Kampf und Handel, und Community-Meilensteine poolen global über alle Spieler. Multiplayer-Meilensteine sind für den Phasenabschluss optional."
+  - question: "In welcher Reihenfolge soll man Expeditions-Meilensteine erledigen?"
+    answer: "Es gibt keine feste Reihenfolge, nur eine günstige. Phasen schalten bei Meilenstein-Schwellen frei, nicht bei vollständiger Abarbeitung — lies also zuerst die komplette Liste am Expeditionsterminal, gruppiere Ziele nach Planet und System, kette sie entlang der Rendezvous-Route und überspringe die langsamsten Meilensteine über jedem Schwellenwert. Belohnungen nach jeder Abholung einbauen."
+  - question: "Kann man eine Expedition in einer Sitzung beenden?"
+    answer: "Ja. Jeder Phasen-Schwellenwert ist solo erreichbar, und optimierte Community-Routen schaffen eine volle Expedition routinemäßig in 2 bis 4 Stunden. Eine lange Session funktioniert, wenn du die Route planst, bevor du dich bewegst, und ständig Belohnungen abholst; eine Zwei-Tage-Aufteilung ist nur bequemer und lässt Luft für sturmabhängige oder zufallsbasierte Meilensteine, die nicht kooperieren."
+  - question: "Zählen Belohnungen noch, wenn ich die Expedition am letzten Tag beende?"
+    answer: "Ja, solange du sie abholst, bevor das Fenster schließt. Phasen-Belohnungen liegen am Expeditionsterminal bis zur Abholung, und alles Abgeholte ist permanent und kontoweit, auf deinem Hauptspielstand einlösbar über den Quecksilber-Synthese-Begleiter. Lass am letzten Tag nie Belohnungen unabgeholt liegen — behandle die Frist als harte Grenze."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Die meisten No-Man's-Sky-Expeditionen gehen nicht an der Schwierigkeit verloren — sie gehen an Drift verloren. Spieler treiben in Rückwege hinein, lassen Belohnungen am Terminal liegen, behandeln ein sechswöchiges Event wie eine sechswöchige Verpflichtung und hetzen dann, wenn der Countdown einstellig wird. Dieser Guide zum schnellen Abschließen existiert, um das zu fixen: ein wiederholbares, expeditions-agnostisches Playbook, um jeden Lauf in etwa zwei fokussierten Tagen zu schaffen — egal, ob du einer frischen Saison-Auslieferung hinterherjagst oder einem Redux-Re-Run.
+
+**Zuletzt aktualisiert: 18. August 2026.** Expedition 22: The Swarm schloss ihr Fenster am 19. Juli 2026, und gerade läuft keine Expedition — was diese Woche zur perfekten macht, um die Methode zu verinnerlichen, denn der nächste Lauf beginnt immer gleich.
+
+<StatBar
+  items={[
+    { value: '2 Tage', label: 'Fokussiertes Spielen für den Full Clear' },
+    { value: '2–4 Std.', label: 'Optimierter Lauf in einer Sitzung' },
+    { value: '5–6', label: 'Phasen in einer Standard-Expedition' },
+    { value: '1:29:38', label: 'Full-Run-Rekord auf speedrun.com' },
+  ]}
+/>
+
+<Callout type="info" title="Das ist ein Playbook, kein Patch-Day-Skript">
+  Alles hier — Phasen-Schwellenwerte, Rendezvous-Routing, Terminal-Abholen, die
+  Multiplayer-Regeln — ist über jede Expedition seit dem Start des Formats stabil. Öffnet der
+  nächste Lauf, wende es am ersten Tag an. Nichts unten hängt davon ab, welche Expedition live
+  ist.
+</Callout>
+
+Wenn du noch nie eine Expedition gespielt hast, beginne mit unserem [allgemeinen Expeditions-Guide](/expeditions/expedition-guide) dazu, wie Spielstände, Phasen und Belohnungs-Abholen funktionieren. Diese Seite setzt voraus, dass du die Grundlagen kennst und schnell vorankommen willst, ohne den Lauf miserabel zu machen.
+
+## Was schnelles Abschließen wirklich bedeutet
+
+Expeditionen verlangen nie 100 Prozent. Jede der fünf oder sechs Phasen schaltet bei einem Meilenstein-Schwellenwert frei, der unter der Gesamtzahl der Meilensteine liegt, die sie enthält — hält eine Phase zwölf Meilensteine und der Schwellenwert bei acht, sind vier davon Dekoration. Schnelles Abschließen ist schlicht die Disziplin, fünf oder sechs Schwellenwerte mit minimalem Reisen zu erreichen, und jede Strategie unten ist eine Variation dieser einen Idee.
+
+Diese eine Regel rahmt das ganze Event neu ein. Du bearbeitest keine Checkliste ab; du stutzst eine zurück. Bevor du dein erstes System verlässt, solltest du bereits wissen, welche Meilensteine du ignorierst, welche sich auf dieselben Orte stapeln und auf welche Belohnungen du tatsächlich jagst — der komplette Pool der letzten Läufe steht katalogisiert in unserer [Expeditions-Belohnungsliste](/expeditions/expedition-rewards-list).
+
+## Stunde eins: lesen, abholen, planen
+
+Die erste Stunde entscheidet über die Länge des gesamten Laufs. Speedrunner und gemütliche Spieler verlieren gleichermaßen die meiste Zeit an denselben Fehler: Ziele in der Reihenfolge abzuarbeiten, in der das Terminal sie listet, statt in der Reihenfolge, die die Galaxie erlaubt.
+
+1. **Lies am Expeditionsterminal zuerst die komplette Meilenstein-Liste, bevor du irgendetwas anderes tust.** Gruppiere jedes Ziel im Kopf nach Planet und System. Die meisten verschwendeten Stunden jeder Expedition entstehen durch Rückwege in ein System, das du zwei Stunden vorher durchquert hast.
+2. **Öffne die Galaxiekarte und schau dir die Expeditions-Route an.** Jede Expedition parkt Rendezvous-Punkte entlang einer Route durch die Galaxie; diese Punkte verankern deinen schnellsten Weg. Mehr dazu unten.
+3. **Hol Belohnungen sofort ab, jedes Mal.** Meilenstein- und Phasen-Belohnungen warten am Terminal bis zur Abholung, und viele davon sind Upgrade-Module und Ressourcen, die den nächsten Meilenstein beschleunigen. Eine unabgeholte Belohnung ist ein Gratis-Upgrade, das du nicht nutzt.
+4. **Baue ein, was du abholst.** Ein Modul in deinen Fracht-Slots beschleunigt nichts. Slotte es in dem Moment ein, in dem du es abholst.
+5. **Setze eine Keine-Umwege-Regel.** Liegt ein optionales Ziel mehr als etwa eine Minute von deiner Route entfernt, überspringe es, außer du bist unter dem Phasen-Schwellenwert. Die Sandbox ist auch nach dem Event noch da.
+
+Nichts davon kostet Zusatzzeit — Schritt eins und zwei dauern zehn Minuten —, und zusammen halbieren sie einen Lauf typischerweise, bevor du deinen Bergbaulaser gefeuert hast.
+
+## Der kürzeste Weg: Meilensteine nach Ort sortieren
+
+Hast du die Liste gelesen, sortiere Meilensteine nach Geografie, nicht nach Phase. Das Muster, das in praktisch jeder Expedition funktioniert:
+
+| Priorität | Meilenstein-Typ | Warum zuerst |
+| --- | --- | --- |
+| 1 | Ziele auf deinem Startplaneten und -system | Keine Reisekosten; sichert den frühen Phasen-Schwellenwert, bevor du in Logistik investierst |
+| 2 | Rendezvous-Punkte-Meilensteine | Die Route bringt dich eh dorthin, und jedes Rendezvous trägt meist eigenen Meilenstein-Kredit |
+| 3 | Reise-kompatible Ziele: Scannen, Wissenssteine, Signale, Fotos | Erledigen sich selbst, während du dich zwischen allen anderen Zielen bewegst |
+| 4 | Cluster-Ziele: mehrere Meilensteine auf einem Planeten oder System | Bündle sie zu einem Stopp statt dreier Fahrten |
+| 5 | Langsame Einzweck-Meilensteine: Koch-Ketten, Sturm-Warten, seltene Fauna | Nur unterhalb eines Schwellenwerts angehen — oder ab Minute eins passiv ansparen |
+
+Die Stapel-Gewohnheit zählt mehr als jede einzelne Route. Scanne Fauna, während dein Schiff auftankt. Fotografiere Wegpunkte, wenn du über Hügelkämme ziehst. Interagiere mit jedem Wissensstein, an dem du vorbeikommst, denn Wort-Lern-Meilensteine tauchten in mehreren Expeditionen auf und sie sparen gratis an. Die besten Läufe reisen nie leer: Jede Fahrt zwischen zwei Punkten sollte ein oder zwei passive Meilensteine als Nebenwirkung erledigen.
+
+Rückwege sind der Gegner, an dem du dich messen solltest. Ein nützlicher Selbstcheck zu Beginn jeder Stunde: Fliegst du ein System an, das du schon besucht hast, frag, ob ein Ziel im aktuellen System diese Fahrt hätte ersetzen können. Wenn ja, ist deine Sortierung gerutscht — rechne neu, bevor du warpst.
+
+## Rendezvous-Punkte, die Anomalie und Reise-Abkürzungen
+
+Das Reisen ist die Stelle, an der schnelles Abschließen gewonnen wird, weil jede Meilenstein-Liste des Spiels trivial ist neben den Distanzen zwischen ihren Zielen. Vier Mechaniken machen den Großteil der Arbeit:
+
+- **Rendezvous-Punkte.** Jede Expedition inszeniert ihre Phasen entlang einer Route aus Rendezvous-Planeten — dynamische Knoten, an denen sich die Community natürlicherweise sammelt. Sie zu erreichen zählt in den meisten Läufen selbst als Meilenstein-Fortschritt, und die Galaxiekarte hebt die Expeditions-Route hervor, sodass du sie ketten kannst. Besuche nie ein System, das nicht auf dem Weg zum nächsten Rendezvous liegt, außer ein Cluster von Meilensteinen rechtfertigt es.
+- **Die Weltraumanomalie.** Rufe sie aus dem All, wann immer du zwischen Systemen bist: Sie ist deine kostenlose Abhol-und-Einbau-Station, dein Laden und die Vermittlungszentrale für den Trick unten.
+- **Der Anomalie-Teleporter und die Basen anderer Spieler.** Der Teleporter der Anomalie funktioniert nur ausgehend, aber er bringt dich zu den Basen jedes Spielers, der gerade mit dir an Bord der Anomalie ist. Der klassische Community-Speed-Trick: an Bord gehen, einen Spieler finden, dessen Basis nahe deinem nächsten Rendezvous liegt, und dorthin teleportieren, statt die ganze Strecke zu warpen. Auf einer vollen Anomalie in der Startwoche spart das gewaltige Warp-Ketten. Raumstationen-Teleporter decken die Rückrichtung — Gratis-Sprünge zurück in jedes System oder zu jeder Basis, die du schon besucht hast, der billigste Weg, ein vergessenes Ziel nachzuholen.
+- **Portale, ehrlich gesagt.** Das Portal-Netzwerk taucht in einer schnellen Expeditions-Route fast nie auf, weil ein frischer Expeditions-Spielstand ohne gelernte Glyphen startet. Jage keine Portal-Freischaltungen mitten im Lauf; die Rendezvous-Route plus Teleporter ist schneller auszuführen als Glyphen-Jagd.
+
+Eine Vorsichtsmahnung aus jeder Startwoche aller Zeiten: Neue Expeditionen liefern mit Bugs, und Community-Threads dokumentierten in vergangenen Läufen Teleporter-Listen, die besuchte Systeme nicht anzeigten. Spinnt eine Abkürzung, falle auf die Galaxiekarte zurück, statt gegen das Menü zu kämpfen — die Warp-Route funktioniert immer.
+
+## Multiplayer: Was geteilt wird und was nicht
+
+Das ist der am meisten missverstandene Mechanismus des Formats, hier die klare Version: **Meilenstein-Fortschritt gilt pro Spieler.** Einer Gruppe beizutreten teilt deine Checkliste nicht. Jedes Mitglied einer Gruppe muss die eigenen Meilensteine erfüllen und die eigenen Phasen-Belohnungen abholen; ein Veteran kann nicht vier Freunde durch die Liste tragen, während sie zusehen.
+
+| Element | Wird geteilt? | Wie es wirklich hilft |
+| --- | --- | --- |
+| Meilenstein-Fortschritt | Nein — pro Spieler | Jeder klettert an der eigenen Leiter, aber ihr könnt an denselben Orten klettern |
+| Phasen-Belohnungen | Nein — einzeln abgeholt | Jeder Spieler holt am Terminal ab; Belohnungen sind nach Abholung kontoweit |
+| Mitfahrgelegenheiten | Teilweise | Die Fahrt im Schiff oder Exocraft eines Teammates erspart Reisen und erfüllt Mitfahr-Multiplayer-Meilensteine, die als optionale Ziele auftauchten (ein „Hitchhiker"-Ziel in früheren Läufen) |
+| Basen und Infrastruktur | Ja | Die Basis eines Teammates nahe einem Rendezvous ist für alle ein freier Teleport-Anker und Tankstelle |
+| Kampf und Ressourcen | Ja | Gruppenfeuerkraft macht Kampf-Meilensteine trivial; Überschuss-Ressourcen lassen sich frei handeln |
+| Community-Meilensteine | Ja — global | Diese poolen über jeden Spieler im Event, nicht nur über deine Gruppe; The Swarms Drei-Team-Krieg 2026 war diese Idee im Vollmaßstab ([Expedition-22-Rückblick](/expeditions/expedition-22)) |
+
+Der korrekte Einsatz von Multiplayer ist also nicht Delegation — er ist Logistik. Eine synchrone Gruppe bewegt sich gemeinsam durch dieselbe Rendezvous-Route, teilt Basen als Teleport-Anker, poolt Treibstoff und handwerkliche Ressourcen und schmilzt Kampf-Meilensteine, die einen Solo-Spieler jeweils Minuten kosten würden. Zwei gemeinsam reisende Spieler finishen typischerweise schneller als jeder allein, obwohl keiner die Ziele des anderen erfüllt. Und spielst du solo, ist nichts davon Pflicht: Jeder Multiplayer-lastige Meilenstein der Expeditions-Geschichte war für den Phasenabschluss optional.
+
+## Upgrade-Priorität: Slots vor Feuerkraft
+
+Expeditions-Spielstände starten alle mit kuratierten Loadouts, was heißt: Deine Upgrade-Reihenfolge zählt mehr als deine Startausrüstung. Wenn Meilenstein-Belohnungen und Händler-Sortiment dich wählen lassen, gib in dieser Reihenfolge aus:
+
+1. **Exoanzug-General-Slots.** Inventar ist der universelle Flaschenhals — jeder Sammel-, Koch- und Ausgrabungs-Meilenstein geht mit mehr Fracht schneller. Kaufe den Slot, den es auf jeder Raumstation gibt, und hebe die Fallkapseln aus, denen du auf Planeten begegnest.
+2. **Hyperantriebs-Reichweite.** Längere Warps bedeuten weniger davon. Baue jedes antriebsbezogene Modul ein, das der Lauf dir übergibt, bevor du einen System-Cluster verlässt.
+3. **Starttreibstoff-Wirtschaft.** Nichts verbrennt einen Zeitplan wie Auftank-Schleifen auf einem Planeten, mit dem du fertig warst. Startsystem-Upgrades plus die Gewohnheit, vor der Landung Kohlenstoff vollzumachen, fixen das permanent.
+4. **Gefahrenschutz-Vorräte statt neuer Gefahren-Ausrüstung.** Natrium, Ionenbatterien und geladener Schutz schlagen Suit-Tech-Shopping in nahezu jedem Klima-Meilenstein.
+5. **Waffen zuletzt.** Kampf-Meilensteine sind kurz und nachsichtig; investiere nur, wenn eine bestimmte Begegnung es verlangt.
+
+Widerstehe dem Drang, mitten im Lauf ein besseres Schiff zu kaufen. Das Loadout der Expedition plus abgeholte Belohnungen reicht, um jeden bisherigen Lauf zu beenden — behandle Schiffs-Jagd als Nach-Expeditions-Aktivität für deinen Hauptspielstand und unsere [Besten-Schiffe](/starships/best-ships)-Auswahl.
+
+## Die Blocker-Vorbereitungsliste
+
+Bestimmte Meilenstein-Typen haben Läufe in jeder Expedition seit dem Format-Start gebremst. Keiner ist schwer; alle sind langsam, wenn du sie unvorbereitet triffst. Das ist die Vorflug-Checkliste für jeden:
+
+| Wiederkehrender Blocker | Warum er Läufe stoppt | Die Vorbereitung |
+| --- | --- | --- |
+| Wetter-Aushalten-Ziele | Stürme und Hitzespitzen laufen nach eigenem Zeitplan, nicht deinem | Mit voll geladenem Gefahrenschutz ankommen; beim Warten nebenstehende Scan- oder Sammel-Ziele erledigen, statt in den Himmel zu starren |
+| Nur-im-Sturm-Ressourcen | Manche sammelbaren Materialien erscheinen nur während Stürmen | In dasselbe Wetter-Warten falten — nie eine separate Fahrt ansetzen |
+| Koch- und Verarbeitungsketten | Mehrstufige Rezepte brauchen Vorprodukte, die du nicht dabeihast | Rezept-Anforderungen zu Beginn von der Meilenstein-Liste ablesen; Vorprodukte beim Reisen passiv sammeln |
+| Wort-Lern-Meilensteine | Verlangen über Zeit die Interaktion mit Wissenssteinen | Ab Minute eins jeden Wissensstein und Monolithen berühren, den du passierst — das spart gratis Fortschritt an |
+| Seltene-Fauna-Scans | Manche Entdeckungs-Meilensteine brauchen spezifische, unübliche Kreaturtypen | Früh alles scannen, was sich bewegt; Teil-Entdeckungsfortschritt trägt in die späten Phasen |
+| Inszenierte Kampf-Begegnungen | Boss-artige Meilensteine bestrafen unvorbereitetes Ankommen | Mit geladenen Waffen, Schilden und Starttreibstoff ankommen; ein Tod kostet eine volle Rückfahrt |
+
+Der rote Faden: Blocker bestrafen Spieler, die sie kalt treffen. Zehn Minuten mit der Meilenstein-Liste am Terminal sagen dir, welche davon dein Lauf enthält und wo sie sitzen — und jeder von ihnen lässt sich auf Reisen vorladen, die du sowieso unternommen hast.
+
+## Der Zwei-Tage-Zeitplan
+
+So sieht ein bequemer Zwei-Tage-Clear aus, stundenbudgetiert. Er setzt normales Tempo voraus, keine Vorerfahrung mit dem konkreten Lauf und eine Tag-1-Community-Route im Browser-Tab — optimierte Routen erscheinen innerhalb weniger Tage nach jedem Start auf Reddit und YouTube, und selbst ein spoiler-armes Gerüst spart Stunden.
+
+| Block | Budget | Was du schaffst |
+| --- | --- | --- |
+| Tag 1, Session 1 | 2–3 Stunden | Spielstand starten, die komplette Meilenstein-Liste lesen, Route planen, die gesamte erste Phase plus das meiste der zweiten rund um Startsystem und erstes Rendezvous abschließen |
+| Tag 1, Session 2 | 2 Stunden | Die nächsten zwei Rendezvous-Punkte ketten, alles abholen und einbauen, passive Meilensteine (Scans, Steine, Fotos) beim Planetenqueren ansparen |
+| Tag 2, Session 1 | 2–3 Stunden | Das Rendezvous der finalen Phase erreichen, restliche Schwellenwerte abarbeiten, gebankte Blocker-Meilensteine nachziehen |
+| Tag 2, Session 2 | 1 Stunde | Finale-Meilenstein, komplette Abhol-Runde am Terminal — prüfe, dass jede Phase abgeholt liest —, dann Hauptspielstand laden und freigeschaltete Items beim Quecksilber-Synthese-Begleiter einsammeln |
+
+Gesamt: sieben bis neun Stunden über zwei Tage, was einen üblen Sturm-Wartetimer, einen Bug und eine kurz geratene Session bequem schluckt. Verdichte die Blöcke auf einen einzigen Tag, hast du den üblichen Zwei-bis-Vier-Stunden-optimierten Clear; streckst ihn, bist du genau dort, wo der Sechs-bis-Zehn-Stunden-Entspannten-Lauf wohnt.
+
+## Was die Speedrun-Rekorde lehren
+
+No-Man's-Sky-Expeditions-Speedrunning ist eine echte, dokumentierte Disziplin — speedrun.com pflegt Bestenlisten für das Format, inklusive Full-Run- und Einzelphasen-Kategorien. Der Full-Run-Rekord für Expedition 1: The Pioneers steht bei 1 Stunde 29 Minuten 38 Sekunden, Phasenrekorde laufen bis runter auf 34 Minuten, und Video-Guides existieren, um bestimmte Expeditionen in rund 90 Minuten zu schaffen. Community-Routen landen jüngste Läufe regelmäßig im selben Gebiet: Die Remnant-Expedition wurde mit veröffentlichter Route vielerorts in etwa drei Stunden geschafft ([Remnant-Routen-Breakdown](/expeditions/expedition-21-remnant-guide)).
+
+Der lehrreiche Teil ist, worauf diese Läufe nicht bauen: Reflexe, Kampf-Geschick oder exotische Ausrüstung. Sie sind Planungs-Artefakte. Routenwissen, aggressives Abholen und kompromissloses Überspringen machen nahezu die gesamte Lücke zwischen einem Neunzig-Minuten-Clear und einem Zehn-Stunden-Clear aus — weshalb dieselben Methoden perfekt auf einen bequemen Zwei-Tage-Clear skalieren. Du übst keine Mechaniken; du vermeidest Verschwendung.
+
+## Wo das gerade gilt
+
+Stand 18. August 2026 läuft nichts — The Swarm schloss am 19. Juli, und die Patchnotes des Cosmos-Jubiläumsupdates erscheinen weiterhin gestaffelt ([was 2026 neu ist](/guides/new-update-2026)). Hello Games hat den nächsten Lauf nicht angekündigt. Die realistischen Fenster für dieses Playbook: eine neue Expedition zusammen mit Cosmos-Inhalten — wir verfolgen Ankündigungen auf unserer [Expedition-23-Seite](/expeditions/expedition-23) — oder der Spätherbst-Redux-Block, der zum Studio-Muster geworden ist und dessen erwarteten Zeitplan wir im [Redux-Expeditions-Tracker](/expeditions/redux-expeditions-schedule) führen. Sobald eines von beiden öffnet, greift das Playbook oben unverändert an Tag eins.

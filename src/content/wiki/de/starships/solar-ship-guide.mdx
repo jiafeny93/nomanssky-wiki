@@ -1,0 +1,162 @@
+---
+title: "No Man's Sky Solarschiff-Guide: kostenloser Starttreibstoff & S-Klasse-Jagd"
+description: "No Man's Sky Solarschiff-Guide: Starttreibstoff-Nachladung per Segel, Solars-Fundorte in gesetzlosen Systemen und der Weg zur S-Klasse."
+category: "starships"
+image: '../../../../assets/covers/starships/solar-ship-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Solarschiffe laden ihren Starttreibstoff im Flug automatisch über die Segel nach. Du findest sie in gesetzlosen Systemen, wo sie das Shuttle-Angebot ersetzen — S-Klassen spawnen mit flachen 5%."
+tags: ["solar-ship", "outlaws-update", "outlaw-systems", "launch-fuel", "starships", "2026"]
+faq:
+  - question: "Wo findet man Solarschiffe in No Man's Sky?"
+    answer: "Am verlässlichsten in gesetzlosen Systemen, den piratenkontrollierten Systemen aus dem Outlaws-Update. Community-dokumentierte Spawn-Regeln: Ein Shuttle-Slot hat dort eine 85%-Chance auf ein Solar, anderswo nur 10% — die Jagd läuft also an Gesetzlosen-Stationen und Handelsposten. Selten tauchen Solars auch in gewöhnlichen Systemen auf."
+  - question: "Wie funktioniert die Starttreibstoff-Nachladung des Solarschiffs?"
+    answer: "Jedes Solarschiff trägt die exklusive Technologie Vesper Sail. Jeder Start zieht weiterhin Starttreibstoff zum Standardtarif, aber die Segel laden die Starttriebwerke beim Fliegen automatisch photovoltaisch nach, sodass sich der Tank im normalen Reisebetrieb wieder füllt. In der Praxis craftest du keinen Starttreibstoff mehr, weil ein Impulssprung zwischen Planeten den Tank schon auffüllt."
+  - question: "Sind Solarschiffe besser als Jäger oder Entdecker?"
+    answer: "Nicht besser — anders geschnitten. Ein S-Klasse-Solar würfelt rund 60–75% Schadensbonus, nah an Exoten-Territorium, aber unter den 70–90% eines Jägers, bei gleicher hoher Wendigkeit. Der Hyperantriebsbonus hängt deutlich hinter einem Entdecker zurück, und das Inventar ist klein. Solars gewinnen durch Bequemlichkeit: keine Starttreibstoff-Wartung und der beste Impulsantrieb aller Klassen."
+  - question: "Wie bekomme ich ein S-Klasse-Solarschiff?"
+    answer: "Drei Wege: Jage Erstwellen in gesetzlosen Systemen mit flacher 5%-S-Klasse-Chance laut Community-Tests. Oder erhebe ein günstigeres Solar gegen Gebühr am Starship-Outfitting-Terminal in der Klasse. Oder baue eines am Starship-Fabricator aus Rumpf, Flügel, Segel und einem Reaktorkern, dessen Klasse das Ergebnis bestimmt — ein S-Klasse-Kern garantiert ein S-Klasse-Solar."
+  - question: "Brauchen Solarschiffe Sonnenlicht oder einen nahen Stern zum Nachladen?"
+    answer: "Nein. Trotz des Namens hängt die Nachladung nicht an Tageslicht, Sternnähe oder geparkter Oberfläche — sie kommt aus dem Fliegen. Das unterscheidet sie vom Launch Auto-Charger-Upgrade, das jedes Schiff einbauen kann und das nur tagsüber im geparkten Zustand langsam nachlädt."
+  - question: "Können Solarschiffe normale Raumschiff-Upgrades nutzen?"
+    answer: "Ja. Anders als Lebende Schiffe sind Solars konventionelle Technologie-Schiffe: sie nehmen Impulsantriebs-, Waffen-, Schild- und Hyperantrieb-Upgrade-Module, Lagererweiterungen und die verdächtigen X-Klasse-Module der Gesetzlosen-Stationen. Ihr einziges Exklusivteil ist das Vesper Sail, das sich weder kaufen noch auf eine andere Schiffsklasse übertragen lässt."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Das Solarschiff ist No Man's Skys Quality-of-Life-Spezialist: eine markante, segelbewehrte Hülle, die eine der ältesten Pflichtaufgaben des Spiels einfach streicht. Seit den frühesten Tagen endete jede Planetenlandung gleich — mit dir beim Auffüllen des Starttreibstoffs oder dem Zusammenzucken, wenn der Tank gegen leer kriecht. Solarschiffe, eingeführt im Outlaws-Update vom April 2022 (Version 3.85), laden ihre Starttriebwerke über die Segel im Flug selbst nach. Landen, aussteigen, eine Basis bauen, eine Woche später wiederkommen — der Start ist schon bezahlt.
+
+Diese eine Eigenschaft hat Solars zusammen mit konkurrenzfähigen Werten und einer der markantesten Silhouetten des Spiels seitdem in jeder Diskussion darüber, welches Schiff man fliegen sollte, gehalten. Dieser Guide behandelt, wie das Segel funktioniert, wo Solars spawnen, die praktischen Wege zu einer S-Klasse, den Teile-Katalog und einen ehrlichen Vergleich mit Jägern und Entdeckern.
+
+<StatBar
+  items={[
+    { value: '3.85', label: 'Outlaws-Update, das Solars brachte (April 2022)' },
+    { value: '25%', label: 'Starttreibstoff pro Start, vom Segel nachgefüllt' },
+    { value: '85%', label: 'Chance, dass ein Shuttle in gesetzlosen Systemen ein Solar ist' },
+    { value: '5%', label: 'Flache S-Klasse-Chance in gesetzlosen Systemen' },
+  ]}
+/>
+
+<Callout type="tip" title="Die Nachladung kommt vom Fliegen, nicht von Sternen">
+  Das Solarsegel lädt deine Starttriebwerke nach, solange das Schiff in der Luft ist — egal,
+  wie weit du vom nächsten Stern entfernt bist oder ob auf dem Planeten darunter gerade Nacht
+  ist. Landest du irgendwo und planst eine lange Session des Herumhüpfens auf einem Planeten,
+  ist der Tank, mit dem du ankommst, der Tank, den du behältst. Komm also mit vollem an.
+</Callout>
+
+**Zuletzt aktualisiert: 18. August 2026.** Die Solarschiff-Mechaniken sind seit dem Outlaws-Update praktisch eingefroren, und nichts im 2026er Patch-Zyklus hat sie bis hierher verändert. Die Werte unten folgen der aktuellen Community-Wiki-Dokumentation; falls das gestaffelte [Cosmos-Update](/cosmos-update/cosmos-update-guide) Relevantes ändert, wird dieser Guide zusammen mit unserem [2026-Update-Tracker](/guides/new-update-2026) überarbeitet.
+
+## Was ist ein Solarschiff?
+
+Ein Solarschiff ist eine hochtechnisierte Raumschiffklasse mit ausfahrbaren Solarsegeln, die sich im Flug automatisch entfalten. Hello Games lieferte sie im Outlaws-Update aus — laut den offiziellen Patchnotes mit „einzigartigen Technologien für einen schnellen und effizienten Impulsantrieb", verteilt über eine breite Palette prozedural generierter Varianten. Technisch können sie überall in der Galaxie auftauchen, aber sie sind dramatisch häufiger in den piratenkontrollierten gesetzlosen Systemen, die im selben Update kamen — und diese Kopplung ist kein Zufall: Solars sind die Markenzeichen-Hülle der Gesetzlosen-Flotten.
+
+Vier Dinge definieren die Klasse in der Praxis:
+
+- **Das Vesper Sail.** Jedes Solar trägt diese exklusive Triebwerkstechnologie, die die Impulsleistung steigert und — entscheidend — das automatische Nachladen des Startsystems aus dem Flug heraus ermöglicht. Sie ist weder separat kaufbar noch in jede andere Klasse einbaubar.
+- **Ein kleines Inventar, immer.** Solars spawnen nur in der kleinen Inventar-Stufe, rund 24 bis 30 Fracht-Slots mit 13 bis 18 Tech-Slots, erweiterbar bis zur 110-Slot-Fracht-Obergrenze wie andere moderne Schiffe. Das ist die eine echte Schwäche der Klasse.
+- **Hohe Wendigkeit.** Dasselbe Wendigkeits-Band wie Jäger und Entdecker, was sie angenehm zu fliegen und in einem Gerangel absolut brauchbar macht.
+- **Eine piratenlastige Bezugs-Schleife.** Du wirst Zeit in gesetzlosen Systemen verbringen — mit ihren Schwarzmärkten, Kopfgeld-Brokern und der vollständigen Abwesenheit von Weltraumpolizei.
+
+Geflogen, eingetauscht und verschrottet werden sie wie jedes andere Schiff, was sie in der Flexibilität bereits vor die Lebenden Schiffe setzt. Unser [Schiffs-Klassen-Ranking](/starships/best-ships) führt sie als den smarten Alltagsfahrer statt als Endgame-Spezialist — und diese Einordnung hält den Zahlen stand.
+
+## Wie das Solarsegel funktioniert: Starttreibstoff, den du nie craftest
+
+Starttreibstoff ist die stille Steuer auf jede Landung in No Man's Sky. Ein Standard-Start verbrennt **25% des Starttriebwerkstanks** (in Überleben und Permadeath verdoppelt), und bis du Workarounds einbaust, bedeutet Nachfüllen: Starttreibstoff craften oder den Triebwerken für immer Ferritstaub und Dihydrogen füttern.
+
+Die Antwort des Solarschiffs ist das **Vesper Sail**, im Spiel beschrieben als Hochleistungs-Solarsegel, das ein elektrisches Feld innerhalb der Segel selbst erzeugt, dem Schiff Momentum aus dem Sonnenwind gewinnen lässt und die „photovoltaische Nachladung der Startsysteme des Raumschiffs" ermöglicht. Auf Deutsch: Starts kosten weiterhin Starttreibstoff zum Standardtarif, aber während du fliegst — ob durch die Atmosphäre cruisend, über einen Kontinent boostend oder zwischen Planeten pulsend — schüttet das Segel diesen Treibstoff zurück. Ein Impulssprung zwischen Planeten reicht üblicherweise, um mit vollem Tank anzukommen — deshalb hören Solar-Besitzer einfach auf, an Starttreibstoff zu denken, innerhalb einer Stunde nach dem Kauf.
+
+Das Segel bringt laut den dokumentierten Zahlen des Community-Wikis drei Boni obendrauf: rund **+80% Impulsantriebs-Treibstoffeffizienz**, **+15% Boost** und **+11% Wendigkeit**. Diese Kombination ist der Grund, warum Solars weithin die **beste Impulsantriebs-Leistung aller Schiffsklassen** zugeschrieben bekommen: Sie pulsen länger und schneller mit demselben Tritium — und betanken sich dabei selbst.
+
+Sei präzise darüber, was das Segel nicht ist. Es ist nicht der **Launch Auto-Charger**, ein Upgrade, das jedes Schiff einbauen kann und das 4% pro Minute in den Tank zurücktropfen lässt — aber nur tagsüber, solange geparkt. Es ist nicht das **Efficient Thrusters**-Upgrade, das die Startkosten um 20% senkt, dich aber weiter Treibstoff craften lässt. Das sind langsame Pflaster auf dem Problem; das Segel löscht das Problem. Und es ist nicht übertragbar: Verschrottetest du ein Solar, kommt das Vesper Sail nicht als wiederverwendbares Teil für deinen Jäger heraus.
+
+## Wo du Solarschiffe findest: Gesetzlose Systeme 101
+
+Solars folgen denselben Umgebungs-Spawn-Regeln wie jedes NPC-Schiff: Sie landen an Raumstationen und Handelsposten, und du kaufst sie dem Piloten ab. Was sich ändert, ist der Mix. Community-dokumentierte Regeln besagen, dass jedes System Slots für sieben Shuttle-Designs reserviert, und ein Solarschiff hat eine **85%-Chance, in gesetzlosen Systemen ein Shuttle zu ersetzen, gegenüber 10% überall sonst**. In einem gewöhnlichen System sind Solars so selten, dass Spieler sie für Exoten halten. In einem gesetzlosen System sind sie das meiste, was landet.
+
+Gesetzlose Systeme zu finden ist eine eigene kleine Fertigkeit:
+
+1. **Baue einen Scanner ein.** Die Outlaws-Patchnotes halten fest, dass gesetzlose Systeme auf der Galaxiekarte mit einem **Konflikt- oder Wirtschaftsscanner** erkannt werden, beides Standard-Raumschifftechnik. Kaufe eines davon bei einem Stations-Technologiehändler, falls deinem Schiff eines fehlt.
+2. **Lies die Karte.** Gesetzlose Systeme zeigen keine Wirtschaftsbewertung dort, wo ein normales System Wohlstandsstufen listet, und piratenaufsicht statt Gek-, Korvax- oder Vy'keen-Fraktionen. Die fehlende Wirtschafts-Zeile ist das Erkennungsmerkmal.
+3. **Erwarte neue Kulisse.** Gesetzlose Stationen haben eigene NPCs, einen Bounty Master mit Piraterie-Missionen, Schwarzmarkt-Händler mit Konterbande und einen Technologiehändler, der auf „verdächtige Nachrüst-Upgrades" spezialisiert ist (X-Klasse-Module, mehr dazu unten). Keine Wächter-Behörden patrouillieren den Weltraum.
+4. **Plane die Route.** Eine dokumentierte Eigenheit aus den Patchnotes: Gesetzlose Stationen lassen sich nicht direkt aus regulierten Stationen anwarpen — und umgekehrt. Kalkuliere einen Extra-Hop durch den offenen Weltraum ein, wenn du zwischen Pirateriegebiet und zivilisiertem Raum wechselst.
+
+Angedockt, ist die Jagd-Schleife dieselbe, die Schiffsjäger seit Jahren laufen. Jedes System hat einen fixen Pool von Schiffdesigns, generiert aus seinem Seed — ein System, dessen frühe Landewellen Solar-Designs enthalten, produziert sie bei jedem Besuch und Reload weiter, während Klasse und Werte jedes Schiffs bei jeder Landung neu würfeln. Parke an einer Station oder einem Handelsposten, beobachte, was landet, und lade deinen Speicherstand, um die Würfel neu zu mischen; die erste Welle nach einem Reload ist die effiziente zum Prüfen.
+
+Eine Notiz für Multitasker: Gesetzlose Systeme sind auch das Herz der Schmuggel-Schleife. Konterbande, billig auf einer Piratenstation gekauft, verkauft sich im regulierten Raum mit fettem Aufschlag, und Kopfgeld-Missionen zahlen gut — eine Solar-Jagd finanziert sich also meist selbst. Das Piratenleben passt natürlich zu Staffelrekrutierung und einem Frachter, beides behandelt in unserem [Frachter-Guide](/starships/freighter-guide).
+
+## So bekommst du ein S-Klasse-Solar
+
+Es gibt drei legitime Wege zu einem Maximal-Klassen-Solar, in aufsteigender Reihenfolge des Aufwands.
+
+**Weg 1: Jage die 5%.** Die Spawn-Klassen-Chancen folgen der Wirtschaft des Systems, und gesetzlose Systeme haben eine eigene Zeile in der Tabelle: grob **85% C-Klasse, 5% B, 5% A, 5% S**. Diese flache 5%-S-Klasse-Chance ist mehr als doppelt so hoch wie die 2% einer reichen Wirtschaft — was gesetzlose Systeme, kontraintuitiv wie das wirkt, zu den besten S-Klasse-Jagdgründen des Spiels macht. Lauf die Schleife oben, bis eine S-Klasse aufsetzt; bei 5% erwarte ungefähr eine auf zwanzig Schiffe, und jeder Wurf ist unabhängig.
+
+**Weg 2: Billig kaufen, die Klasse hochstufen.** Jedes Solar, inklusive einer billigen C-Klasse, lässt sich am **Starship-Outfitting-Terminal** einer Raumstation durch die Klassen heben — mit aufwärts neu gewürfelten Werten innerhalb des Klassenbands, während Slot-Erweiterungen über Lagererweiterungen mitreisen. Du tauschst Units gegen die Gewissheit, die sonst Würfel wären; und weil ein Solar, dessen Optik du liebst, mehr wert ist als eine zufällige S-Klasse, die du erträgst, kaufen viele Jäger die Hülle, die sie wollen, und zahlen, um sie stark zu machen.
+
+**Weg 3: Baue genau das, was du willst.** Seit dem Orbital-Update lassen sich Solars am **Starship-Fabricator** von Grund auf bauen. Das Rezept ist erfreulich wörtlich: ein Solar-**Rumpf**, ein **Flügel**, ein **Segel** und ein **Reaktorkern**. Teile kommen aus dem Verschrotten geborgener Solars, und die Klasse des Kerns setzt die Klasse des fertigen Schiffs — ein S-Klasse-Kern vom Raumschiff-Technologiehändler liefert dir also eine garantierte S-Klasse in genau den Teilen und Farben, die du gewählt hast. Exoten, Lebende Schiffe und Wächter-Abfangjäger lassen sich gar nicht fabrizieren, was Solars still zur anpassbarsten jagdbaren Klasse des Spiels macht.
+
+Zur allgemeinen Erstwellen-Farming-Disziplin, zur Reload-Etikette und zur Slot-Ökonomie: Unser [S-Klasse-Schiff-Guide](/starships/s-class-ships) behandelt die Schleife klassenneutral, und der [Exoten-Fundort-Guide](/starships/exotic-ship-locations) lehrt die Portal-und-Glyphen-Pipeline, falls du lieber direkt zu einem community-dokumentierten Solar porten willst, statt System für System zu shoppen.
+
+## Teile, Farben und die Cockpit-Sicht
+
+Solarschiffe sind aus einem fixen Teile-Katalog gebaut, und ihn zu kennen macht das Koordinations-Handeln enorm leichter, weil die Community jedes Teil benennt. Gemäß dem community-gepflegten Solar Parts Catalogue:
+
+| Slot | Optionen |
+| --- | --- |
+| Rumpfform (6) | Raven, Arachnid (Spider), Marlin, Falcon, Turbofan Fuselage (Grouper), Jackal |
+| Segel (3) | Hex, Crescent, Rectangle |
+| Flügel (6) | Razor, Shielded, Double Blade, Starburst, Talon, Grapple |
+| Flügelspitze (5) | Horza, Verta, Tristar, Torpedo, Drill |
+| Segelfarbe (8) | Grün, Gold, Lila, Cyan, Rot, Weiß, Orange, Blau |
+
+Jedes Attribut ist unabhängig, Rumpffarben kommen lackiert oder metallisch daher, und die Rumpfform setzt die gesamte Karosse, von der Nase bis zu den Boostern. Der Designraum ist gewaltig — weshalb die Community Solars als 12-Glyphen-Portaladressen plus Teilebeschreibung handelt, dieselbe Konvention wie bei Exoten.
+
+Zwei ästhetische Wahrheiten, die du kennen solltest, bevor du dich an einem Handelsposten verliebst:
+
+**Die Segel-Animation ist der Punkt.** Segel falten sich im Flug automatisch aus und leuchten in der gewählten Farbe. Die meisten Besitzer verbringen in einem Solar mehr Zeit in der Dritten-Person-Sicht als in jedem anderen Schiff, und es ist leicht zu sehen, warum.
+
+**Die Egoperspektive ist der wunde Punkt der Klasse.** Dieselben Segel, die von außen so gut aussehen, sitzen teilweise im Sichtfeld des Piloten aus dem Cockpit. Sie sind halbtransparent, aber Community-Threads beschreiben die Sicht durch sie als trüb, und manche Egoperspektiven-Piloten finden bestimmte Rumpfformen wirklich hinderlich. Fliegst du ausschließlich in der Egoperspektive, prüfe die Cockpit-Sicht eines Solars vor dem Kauf oder neige zu Rumpfformen, deren Segel tiefer oder weiter außen sitzen; Drittperson-Piloten können diesen Abschnitt komplett ignorieren.
+
+Seit es Schiffs-Anpassung gibt, kannst du Schiffe auch in Teile verschrotten und dein Traum-Solar am Fabricator neu bauen — beliebig Rumpf, Segel, Flügel und Spitzen zu einer Hülle mischen und sie dann lackieren. Der Katalog oben ist effektiv die Karte.
+
+## Solarschiff-Werte: Der Vergleich
+
+Aktuelle Community-Wiki-Daten ordnen die Klasse neben ihren nächsten Rivalen ein. Alle Zahlen sind S-Klasse-Typ-Boni; die Basis-Hyperantriebsreichweite startet für jeden bei 101 Lichtjahren, bevor Boni und Upgrades multiplizieren.
+
+| | Solar | Jäger | Entdecker | Exot |
+| --- | --- | --- | --- | --- |
+| Wendigkeit | Hoch (387,5–445) | Sehr hoch (387,5–445) | Hoch (387,5–445) | Hoch (387,5–445) |
+| S-Klasse-Schadensbonus | +60–75% | +70–90% | Kein Bonus | +50–75% |
+| S-Klasse-Schildbonus | +23–50% | +24–38% | +30–40% | +70–90% |
+| S-Klasse-Hyperantriebsbonus | +38–50% | +35–45% | +90–120% | +75–95% |
+| Startkosten pro Abflug | 25%, lädt sich selbst nach | 25% | 12,5% | 25% |
+| Inventar | Nur klein (24–30 Fracht) | Klein bis groß | Klein bis groß | Nur klein (24–30 Fracht) |
+
+Als Jäger gelesen: Ein Solar gibt etwas Spitzen-Schaden her und bekommt dafür, nie Starttreibstoff anzufassen und spürbar günstiger zu pulsen. Als Entdecker gelesen: Kein Wettbewerb auf Distanz, weil der Hyperantriebsbonus eines Entdeckers doppelt bis dreifach so hoch ist — und Entdecker starten obendrein mit halbem Starttreibstoff. Als Exot gelesen: Der Exot gewinnt Schilde und Warpreichweite mit breitem Abstand, lässt sich aber nicht nach Bestellung fabrizieren — das Solar ist die Trophäe des Anpassers.
+
+Das Urteil unseres [Besten-Schiffe-Rankings](/starships/best-ships) übersteht die Zahlen: Solars sind konkurrenzfähige, aber nicht außergewöhnliche Werteträger, deren echte Verkaufsargumente verhalten sind. Kein Starttreibstoff, der beste Impulsantrieb des Spiels, hohe Wendigkeit und ein Look, sonst keiner hat.
+
+## Ein Solarschiff ausrüsten
+
+Solars sind konventionelle Technologie-Schiffe, das Ausrüsten folgt also dem Standard-Playbook. Kaufe S-Klasse-Upgrade-Module von Stations-Technologiehändlern für Impulsantrieb, Waffen, Schilde und Hyperantrieb; halte sie in den inzwischen vertrauten Zwei-mal-zwei-Blöcken neben ihren Eltersystemen für den Nachbarschafts-Bonus; und staple Lagererweiterungen Richtung 110-Slot-Fracht-Obergrenze.
+
+Eine gesetzlosen-spezifische Besonderheit: Piratenstations-Technologiehändler verkaufen **X-Klasse-„verdächtige" Module**, die wild zwischen brillant und miserabel würfeln. Sie sind billig, ein angenehmes Glücksspiel und die thematische Passung zum Schiff — streue einige ein und behalte die Gewinner. Standard-Module von regulierten Stationen bleiben das verlässliche Rückgrat.
+
+Und denke zuletzt daran, dass Solars exzellenter Schrott sind. Eine Jagd-Session produziert Überschuss-Schiffe, deren Rümpfe, Flügel und Segel künftige Bauten füttern — horte die Teile, die zu deinem Zieldesign passen, auch wenn das Schiff, das sie trägt, eine C-Klasse ist, die du nie fliegen würdest.
+
+## Lohnt sich das Solarschiff?
+
+Spielst du so, wie die meisten Spieler tatsächlich spielen — Planeten hüpfend, Basen bauend, gelegentlich in Kampf dippend und Fernerkundung selten —, dann ja, ausdrücklich. Die Starttreibstoff-Wirtschaft ist eine kleine Steuer, die sich über hunderte Landungen summiert, und das Solar ist die einzige Klasse, die sie abschafft und dabei ein voll konventionelles, voll aufrüstbares Schiff bleibt. Jäger, die kostenlose Alternativen vergleichen, sollten sich auch [Wächter-Abfangjäger](/starships/sentinel-interceptor-guide) ansehen, die nichts als einen Kampf auf einem dissonanten Planeten kosten — aber ein Abfangjäger lässt sich nicht nach Spezifikation fabrizieren und zahlt deine Starttreibstoff-Rechnung nicht.
+
+Ein vorausschauender Hinweis, klar als Schlussfolgerung statt als bestätigte Tatsache markiert: Der im Cosmos-Update angekündigte interstellare Freiflug würde lange Cruisen zwischen Systemen zu einer echten Aktivität machen, und ein Schiff, das seine Starttriebwerke allein durchs Fliegen nachtankt, ist ein offensichtlicher Nutznießer. Behalte den [Cosmos-Guide](/cosmos-update/cosmos-update-guide) im Auge, während die gestaffelten Patchnotes landen.
+
+Kaufe die Rumpfform, die du liebst, in welcher Klasse du dir leisten kannst, upgrade oder fabriziere dich zur S — und lass jede Landung danach jemand anderes Problem sein.
+
+## Verwandte Guides
+
+- [Die besten Schiffe in No Man's Sky: Alle Typen im Ranking](/starships/best-ships)
+- [S-Klasse-Schiffe: Spawn-Chancen, Farming & Werte](/starships/s-class-ships)
+- [Exoten-Fundorte: Portale, Glyphen, Koordinaten](/starships/exotic-ship-locations)
+- [Wächter-Abfangjäger-Guide: Sichere dir ein kostenloses S-Klasse-Schiff](/starships/sentinel-interceptor-guide)
+- [Frachter-Guide: Basen, Flotten und Fregatten-Expeditionen](/starships/freighter-guide)
+- [Cosmos-Update: Der komplette Jubiläums-Guide](/cosmos-update/cosmos-update-guide)
+- [Alle No-Man's-Sky-Updates 2026](/guides/new-update-2026)

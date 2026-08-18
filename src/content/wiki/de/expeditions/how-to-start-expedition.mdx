@@ -1,0 +1,157 @@
+---
+title: "No Man's Sky: So startest du eine Expedition (Einsteiger-Guide)"
+description: "Einsteiger-Guide für den Expeditions-Start in No Man's Sky: Hauptmenü-Weg, Anomalie-Terminal, die ersten zehn Minuten und das Abholen der Belohnungen."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/how-to-start-expedition.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "No-Man's-Sky-Expeditionen starten über das Neues-Spiel-Menü oder das Terminal der Weltraumanomalie. Der Einsteiger-Walkthrough deckt beide Wege, das skriptierte Intro, Meilensteine und Belohnungen ab."
+tags: ["expeditions", "guides", "beginners", "how-to"]
+faq:
+  - question: "Wie starte ich eine No-Man's-Sky-Expedition über das Hauptmenü?"
+    answer: "Öffne das Hauptmenü, wähle Neues Spiel und wähle statt Normal, Kreativ, Survival oder Permadeath den Expedition-Slot für die aktuelle oder eine vergangene Expedition. Bestätige, und das Spiel erstellt einen separaten Expeditions-Spielstand mit kuratiertem Loadout und bereits aktiver Meilenstein-Liste."
+  - question: "Läuft gerade eine Expedition in No Man's Sky?"
+    answer: "Nein. Stand 18. August 2026 ist keine zeitlich begrenzte Expedition aktiv: Expedition 22, The Swarm, endete am 19. Juli 2026. Vergangene Expeditionen lassen sich weiterhin über das Terminal auf der Weltraumanomalie replayen, und ein neuer Lauf könnte rund um das Cosmos-Jubiläumsupdate kommen — bestätigt hat Hello Games aber noch keinen."
+  - question: "Brauche ich einen bestehenden Spielstand, um eine Expedition zu starten?"
+    answer: "Nein. Der Hauptmenü-Weg funktioniert für absolute Neulinge und erstellt den Expeditions-Spielstand direkt. Der zweite Weg — über das Expeditionsterminal auf der Weltraumanomalie — verlangt einen bestehenden Spielstand hinter dem Eröffnungs-Tutorial, weil du zur Anomalie fliegen musst, um das Terminal zu erreichen."
+  - question: "Wie kommen Expeditions-Belohnungen auf meinen Hauptspielstand?"
+    answer: "Hol jede Phasen-Belohnung während des Laufs am Expeditionsterminal ab. Alles Abgeholte schaltet kontoweit frei: Lade deinen Hauptspielstand, docke an der Weltraumanomalie an und entnimm die Schiffe, Multiwerkzeuge und Kosmetik kostenlos beim Quecksilber-Synthese-Begleiter. Währungen und Verbrauchsgüter bleiben im Expeditions-Spielstand."
+  - question: "Was passiert mit meinem Expeditions-Spielstand, wenn die Expedition endet?"
+    answer: "Er wird in einen normalen Spielstand umgewandelt, den du unbegrenzt weiterspielen kannst. Deine Schiffe, Basen und dein Fortschritt bleiben exakt dort, wo der Lauf sie ließ, und jede Belohnung, die du vor Fensterende abgeholt hast, bleibt für immer auf deinem Konto freigeschaltet."
+---
+
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Deine erste No-Man's-Sky-Expedition zu starten ist eine Fünf-Minuten-Arbeit, sobald du weißt, wo das Spiel den Knopf versteckt — und verwirrend, wenn nicht, denn die Expeditions-Option wohnt im Neues-Spiel-Menü, das Tutorial erwähnt sie nie, und der zweite Einstiegspunkt ist ein Terminal, zu dem du erst hinfliegen musst. **Zuletzt aktualisiert: 18. August 2026.** Gerade läuft keine Expedition (Expedition 22 schloss am 19. Juli), deshalb ist dieser Guide so geschrieben, dass du am Tag der Eröffnung des nächsten Laufs bereit bist — jeder Schritt funktioniert gleich, ob der Lauf brandneu ist oder ein Redux-Re-Run.
+
+<StatBar
+  items={[
+    { value: '2', label: 'Wege zum Start: Neues-Spiel-Menü oder Anomalie-Terminal' },
+    { value: '~6 Wochen', label: 'Typische Länge eines zeitlich begrenzten Laufs' },
+    { value: '5–6', label: 'Phasen voller Meilensteine pro Expedition' },
+    { value: '19. Juli', label: '2026 — Expedition 22 endete, nächster Lauf offen' },
+  ]}
+/>
+
+Die Kurzfassung:
+
+1. **Hauptmenü-Weg:** Drücke Neues Spiel und wähle den **Expedition**-Spielstandsslot statt Normal, Kreativ, Survival oder Permadeath. Das Spiel baut einen separaten Spielstand, überspringt das Tutorial und setzt dich in das skriptierte Intro.
+2. **Terminal-Weg:** Rufe auf einem bestehenden Spielstand hinter der Eröffnung die **Weltraumanomalie** und nutze das **Expeditionsterminal** beim Haupteingang, um den Lauf zu betreten — und um ein paar nützliche Items von deinem Hauptspielstand herüberzukopieren.
+3. **Erste zehn Minuten:** Öffne den Expeditions-Tab in deinem Logbuch, lies die Meilenstein-Liste und jage Meilensteine, bis du den ersten Phasen-Schwellenwert erreichst.
+
+Für das System-Gesamtbild — Phasen-Mathematik, Schwellenwert-Überspringen, Transfer-Regeln — ist unser [großer Expeditions-Guide](/expeditions/expedition-guide) der Deep Dive. Diese Seite ist die Null-Erfahrungs-Version: Was du anklickst, was du sehen wirst und die Fehler, die Erstläufern Stunden kosten.
+
+## Was eine Expedition eigentlich ist
+
+Eine Expedition ist ein saisonaler Spielmodus auf einer eigenen, dedizierten Spielstanddatei. Statt der offenen Sandbox-Schleife arbeitest du eine fixe Liste von Zielen ab, Meilensteine genannt, gruppiert in Phasen — üblicherweise fünf oder sechs. Erreichst du den Meilenstein-Schwellenwert einer Phase, schalten die Belohnungen dieser Phase frei. Schließt sich das Event-Fenster, typischerweise nach etwa sechs Wochen, ist alles Abgeholte dauerhaft deins und der Spielstand wird in einen normalen umgewandelt.
+
+Für einen Neuling sind das die Unterschiede zu einem regulären Spielstand, die wirklich zählen:
+
+| | Normaler Spielstand | Expeditions-Spielstand |
+| --- | --- | --- |
+| Spielstanddatei | Einer deiner permanenten Slots | Ein separater Saison-Slot, für den Lauf erstellt |
+| Ziele | Offen — du setzt die Ziele | Eine fixe Meilenstein-Liste in Phasen, mit Schwellenwerten |
+| Zeitlimit | Keines | Ein begrenztes Fenster mit Countdown am Terminal |
+| Startausrüstung | Was auch immer du im Slot hinterlassen hast | Ein kuratiertes Loadout — alle starten gleich |
+| Tutorial | Die vollständige Eröffnungs-Questreihe | Übersprungen — kein Tutorial, keine Artemis-Storyline |
+| Danach | Läuft für immer weiter | Wird ein normaler Spielstand; abgeholte Belohnungen schalten kontoweit frei |
+
+Der Grund, warum Spieler das interessiert, ist Exklusivität. Expeditionen verteilen Raumschiffe, Multiwerkzeuge, Exocraft-Teile, Rüstungssets und Titel, die über normales Spielen nicht erhältlich sind — die [vollständige Belohnungsliste](/expeditions/expedition-rewards-list) reicht vom Golden Vector bis zu den Colossus-Mechanikbeinen der Expedition 21, und all das hängt daran zu wissen, wie man eine Expedition startet — und beendet.
+
+<Callout type="warn" title="Gerade läuft nichts — lern die Schritte und warte auf die Glocke">
+  Stand 18. August 2026 ist keine zeitlich begrenzte Expedition aktiv. Expedition 22: The Swarm
+  schloss am 19. Juli 2026, und Hello Games hat den nächsten Lauf nicht angekündigt — das
+  zehnjährige Jubiläumsupdate Cosmos ist das wahrscheinlichste Fahrzeug, aber das ist
+  Musterlesung, kein Datum. Alles unten greift in dem Moment, in dem Expedition 23 öffnet; unsere
+  [Expedition-23-Seite](/expeditions/expedition-23) führt das bestätigte Startdatum.
+</Callout>
+
+## Weg 1: Über das Hauptmenü starten (am besten für Erstspieler)
+
+Das ist der Weg für alle, die neu in No Man's Sky sind oder nicht erst einen alten Spielstand laden wollen — du brauchst keinen normalen Spielstand und keinen Vorfortschritt.
+
+1. **Wähle vom Titelsbildschirm Neues Spiel.** Die Modus-Auswahl erscheint: Normal, Kreativ, Survival und Permadeath, plus die Expeditions-Einträge.
+2. **Wähle den Expedition-Slot für den gewünschten Lauf.** Während eine Expedition läuft, erscheint die aktuelle hier neben den Schwierigkeitsmodi — während Expedition 22 war das Wählen so simpel wie Normal wählen. Derselbe Bildschirm listet auch bereits veröffentlichte Expeditionen zum Replayen oder Üben. Nur eine Expedition läuft gleichzeitig live, aber das Menü gibt dir den Rückstand.
+3. **Bestätige und betrete.** Das Spiel erstellt den separaten Expeditions-Spielstand, aktiviert die Meilenstein-Liste und überspringt die reguläre Eröffnung — es gibt kein Tutorial im Expeditionsmodus. Du landest direkt im skriptierten Eröffnungsszenario mit vordefiniertem Loadout.
+
+Zwei Beruhigungen. Eine Expedition zu starten berührt deine anderen Spielstände nie: Es ist eine neue, separate Datei. Und brichst du auf halbem Weg ab, geht nichts verloren — lade den Expeditions-Spielstand jederzeit neu, solange das Fenster offen ist.
+
+## Weg 2: Über das Expeditionsterminal auf der Weltraumanomalie
+
+Der zweite Einstiegspunkt verlangt einen bestehenden Spielstand hinter dem Eröffnungs-Tutorial — du musst frei fliegen können, um ihn zu nutzen.
+
+1. **Rufe die Weltraumanomalie** aus deinem Schiff und docke an.
+2. **Finde das Expeditionsterminal gleich neben dem Haupteingang**, auf der Plaza-Ebene, wo auch die Händler stehen. Dieses Terminal ist die Drehscheibe für alles Expeditionsbezogene: den aktiven Lauf betreten, die Meilenstein-Liste einsehen und — entscheidend — Phasen-Belohnungen abholen.
+3. **Betrete die Expedition vom Terminal aus.** Dein Expeditions-Spielstand wird von hier aus erstellt und betreten, getrennt vom Hauptspielstand, mit dem du angeflogen kamst.
+
+Der Terminal-Weg hat einen echten Vorteil: Item-Transfer. Das Terminal neben dem Expeditions-Terminal lässt dich eine Auswahl an Items — Upgrade-Module, Waffen, essenzielle Ressourcen — von deinem etablierten Spielstand in den frischen Expeditions-Spielstand kopieren und das kuratierte Start-Loadout abfedern. Die genauen Regeln haben zwischen Läufen gewechselt, prüfe also das Angebot beim Start; deshalb starten Veteranen von der Anomalie, während Erstläufer das Menü nutzen.
+
+## Deine ersten zehn Minuten: Das skriptierte Intro
+
+Jede Expedition eröffnet mit einem skriptierten Szenario statt des Standard-Crashsite-Tutorials, und die letzten Läufe starteten an wild unterschiedlichen Orten. Expedition 22: The Swarm setzte dich neben einem abgestürzten Raumschiff ab und eröffnete mit einem Persönlichkeitstest, der dich einem von drei Teams zuwies — Royal, Sage oder Weaver — und einen galaxieweiten Krieg speiste. Expedition 21: Remnant startete auf dem einzigen Bergungsplaneten, der den ganzen Lauf beherbergte. Titan, die Wasserwelt-Expedition, begann unter Wasser. Konstant: ein vordefiniertes Loadout, ein Bildschirm-Marker auf dein erstes Ziel und eine Meilenstein-Liste, die schon tickt.
+
+In dieser Eröffnungsstunde kommt die Frage „Schiff reparieren oder Meilensteine jagen" auf, und die Antwort ist fast immer **beides, in der richtigen Reihenfolge**:
+
+1. **Öffne den Expeditions-Tab in deinem Logbuch, bevor du dich bewegst.** Im Pausenmenü hat dein Logbuch einen Expeditions-Tab, der jede Phase und jeden Meilenstein listet. In The Swarm war die Reparatur der Starttriebwerke und Impulsantriebe ein früher Meilenstein — die Reparatur, die du sowieso machst, zählt mit.
+2. **Folge dem Bildschirm-Marker durch die skriptierten Beats.** Die Eröffnungs-Meilensteine sind eine geführte Sequenz — Wrack untersuchen, Startitems craften, Schiff reparieren — und sie bringen dir die Steuerung nebenbei bei. Das ist das Tutorial, nur im Expeditions-Gewand.
+3. **Repariere nur, was die Meilensteine verlangen.** Das Startschiff ist ein Werkzeug, nichts für die Ewigkeit. Baue nicht zwanzig Minuten lang Technologie aus, die die Liste nie erwähnt.
+4. **Hol deine ersten Belohnungen ab, bevor du das Eröffnungsgebiet verlässt.** Frühe Meilenstein-Ausschüttungen enthalten Ressourcen und Baupläne, die spätere Meilensteine verbrauchen — die Eröffnungs-Meilensteine von The Swarm speisten buchstäblich die nächsten Ziele.
+
+Noch eine Erwartung: Manche Expeditionen hängen das Finale an eine communityweite Fortschrittsleiste. Die letzte Stage von The Swarm, der Meilenstein Chromatic Distortion, schaltete erst frei, als die gesamte Spielerschaft eine geteilte Anzeige füllte — du konntest deine persönlichen Meilensteine abschließen und trotzdem auf die Community-Uhr warten. Hängt dein Lauf an einem Meilenstein, den du persönlich nicht abschließen kannst, liegt es vermutlich daran.
+
+## Die Expeditions-Oberfläche lesen
+
+Die UI ist dünn, sobald du die drei Orte kennst, an denen Information wohnt:
+
+- **Der Expeditions-Tab in deinem Logbuch.** Jede Phase, jeder Meilenstein, dein Fortschrittszähler und der Schwellenwert der aktuellen Phase. Hier planst du — und hier prüfst du, ob ein Meilenstein Pflicht oder optional ist, denn die meisten Phasen lassen dich ein paar überspringen.
+- **Das Expeditionsterminal auf der Anomalie.** Der Event-Countdown wohnt hier, zusammen mit der Meilenstein-Liste und — der Teil, den alle vergessen — dem Belohnungs-Abholen. Belohnungen fallen nicht automatisch in dein Inventar; du sammelst sie am Terminal.
+- **Bildschirm-Marker und Benachrichtigungen.** Meilenstein-Abschlüsse melden sich beim Spielen mit einem Ping. Ein neuer Ping heißt: Denk über einen Terminal-Besuch nach, nicht: Sofort umdrehen.
+
+Die wichtigste Lesart ist der Phasen-Schwellenwert. Phasen schalten bei einer Meilenstein-Anzahl frei, nicht bei 100 Prozent Abschluss, also hat jede Phase überspringbare Ziele — Neulinge, die alles abschließen wollen, brennen auf optionalen Meilensteinen aus. Unser [Schnell-Abschluss-Guide](/expeditions/expedition-fast-completion) behandelt die Routen-Seite.
+
+## Belohnungen abholen und auf den Hauptspielstand bringen
+
+Das ist der Teil mit harter Frist. Belohnungen werden manuell am Expeditionsterminal abgeholt — besuchst du es nie, liegen die Freischaltungen unabgeholt dort, und wenn das Event-Fenster schließt, sind unabgeholte Belohnungen weg bis zu einem Re-Run.
+
+Was übertragen wird, und wie:
+
+| Belohnungstyp | Beispiele | Wie es auf deine Hauptspielstände kommt |
+| --- | --- | --- |
+| Schiffe, Multiwerkzeuge, Exocraft | Golden Vector, Basilisk Crown, Colossus-Teile | Am Terminal abholen, dann kostenlos beim Quecksilber-Synthese-Begleiter auf der Anomalie einlösen, in jedem Modus |
+| Kosmetik | Rüstungssets, Poster, Decals, Titel, Gesten | Derselbe Weg — am Terminal abholen, beim Begleiter einlösen |
+| Baupläne und Upgrades | Technologie-Freischaltungen, Upgrade-Module | Kontoweit, sobald abgeholt |
+| Währungen und Verbrauchsgüter | Units, Naniten, Quecksilber, Materialien | Werden nicht übertragen — sie bleiben im Expeditions-Spielstand |
+
+Das Transfer-Ritual: Beende den Lauf (oder die Phasen, die du wolltest), hol alles am Terminal ab, lade deinen Hauptspielstand, rufe die Weltraumanomalie und sprich mit dem **Quecksilber-Synthese-Begleiter**. Jede Belohnung, die du abgeholt hast, liegt in seinem Katalog zum Preis null — entnimm dein Schiff, Multiwerkzeug und Rüstungsset und flieg davon. Das funktioniert auf jedem Spielstand, in jedem Modus, für immer.
+
+## Anfängerfehler, die du in deiner ersten Expedition vermeidest
+
+| Fehler | Warum es wehtut | Was du stattdessen tust |
+| --- | --- | --- |
+| Startressourcen verkaufen oder wegwerfen | Die Eröffnungs-Meilensteine verbrauchen genau diese Materialien | Fasse nichts an, bevor du die Meilenstein-Liste gelesen hast |
+| Den Expeditions-Tab nie öffnen | Du irrst wie in einem normalen Spielstand und läufst ständig zurück | Öffne ihn in den ersten zehn Minuten und plane nach Phasen |
+| Am Startschiff alles reparieren und aufrüsten | Das Startschiff ist ein Sprungbrett, kein Projekt | Repariere, was Meilensteine verlangen, dann weiter |
+| Belohnungen nicht abholen, wenn Meilensteine fertig werden | Spätere Phasen grinden ohne die Gratis-Upgrades | Hol nach jedem Batch am Terminal ab |
+| Den Lauf wie einen normalen Spielstand behandeln | Basen-Deko und Nebenquests fressen das begrenzte Fenster | Expeditionen sind Sprints; die Sandbox wartet danach |
+| Kurz vor der Frist aufhören, Belohnungen unabgeholt | Das Fenster schließt, unabgeholte Freischaltungen verschwinden bis zum Re-Run | Hol alles früh ab und prüfe dann jede Phase doppelt |
+
+Der Meta-Fehler hinter allen sechs: die Uhr vergessen. Ein normaler Spielstand verzeiht; ein Expeditions-Fenster nicht.
+
+## Wann kannst du also wirklich eine starten?
+
+Stand 18. August 2026: keine neue. Expedition 22: The Swarm lief vom 27. Mai bis 19. Juli 2026, und seitdem ist nichts angekündigt. Die realistischen nächsten Gelegenheiten, in dieser Reihenfolge:
+
+1. **Expedition 23 zusammen mit oder nach dem Cosmos-Update.** Das Jubiläumsupdate wurde am 9. August 2026 angekündigt, und neue Expeditionen kamen historisch mit großen Updates — Remnant mit dem Remnant-Patch, The Swarm mit Version 6.4. Hello Games hat eine Expedition für Cosmos noch nicht bestätigt. Unsere [Expedition-23-Seite](/expeditions/expedition-23) verfolgt die Ankündigung.
+2. **Ein Redux-Re-Run einer älteren Expedition.** Hello Games wiederholt vergangene Expeditionen periodisch in verkürzten Fenstern — je rund zwei Wochen — mit derselben Meilenstein- und Belohnungsstruktur. Die Saison 2025/26 lief fünf hintereinander, und ein ähnlicher Block im Spätjahr 2026 ist die gängige Community-Erwartung. Der [Redux-Expeditions-Zeitplan](/expeditions/redux-expeditions-schedule) verfolgt jedes bestätigte Fenster.
+3. **Ein Replay vom Terminal, heute.** Vergangene Expeditionen bleiben über das Expeditionsterminal und das Neues-Spiel-Menü spielbar, auch ohne laufendes Event — du kannst also den kompletten A-bis-Z-Flow an einem alten Lauf üben, inklusive The Swarm, sofort. Der Haken: Replays beendeter Expeditionen geben den zeitlich begrenzten Belohnungs-Track nicht erneut aus; dafür braucht es ein Live-Fenster oder ein Redux.
+
+Die dritte Option ist die beste Vorbereitung: Spiele diese Woche eine alte Expedition, und wenn der Countdown von Expedition 23 erscheint, startest du sie, kennend das Menü, das Terminal, den Logbuch-Tab und die Abhol-Schleife — ganz ohne Fristdruck.
+
+## Verwandte Guides
+
+- [No Man's Sky Expeditions-Guide: Phasen, Belohnungen & Speedrun-Taktiken](/expeditions/expedition-guide) — der systemische Begleiter zu dieser Seite
+- [Expedition 22 (The Swarm): Belohnungen & Replay](/expeditions/expedition-22) — der jüngste Lauf, Meilenstein für Meilenstein
+- [Expeditionen schnell abschließen: Der Zwei-Tage-Guide](/expeditions/expedition-fast-completion) — Routing und Schwellenwert-Überspringen
+- [Redux-Expeditionen: Termine, Historie, Ausblick 2026](/expeditions/redux-expeditions-schedule) — jedes bestätigte Re-Run-Fenster
+- [Alle No-Man's-Sky-Updates 2026](/guides/new-update-2026) — Cosmos und die anderen Patches des Jahres
