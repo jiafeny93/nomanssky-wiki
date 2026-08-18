@@ -45,6 +45,7 @@
     "check-sitemap": "tsx scripts/check-sitemap.ts",
     "check-config": "tsx scripts/check-config.ts",
     "new-post": "tsx scripts/new-post.ts",
+    "covers": "tsx scripts/generate-covers.ts",
     "new-locale": "tsx scripts/new-locale.ts",
     "apply-template": "tsx scripts/apply-template.ts",
     "check-i18n": "tsx scripts/check-i18n.ts",
