@@ -1,0 +1,151 @@
+---
+title: "Améliorations d'hyperpropulseur : modules, propulseurs colorés, portée max"
+description: "Améliorations d'hyperpropulseur : limite des trois modules classe S, propulseurs à cadmium, émeril et indium, calcul de portée de distorsion et carburant."
+category: "starships"
+image: '../../../../assets/covers/starships/hyperdrive-upgrades.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "Un hyperpropulseur de série saute 101 AL vers les étoiles jaunes seulement. Trois modules de classe S plus les propulseurs colorés dépassent 2 000 AL et ouvrent chaque classe d'étoile."
+tags: ["hyperdrive", "warp", "starships", "upgrades", "guide"]
+faq:
+  - question: "Combien de modules d'amélioration d'hyperpropulseur peut-on empiler ?"
+    answer: "Trois. Un vaisseau accepte jusqu'à trois modules d'amélioration d'hyperpropulseur ; en installer un quatrième ou plus désactive tous les modules de ce type jusqu'à ce que vous redescendiez à trois en démontant. Les propulseurs à cadmium, émeril, indium et Atlantide ne comptent pas dans cette limite, d'où les vaisseaux longue portée qui gardent les propulseurs à côté d'une pile complète de modules."
+  - question: "Quelle est la portée maximale d'hyperpropulseur dans No Man's Sky ?"
+    answer: "Le plafond documenté par le wiki est d'environ 2 200 années-lumière sur un vaisseau à trois modules de classe S placés optimalement, ou autour de 2 500 avec des modules de classe X, par-dessus les 101 AL du propulseur de base. Les fretteurs atteignent environ 5 800 AL avec les modules de fretteurs abandonnés. Les chiffres exacts varient avec les tirages, la carène et l'adjacence."
+  - question: "Faut-il encore les propulseurs à cadmium et émeril avec le Moteur à indium ?"
+    answer: "Non. Le Moteur à indium agit comme une amélioration directe : installé, il permet de sauter vers les systèmes bleus, verts et rouges sans les autres propulseurs. Beaucoup de joueurs les gardent tous les trois installés quand même, parce que chacun nourrit la synergie d'adjacence des modules voisins, mais pour l'accès aux systèmes, le Moteur à indium seul suffit."
+  - question: "La mise à jour Cosmos rend-elle les améliorations d'hyperpropulseur inutiles ?"
+    answer: "Non. Cosmos ajoute le vol interstellaire libre comme option, pas comme obligation, et les sauts de distorsion instantanés devraient rester le choix d'efficacité. Un hyperpropulseur longue portée est aussi votre filet de sécurité : si un vol libre tourne mal dans l'espace profond, un bon propulseur et un stock de carburant sont ce qui vous ramène quelque part d'utile."
+  - question: "Quelle distance couvre une cellule de distorsion ?"
+    answer: "Un saut par défaut. Chaque saut brûle 20 % du réservoir de l'hyperpropulseur et une cellule de distorsion en restaure 25 %, donc quatre cellules chargent le propulseur pour cinq sauts. Trois modules de classe S ajoutent chacun +100 % d'efficacité de cellule, ramenant le coût par saut au quart — jusqu'à dix sauts avec une seule cellule."
+  - question: "Où acheter des modules d'amélioration d'hyperpropulseur ?"
+    answer: "Chez les marchands de technologie des stations spatiales, payés en nanites. Le stock diffère d'une station à l'autre, donc les chasseurs de portée sautent de système en système pour vérifier chaque marchand de technologie de vaisseau. Les systèmes hors-la-loi vendent des modules de classe X au potentiel de portée supérieur, et les runs de fretteurs abandonnés fournissent les versions fretteur."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Chaque long voyage dans No Man's Sky finit en problème d'hyperpropulseur. La galaxie couvre des centaines de milliards de systèmes stellaires, une sauvegarde neuve peine à dépasser les 100 années-lumière vers l'étoile jaune suivante, et toute une économie d'amélioration — nanites, modules procéduraux, propulseurs pour systèmes colorés, hangars de fretteurs — existe pour pousser ce nombre plus haut. La portée, c'est la différence entre traverser une région de la galaxie en un après-midi et passer une semaine à sauter entre points de carburant.
+
+Ce guide parcourt la voie complète des améliorations d'hyperpropulseur dans l'ordre : le fonctionnement du propulseur de base, les propulseurs colorés réellement nécessaires, l'empilement des modules de classe S et l'endroit où le plafond dur de trois modules mord, la pose de chaque pièce pour les bonus d'adjacence, le fonctionnement du carburant de distorsion et la place des fretteurs. Il se termine par ce que le vol interstellaire libre de la mise à jour Cosmos change vraiment pour les builds de distorsion — moins que vous ne le craignez.
+
+**Dernière mise à jour : 18 août 2026**, à jour du déploiement échelonné de la [mise à jour Cosmos](/cosmos-update/cosmos-update-guide) ; voyez notre [suivi des mises à jour 2026](/guides/new-update-2026) pour les autres correctifs de l'année.
+
+<StatBar
+  items={[
+    { value: '101 AL', label: "Portée d'hyperpropulseur de base, étoiles jaunes seulement" },
+    { value: '3', label: "Modules d'amélioration avant que la pile ne se désactive" },
+    { value: '+265 AL', label: 'Bonus de portée maximal par module de classe S' },
+    { value: '~5 800 AL', label: 'Plafond documenté de distorsion des fretteurs' },
+  ]}
+/>
+
+<Callout type="info" title="Cosmos se déploie encore">
+  Le vol interstellaire libre arrive avec la mise à jour Cosmos, annoncée le 9 août 2026, et ses
+  notes de correctif se publient par étapes. Tout ce qui concerne les mécaniques d'hyperpropulseur
+  existantes dans ce guide est établi de longue date et actuel ; tout ce qui touche à l'interaction
+  entre vol libre et distorsion est étiqueté en attente jusqu'à confirmation de Hello Games.
+</Callout>
+
+## Le fonctionnement de l'hyperpropulseur de base
+
+Chaque vaisseau est livré avec un hyperpropulseur, et de série il fait deux choses mal : il n'atteint que 101 années-lumière par saut (une portée que la mise à jour Synthesis a rehaussée d'un 100 pile), et il ne peut viser que les systèmes à étoile jaune — la majorité standard de la galaxie. Les étoiles rouges, vertes, bleues et violettes refusent simplement votre demande de saut jusqu'à ce que vous installiez la bonne technologie de propulsion, quelle que soit votre portée.
+
+Le carburant est un jeu de pourcentages. Chaque saut de distorsion brûle 20 % du réservoir de l'hyperpropulseur, une cellule de distorsion en restaure 25 %, et quatre cellules chargent pleinement le propulseur pour cinq sauts — un changement de l'ère Waypoint par rapport au remplissage à cinq cellules d'avant. Un propulseur entièrement chargé vous permet aussi de franchir le centre de la galaxie depuis un système passerelle, la route classique vers une nouvelle galaxie.
+
+Vous obtenez le plan du propulseur de base tôt, via l'histoire du fretteur crashé qui suit votre première construction de base, donc aucune raison de voler sans. Une bizarrerie à connaître avant d'investir : l'hyperpropulseur est l'une des seules technologies du jeu qui se fabrique mais ne se démonte jamais, donc son emplacement dans votre inventaire général est permanent.
+
+## L'échelle des propulseurs colorés : cadmium, émeril, indium, Atlantide
+
+La couleur d'étoile est un verrou, et chaque propulseur est une clé. Quatre technologies déverrouillent les quatre classes d'étoiles restreintes :
+
+| Propulseur | Déverrouille | Notes |
+| --- | --- | --- |
+| Moteur à cadmium | Systèmes à étoile rouge | Premier barreau ; les étoiles rouges se raffinent en cadmium |
+| Moteur à émeril | Systèmes à étoile verte | Deuxième barreau ; exige de l'émeril des étoiles vertes |
+| Moteur à indium | Systèmes à étoile bleue | Amélioration directe — donne aussi l'accès rouge et vert |
+| Propulseur Atlantide | Systèmes à étoile violette | Ajouté avec Worlds Part II ; supplante l'indium pour l'accès |
+
+Les quatre plans viennent d'Itération Hyperion à bord de l'Anomalie spatiale, payés en nanites (le Moteur à indium coûte 200), et chaque propulseur se construit en métal chromatique et en Wiring Loom. La conception est une boucle délibérée : vous sautez aussi loin que vos propulseurs actuels le permettent, récoltez le métal de cette classe d'étoile, le raffinez en métal chromatique et construisez la clé suivante.
+
+Deux détails rendent cette échelle moins chère qu'elle n'y paraît. D'abord, les propulseurs sont cumulatifs pour l'accès — le Moteur à indium couvre seul les étoiles rouges, vertes et bleues, et le Propulseur Atlantide couvre tout ce qui est en dessous, donc un build minimal n'exige que le plus haut barreau atteignable. Ensuite, aucun des quatre propulseurs ne compte dans la limite de modules, et chacun nourrit passivement un bonus d'adjacence dans la technologie d'hyperpropulseur voisine. Voilà pourquoi la plupart des vaisseaux de fin de partie gardent chaque propulseur installé même après en avoir techniquement fini avec les inférieurs : ce sont des synergies gratuites, pas des emplacements gaspillés.
+
+## Les modules de classe S et la limite à trois
+
+Les propulseurs colorés décident quelles étoiles vous pouvez visiter. Les modules d'amélioration décident jusqu'où vous pouvez sauter, et c'est là que vit vraiment la méta d'hyperpropulseur.
+
+Les modules sont procéduraux. Vous achetez des Modules d'hyperpropulseur scellés aux marchands de technologie des stations spatiales contre des nanites, les ouvrez et obtenez une installation tirée dont les stats dépendent de sa classe :
+
+| Classe | Bonus de portée (AL) | Efficacité des cellules | Source |
+| --- | --- | --- | --- |
+| C | 50 à 100 | Aucune | Marchands de station spatiale |
+| B | 115 à 165 | Aucune | Marchands de station spatiale |
+| A | 165 à 220 | +100% | Marchands de station spatiale |
+| S | 220 à 265 | +100% | Marchands de station spatiale |
+| X | 50 à 320 | jusqu'à +100% | Marchands des systèmes hors-la-loi |
+
+Deux stats comptent. La portée d'hyperpropulseur fait la une — un haut tirage de classe S ajoute jusqu'à 265 années-lumière par module. L'efficacité des cellules de distorsion est la moitié silencieuse de la valeur : les modules de classe A et S ajoutent chacun +100 % d'efficacité de carburant, et les bonus se cumulent multiplicativement, donc un module d'efficacité divise par deux votre coût de carburant par saut, deux le ramènent à un tiers et trois à un quart — cinq pour cent de réservoir par saut, soit environ dix sauts depuis une seule cellule de distorsion. Pour les courses au centre et les sauts de galaxie, les modules d'efficacité économisent souvent plus de temps que la portée brute.
+
+Le stock diffère d'un marchand à l'autre, donc les chasseurs de portée sérieux sautent de système en système, vérifient chaque marchand de technologie de vaisseau et n'achètent que les hauts tirages. Les systèmes hors-la-loi valent le détour : leur stock de classe X peut tirer jusqu'à 320 années-lumière, au-delà de tout module de classe S, même si le plancher de cette plage est assez bas pour que la plupart des tirages X soient de la camelote.
+
+La règle dure, celle qui piège chaque nouveau joueur : **trois modules maximum**. Installez un quatrième module d'amélioration du même type et le jeu les désactive tous jusqu'à ce que vous redescendiez à trois en démontant. Pas de pénalité partielle ni d'écran d'avertissement — votre portée s'effondre simplement, et le remède est de démonter le module le plus faible.
+
+Une dernière pièce de trivia que les épargnants de nanites devraient connaître : les stats des modules suivent une progression seedée liée à l'ordre d'installation sur votre sauvegarde. Le troisième module installé tire d'un créneau de tirage précis, quel que soit le module physique concerné, d'où les maximiseurs qui installent, vérifient, rechargent et réordonnent avant de s'engager.
+
+## La pose : l'adjacence multiplie tout
+
+L'endroit où la technologie siège dans votre grille d'inventaire n'est pas cosmétique. Chaque élément de la famille hyperpropulseur — modules, propulseurs colorés, propulseur de base — nourrit un bonus d'adjacence d'environ cinq pour cent dans chaque élément voisin, et ces bonus s'empilent sur les stats des modules avant que les emplacements surchargés ne multiplient le résultat.
+
+Les règles pratiques de disposition sont simples. Groupez tout : hyperpropulseur de base, trois modules et les propulseurs colorés conservés doivent former un bloc, pas s'éparpiller entre onglets. Placez vos modules à la plus haute portée dans les emplacements surchargés de l'inventaire (ajoutés dans la mise à jour Waypoint), parce que ces emplacements multiplient la technologie qui s'y trouve. Et gardez les propulseurs colorés au contact du bloc de modules — ils n'ont pas de stats propres à booster, mais ils nourrissent des bonus dans les modules à côté d'eux.
+
+Une installation paresseuse éparpillée et une installation resserrée optimisée peuvent différer de centaines d'années-lumière sur le même matériel. Avant de grinder de meilleurs modules, réarrangez ce que vous possédez déjà.
+
+## Le calcul de portée : ce que vous atteignez vraiment
+
+La portée de saut totale est le propulseur de base plus les bonus de modules plus les multiplicateurs d'adjacence et de surcharge, puis ajustée par votre carène. La progression documentée :
+
+| Build | Portée approximative |
+| --- | --- |
+| Propulseur de série, sans modules | 101 AL |
+| Trois modules de classe C | 250 à 400 AL |
+| Trois modules de classe S, non placés | 760 à 900 AL |
+| Trois modules de classe S, optimisés | ~2 200 AL |
+| Trois hauts tirages de classe X, optimisés | ~2 500 AL |
+
+Le saut de « non placés » à « optimisés », c'est l'adjacence et les emplacements surchargés au travail, et voilà pourquoi la pose est une amélioration gratuite. Votre carène compte aussi : les explorateurs portent la meilleure stat d'hyperpropulseur de toute classe pilotable, donc les vaisseaux aux sauts les plus longs du jeu sont des explorateurs de classe S à trois modules en bloc resserré — la même carène que notre [classement des vaisseaux](/starships/best-ships) place au sommet du jeu de portée.
+
+Les plafonds exacts bougent de patch en patch à mesure que tirages et multiplicateurs sont réajustés, donc traitez tout ce qui est plus précis que « environ 2 200 à 2 500 années-lumière sur un vaisseau » comme du folklore jusqu'à ce que vous le mesuriez sur votre propre sauvegarde.
+
+## Carburant : cellules de distorsion, hypernoyaux et efficacité
+
+La portée prend la gloire ; le carburant fait le travail. Une cellule de distorsion se fabrique à partir d'antimatière et d'une enveloppe d'antimatière, elles-mêmes construites depuis du métal chromatique et du carbone condensé, et de l'oxygène et de la poussière de ferrite, respectivement.
+
+Si vous préférez acheter plutôt que fabriquer, l'**Hypernoyau de distorsion** est l'option premium : un seul hypernoyau charge à lui seul un hyperpropulseur — l'équivalent de quatre cellules de distorsion — et son plan vient des installations de fabrication et des centres des opérations, ou du Laboratoire de synthèse à bord de l'Anomalie. Le hic : sa liste d'ingrédients inclut des cristaux d'orage, qui n'apparaissent que pendant les météorologies extrêmes, donc la plupart des pilotes traitent les hypernoyaux comme un stock d'expédition plutôt qu'un carburant quotidien.
+
+Le calcul d'efficacité de la section modules mérite d'être répété comme règle empirique : un propulseur non modifié tire un saut par cellule, un propulseur à trois modules de classe S d'efficacité en tire environ dix. La discipline de carburant est l'amélioration la moins chère de tout le jeu.
+
+## Fretteurs : l'hyperpropulseur à l'échelle de flotte
+
+Votre vaisseau capital a son propre hyperpropulseur, son propre réservoir et sa propre voie d'amélioration, et c'est le moteur de saut de toute votre opération — un saut de distorsion de fretteur emporte chaque vaisseau stocké dans son hangar, ce qui fait de la logistique de flotte une question de portée de fretteur.
+
+Le propulseur de fretteur démarre à 100 années-lumière et se charge pleinement avec cinq cellules de distorsion ou un hypernoyau. Il grandit de deux façons. L'arbre d'améliorations intégré — Résonateur de noyau de distorsion à +200 AL, Injecteur de distorsion plasmique à +300 AL et Dérouleur de réalité à +800 AL, plus des variantes de blindage colorées à +50 AL pour l'accès rouge, vert et bleu — s'achète en unités et en nanites. Les gains plus gros viennent des Modules d'amélioration d'hyperpropulseur de fretteur, les butins procéduraux des runs de fretteurs abandonnés depuis la mise à jour Desolation, qui tirent aussi des stats d'efficacité de carburant. Un capitaine dédié qui enchaîne les layouts d'abandonnés propres pousse un fretteur à environ 5 800 années-lumière — plus du double de n'importe quel vaisseau.
+
+La boucle complète des fretteurs abandonnés, la gestion de flotte et la logistique des expéditions de frégates sont couvertes dans notre [guide des fretteurs](/starships/freighter-guide).
+
+## Cosmos et après : le vol libre remplace-t-il la distorsion ?
+
+La mise à jour anniversaire Cosmos, annoncée le 9 août 2026, ajoute l'option de voler droit vers un autre système solaire par vos propres moyens — la première fois de l'histoire du jeu que l'hyperpropulseur a de la concurrence.
+
+Le cadrage compte, cependant : comme le pose notre [guide du vol interstellaire](/cosmos-update/interstellar-flight-guide), le vol libre est une option, pas une obligation. Hello Games n'a pas annoncé la suppression de la distorsion, et l'attente à travers toute la couverture médiatique est que les sauts instantanés restent le choix d'efficacité pendant que le vol libre devient le choix panoramique. Deux questions ouvertes méritent d'être suivies dans les notes échelonnées : le vol libre respecte-t-il les verrous des propulseurs colorés (peut-on voler vers une étoile bleue sans Moteur à indium ?) et quel carburant, s'il y en a un, la croisière interstellaire soutenue consomme.
+
+En attendant ces réponses, la lecture pratique est que les améliorations d'hyperpropulseur gagnent de la valeur plutôt qu'elles n'en perdent. Un propulseur longue portée est le repli qui sauve un vol libre mal engagé, la voie rapide pour les traders et les coureurs du centre, et la colonne vertébrale de toute poussée vers le centre galactique. La liste de préparation Cosmos classe l'amélioration de votre hyperpropulseur et de vos modules en priorité haute — ce qui correspond à la façon dont chaque système de voyage de dix ans de mises à jour a traité la qualité de propulsion. Si vous reconstruisez votre kit de distorsion pour l'ère anniversaire, notre [guide de chasse aux vaisseaux de classe S](/starships/s-class-ships) couvre la recherche de la carène qui mérite de tout recevoir.
+
+## Guides liés
+
+- [Les meilleurs vaisseaux de No Man's Sky, classés](/starships/best-ships)
+- [Vaisseaux de classe S : chances d'apparition et boucles de chasse](/starships/s-class-ships)
+- [Guide des fretteurs : bases, flottes et expéditions de frégates](/starships/freighter-guide)
+- [Vol interstellaire Cosmos : vol libre contre distorsion](/cosmos-update/interstellar-flight-guide)
+- [Mise à jour Cosmos de No Man's Sky : guide complet de l'anniversaire](/cosmos-update/cosmos-update-guide)
+- [Comment atterrir sur les étoiles dans No Man's Sky](/cosmos-update/how-to-land-on-stars)
+- [Toutes les mises à jour No Man's Sky en 2026](/guides/new-update-2026)

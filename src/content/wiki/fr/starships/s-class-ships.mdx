@@ -1,0 +1,152 @@
+---
+title: "Vaisseaux de classe S dans No Man's Sky : chances, farm et stats (2026)"
+description: "Comment obtenir un vaisseau de classe S : chances par palier d'économie, l'exception à 5 % des systèmes pirates et la boucle de recharge qui les trouve vite."
+category: "starships"
+image: '../../../../assets/covers/starships/s-class-ships.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "En économie riche 3 étoiles, la classe S sort dans environ 2 % des tirages, 1 % en moyenne et 5 % chez les pirates. Farmez les premières vagues aux avant-postes et rechargez pour relancer les dés."
+tags: ["s-class", "starships", "ship-farming", "spawn-odds", "economy"]
+faq:
+  - question: "Quelles sont les chances de vaisseau de classe S dans No Man's Sky ?"
+    answer: "Environ 2 % par vaisseau qui arrive dans les économies riches 3 étoiles, 1 % en économie moyenne et pratiquement zéro dans les pauvres. Les systèmes pirates font exception à environ 5 %, un chiffre testé par la communauté depuis la mise à jour Outlaws. Les exotiques ignorent ce tirage : ils apparaissent toujours en classe S."
+  - question: "Les vaisseaux de classe S apparaissent-ils dans les systèmes pauvres ?"
+    answer: "Pour ainsi dire jamais. Le tableau d'apparition documenté donne aux économies pauvres une pondération de 0 % en classe S, avec 60 % des vaisseaux en classe C. Les modèles d'un système peuvent techniquement sortir en S, mais aucune raison de chasser en économie 1 étoile quand une économie riche double ou triple les chances."
+  - question: "Quelle est la façon la plus rapide de farmer un vaisseau de classe S ?"
+    answer: "Installez un Scanner économique, filtrez la carte de la galaxie sur les économies riches 3 étoiles, atterrissez à un avant-poste commercial et sortez de votre vaisseau pour créer une sauvegarde automatique. Scannez la première vague ; si aucune classe S ne se pose, rechargez le point de restauration. Chaque recharge relance le tirage : les cycles rapides battent l'attente passive."
+  - question: "Les vaisseaux de classe S valent-ils leur prix ?"
+    answer: "Habituellement oui, si vous comptez garder le vaisseau. La classe S ajoute 50 à 100 % au prix mais tire le haut des plages de dégâts, boucliers et hyperpropulseur de la carène, avec des emplacements quasi maximaux. Pour un vaisseau amiral à long terme, ce plafond vaut l'investissement ; les pilotes à court terme peuvent se contenter d'une classe A."
+  - question: "Les modules d'amélioration rendent-ils une classe C aussi bonne qu'une classe S ?"
+    answer: "Les modules comblent l'écart sans l'effacer. Les modules de classe S empilent de gros bonus en pourcentage sur toute carène, et les emplacements technologiques surchargés les amplifient encore, mais le bonus de classe de base multiplie tout ce qui est en dessous. Une classe C pleinement améliorée performe bien ; les mêmes modules sur une carène classe S finissent toujours plus haut."
+  - question: "La mise à jour Cosmos a-t-elle changé les taux d'apparition des classes S ?"
+    answer: "Pas au 18 août 2026. Hello Games publie toujours les notes de Cosmos par étapes, et rien de publié ne touche à l'apparition des vaisseaux ni à la pondération des classes. Le tableau de ce guide est resté stable à travers les mises à jour 2025 et 2026 ; nous le réviserons si les notes échelonnées changent quoi que ce soit."
+---
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Chaque vaisseau qui se pose sur la plateforme d'un avant-poste commercial de No Man's Sky lance des dés que vous ne voyez pas. Le modèle est fixe — le pool de vaisseaux d'un système ne change jamais — mais la classe estampillée sur chaque carène qui arrive est tirée à l'apparition, de C en bas, via B et A, jusqu'à S en haut. Un vaisseau de classe S est le plafond de ce tirage : les meilleurs bonus de stats de base, la plus large bande d'inventaire et le prix le plus lourd que le jeu accroche à une seule carène.
+
+Les chasser est un test de connaissances plus qu'un grind. Sachez quelles économies tirent la classe S, sachez où vous placer et sachez relancer la file des arrivées, et un vaisseau de classe S vous coûte vingt minutes tranquilles. Faites-le à l'aveugle et le même vaisseau peut prendre une semaine. **Dernière mise à jour : 18 août 2026.** Les règles d'apparition ci-dessous sont stables depuis des années, et rien du déploiement échelonné de Cosmos ne les a changées à l'heure où nous écrivons. Pour ce que chaque type de carène fait de stats de classe S, voyez notre [classement des types de vaisseaux](/starships/best-ships) ; pour la chronologie de l'année, notre [suivi des mises à jour 2026](/guides/new-update-2026).
+
+<StatBar
+  items={[
+    { value: '2%', label: "Chances de classe S en économie riche 3 étoiles" },
+    { value: '5%', label: 'Chances de classe S dans les systèmes pirates' },
+    { value: '1–3', label: "Augmentations de stockage par classe S démantelée" },
+    { value: '+100%', label: "Prime de prix d'un chasseur classe S sur une classe C" },
+  ]}
+/>
+
+<Callout type="info" title="D'où viennent ces chiffres">
+  Les chances par palier d'économie et les primes de prix ci-dessous correspondent aux tableaux
+  documentés sur les wikis communautaires, stables depuis des années. Le taux des systèmes
+  pirates, les plages de stats et les rendements du démantèlement sont testés par la communauté
+  plutôt qu'officiellement documentés, et chacun est signalé en ligne là où il apparaît.
+</Callout>
+
+## Ce qu'est réellement un vaisseau de classe S
+
+La classe est le système de classement du jeu pour les vaisseaux (et les multi-outils, les fretteurs et les modules d'amélioration) : C, B, A et S. Pour un vaisseau, elle fait deux choses concrètes. Elle décide combien d'emplacements généraux et technologiques la carène tire dans la plage autorisée par son modèle, et elle fixe le multiplicateur de bonus appliqué aux trois stats principales que vous lisez en scannant un vaisseau — dégâts, boucliers et hyperpropulseur. Un chasseur de classe C et un chasseur de classe S du même modèle partagent la même cellule ; la version classe S tire simplement des nombres plus gros dans chaque colonne qui compte.
+
+La classe fixe aussi le prix. La prime documentée par le wiki sur une carène de classe C du même type :
+
+| Type de vaisseau | Classe B | Classe A | Classe S |
+| --- | --- | --- | --- |
+| Chasseur | +20% | +70% | +100% |
+| Transporteur | +30% | +60% | +80% |
+| Explorateur | +10% | +25% | +50% |
+| Navette | +10% | +25% | +50% |
+| Fretteur | +20% | +40% | +60% |
+
+Trois familles de carènes sautent purement et simplement la loterie de classe. Les [vaisseaux exotiques](/starships/exotic-ship-locations) apparaissent toujours en classe S — le wiki est explicite : un exotique s'affiche en S même quand son tirage sous-jacent aurait compté comme C. Les [vaisseaux vivants](/starships/living-ship-guide) éclosent en classe S garantie, parce que leurs stats sont fixées au palier supérieur par la quête plutôt que tirées en station. Et les [intercepteurs Sentinelle](/starships/sentinel-interceptor-guide) se récupèrent sur des sites de crash avec leurs stats déjà tirées, ce qui explique pourquoi les chasseurs au budget serré les adorent. Tous les autres vaisseaux du jeu lancent les dés — alors apprenez les dés.
+
+## Les chances de classe S par palier d'économie
+
+La classe de chaque vaisseau qui arrive est tirée contre un tableau pondéré par la force économique du système hôte. Les systèmes riches tirent plus de classes A et S ; les pauvres à peine. La distribution documentée complète :
+
+| Palier d'économie | C | B | A | Chance classe S |
+| --- | --- | --- | --- | --- |
+| 1 étoile — En déclin, Indigente, En difficulté | 60% | 30% | 10% | ~0% |
+| 2 étoiles — Adéquate, Équilibrée, Prometteuse | 49% | 35% | 15% | 1% |
+| 3 étoiles — Opulente, Cossue, Prospère | 30% | 40% | 28% | 2% |
+| Pirate — Marché noir, icône de crâne | variable | variable | variable | ~5% |
+
+Comment lire chaque ligne sur la carte de la galaxie :
+
+1. **Les économies 1 étoile** (En déclin, Indigente, Défaillante, Naissante, Approvisionnement faible, En difficulté, Sans succès, Peu prometteuse) portent une pondération classe S documentée à 0 %. Six vaisseaux sur dix sont de classe C. Ne chassez jamais ici.
+2. **Les économies 2 étoiles** (Adéquate, Équilibrée, Confortable, En développement, Approvisionnement moyen, Prometteuse, Satisfaisante, Durable) tirent environ 1 % de classe S. Un arrivant sur cent — chassable, mais vous payez le double de recharges pour le même résultat.
+3. **Les économies 3 étoiles** (Avancée, Cossue, En plein essor, Florissante, Approvisionnement élevé, Opulente, Prospère, Fortunée) tirent environ 2 % de classe S et 28 % de classe A, les meilleures chances légales du jeu. C'est ici que chaque chasse sérieuse se joue.
+4. **Les systèmes pirates** affichent « Marché noir » et une icône de crâne à la place d'une note en étoiles. Les tests communautaires depuis la mise à jour Outlaws situent leur taux de classe S à environ **5 %** — deux fois et demie la meilleure économie légale — au prix d'un espace sans loi et de stations qui vendent de la contrebande au lieu d'articles commerciaux normaux.
+
+La différence entre les lignes se compose : à 2 % contre 1 %, un système riche atteint votre classe S en deux fois moins de recharges qu'un système moyen, sans compter les plus gros lots de consolation en classe A qui tombent autour.
+
+Pour voir tout cela sur la carte, installez un module de vaisseau **Scanner économique**. Il ajoute un filtre d'économie à la carte de la galaxie et vous laisse lire la richesse et le niveau de conflit de tout système avant la distorsion, pour enchaîner les systèmes riches au lieu de deviner. Il est bon marché, s'achète chez le marchand de technologie de vaisseau de n'importe quelle station, et c'est le module à la plus grande valeur de toute la chasse.
+
+## Où farmer les vaisseaux de classe S
+
+**Les systèmes riches 3 étoiles sont la réponse par défaut**, et vous y avez deux endroits où vous placer :
+
+- **Les avant-postes commerciaux** sont les favoris de la communauté. Les vaisseaux arrivent plus vite à un avant-poste qu'en station spatiale, la plateforme vous laisse assez proche pour scanner les arrivants sans bouger, et toute la boucle se joue depuis un seul toit. Trouvez-en un avec le scan d'avant-postes du Scanner économique ou une carte planétaire du cartographe de station.
+- **Les stations spatiales** font tourner la boucle identique — amarrez, sortez de votre vaisseau à l'intérieur pour la sauvegarde automatique, surveillez les plateformes d'atterrissage. Les vagues arrivent un peu plus lentement et les lignes de vue sont pires, mais les stations n'ont ni météo ni Sentinelles pour vous interrompre.
+
+**Les systèmes pirates sont la réponse de spécialiste.** Le taux de classe S de 5 %, testé par la communauté, est le meilleur du jeu, et les systèmes pirates sont aussi là où apparaissent les [vaisseaux solaires](/starships/best-ships), donc la chasse sert deux fois. Les compromis : aucune notation économique sur laquelle s'appuyer, des stations hors-la-loi avec leur propre stock de vendeurs, et plus de danger ambiant. Si vous savez repousser une interception de pirates occasionnelle, les chances valent le voyage.
+
+**Les fretteurs suivent des règles entièrement séparées.** Les fretteurs capitaux arrivent par des événements de bataille de sauvetage après des sauts de distorsion, pas par les vagues de station, et les capitaux de classe S se farm avec leur propre discipline de sauvegarde-recharge. Notre [guide de farm de fretteurs capitaux](/starships/capital-freighter-farming) couvre cette boucle, et le [guide des fretteurs](/starships/freighter-guide) couvre tout le reste de leur gestion.
+
+## La boucle recharge-première vague, étape par étape
+
+Les vaisseaux arrivent aux avant-postes et aux stations par vagues, et les premiers vaisseaux à se poser après un chargement sont ce que le jeu relance le plus vite. Le pool de vaisseaux du système — quels modèles existent ici — est fixé pour toujours, mais la classe, les stats et le nombre d'emplacements de chaque vaisseau qui arrive sont tirés à l'apparition, et recharger votre sauvegarde relance la file. La boucle :
+
+1. Installez un **Scanner économique** et filtrez la carte de la galaxie sur les **économies riches**.
+2. Sautez en distorsion vers un système 3 étoiles et atterrissez à un **avant-poste commercial**.
+3. Sortez de votre vaisseau. En sortir crée une **sauvegarde automatique** — c'est votre point de réinitialisation.
+4. Regardez la première vague se poser et **scannez chaque vaisseau** à l'arrivée pour lire classe, stats et emplacements.
+5. Si aucune classe S ne se pose dans les deux premières vagues, ouvrez le menu d'options et **rechargez votre point de restauration**.
+6. La file des vagues se relance. Scannez la nouvelle première vague.
+7. Répétez jusqu'à ce qu'une classe S se pose, puis achetez-la avant son départ — attendez-vous à un prix à plusieurs dizaines de millions d'unités, selon le tableau des primes ci-dessus.
+
+Deux habitudes rendent la boucle indolore. D'abord, scannez d'où vous êtes — vous n'avez jamais besoin de marcher jusqu'à un vaisseau pour lire sa fiche. Ensuite, traitez les échecs comme un inventaire : chaque recharge en système riche tire aussi 28 % de classes A, et une bonne carène classe A au bon prix est un achat légitime en attendant la S.
+
+La même boucle fonctionne dans les stations spatiales et dans les systèmes pirates ; seul le décor change. Ce que la boucle ne fait pas, c'est changer le pool de vaisseaux d'un système — si aucun modèle qui se pose ne vous plaît, sautez vers un autre système riche plutôt que de recharger éternellement.
+
+## Ce que les stats de classe S vous apportent vraiment
+
+Les pourcentages sur la fiche de scan d'un vaisseau sont son bonus de classe, et la classe S tire le haut de la plage de chaque type de carène. Les plages principales, documentées par la communauté au fil d'années de scans :
+
+- Les **chasseurs** tirent les bonus de dégâts les plus hauts du jeu — un chasseur classe S peut atteindre environ **+50 % de dégâts**, qui se multiplie à travers chaque module d'arme installé.
+- Les **explorateurs** tirent les meilleurs bonus d'hyperpropulseur — les explorateurs classe S approchent **+80 % de portée de distorsion**, avant toute amélioration du propulseur.
+- Les **transporteurs** dominent en boucliers, encaissant des embuscades qui plient d'autres carènes, au prix de la maniabilité.
+- Les **exotiques** et les intercepteurs tirent haut et équilibré sur les trois stats, exactement pourquoi ils ancrent le haut de notre [classement](/starships/best-ships).
+
+La classe gouverne aussi les emplacements. Un vaisseau classe S tend à tirer le maximum ou presque d'emplacements généraux et technologiques autorisés par son modèle : la même cellule qui arrive en chasseur classe C à 19 emplacements peut arriver en classe S à inventaire plein.
+
+Une réserve honnête : les plages de bonus se chevauchent entre classes adjacentes. Un bon tirage de classe A peut battre un mauvais tirage de classe S sur une stat isolée. Sur beaucoup d'apparitions, cependant, la classe S gagne régulièrement en dégâts, boucliers, hyperpropulseur et emplacements réunis — c'est la seule classe qui domine les quatre à la fois.
+
+## Vaisseaux de classe S et modules d'amélioration
+
+Les modules d'amélioration ont leur propre classement, de C à S, et c'est là que les joueurs se perdent. Les règles sont simples et s'empilent proprement :
+
+- La **classe de la carène** fixe les multiplicateurs de stats de base et le plafond d'emplacements.
+- Les **modules d'amélioration** ajoutent des bonus en pourcentage par-dessus ces bases, et un module de classe S ajoute le plus — achetez-les aux marchands de technologie de station ou gagnez-les au démantèlement.
+- Les **emplacements technologiques surchargés**, les emplacements luisants de chaque vaisseau depuis la refonte Waypoint, multiplient ce qui s'y trouve. Mettez-y vos meilleurs modules de classe S.
+
+Alors, une pile de modules classe S peut-elle sauver une carène classe C ? En grande partie, oui — et pour les budgets de début de partie, améliorer ce que vous possédez bat attendre une apparition à 2 %. Mais l'argument du plafond est mathématiquement définitif : les modules multiplient par-dessus les stats de base, et les bases de classe C sont les plus basses de la plage. Le même chargement de modules finit toujours plus haut sur une meilleure carène. Achetez la classe C maintenant si vous devez voler aujourd'hui ; chassez la classe S quand vous bâtissez le vaisseau que vous comptez garder.
+
+Le démantèlement est la boucle qui finance tout cela. Tout vaisseau acheté peut être démonté à un **Terminal d'équipement de vaisseau** sur n'importe quelle station spatiale. Rendements testés par la communauté pour les carènes classe S : une **Augmentation de stockage** quasi garantie (une à trois par vaisseau), qui ajoute des emplacements d'inventaire à tout vaisseau possédé, plus des modules d'amélioration récupérés à installer ou à vendre contre des nanites. Achetez à bas prix les arrivées en classe S d'un système riche, démontez ce qui ne vous plaît pas, et la chasse se finance elle-même en emplacements et en nanites pendant que vous attendez le modèle que vous êtes venu chercher.
+
+## La mise à jour Cosmos change-t-elle quoi que ce soit ?
+
+Pas jusqu'ici. Au 18 août 2026, Hello Games publie toujours les notes de [Cosmos](/cosmos-update/cosmos-update-guide) par étapes, et rien de publié n'a touché à l'apparition des vaisseaux, aux chances de classe ni à la pondération économique. Les tableaux ci-dessus reflètent le jeu en direct actuel.
+
+La seule interaction prévisible est le voyage. Le vol interstellaire libre confirmé de Cosmos — voler vers un autre système au lieu de sauter en distorsion — devrait coexister avec l'hyperpropulseur, et notre [guide du vol interstellaire](/cosmos-update/interstellar-flight-guide) compare les deux. Quelle que soit votre façon de rejoindre les systèmes, la chasse reste la même : destination riche, plateforme d'avant-poste, sauvegarde, recharge.
+
+## Guides liés
+
+- [Les meilleurs vaisseaux de No Man's Sky : chaque type classé](/starships/best-ships)
+- [Positions des vaisseaux exotiques : portails, glyphes, coordonnées](/starships/exotic-ship-locations)
+- [Guide des intercepteurs Sentinelle : un vaisseau de classe S gratuit](/starships/sentinel-interceptor-guide)
+- [Farm de fretteurs capitaux : obtenez un vaisseau capital de classe S](/starships/capital-freighter-farming)
+- [Guide du vaisseau vivant : Étoile naissante, croissance et améliorations](/starships/living-ship-guide)
+- [Vol interstellaire : le guide du vol libre Cosmos](/cosmos-update/interstellar-flight-guide)
+- [Mise à jour Cosmos : le guide complet de l'anniversaire](/cosmos-update/cosmos-update-guide)
+- [Toutes les mises à jour No Man's Sky en 2026](/guides/new-update-2026)

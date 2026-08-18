@@ -1,0 +1,157 @@
+---
+title: "No Man's Sky : comment démarrer une expédition (guide débutant)"
+description: "Guide débutant pour démarrer une expédition : menu Nouvelle partie, terminal de l'Anomalie, dix premières minutes, jalons et réclamation des récompenses."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/how-to-start-expedition.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Les expéditions démarrent depuis le menu Nouvelle partie ou le terminal de l'Anomalie spatiale. Ce pas-à-pas débutant couvre les deux voies, l'ouverture scriptée, les jalons et les récompenses."
+tags: ["expeditions", "guides", "beginners", "how-to"]
+faq:
+  - question: "Comment démarrer une expédition depuis le menu principal ?"
+    answer: "Ouvrez le menu principal, choisissez Nouvelle partie, et au lieu de prendre Normal, Créatif, Survie ou Mort permanente, sélectionnez l'emplacement d'expédition pour l'expédition en cours ou passée de votre choix. Confirmez, et le jeu crée une sauvegarde d'expédition séparée avec un équipement curaté et la liste de jalons déjà active."
+  - question: "Y a-t-il une expédition en cours dans No Man's Sky en ce moment ?"
+    answer: "Non. Au 18 août 2026, aucune expédition limitée n'est en direct : l'Expédition 22, The Swarm, s'est terminée le 19 juillet 2026. Vous pouvez toujours rejouer les expéditions passées depuis le terminal de l'Anomalie spatiale, et une nouvelle course pourrait arriver autour de la mise à jour anniversaire Cosmos, mais Hello Games n'en a confirmé aucune."
+  - question: "Faut-il une sauvegarde existante pour démarrer une expédition ?"
+    answer: "Non. La voie du menu principal fonctionne pour les complets nouveaux venus et crée la sauvegarde d'expédition directement. La seconde voie, depuis le terminal d'expédition de l'Anomalie spatiale, exige une sauvegarde existante passée le tutoriel d'ouverture, parce qu'il faut voler jusqu'à l'Anomalie pour atteindre le terminal."
+  - question: "Comment les récompenses arrivent-elles sur ma sauvegarde principale ?"
+    answer: "Réclamez chaque récompense de phase au terminal d'expédition pendant la course. Tout ce qui est réclamé se débloque pour tout le compte : chargez votre sauvegarde principale, amarrez à l'Anomalie spatiale et récupérez gratuitement vaisseaux, multi-outils et cosmétiques auprès du Compagnon de synthèse de vif-argent. Devises et consommables restent dans la sauvegarde d'expédition."
+  - question: "Que devient ma sauvegarde d'expédition quand l'expédition se termine ?"
+    answer: "Elle se convertit en sauvegarde standard que vous pouvez continuer indéfiniment. Vos vaisseaux, bases et progression restent exactement là où la course les a laissés, et chaque récompense réclamée avant la fermeture de la fenêtre reste débloquée sur votre compte pour toujours."
+---
+
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Démarrer votre première expédition de No Man's Sky prend cinq minutes quand vous savez où le jeu cache le bouton — et c'est déroutant sinon, parce que l'option d'expédition vit dans le menu Nouvelle partie, que le tutoriel n'en parle jamais, et que le second point d'entrée est un terminal vers lequel il faut voler. **Dernière mise à jour : 18 août 2026.** Aucune expédition n'est en direct en ce moment (l'Expédition 22 a fermé le 19 juillet), donc ce guide est écrit pour que vous soyez prêt le jour où la prochaine ouvrira — chaque étape fonctionne pareil que la course soit flambant neuve ou une rediffusion Redux.
+
+<StatBar
+  items={[
+    { value: '2', label: "Voies de départ : menu Nouvelle partie ou terminal de l'Anomalie" },
+    { value: '~6 semaines', label: "Durée typique d'une course limitée" },
+    { value: '5–6', label: "Phases de jalons par expédition" },
+    { value: '19 juil.', label: '2026 — fin de l’Expédition 22, prochaine non annoncée' },
+  ]}
+/>
+
+La version courte :
+
+1. **Voie du menu principal :** appuyez sur Nouvelle partie, puis sélectionnez l'emplacement **Expédition** au lieu de Normal, Créatif, Survie ou Mort permanente. Le jeu construit une sauvegarde séparée, saute le tutoriel et vous dépose dans l'ouverture scriptée.
+2. **Voie du terminal :** sur une sauvegarde existante passée l'ouverture, invoquez l'**Anomalie spatiale** et utilisez le **terminal d'expédition** près de l'entrée principale pour rejoindre la course — et pour copier quelques objets utiles depuis votre sauvegarde principale.
+3. **Dix premières minutes :** ouvrez l'onglet Expédition de votre journal, lisez la liste de jalons et courez après les jalons jusqu'au premier seuil de phase.
+
+Pour l'image au niveau du système — le calcul des phases, le saut de seuils, les règles de transfert — notre [guide général des expéditions](/expeditions/expedition-guide) est la plongée en profondeur. Cette page est la version d'entrée sans expérience : quoi cliquer, ce que vous verrez, et les erreurs qui coûtent des heures aux débutants.
+
+## Ce qu'est réellement une expédition
+
+Une expédition est un mode de jeu saisonnier sur son propre fichier de sauvegarde dédié. Au lieu de la boucle bac-à-sable ouverte, vous travaillez une liste fixe d'objectifs appelés jalons, regroupés en phases — généralement cinq ou six. Atteignez le seuil de jalons d'une phase et les récompenses de cette phase se débloquent. Quand la fenêtre de l'événement ferme, typiquement après environ six semaines, tout ce que vous avez réclamé est à vous pour toujours et la sauvegarde se convertit en sauvegarde normale.
+
+Pour un nouveau venu, voici les différences avec une sauvegarde normale qui comptent vraiment :
+
+| | Sauvegarde normale | Sauvegarde d'expédition |
+| --- | --- | --- |
+| Fichier de sauvegarde | L'un de vos emplacements permanents | Un emplacement saisonnier séparé, créé pour la course |
+| Objectifs | Ouverts, vous fixez les buts | Une liste fixe de jalons en phases, avec seuils |
+| Limite de temps | Aucune | Une fenêtre limitée avec compte à rebours au terminal |
+| Équipement de départ | Ce que vous avez laissé dans l'emplacement | Un équipement curaté — tout le monde démarre égal |
+| Tutoriel | La quête d'ouverture complète | Sauté — pas de tutoriel, pas d'histoire d'Artemis |
+| Après la fin | Continue pour toujours | Devient une sauvegarde normale ; les récompenses réclamées se débloquent sur tout le compte |
+
+La raison pour laquelle les joueurs s'y intéressent, c'est l'exclusivité. Les expéditions distribuent des vaisseaux, des multi-outils, des pièces d'Exocraft, des ensembles d'armure et des titres introuvables par le jeu normal — la [liste complète des récompenses](/expeditions/expedition-rewards-list) va du Golden Vector aux Jambes mécaniques du Colosse de l'Expédition 21, et tout est verrouillé derrière le fait de savoir démarrer, et finir, une expédition.
+
+<Callout type="warn" title="Rien n'est en direct — apprenez les étapes, puis attendez la cloche">
+  Au 18 août 2026, aucune expédition limitée n'est active. L'Expédition 22 : The Swarm a fermé
+  le 19 juillet 2026, et Hello Games n'a pas annoncé la prochaine course — la mise à jour
+  anniversaire Cosmos est le véhicule le plus probable, mais c'est de la lecture de tendances,
+  pas une date. Tout ce qui suit s'applique dès l'ouverture de l'Expédition 23 ; notre
+  [suivi de l'Expédition 23](/expeditions/expedition-23) portera la date de début confirmée.
+</Callout>
+
+## Voie 1 : démarrer depuis le menu principal (idéal pour les premiers joueurs)
+
+C'est la voie pour quiconque est nouveau dans No Man's Sky, ou ne veut pas charger une vieille sauvegarde d'abord — aucune sauvegarde normale ni progression préalable n'est nécessaire.
+
+1. **Depuis l'écran-titre, choisissez Nouvelle partie.** Le sélecteur de mode apparaît : Normal, Créatif, Survie et Mort permanente, plus les entrées d'expédition.
+2. **Sélectionnez l'emplacement d'expédition pour la course voulue.** Pendant qu'une expédition est en direct, la courante apparaît ici à côté des modes de difficulté — pendant l'Expédition 22, la choisir était aussi simple que choisir Normal. Le même écran liste aussi les expéditions déjà publiées, pour rejouer ou s'entraîner. Une seule expédition tourne en direct à la fois, mais le menu vous donne le catalogue.
+3. **Confirmez et entrez.** Le jeu crée la sauvegarde d'expédition séparée, arme la liste de jalons et saute l'ouverture habituelle — il n'y a pas de tutoriel en mode expédition. Vous êtes déposé directement dans le scénario d'ouverture scripté avec un équipement prédéfini.
+
+Deux rassurances. Démarrer une expédition ne touche jamais vos autres sauvegardes : c'est un fichier neuf et séparé. Et si vous abandonnez en route, rien n'est perdu — rechargez la sauvegarde d'expédition à tout moment pendant que la fenêtre est ouverte.
+
+## Voie 2 : démarrer depuis le terminal d'expédition de l'Anomalie spatiale
+
+Le second point d'entrée exige une sauvegarde existante passée le tutoriel d'ouverture — il faut être libre de voler pour pouvoir l'utiliser.
+
+1. **Invoquez l'Anomalie spatiale** depuis votre vaisseau et amarrez.
+2. **Trouvez le terminal d'expédition juste à l'intérieur de l'entrée principale**, au niveau de la plaza où se trouvent les vendeurs. Ce terminal est la plaque tournante de tout ce qui touche aux expéditions : rejoindre la course active, consulter la liste de jalons et — crucial — réclamer les récompenses de phase.
+3. **Entrez dans l'expédition depuis le terminal.** Votre sauvegarde d'expédition est créée et saisie d'ici, séparée de la sauvegarde principale avec laquelle vous êtes arrivé.
+
+La voie du terminal a un vrai avantage : le transfert d'objets. Le terminal à côté de celui de l'expédition laisse copier une sélection d'objets — modules d'amélioration, armes, ressources essentielles — de votre sauvegarde établie vers la sauvegarde d'expédition neuve, adoucissant l'équipement de départ curaté. Les règles exactes ont changé entre les courses, donc vérifiez ce qui est proposé au démarrage ; c'est pourquoi les vétérans démarrent depuis l'Anomalie pendant que les débutants utilisent le menu.
+
+## Vos dix premières minutes : l'ouverture scriptée
+
+Chaque expédition s'ouvre sur un scénario scripté au lieu du tutoriel standard du site de crash, et les courses récentes ont démarré dans des endroits radicalement différents. L'Expédition 22 : The Swarm vous déposait à côté d'un vaisseau stellaire crashé et s'ouvrait sur un test de personnalité vous assignant à l'une des trois équipes — Royal, Sage ou Weaver — nourrissant une guerre à l'échelle de la galaxie. L'Expédition 21 : Remnant démarrait sur l'unique planète de récupération qui hébergeait toute la course. Titan, l'expédition du monde océanique, commençait sous l'eau. La constante : un équipement prédéfini, un marqueur à l'écran sur votre premier objectif, et une liste de jalons déjà active.
+
+Cette première heure est là où surgit la question « réparer mon vaisseau ou courir les jalons », et la réponse est presque toujours **les deux, dans le bon ordre** :
+
+1. **Ouvrez l'onglet Expédition de votre journal avant de bouger.** Dans le menu pause, votre journal a un onglet Expédition listant chaque phase et chaque jalon. Dans The Swarm, réparer les propulseurs de lancement et les moteurs à impulsion était un jalon précoce — la réparation que vous feriez de toute façon compte.
+2. **Suivez le marqueur à l'écran à travers les temps forts scriptés.** Les jalons d'ouverture sont une séquence guidée — enquêter sur l'épave, fabriquer les objets de départ, réparer le vaisseau — et ils enseignent les commandes au passage. C'est le tutoriel, en habits d'expédition.
+3. **Ne réparez que ce que les jalons demandent.** Le vaisseau de départ est un outil, pas un gardien. Ne minez pas vingt minutes pour améliorer une technologie que la liste ne mentionne jamais.
+4. **Réclamez vos premières récompenses avant de quitter la zone d'ouverture.** Les paiements des premiers jalons incluent ressources et plans que des jalons ultérieurs consomment — les jalons d'ouverture de The Swarm nourrissaient les objectifs suivants immédiats.
+
+Une dernière attente : certaines expéditions verrouillent le final derrière une barre de progression communautaire. Le dernier étage de The Swarm, le jalon Distorsion chromatique, ne se débloquait qu'une fois toute la base de joueurs ayant rempli un compteur partagé — vous pouviez finir vos jalons personnels et attendre quand même l'horloge communautaire. Si votre course cale sur un jalon que vous ne pouvez pas compléter personnellement, c'est probablement pour ça.
+
+## Lire l'interface d'expédition
+
+L'interface est mince quand vous connaissez les trois endroits où vit l'information :
+
+- **L'onglet Expédition de votre journal.** Chaque phase, chaque jalon, votre compteur de progression et le seuil de la phase courante. C'est ici que vous planifiez — et que vous vérifiez si un jalon est requis ou optionnel, puisque la plupart des phases vous laissent en sauter quelques-uns.
+- **Le terminal d'expédition sur l'Anomalie.** Le compte à rebours de l'événement vit ici, avec la liste de jalons et — la partie qu'on oublie — la réclamation des récompenses. Les récompenses ne tombent pas automatiquement dans votre inventaire ; vous les collectez au terminal.
+- **Les marqueurs à l'écran et les notifications.** Les complétions de jalons sonnent pendant que vous jouez. Un nouveau ping veut dire qu'il est temps de penser à une visite au terminal, pas à un détour immédiat.
+
+La lecture la plus importante est le seuil de phase. Les phases se débloquent à un nombre de jalons, pas à 100 pour cent de complétion, donc chaque phase a des objectifs escamotables — les nouveaux joueurs qui essaient de tout compléter s'épuisent sur des jalons optionnels. Notre [guide de complétion rapide](/expeditions/expedition-fast-completion) couvre le côté itinéraire.
+
+## Réclamer les récompenses et les amener sur votre sauvegarde principale
+
+C'est la partie à échéance dure. Les récompenses se réclament manuellement au terminal d'expédition — si vous ne visitez jamais, les déblocages restent là non réclamés, et quand la fenêtre ferme, le non réclamé disparaît jusqu'à une réédition.
+
+Ce qui se transfère, et comment :
+
+| Type de récompense | Exemples | Comment ça atteint vos sauvegardes principales |
+| --- | --- | --- |
+| Vaisseaux, multi-outils, Exocraft | Golden Vector, Basilisk Crown, pièces du Colosse | Réclamez au terminal, puis récupérez gratuitement auprès du Compagnon de synthèse de vif-argent sur l'Anomalie, dans n'importe quel mode |
+| Cosmétiques | Ensembles d'armure, affiches, décalques, titres, gestes | Même voie — réclamation au terminal, récupération au Compagnon |
+| Plans et améliorations | Déblocages de technologie, modules d'amélioration | À l'échelle du compte une fois réclamés |
+| Devises et consommables | Unités, nanites, vif-argent, matériaux | Ils ne se transfèrent pas — ils restent dans la sauvegarde d'expédition |
+
+Le rituel de transfert : finissez la course (ou les phases voulues), réclamez tout au terminal, chargez votre sauvegarde principale, invoquez l'Anomalie spatiale et parlez au **Compagnon de synthèse de vif-argent**. Chaque récompense réclamée siège dans son catalogue au prix zéro — collectez votre vaisseau, votre multi-outil et votre ensemble d'armure, et envolez-vous. Cela fonctionne sur chaque sauvegarde, dans chaque mode, pour toujours.
+
+## Les erreurs de débutant à éviter dans votre première expédition
+
+| Erreur | Pourquoi ça fait mal | Quoi faire à la place |
+| --- | --- | --- |
+| Vendre ou jeter les ressources de départ | Les jalons d'ouverture consomment exactement ces matériaux | Ne touchez à rien avant d'avoir lu la liste de jalons |
+| Ne jamais ouvrir l'onglet Expédition | Vous errez comme en sauvegarde normale et faites sans cesse marche arrière | Ouvrez-le dans les dix premières minutes et planifiez par phase |
+| Réparer et tout améliorer sur le vaisseau de départ | Le vaisseau de départ est une marche-pied, pas un projet | Réparez ce que les jalons exigent, puis avancez |
+| Ne pas réclamer les récompenses au fil des jalons | Les phases suivantes grindent sans les améliorations gratuites | Réclamez au terminal après chaque lot |
+| Traiter la course comme une sauvegarde normale | Décoration de base et quêtes annexes mangent la fenêtre limitée | Les expéditions sont des sprints ; le bac-à-sable attend après |
+| S'arrêter avec des récompenses non réclamées près de l'échéance | La fenêtre ferme et les déblocages non réclamés s'évaporent jusqu'à une réédition | Réclamez tout tôt, puis revérifiez chaque phase |
+
+L'erreur méta derrière les six : oublier l'horloge. Une sauvegarde normale pardonne ; une fenêtre d'expédition, non.
+
+## Alors, quand pourrez-vous réellement en démarrer une ?
+
+Au 18 août 2026 : pas une nouvelle. L'Expédition 22 : The Swarm a couru du 27 mai au 19 juillet 2026, et rien n'a été annoncé depuis. Les prochaines opportunités réalistes, dans l'ordre :
+
+1. **L'Expédition 23 avec ou après la mise à jour Cosmos.** La mise à jour du dixième anniversaire a été annoncée le 9 août 2026, et les nouvelles expéditions ont historiquement accompagné les grosses mises à jour — Remnant avec le correctif Remnant, The Swarm avec la version 6.4. Hello Games n'a pas confirmé d'expédition pour Cosmos. Notre [page Expédition 23](/expeditions/expedition-23) suit l'annonce.
+2. **Une rediffusion Redux d'une ancienne expédition.** Hello Games rejoue périodiquement les expéditions passées dans des fenêtres raccourcies — environ deux semaines chacune — avec la même structure de jalons et de récompenses. La saison des fêtes 2025 en a enchaîné cinq, et un bloc similaire fin 2026 est l'attente de travail de la communauté. Le [calendrier des expéditions Redux](/expeditions/redux-expeditions-schedule) suit chaque fenêtre confirmée.
+3. **Un replay depuis le terminal, aujourd'hui.** Les expéditions passées restent jouables depuis le terminal d'expédition et le menu Nouvelle partie même sans rien en direct, donc vous pouvez vous entraîner sur tout le flux du début à la fin avec une ancienne course — y compris The Swarm — dès maintenant. Le hic : les replays d'expéditions terminées ne redistribuent pas la piste de récompenses limitée ; il faut une fenêtre en direct ou un Redux.
+
+Cette troisième option est la meilleure préparation : faites une ancienne expédition cette semaine, et quand le compte à rebours de l'Expédition 23 apparaîtra, vous la démarrerez en connaissant déjà le menu, le terminal, l'onglet du journal et la boucle de réclamation — sans échéance attachée.
+
+## Guides liés
+
+- [Guide des expéditions de No Man's Sky : phases, récompenses et speedrun](/expeditions/expedition-guide) — le compagnon au niveau système de cette page
+- [Expédition 22 (The Swarm) : récompenses et comment y rejouer](/expeditions/expedition-22) — la course la plus récente, jalon par jalon
+- [Complétion rapide des expéditions](/expeditions/expedition-fast-completion) — itinéraires et saut de seuils
+- [Calendrier des expéditions Redux](/expeditions/redux-expeditions-schedule) — chaque fenêtre de réédition confirmée
+- [Toutes les mises à jour No Man's Sky en 2026](/guides/new-update-2026) — Cosmos et le reste des correctifs de l'année

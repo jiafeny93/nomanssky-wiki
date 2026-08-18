@@ -1,0 +1,155 @@
+---
+title: "Complétion rapide des expéditions No Man's Sky : finir en deux jours"
+description: "Guide de complétion rapide : itinéraires de jalons au plus court, raccourcis de téléportation, règles du multijoueur et planning en deux jours pour toute course."
+category: "expeditions"
+image: '../../../../assets/covers/expeditions/expedition-fast-completion.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+tags: ["expeditions", "speedrun", "guides", "milestones", "multiplayer"]
+summary: "Finissez une expédition en deux jours concentrés : lisez d'abord les jalons, enchaînez les objectifs sur la route de rendez-vous, réclamez sans cesse et préparez les blocages connus."
+faq:
+  - question: "En combien de temps peut-on compléter une expédition de No Man's Sky ?"
+    answer: "Les speedrunners entraînés détiennent des records de course complète autour de quatre-vingt-dix minutes : le record de l'Expédition 1 The Pioneers sur speedrun.com est à 1 h 29, et des routes filmées existent pour boucler en environ 90 minutes. Avec une route communautaire à rythme normal, comptez deux à quatre heures ; un débutant tranquille a besoin de six à dix heures sur la fenêtre."
+  - question: "La progression d'expédition se partage-t-elle entre joueurs d'un groupe ?"
+    answer: "Non. La progression des jalons est par joueur : chaque membre du groupe doit compléter ses propres objectifs et réclamer ses propres récompenses, donc aucun coéquipier ne peut porter la liste d'un autre. Les groupes aident quand même par les trajets partagés, les bases, le soutien au combat et les ressources échangées. Les jalons multijoueur restent optionnels pour la complétion de phase."
+  - question: "Dans quel ordre compléter les jalons d'expédition ?"
+    answer: "Il n'y a pas d'ordre fixe, seulement un ordre bon marché. Les phases se débloquent à des seuils de jalons, pas à la complétion totale : lisez d'abord la liste entière au terminal d'expédition, regroupez les objectifs par planète et par système, enchaîne-les le long de la route de rendez-vous et sautez les jalons les plus lents au-dessus de chaque seuil. Réclamez et installez après chaque lot."
+  - question: "Peut-on finir une expédition en une seule session ?"
+    answer: "Oui. Chaque seuil de phase est atteignable en solo, et les routes optimisées bouclent régulièrement une expédition en deux à quatre heures. Une longue session fonctionne si vous planifiez l'itinéraire avant de bouger et réclamez en continu ; un découpage en deux jours est simplement plus confortable et laisse de la place aux jalons dépendant des tempêtes ou des gouttes récalcitrantes."
+  - question: "Les récompenses comptent-elles si je finis l'expédition le dernier jour ?"
+    answer: "Oui, tant que vous les réclamez avant la fermeture de la fenêtre. Les récompenses de phase attendent au terminal jusqu'à leur collecte, et tout ce qui est réclamé est permanent et valable sur tout le compte, récupérable sur votre sauvegarde principale via le Compagnon de synthèse de vif-argent. Ne laissez jamais rien non réclamé le dernier jour ; traitez l'échéance comme une limite dure."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+La plupart des expéditions de No Man's Sky ne se perdent pas à cause de la difficulté — elles se perdent par dérive. Les joueurs s'égarent en retours en arrière, laissent des récompenses non réclamées au terminal, traitent un événement de six semaines comme un engagement de six semaines, puis paniquent quand le compte à rebours n'a plus qu'un chiffre. Ce guide de complétion rapide existe pour corriger cela : un manuel répétable, indépendant de l'expédition, pour finir n'importe quelle course en environ deux jours concentrés, que vous visiez une sortie saisonnière flambant neuve ou une rediffusion Redux.
+
+**Dernière mise à jour : 18 août 2026.** L'Expédition 22 : The Swarm a fermé sa fenêtre le 19 juillet 2026, et aucune expédition n'est en direct en ce moment — la semaine parfaite pour intérioriser la méthode, parce que la prochaine course commence toujours de la même façon.
+
+<StatBar
+  items={[
+    { value: '2 jours', label: 'Jeu concentré pour un clear complet' },
+    { value: '2–4 h', label: 'Course optimisée en une session' },
+    { value: '5–6', label: 'Phases dans une expédition standard' },
+    { value: '1:29:38', label: 'Record de course complète sur speedrun.com' },
+  ]}
+/>
+
+<Callout type="info" title="C'est un manuel, pas un script de jour de patch">
+  Tout ce qui suit — seuils de phase, itinéraires de rendez-vous, réclamation au terminal, règles
+  du multijoueur — est resté stable à travers chaque expédition depuis le lancement du format.
+  Quand la prochaine course ouvrira, appliquez-le dès le premier jour. Rien ci-dessous ne dépend
+  de l'expédition en cours.
+</Callout>
+
+Si vous n'avez jamais fait d'expédition du tout, commencez par notre [guide général des expéditions](/expeditions/expedition-guide) pour le fonctionnement des sauvegardes, des phases et de la réclamation des récompenses. Cette page suppose que vous connaissez les bases et voulez aller vite sans rendre la course pénible.
+
+## Ce que « complétion rapide » veut vraiment dire
+
+Les expéditions ne demandent jamais 100 pour cent. Chacune des cinq ou six phases se débloque à un seuil de jalons inférieur au nombre total de jalons qu'elle contient — si une phase compte douze jalons et un seuil à huit, quatre sont de la décoration. La complétion rapide est simplement la discipline d'atteindre cinq ou six seuils avec le minimum de voyage, et chaque stratégie ci-dessous est une variation de cette seule idée.
+
+Cette règle unique recadre tout l'événement. Vous ne complétez pas une liste ; vous l'élaguez. Avant de quitter votre premier système, vous devriez déjà savoir quels jalons vous comptez ignorer, lesquels s'empilent sur les mêmes lieux, et quelles récompenses vous courez vraiment après — le pool complet des courses récentes est catalogué dans notre [liste des récompenses d'expédition](/expeditions/expedition-rewards-list).
+
+## Première heure : lire, réclamer, planifier
+
+La première heure décide de la longueur de toute la course. Speedrunners et joueurs tranquilles perdent pareil l'essentiel de leur temps sur la même erreur : compléter les objectifs dans l'ordre où le terminal les liste au lieu de l'ordre où la galaxie les permet.
+
+1. **Lisez la liste complète de jalons au terminal d'expédition avant toute autre chose.** Regroupez mentalement chaque objectif par planète et par système. La plupart des heures perdues d'une expédition viennent de retourner dans un système traversé deux heures plus tôt.
+2. **Ouvrez la carte galactique et regardez la route de l'expédition.** Chaque expédition aligne des points de rendez-vous le long d'une route à travers la galaxie ; ces points ancrent votre chemin le plus rapide. Plus bas à leur sujet.
+3. **Réclamez les récompenses immédiatement, à chaque fois.** Les récompenses de jalons et de phases attendent au terminal jusqu'à leur collecte, et beaucoup sont des modules d'amélioration et des ressources qui accélèrent le jalon suivant. Une récompense non réclamée est une amélioration gratuite que vous n'utilisez pas.
+4. **Installez ce que vous réclamez.** Un module qui dort dans vos soutes n'accélère rien. Placez-le dès la réclamation.
+5. **Fixez une règle sans détour.** Si un objectif optionnel s'écarte de plus d'une minute environ de votre itinéraire, sautez-le, sauf si vous êtes sous le seuil de phase. Le bac-à-sable sera encore là après l'événement.
+
+Rien de tout cela ne coûte du temps supplémentaire — les étapes une et deux prennent dix minutes — et ensemble elles coupent généralement une course de moitié avant même que vous ayez tiré votre rayon minier.
+
+## Le chemin le plus court : ordonner les jalons par lieu
+
+Une fois la liste lue, ordonnez les jalons par géographie, pas par phase. Le schéma qui fonctionne dans pratiquement chaque expédition :
+
+| Priorité | Type de jalon | Pourquoi il passe en premier |
+| --- | --- | --- |
+| 1 | Objectifs sur votre planète et système de départ | Zéro coût de voyage ; franchit le seuil de la première phase avant tout investissement logistique |
+| 2 | Jalons des points de rendez-vous | La route vous y mène de toute façon, et chaque rendez-vous porte généralement son propre crédit de jalon |
+| 3 | Objectifs compatibles avec le voyage : scans, pierres de savoir, balises, photos | Ils se complètent tout seuls pendant que vous bougez vers tout le reste |
+| 4 | Objectifs groupés : plusieurs jalons sur une même planète ou un même système | Regroupez-les en un seul arrêt au lieu de trois trajets |
+| 5 | Jalons lents à objectif unique : chaînes de cuisine, attentes de tempête, faune rare | À ne faire que sous un seuil — ou à banquer passivement dès la première minute |
+
+L'habitude d'empilement compte plus que n'importe quel itinéraire. Scannez la faune pendant que votre vaisseau fait le plein. Photographiez les points de passage en franchissant les collines. Interagissez avec chaque pierre de savoir croisée, parce que des jalons d'apprentissage de mots sont apparus dans plusieurs expéditions et se banquent gratuitement. Les meilleures courses ne voyagent jamais à vide : chaque trajet entre deux points devrait retirer un ou deux jalons passifs en effet de bord.
+
+Le retour en arrière est l'ennemi à mesurer. Un auto-contrôle utile en haut de chaque heure : si vous volez vers un système déjà visité, demandez-vous si un objectif du système courant aurait pu remplacer ce trajet. Si oui, votre ordre a glissé — recalculez avant de sauter en distorsion.
+
+## Points de rendez-vous, Anomalie et raccourcis de voyage
+
+Le voyage est là où la complétion rapide se gagne, parce que chaque liste de jalons du jeu est triviale à côté des distances entre ses objectifs. Quatre mécaniques font l'essentiel du travail :
+
+- **Les points de rendez-vous.** Chaque expédition aligne ses phases le long d'une route de planètes de rendez-vous — des plaques tournantes dynamiques où la communauté converge naturellement. Les atteindre vaut en soi de la progression de jalon dans la plupart des courses, et la carte galactique surligne la route d'expédition pour les enchaîner. Ne visitez jamais un système qui n'est pas sur votre chemin vers le prochain rendez-vous, sauf si un groupe de jalons le justifie.
+- **L'Anomalie spatiale.** Invoquez-la depuis l'espace chaque fois que vous êtes entre deux systèmes : c'est votre station gratuite de réclamation-et-installation, votre boutique, et le standard de l'astuce ci-dessous.
+- **Le téléporteur de l'Anomalie et les bases des autres joueurs.** Le téléporteur de l'Anomalie ne fonctionne qu'en sortie, mais il peut vous mener aux bases de tout joueur actuellement à bord de l'Anomalie avec vous. L'astuce de vitesse classique de la communauté est d'embarquer, de repérer un joueur dont la base est près de votre prochain rendez-vous, et d'y téléporter au lieu de sauter en distorsion sur tout le trajet. Sur une Anomalie animée en semaine de lancement, cela économise d'énormes chaînes de sauts. Les téléporteurs de station spatiale couvrent le retour — des sauts gratuits vers tout système ou base déjà visité, la façon la moins chère de réparer un objectif oublié.
+- **Les portails, honnêtement.** Le réseau de portails ne figure presque jamais dans une route d'expédition rapide, parce qu'une sauvegarde d'expédition neuve démarre sans aucun glyphe appris. Ne courez pas après les déblocages de portail en pleine course ; la route des rendez-vous plus les téléporteurs s'exécute plus vite que la chasse aux glyphes.
+
+Une prudence héritée de toutes les semaines de lancement : les nouvelles expéditions arrivent avec des bugs, et des fils communautaires ont documenté des listes de téléporteurs n'affichant pas les systèmes visités. Si un raccourci dysfonctionne, revenez à la carte galactique plutôt que de vous battre avec le menu — la route en distorsion fonctionne toujours.
+
+## Multijoueur : ce qui se partage et ce qui ne se partage pas
+
+C'est la mécanique la plus mal comprise du format, alors voici la version franche : **la progression des jalons est par joueur.** Rejoindre un groupe ne partage pas votre liste. Chaque membre d'une escouade doit compléter ses propres jalons et réclamer ses propres récompenses de phase ; un vétéran ne peut pas porter quatre amis à travers la liste pendant qu'ils regardent.
+
+| Élément | Se partage ? | Comment ça aide vraiment |
+| --- | --- | --- |
+| Progression des jalons | Non — par joueur | Chacun gravit sa propre échelle, mais vous pouvez gravir aux mêmes endroits |
+| Récompenses de phase | Non — réclamées individuellement | Chacun réclame au terminal ; les récompenses sont à l'échelle du compte une fois réclamées |
+| Trajets et sièges passagers | En partie | Rouler dans le vaisseau ou l'Exocraft d'un coéquipier évite le voyage et satisfait les jalons multijoueur de trajet, apparus en objectifs optionnels (un objectif type « autostoppeur » dans d'anciennes courses) |
+| Bases et infrastructure | Oui | La base d'un coéquipier près d'un rendez-vous est une ancre de téléportation et un point de plein gratuite pour tous |
+| Combat et ressources | Oui | La puissance de groupe trivialise les jalons de combat ; les ressources en trop s'échangent librement |
+| Jalons communautaires | Oui — mondialement | Ils se regroupent sur tous les joueurs de l'événement, pas seulement votre groupe ; la guerre à trois équipes de The Swarm en 2026 fut cette idée à pleine échelle ([récapitulatif Expédition 22](/expeditions/expedition-22)) |
+
+L'usage correct du multijoueur n'est donc pas la délégation — c'est la logistique. Un groupe synchronisé traverse la même route de rendez-vous ensemble, partage des bases comme ancres de téléportation, mutualise carburant et ressources fabriquées, et fait fondre des jalons de combat qui coûteraient chacun des minutes à un joueur solo. Deux joueurs voyageant ensemble finissent généralement plus vite que chacun seul, même si aucun ne complète les objectifs de l'autre. Et si vous jouez solo, rien de tout cela n'est requis : chaque jalon à saveur multijoueur de l'histoire des expéditions a été optionnel pour la complétion de phase.
+
+## Priorité d'amélioration : les emplacements avant la puissance de feu
+
+Les sauvegardes d'expédition démarrent tout le monde sur des équipements curatés, ce qui veut dire que votre ordre d'amélioration compte plus que votre matériel de départ. Quand les récompenses de jalons et le stock de boutique vous forcent à choisir, dépensez dans cet ordre :
+
+1. **Emplacements généraux d'exocombinaison.** L'inventaire est le goulot universel — chaque jalon de récolte, cuisine et excavation va plus vite avec plus de cargaison. Achetez l'emplacement disponible à chaque station spatiale et touchez les capsules de survie croisées sur les planètes.
+2. **Portée d'hyperpropulseur.** Des distorsions plus longues, c'est moins de distorsions. Installez chaque module de propulsion offert par la course avant de quitter un amas de systèmes.
+3. **Économie de carburant de lancement.** Rien ne brûle un planning comme des boucles de plein sur une planète dont vous aviez fini. Des améliorations du système de lancement et l'habitude de remplir le carbone avant d'atterrir règlent ça définitivement.
+4. **Des fournitures de protection, pas du neuf.** Sodium, batteries ioniques et protection chargée battent le shopping de technologie de combinaison dans presque tous les jalons de climat.
+5. **Les armes en dernier.** Les jalons de combat sont courts et indulgents ; n'investissez que quand une rencontre précise l'exige.
+
+Résistez à l'envie d'acheter un meilleur vaisseau en pleine course. L'équipement de l'expédition plus les récompenses réclamées suffit à finir chaque course à ce jour — traitez la chasse au vaisseau comme une activité d'après-expédition pour votre sauvegarde principale et notre sélection des [meilleurs vaisseaux](/starships/best-ships).
+
+## La liste de préparation des blocages
+
+Certains types de jalons ont bloqué des courses dans chaque expédition depuis le lancement du format. Aucun n'est dur ; tous sont lents si vous les rencontrez sans préparation. Voici la liste de contrôle avant vol pour chacun :
+
+| Blocage récurrent | Pourquoi ça bloque | La préparation |
+| --- | --- | --- |
+| Objectifs d'endurance météo | Tempêtes et pics de chaleur suivent leur propre horloge, pas la vôtre | Arrivez avec la protection entièrement chargée ; faites les objectifs de scan ou récolte à proximité pendant l'attente au lieu de fixer le ciel |
+| Ressources de tempête seulement | Certains matériaux ne se récoltent que pendant les tempêtes | Intégrez-les à la même attente météo — ne planifiez jamais un trajet séparé |
+| Chaînes de cuisine et de traitement | Les recettes en plusieurs étapes exigent des précurseurs que vous n'aurez pas sur vous | Lisez les exigences de recettes dans la liste de jalons au départ ; récoltez les précurseurs passivement en voyageant |
+| Jalons d'apprentissage de mots | Exigent d'interagir avec des pierres de savoir dans la durée | Touchez chaque pierre de savoir et monolithe croisé dès la première minute — cela banque de la progression gratuitement |
+| Scan de faune rare | Certains jalons de découverte exigent des types de créatures peu communs | Scannez tout ce qui bouge tôt ; la progression partielle de découverte porte jusqu'aux phases tardives |
+| Rencontres de combat scriptées | Les jalons façon boss punissent l'arrivée sans préparation | Arrivez avec armes, boucliers et carburant de lancement chargés ; une mort coûte un trajet complet retour |
+
+Le fil commun : les blocages punissent ceux qui les rencontrent à froid. Dix minutes avec la liste de jalons au terminal vous disent lesquels votre course contient et où ils se trouvent, et chacun peut être préchargé sur des voyages que vous faisiez de toute façon.
+
+## Le planning en deux jours
+
+Voici à quoi ressemble un clear confortable en deux jours, budgété à l'heure. Il suppose un rythme normal, aucune expérience préalable de la course précise, et une route communautaire du premier jour ouverte dans un onglet — des routes optimisées apparaissent sur Reddit et YouTube dans les jours qui suivent chaque lancement, et même un squelette léger en spoilers fait gagner des heures.
+
+| Bloc | Budget | Ce que vous finissez |
+| --- | --- | --- |
+| Jour 1, session 1 | 2–3 heures | Démarrez la sauvegarde, lisez la liste complète de jalons, planifiez la route, franchissez toute la première phase plus la moitié de la deuxième autour du système de départ et du premier rendez-vous |
+| Jour 1, session 2 | 2 heures | Enchaînez les deux points de rendez-vous suivants, réclamez et installez tout, banquez les jalons passifs (scans, pierres, photos) en traversant les planètes |
+| Jour 2, session 1 | 2–3 heures | Atteignez le rendez-vous de la phase finale, franchissez les seuils restants, rattrapez les jalons bloquants que vous banquiez |
+| Jour 2, session 2 | 1 heure | Jalon final, balayage complet de réclamation au terminal — vérifiez que chaque phase affiche réclamée — puis chargez votre sauvegarde principale et récupérez les objets débloqués auprès du Compagnon de synthèse de vif-argent |
+
+Total : sept à neuf heures sur deux jours, ce qui absorbe confortablement une mauvaise attente de tempête, un bug et une session qui s'épuise. Compressez les blocs en une seule journée et vous avez le clear optimisé standard de deux à quatre heures ; étirez-le et vous êtes exactement là où vit la course tranquille de six à dix heures.
+
+## Ce qu'enseignent les records de speedrun
+
+Le speedrun d'expédition dans No Man's Sky est une vraie discipline documentée — speedrun.com maintient des classements pour le format, y compris les catégories course complète et phase individuelle. Le record de l'Expédition 1 : The Pioneers en course complète est à 1 h 29 min 38 s, les records de phase descendent à 34 minutes, et des guides vidéo existent pour boucler des expéditions précises en environ 90 minutes. Les routes communautaires placent régulièrement les courses récentes sur le même territoire : l'expédition Remnant a été largement bouclée en environ trois heures avec une route publiée ([décomposition de la route Remnant](/expeditions/expedition-21-remnant-guide)).
+
+La partie instructive, c'est ce dont ces courses ne dépendent pas : réflexes, compétence de combat ou équipement exotique. Ce sont des artefacts de planification. La connaissance de l'itinéraire, la réclamation agressive et le saut impitoyable expliquent presque tout l'écart entre un clear de quatre-vingt-dix minutes et un clear de dix heures — voilà pourquoi les mêmes méthodes se réduisent parfaitement à un clear tranquille en deux jours. Vous n'entraînez pas des mécaniques ; vous évitez le gaspillage.
+
+## Où appliquer tout ça maintenant
+
+Rien n'est en direct au 18 août 2026 — The Swarm a fermé le 19 juillet, et les notes de la mise à jour anniversaire Cosmos se déploient encore par étapes ([les nouveautés 2026](/guides/new-update-2026)). Hello Games n'a pas annoncé la prochaine course. Les fenêtres réalistes pour appliquer ce manuel : une nouvelle expédition en accompagnement du contenu Cosmos — nous suivons les annonces sur notre page [Expédition 23](/expeditions/expedition-23) — ou le bloc Redux de fin d'automne devenu l'habitude du studio, dont le calendrier attendu est tenu dans le [suivi des expéditions Redux](/expeditions/redux-expeditions-schedule). Quand l'une ou l'autre ouvrira, le manuel ci-dessus s'applique tel quel dès le premier jour.

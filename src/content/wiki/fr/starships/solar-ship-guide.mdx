@@ -1,0 +1,162 @@
+---
+title: "Vaisseaux solaires No Man's Sky : carburant de lancement gratuit et classe S"
+description: "Guide du vaisseau solaire : la recharge du carburant par la voile, où trouver les solaires dans les systèmes hors-la-loi et comment obtenir une classe S."
+category: "starships"
+image: '../../../../assets/covers/starships/solar-ship-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Les solaires rechargent leur carburant de lancement par leurs voiles en vol. On les trouve dans les systèmes hors-la-loi, où ils remplacent la plupart des navettes ; classe S à 5 % de chances fixes."
+tags: ["solar-ship", "outlaws-update", "outlaw-systems", "launch-fuel", "starships", "2026"]
+faq:
+  - question: "Où trouve-t-on les vaisseaux solaires dans No Man's Sky ?"
+    answer: "Le plus sûrement dans les systèmes hors-la-loi, ces systèmes contrôlés par les pirates arrivés en même temps que les solaires dans la mise à jour Outlaws. Les règles documentées par la communauté donnent à un emplacement de navette 85 % de chances d'être un solaire en système hors-la-loi contre 10 % ailleurs. Les solaires apparaissent rarement dans les systèmes ordinaires aussi."
+  - question: "Comment fonctionne réellement la recharge du carburant de lancement ?"
+    answer: "Chaque solaire porte une technologie exclusive, la Vesper Sail. Chaque décollage consomme toujours du carburant au tarif standard, mais la voile recharge photovoltaïquement les propulseurs pendant que vous volez, donc le réservoir se remplit en voyageant. En pratique, vous arrêtez de fabriquer du carburant : pulser entre deux planètes suffit à remplir le réservoir."
+  - question: "Les vaisseaux solaires sont-ils meilleurs que les chasseurs ou les explorateurs ?"
+    answer: "Pas meilleurs, autrement profilés. Un solaire classe S tire un bonus de dégâts d'environ 60 à 75 %, proche du territoire exotique mais sous un chasseur (70 à 90 %), avec une maniabilité égale. Son bonus d'hyperpropulseur reste loin derrière un explorateur, et son inventaire est petit. Les solaires gagnent en confort : zéro entretien de carburant et le meilleur moteur à impulsion du jeu."
+  - question: "Comment obtenir un vaisseau solaire de classe S ?"
+    answer: "Trois voies. Chassez les premières vagues dans les systèmes hors-la-loi, dotés de 5 % fixes de classe S selon la communauté. Payez pour élever la classe d'un solaire moins cher au Terminal d'équipement de vaisseau. Ou fabriquez-en un au Fabricateur de vaisseau avec un corps, une aile, une voile et un cœur de réacteur dont la classe fixe le résultat : un cœur classe S garantit un solaire classe S."
+  - question: "Les vaisseaux solaires ont-ils besoin de soleil ou d'une étoile proche ?"
+    answer: "Non. Malgré le nom, la recharge n'est liée ni à la lumière du jour, ni à la proximité d'une étoile, ni au fait de rester garé au sol. Elle vient du vol. Cela la distingue de l'amélioration Rechargeur de lancement automatique, installable sur tout vaisseau, qui ne restitue qu'un filet de charge en journée, à l'arrêt."
+  - question: "Les vaisseaux solaires acceptent-ils les améliorations normales ?"
+    answer: "Oui. Contrairement aux vaisseaux vivants, les solaires sont des vaisseaux conventionnels : ils acceptent les modules standard de moteur à impulsion, d'armes, de boucliers et d'hyperpropulseur, les Augmentations de stockage et les modules suspects de classe X des stations hors-la-loi. Leur seule pièce exclusive est la Vesper Sail, qui ne s'achète pas et ne se transfère pas."
+---
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Le vaisseau solaire est le spécialiste qualité de vie de No Man's Sky : une carène à voiles frappante qui supprime discrètement l'une des plus vieilles corvées du jeu. Depuis les premiers jours, chaque atterrissage planétaire se termine pareil, avec vous refaisant le plein de carburant de lancement ou grimaçant en voyant le réservoir se rapprocher de zéro. Les vaisseaux solaires, introduits dans la mise à jour Outlaws d'avril 2022 (version 3.85), rechargent eux-mêmes leurs propulseurs de lancement par leurs voiles pendant qu'ils volent. Atterrissez, sortez, construisez une base, revenez une semaine plus tard : le décollage est déjà payé.
+
+Ce trait unique, plus des stats compétitives et l'une des silhouettes les plus distinctives du jeu, a gardé les solaires dans toutes les conversations « quel vaisseau piloter » depuis. Ce guide couvre le fonctionnement de la voile, l'endroit où les solaires apparaissent, les voies pratiques pour décrocher une classe S, le catalogue de pièces et une comparaison honnête avec les chasseurs et les explorateurs.
+
+<StatBar
+  items={[
+    { value: '3.85', label: "Mise à jour Outlaws qui a ajouté les solaires, avril 2022" },
+    { value: '25%', label: 'Carburant de lancement par décollage, régénéré par la voile' },
+    { value: '85%', label: "Chances qu'une navette soit un solaire en système hors-la-loi" },
+    { value: '5%', label: "Chances fixes de classe S dans les systèmes hors-la-loi" },
+  ]}
+/>
+
+<Callout type="tip" title="La recharge vient du vol, pas des étoiles">
+  La voile solaire recharge vos propulseurs de lancement pendant que le vaisseau est en vol, peu
+  importe votre distance à l'étoile la plus proche ou l'heure qu'il est sur la planète en dessous.
+  Si vous atterrissez quelque part et prévoyez une longue session de sauts autour d'une seule
+  planète, le réservoir avec lequel vous arrivez est celui que vous gardez — arrivez donc plein.
+</Callout>
+
+**Dernière mise à jour : 18 août 2026.** Les mécaniques du vaisseau solaire sont pratiquement figées depuis la mise à jour Outlaws, et rien du cycle de correctifs 2026 ne les a touchées à l'heure où nous écrivons. Les stats ci-dessous suivent la documentation actuelle du wiki communautaire ; si la [mise à jour Cosmos](/cosmos-update/cosmos-update-guide) échelonnée change quoi que ce soit de pertinent, ce guide sera révisé aux côtés de notre [suivi des mises à jour 2026](/guides/new-update-2026).
+
+## Qu'est-ce qu'un vaisseau solaire ?
+
+Un vaisseau solaire est une classe de vaisseau high-tech à voiles solaires escamotables qui se déploient automatiquement en vol. Hello Games les a livrés dans la mise à jour Outlaws avec, dans les mots des notes officielles, « des technologies uniques pour un moteur à impulsion rapide et efficace », réparties sur un large éventail de variations procédurales. Ils peuvent techniquement apparaître partout dans la galaxie, mais ils sont spectaculairement plus courants dans les systèmes hors-la-loi contrôlés par les pirates arrivés dans la même mise à jour, et cet appariement n'est pas un accident : les solaires sont la carène signature des flottes pirates.
+
+Quatre choses définissent la classe en pratique :
+
+- **La Vesper Sail.** Chaque solaire porte cette technologie de propulsion exclusive, qui améliore les performances en pulsé et, surtout, permet la recharge automatique du système de lancement par le vol. Elle ne s'achète pas séparément et ne s'installe sur aucune autre classe.
+- **Un petit inventaire, toujours.** Les solaires n'apparaissent que dans le palier petit inventaire, environ 24 à 30 emplacements de cargaison et 13 à 18 emplacements technologiques, extensible jusqu'à un plafond de 110 emplacements de cargaison comme tout vaisseau moderne. C'est la vraie faiblesse de la classe.
+- **Une haute maniabilité.** La même bande d'agilité que les chasseurs et les explorateurs, ce qui les rend agréables à piloter et parfaitement utilisables dans une bagarre.
+- **Une boucle d'acquisition à saveur de pirate.** Vous passerez du temps dans les systèmes hors-la-loi, avec leurs marchés noirs, leurs courtiers de primes et l'absence totale de police spatiale.
+
+On les pilote, les échange et les démonte comme tout autre vaisseau, ce qui les met déjà devant les vaisseaux vivants en flexibilité. Notre [classement des types de vaisseaux](/starships/best-ships) les place comme la voiture quotidienne intelligente plutôt que le spécialiste de fin de partie, et ce cadrage tient face aux chiffres.
+
+## Comment fonctionne la voile solaire : un carburant de lancement que vous ne fabriquez plus
+
+Le carburant de lancement est la taxe silencieuse de chaque atterrissage dans No Man's Sky. Un décollage standard brûle **25 % du réservoir des propulseurs de lancement** (le double en Survie et en Mort permanente), et tant que vous n'installez pas de parade, le remplir signifie fabriquer du carburant de lancement ou nourrir les propulseurs en poussière de ferrite et en di-hydrogène, pour toujours.
+
+La réponse du vaisseau solaire est la **Vesper Sail**, décrite en jeu comme une voile solaire haute performance qui génère un champ électrique dans les voiles elles-mêmes, laissant le vaisseau prendre de la vitesse depuis le vent solaire tout en permettant la « recharge photovoltaïque des systèmes de lancement du vaisseau ». En clair : les décollages coûtent toujours du carburant de lancement au tarif standard, mais pendant que vous volez — croisant en atmosphère, boostant à travers un continent ou pulsant entre planètes — la voile reverse ce carburant. Un saut en pulsé entre deux planètes suffit généralement à arriver plein, c'est pourquoi les propriétaires de solaires arrêtent simplement de penser au carburant de lancement dans l'heure qui suit l'achat.
+
+La voile transporte trois bonus de plus, selon les chiffres documentés par le wiki communautaire : environ **+80 % d'efficacité de carburant du moteur pulsé**, **+15 % de boost** et **+11 % de maniabilité**. Cette combinaison explique qu'on crédite largement aux solaires la **meilleure performance en moteur à impulsion de toutes les classes** : ils pulsent plus vite et plus longtemps à tritium égal, et ils le font en se ravitaillant eux-mêmes.
+
+Soyez précis sur ce que la voile n'est pas. Ce n'est pas le **Rechargeur de lancement automatique**, une amélioration installable sur tout vaisseau qui restitue 4 % par minute dans le réservoir, mais seulement en journée, à l'arrêt. Ce n'est pas non plus l'amélioration **Propulseurs efficaces**, qui réduit le coût de lancement de 20 % mais vous laisse fabriquer du carburant. Ce sont des rustines lentes sur le problème ; la voile supprime le problème. Elle n'est pas transférable non plus : démontez un solaire et la Vesper Sail n'en sort pas comme pièce réutilisable pour votre chasseur.
+
+## Où trouver les vaisseaux solaires : les systèmes hors-la-loi, mode d'emploi
+
+Les solaires suivent les mêmes règles d'apparition ambiante que tout vaisseau PNJ : ils atterrissent aux stations spatiales et aux avant-postes commerciaux, et vous les achetez au pilote. Ce qui change, c'est le mélange. Les règles documentées par la communauté indiquent que chaque système réserve des emplacements à sept designs de navettes, et un vaisseau solaire a **85 % de chances de remplacer une navette dans les systèmes hors-la-loi, contre 10 % partout ailleurs**. Dans un système ordinaire, les solaires sont assez rares pour que des joueurs les prennent pour des exotiques. Dans un système hors-la-loi, ils sont l'essentiel de ce qui se pose.
+
+Trouver les systèmes hors-la-loi est une petite compétence à part :
+
+1. **Équipez un scanner.** Les notes d'Outlaws précisent que les systèmes hors-la-loi s'identifient sur la carte de la galaxie avec un **scanner de Conflit ou un Scanner économique**, deux technologies standard de vaisseau. Achetez l'un ou l'autre chez un marchand de technologie de station si votre vaisseau en manque.
+2. **Lisez la carte.** Les systèmes hors-la-loi n'affichent aucune notation économique là où un système normal liste ses paliers de richesse, avec une autorité pirate au lieu des factions Gek, Korvax ou Vy'keen. Cette ligne d'économie manquante est le signe révélateur.
+3. **Attendez-vous à un autre décor.** Les stations hors-la-loi ont leurs propres PNJ, un Maître des primes qui distribue des missions de piraterie, des marchands du marché noir qui vendent de la contrebande, et un marchand de technologie spécialisé dans les « améliorations suspectes d'après-marché » (modules de classe X, plus bas). Aucune autorité Sentinelle ne patrouille cet espace.
+4. **Planifiez votre itinéraire.** Une bizarrerie documentée des notes de correctif : les stations hors-la-loi ne se rejoignent pas directement en distorsion depuis les stations réglementées, et inversement. Prévoyez un saut supplémentaire par l'espace ouvert en traversant entre territoire pirate et espace civilisé.
+
+Une fois amarré, la boucle de chasse est celle que les chasseurs de vaisseaux pratiquent depuis des années. Chaque système a un pool fixe de designs généré depuis sa graine, donc un système dont les premières vagues d'atterrissage incluent des designs solaires continuera de les produire à chaque visite et à chaque recharge, tandis que la classe et les stats de chaque vaisseau se retirent à chaque atterrissage. Postez-vous à une station ou à un avant-poste, regardez ce qui se pose, et rechargez votre sauvegarde pour brouiller les dés ; la première vague après une recharge est celle qu'il faut vérifier.
+
+Une note pour les multitâches : les systèmes hors-la-loi sont aussi le cœur de la boucle de contrebande. La contrebande achetée à bas prix en station pirate se revend avec une grosse marge en espace réglementé, et les missions de primes paient bien, donc une sortie de chasse aux solaires se finance généralement elle-même. La vie de pirate se marie naturellement avec le recrutement d'escadron et un fretteur, tous deux couverts dans notre [guide des fretteurs](/starships/freighter-guide).
+
+## Comment obtenir un solaire de classe S
+
+Il y a trois voies légitimes vers un solaire de classe maximale, par effort croissant.
+
+**Voie 1 : chassez les 5 %.** Les chances de classe à l'apparition suivent l'économie du système, et les systèmes hors-la-loi ont leur propre ligne dans le tableau : environ **85 % classe C, 5 % B, 5 % A, 5 % S**. Ces 5 % fixes de classe S font plus du double des 2 % d'une économie riche, ce qui fait des systèmes hors-la-loi, contre-intuitif que ce soit, sans doute les meilleurs terrains de chasse à la classe S du jeu. Faites tourner la boucle décrite ci-dessus jusqu'à ce qu'une classe S se pose ; à 5 %, attendez-vous à environ une tous les vingt vaisseaux, et chaque tirage est indépendant.
+
+**Voie 2 : achetez bas, améliorez la classe.** N'importe quel solaire, y compris une classe C bon marché, peut être élevé de classe en classe au **Terminal d'équipement de vaisseau** d'une station spatiale, en retirant des stats vers le haut de la plage de classe pendant que les extensions d'emplacements suivent via les Augmentations de stockage. Vous échangez des unités contre la garantie qui serait autrement des dés, et comme un solaire dont vous aimez le look vaut plus qu'une classe S aléatoire que vous tolérez, plein de chasseurs achètent la carène qu'ils veulent et paient pour la rendre forte.
+
+**Voie 3 : fabriquez exactement ce que vous voulez.** Depuis la mise à jour Orbital, les solaires se construisent de zéro à un **Fabricateur de vaisseau**. La recette est plaisamment littérale : un **corps** solaire, une **aile**, une **voile** et un **cœur de réacteur**. Les pièces viennent du démantèlement de solaires récupérés, et la classe du cœur fixe celle du vaisseau fini, donc un cœur de classe S acheté chez un marchand de technologie de vaisseau vous donne une classe S garantie dans exactement les pièces et les couleurs choisies. Exotiques, vaisseaux vivants et intercepteurs Sentinelle ne se fabriquent pas du tout, ce qui fait discrètement des solaires la classe chassable la plus personnalisable du jeu.
+
+Pour la discipline générale de farm des premières vagues, l'étiquette de recharge et l'économie des emplacements, notre [guide des vaisseaux de classe S](/starships/s-class-ships) couvre la boucle sans distinction de classe, et le [guide des positions de vaisseaux exotiques](/starships/exotic-ship-locations) enseigne le pipeline portails-et-glyphes si vous préférez porter directement vers un solaire documenté par la communauté plutôt que fouiller système par système.
+
+## Pièces, couleurs et vue du cockpit
+
+Les vaisseaux solaires s'assemblent depuis un catalogue de pièces fixe, et le connaître rend le troc de coordination bien plus facile, parce que la communauté nomme chaque pièce. Selon le catalogue communautaire des pièces solaires :
+
+| Emplacement | Options |
+| --- | --- |
+| Forme de corps (6) | Raven, Arachnid (Spider), Marlin, Falcon, Turbofan Fuselage (Grouper), Jackal |
+| Voile (3) | Hex, Crescent, Rectangle |
+| Aile (6) | Razor, Shielded, Double Blade, Starburst, Talon, Grapple |
+| Bout d'aile (5) | Horza, Verta, Tristar, Torpedo, Drill |
+| Couleur de voile (8) | vert, or, violet, cyan, rouge, blanc, orange, bleu |
+
+Chaque attribut est indépendant, les couleurs de carène existent en sous-couches peintes et métalliques, et la forme du corps fixe toute la carapace, du nez aux propulseurs. L'espace de design est énorme, c'est pourquoi la communauté troque les solaires sous forme d'adresses de portail à 12 glyphes plus une description des pièces, la même convention que pour les exotiques.
+
+Deux vérités esthétiques à connaître avant de tomber amoureux à un avant-poste commercial :
+
+**L'animation des voiles est le point.** Les voiles se déploient automatiquement en vol et luisent de la couleur choisie. La plupart des propriétaires passent plus de temps en troisième personne dans un solaire que dans tout autre vaisseau, et on comprend pourquoi.
+
+**La visibilité en première personne est le point sensible de la classe.** Les mêmes voiles si belles de l'extérieur encombrent en partie la ligne de vue du pilote depuis le cockpit. Elles sont semi-transparentes, mais les fils communautaires décrivent la vue à travers elles comme trouble, et certains pilotes en première personne trouvent certaines formes de corps vraiment gênantes. Si vous volez exclusivement en première personne, inspectez la vue cockpit d'un solaire avant d'acheter, ou penchez pour des formes de corps dont les voiles reposent plus bas ou plus à l'extérieur ; les pilotes en troisième personne peuvent ignorer ce paragraphe.
+
+Depuis l'arrivée de la personnalisation des vaisseaux, vous pouvez aussi démonter des vaisseaux pour leurs pièces et reconstruire votre solaire de rêve au fabricateur, en mélangeant n'importe quel corps, voile, ailes et bouts dans une seule carène, puis en la peignant. Le catalogue ci-dessus est effectivement le menu.
+
+## Stats du vaisseau solaire : la comparaison
+
+Les données actuelles du wiki communautaire remettent la classe en perspective à côté de ses rivales les plus proches. Tous les chiffres sont des bonus de type en classe S ; la portée d'hyperpropulseur de base démarre à 101 années-lumière pour tout le monde avant que bonus et améliorations ne se multiplient.
+
+| | Solaire | Chasseur | Explorateur | Exotique |
+| --- | --- | --- | --- | --- |
+| Maniabilité | Haute (387,5–445) | Très haute (387,5–445) | Haute (387,5–445) | Haute (387,5–445) |
+| Bonus de dégâts classe S | +60–75% | +70–90% | Aucun bonus | +50–75% |
+| Bonus de bouclier classe S | +23–50% | +24–38% | +30–40% | +70–90% |
+| Bonus d'hyperpropulseur classe S | +38–50% | +35–45% | +90–120% | +75–95% |
+| Coût de lancement par décollage | 25%, auto-régénéré | 25% | 12,5% | 25% |
+| Inventaire | Petit seulement (24–30 cargaison) | Petit à grand | Petit à grand | Petit seulement (24–30 cargaison) |
+
+Lu comme un chasseur : un solaire abandonne un peu de dégâts au sommet en échange de ne plus jamais toucher au carburant de lancement et de pulser nettement moins cher. Lu comme un explorateur : pas de match à la portée, parce que le bonus d'hyperpropulseur d'un explorateur est le double ou le triple de celui d'un solaire, et les explorateurs décollent en plus avec la moitié du carburant de lancement. Lu comme un exotique : l'exotique gagne en boucliers et en portée de distorsion avec de grosses marges, mais ne se fabrique pas sur commande, donc le solaire est le trophée du personnalisateur.
+
+Le verdict de notre [classement des meilleurs vaisseaux](/starships/best-ships) survit aux chiffres : les solaires sont des bâtons de stats compétitifs-sans-plus dont les vrais arguments sont comportementaux. Pas de carburant de lancement, le meilleur moteur à impulsion du jeu, une haute agilité et un look que personne d'autre n'a.
+
+## Équiper un vaisseau solaire
+
+Les solaires sont des vaisseaux à technologie conventionnelle, donc l'équipement suit le manuel standard. Achetez des modules d'amélioration de classe S aux marchands de technologie de station pour votre moteur à impulsion, vos armes, vos boucliers et votre hyperpropulseur ; gardez-les adjacents à leurs systèmes parents dans les blocs deux-par-deux désormais familiers pour le bonus d'adjacence ; et empilez les Augmentations de stockage vers le plafond de 110 emplacements de cargaison.
+
+Un pli propre aux hors-la-loi : les marchands de technologie des stations pirates vendent des **modules « suspects » de classe X**, qui tirent n'importe où entre brillant et exécrable. Ils sont bon marché, compatibles avec le pari, et l'accord thématique est parfait avec le vaisseau, donc semez-en quelques-uns et gardez les gagnants. Les modules standard des stations réglementées restent la colonne vertébrale fiable.
+
+Enfin, rappelez-vous que les solaires sont d'excellentes épaves. Une session de chasse produit des vaisseaux en surplus dont les corps, ailes et voiles nourrissent les builds futurs, donc thésaurisez les pièces qui correspondent à votre design cible même quand le vaisseau qui les porte est une classe C que vous ne piloteriez jamais.
+
+## Le vaisseau solaire en vaut-il la peine ?
+
+Si vous jouez comme la plupart des joueurs jouent vraiment — sauter de planète en planète, bâtir des bases, piquer un combat occasionnellement et explorer à longue portée rarement — alors oui, sans hésiter. L'économie de carburant de lancement est une petite taxe qui se compose à travers des centaines d'atterrissages, et le solaire est la seule classe qui l'abolit tout en restant un vaisseau entièrement conventionnel et entièrement améliorable. Les chasseurs qui comparent les alternatives gratuites devraient aussi regarder les [intercepteurs Sentinelle](/starships/sentinel-interceptor-guide), qui ne coûtent qu'un combat sur une planète dissonante, mais un intercepteur ne se fabrique pas sur mesure, et il ne paie pas votre facture de carburant de lancement.
+
+Une note prospective, clairement étiquetée raisonnement plutôt que fait confirmé : le vol interstellaire libre annoncé par la mise à jour Cosmos ferait des longues croisières entre systèmes une vraie activité, et un vaisseau qui ravitaille ses propulseurs de lancement rien qu'en volant en est un bénéficiaire évident. Surveillez le [guide Cosmos](/cosmos-update/cosmos-update-guide) à mesure que les notes échelonnées tombent.
+
+Achetez la forme de corps que vous aimez à la classe que vous pouvez vous permettre, améliorez ou fabriquez votre chemin vers la S, et que chaque atterrissage suivant soit le problème de quelqu'un d'autre.
+
+## Guides liés
+
+- [Les meilleurs vaisseaux de No Man's Sky : chaque type classé](/starships/best-ships)
+- [Vaisseaux de classe S dans No Man's Sky : chassez les meilleurs tirages](/starships/s-class-ships)
+- [Positions des vaisseaux exotiques : portails, glyphes, coordonnées](/starships/exotic-ship-locations)
+- [Guide des intercepteurs Sentinelle : un vaisseau de classe S gratuit](/starships/sentinel-interceptor-guide)
+- [Guide des fretteurs : bases, flottes et expéditions de frégates](/starships/freighter-guide)
+- [Mise à jour Cosmos : le guide complet de l'anniversaire](/cosmos-update/cosmos-update-guide)
+- [Toutes les mises à jour No Man's Sky en 2026](/guides/new-update-2026)
