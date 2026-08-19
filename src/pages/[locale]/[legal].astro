@@ -29,7 +29,12 @@ const LEGAL_TITLES: Record<string, string> = {
   contact: 'Contact',
 };
 
-const { locale: localeParam, legal } = Astro.props as { locale: string; legal: string };
+// Route params come from Astro.params — Astro.props is empty for pages
+// rendered outside their getStaticPaths params (the old props-based read
+// shipped locale legal pages as literal "Not Found" text since the
+// template migration; params is the reliable source).
+const localeParam = Astro.params.locale;
+const legal = Astro.params.legal;
 if (!isLocale(localeParam) || localeParam === defaultLocale) {
   return new Response('Not Found', { status: 404 });
 }
