@@ -40,8 +40,9 @@ const htmlFiles: string[] = [];
   }
 })(DIST);
 
-/** Existing site paths (site is trailingSlash:'never'). "/bosses/x" → exists
- *  if dist/bosses/x/index.html or dist/bosses/x.html exists. */
+/** Existing site paths. "/bosses/x" → exists if dist/bosses/x/index.html or
+ *  dist/bosses/x.html exists. Hrefs are compared slash-agnostic: "/x/" and
+ *  "/x" both resolve ("/x" 308s to the canonical "/x/"). */
 const knownPaths = new Set<string>(['/']);
 for (const file of htmlFiles) {
   const rel = path.relative(DIST, file).replace(/index\.html$/, '').replace(/\.html$/, '');

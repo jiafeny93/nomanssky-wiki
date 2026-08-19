@@ -8,7 +8,9 @@
  *   1. No H1 in the body (`# ...`) — H1 is rendered from frontmatter title.
  *   2. Headings must not skip levels (H2 → H4 without an H3 in between).
  *   3. Images need alt text (`![alt](src)`, empty `![](src)` fails).
- *   4. Internal MD links must not end with "/" (site is trailingSlash:'never').
+ *   4. (removed) No trailing-slash rule on internal MD links — both forms
+ *      resolve ("/path" 308s to the canonical "/path/"); prefer the slashed
+ *      form in new content.
  *
  * Style: warnings don't fail the build; errors exit 1 (can gate CI).
  *
@@ -73,12 +75,6 @@ for (const file of files) {
     for (const m of img) {
       const alt = m.match(/!\[([^\]]*)\]/)?.[1] ?? '';
       if (!alt.trim()) error(file, ln, `image without alt text: ${m.slice(0, 60)}`);
-    }
-
-    // 4. Trailing-slash internal links (trailingSlash: 'never').
-    const links = line.match(/\]\((\/[^)#\s]*\/)\)/g) ?? [];
-    for (const m of links) {
-      error(file, ln, `internal link ends with "/" (trailingSlash never): ${m.slice(0, 60)}`);
     }
   });
 }

@@ -446,43 +446,17 @@ const placeholder = search.placeholder ?? 'Search...';
               showSubResults: true,
               showImages: false,
               showEmptyFilters: false,
-              // Pagefind maps dist/<dir>/index.html → "/<dir>/" (trailing slash).
-              // The site uses trailingSlash:'never', so those URLs 404 on click.
-              // Strip the trailing slash from every result URL before render.
-              processResult: (result) => {
-                if (result?.url) {
-                  result.url = result.url.replace(/\/+$/, '') || '/';
-                }
-                if (result?.meta?.url) {
-                  result.meta.url = result.meta.url.replace(/\/+$/, '') || '/';
-                }
-                return result;
-              },
+              // Pagefind maps dist/<dir>/index.html → "/<dir>/" — exactly
+              // this site's canonical URL form (trailing slash), so result
+              // URLs pass through untouched.
+              processResult: (result) => result,
               translations: {
                 placeholder,
                 zero_results: noResults,
               },
             });
-            // processResult covers main results, but sub-results (nested
-            // anchors like /bosses/emberfang/#section) are rendered separately
-            // and still carry trailing slashes. Intercept all clicks inside
-            // the results area and rewrite the href on the fly.
-            target.addEventListener('click', (e) => {
-              const link = e.target.closest('a[href]');
-              if (!link) return;
-              const href = link.getAttribute('href');
-              if (!href) return;
-              // Normalize: strip trailing slash before a #anchor or at end.
-              // "/bosses/emberfang/" → "/bosses/emberfang"
-              // "/bosses/emberfang/#anchor" → "/bosses/emberfang#anchor"
-              const fixed = href
-                .replace(/\/+(#|$)/, '$1')  // "/.../#anchor" → "/...#anchor", "/.../"  → "/..."
-                || '/';
-              if (fixed !== href) {
-                e.preventDefault();
-                window.location.href = fixed;
-              }
-            });
+            // Sub-result anchors like /bosses/emberfang/#section are correct
+            // as-is under the trailing-slash URL scheme — no click rewrite.
             setTimeout(() => {
               target.querySelector('input')?.focus();
             }, 60);

@@ -43,7 +43,7 @@ describe('SEO helpers', () => {
       expect(json.headline).toBe('Test Article');
       expect(json.datePublished).toContain('2026-01-01');
       expect(json.image).toMatch(/^https?:\/\//);
-      expect(json.mainEntityOfPage['@id']).toMatch(/\/bosses\/test-slug$/);
+      expect(json.mainEntityOfPage['@id']).toMatch(/\/bosses\/test-slug\/$/);
     });
 
     it('uses dateModified when provided, otherwise falls back to datePublished', () => {
@@ -129,10 +129,22 @@ describe('SEO helpers', () => {
       expect(t).toBe("No Man's Sky Freighter Guide: How to Get One Fast");
     });
 
-    it('uses the short name suffix for long titles without the game name', () => {
+    it('uses the short name suffix when only the short one fits the 60-char window', () => {
+      // 41 chars: + " — No Man's Sky Wiki" (20) = 61 > 60, but + " — NMS Wiki" (12) = 53 ≤ 60.
+      const t = pageTitle('Farming Starship Routes for Units Quickly');
+      expect(t).toBe('Farming Starship Routes for Units Quickly — NMS Wiki');
+    });
+
+    it('drops the suffix entirely when even the short one would exceed 60 chars', () => {
       const t = pageTitle('A Very Long Page Title That Goes Well Beyond Fifty Characters');
-      expect(t).toContain('— NMS Wiki');
-      expect(t).not.toContain('No Man');
+      expect(t).toBe('A Very Long Page Title That Goes Well Beyond Fifty Characters');
+    });
+
+    it('is idempotent — an already-suffixed title is returned unchanged', () => {
+      const once = pageTitle('Hello');
+      expect(pageTitle(once)).toBe(once);
+      const shortOnce = pageTitle('Farming Starship Routes for Units Quickly');
+      expect(pageTitle(shortOnce)).toBe(shortOnce);
     });
   });
 });

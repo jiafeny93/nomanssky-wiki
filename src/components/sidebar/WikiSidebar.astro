@@ -56,7 +56,10 @@ const groups = await getDynamicNavigation(locale, nav);
             <ul class="space-y-0.5 border-l border-border pl-3">
               {group.entries.map((entry) => {
                 const href = localizePath(entry.path, locale);
-                const isActive = currentPath === href;
+                // Slash-agnostic compare: currentPath comes from
+                // Astro.url.pathname, whose trailing slash depends on how
+                // the page was requested.
+                const isActive = currentPath.replace(/\/+$/, '') === href.replace(/\/+$/, '');
                 return (
                   <li>
                     <a

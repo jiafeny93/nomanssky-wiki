@@ -257,18 +257,25 @@ export function videoObjectJsonLd(opts: {
 }
 
 /**
- * Build the <title> string with consistent suffix.
+ * Build the <title> string with a suffix that fits the SERP window.
  *
- * Suffix rules (keep titles within the ~60-char SERP display window):
+ * Suffix rules (keep the final title within the ~60-char display window):
  *   - Title already contains the game name → no suffix (brand is present;
  *     article titles like "No Man's Sky Freighter Guide..." stay short).
- *   - Long titles (>50 chars) → shortName suffix (" — NMS Wiki").
- *   - Otherwise → full site name suffix.
+ *   - Full site name suffix if it fits in 60 chars, else the shortName
+ *     suffix (" — NMS Wiki") if that fits, else no suffix at all — a
+ *     complete title beats one truncated by the brand.
+ *   - Idempotent: a title that already carries either suffix (pages may
+ *     call this on an already-processed string) is returned unchanged.
  */
 export function pageTitle(title: string): string {
   if (title.includes(site.game.name)) return title;
-  const suffix = title.length > 50 ? site.shortName : site.name;
-  return title.includes(suffix) ? title : `${title} — ${suffix}`;
+  if (title.includes(site.name) || title.includes(site.shortName)) return title;
+  const withFull = `${title} — ${site.name}`;
+  if (withFull.length <= 60) return withFull;
+  const withShort = `${title} — ${site.shortName}`;
+  if (withShort.length <= 60) return withShort;
+  return title;
 }
 
 /** VideoGame JSON-LD — injected on the homepage for game entity recognition. */

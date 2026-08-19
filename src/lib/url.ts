@@ -8,14 +8,21 @@
 import { defaultLocale, isLocale, type Locale } from '~/i18n/routing';
 import { siteUrl } from '~/config/site';
 
-/** Build a path with the locale prefix applied (or none for default locale). */
+/**
+ * Build a path with the locale prefix applied (or none for default locale).
+ *
+ * All HTML paths carry a trailing slash ("/starships/", "/es/guides/foo/"):
+ * the site builds to directory pages (…/index.html), and Cloudflare Pages
+ * 308-redirects the slashless form to the slashed one. Emitting slashed
+ * URLs everywhere keeps canonical/sitemap/internal links equal to the
+ * final URL after that redirect — no mixed signals for Google.
+ */
 export function localizePath(path: string, locale: Locale): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  if (locale === defaultLocale) return cleanPath;
-  // For the root path "/", avoid producing "/<locale>/" (trailing slash).
-  // The site uses trailingSlash: 'never', so "/ja/" would 404.
-  if (cleanPath === '/') return `/${locale}`;
-  return `/${locale}${cleanPath}`;
+  // Normalize to exactly one trailing slash; "/" stays "/".
+  const slashed = cleanPath === '/' ? '/' : cleanPath.replace(/\/?$/, '/');
+  if (locale === defaultLocale) return slashed;
+  return `/${locale}${slashed}`;
 }
 
 /** Build an absolute URL (with domain) for a path + locale. */
@@ -28,17 +35,17 @@ export function homeUrl(locale: Locale): string {
   return localizePath('/', locale);
 }
 
-/** List page URL for a category + locale. e.g. localizeListPath('bosses', 'en') -> '/bosses' */
+/** List page URL for a category + locale. e.g. listPath('bosses', 'en') -> '/bosses/' */
 export function listPath(category: string, locale: Locale): string {
   return localizePath(`/${category}`, locale);
 }
 
-/** Article detail URL. e.g. detailPath('bosses', 'emberfang', 'en') -> '/bosses/emberfang' */
+/** Article detail URL. e.g. detailPath('bosses', 'emberfang', 'en') -> '/bosses/emberfang/' */
 export function detailPath(category: string, slug: string, locale: Locale): string {
   return localizePath(`/${category}/${slug}`, locale);
 }
 
-/** Tag index URL for a locale. e.g. tagsPath('en') -> '/tags' */
+/** Tag index URL for a locale. e.g. tagsPath('en') -> '/tags/' */
 export function tagsPath(locale: Locale): string {
   return localizePath('/tags', locale);
 }

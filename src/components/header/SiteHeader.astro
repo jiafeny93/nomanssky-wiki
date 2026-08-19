@@ -30,9 +30,15 @@ const nav: Record<string, string> = ui.nav as Record<string, string>;
 
 const headerLocales = availableLocales ?? locales;
 
+// Normalize the request path to the canonical trailing-slash form before
+// comparing or re-prefixing (Astro.url.pathname may be slashless).
+const normPath = currentPath === '/' ? '/' : currentPath.replace(/\/+$/, '/');
+
 const samePagePathFor = (loc: Locale) => {
-  // Strip existing locale prefix, then prepend the new one.
-  const stripped = currentPath.replace(/^\/(ja)(\/|$)/, '/') || '/';
+  // Strip ANY known locale prefix (template residue once hardcoded 'ja'
+  // here, which double-prefixed /es/… → /de/es/…), then re-prefix.
+  const localePrefixRe = new RegExp(`^/(${locales.join('|')})(?=/|$)`);
+  const stripped = normPath.replace(localePrefixRe, '') || '/';
   return localizePath(stripped, loc);
 };
 ---
@@ -54,7 +60,7 @@ const samePagePathFor = (loc: Locale) => {
       {
         NAVIGATION_CONFIG.map((item) => {
           const path = localizePath(item.path, locale);
-          const isActive = currentPath === path || currentPath.startsWith(path + '/');
+          const isActive = normPath === path || normPath.startsWith(path);
           return (
             <a
               href={path}

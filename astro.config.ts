@@ -7,6 +7,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 
 import { locales, defaultLocale } from './src/i18n/routing';
+import { CONTENT_TYPES } from './src/config/navigation';
 
 /**
  * Build a map of page path → lastmod ISO date, read from MDX frontmatter
@@ -45,28 +46,54 @@ function buildLastmodMap(): Map<string, string> {
       const rel = path.relative(base, p).replace(/\.mdx$/, '');
       const [loc, cat, ...rest] = rel.split(path.sep);
       const slugPath = rest.join('/');
-      const articlePath = loc === defaultLocale ? `/${cat}/${slugPath}` : `/${loc}/${cat}/${slugPath}`;
+      // Trailing-slash keys — canonical URLs on this site end with "/".
+      const articlePath =
+        loc === defaultLocale ? `/${cat}/${slugPath}/` : `/${loc}/${cat}/${slugPath}/`;
       map.set(articlePath, date.toISOString());
 
       // List pages: newest article in the category wins.
-      const listPath = loc === defaultLocale ? `/${cat}` : `/${loc}/${cat}`;
-      const existing = map.get(listPath);
+      const listPagePath = loc === defaultLocale ? `/${cat}/` : `/${loc}/${cat}/`;
+      const existing = map.get(listPagePath);
       if (!existing || existing < date.toISOString()) {
-        map.set(listPath, date.toISOString());
+        map.set(listPagePath, date.toISOString());
       }
+
+      publishedCounts.set(`${loc}/${cat}`, (publishedCounts.get(`${loc}/${cat}`) ?? 0) + 1);
     }
   };
   walk(base);
   return map;
 }
 
+/**
+ * Category list pages with zero published articles in a locale render an
+ * "empty" state. They get noindex at render time (ListPage) and are dropped
+ * from the sitemap here — a sitemap should only list indexable URLs.
+ */
+function buildEmptyListPaths(): Set<string> {
+  const empty = new Set<string>();
+  for (const loc of locales) {
+    for (const cat of CONTENT_TYPES) {
+      if ((publishedCounts.get(`${loc}/${cat}`) ?? 0) === 0) {
+        empty.add(loc === defaultLocale ? `/${cat}` : `/${loc}/${cat}`);
+      }
+    }
+  }
+  return empty;
+}
+
+const publishedCounts = new Map<string, number>();
+
 const lastmodMap = buildLastmodMap();
+const emptyListPaths = buildEmptyListPaths();
 
 // https://astro.build/config
 export default defineConfig({
   site: process.env.SITE_URL || 'https://nomanssky.wiki',
   output: 'static',
-  trailingSlash: 'never',
+  // Directory pages are served at "/path/" (CF Pages 308s "/path" → "/path/");
+  // 'always' makes canonical/sitemap/internal links agree with that.
+  trailingSlash: 'always',
   image: {
     // Emit explicit width/height on responsive <Image> output to prevent CLS.
     responsiveStyles: true,
@@ -92,11 +119,25 @@ export default defineConfig({
         defaultLocale,
         locales: Object.fromEntries(locales.map((l) => [l, l])),
       },
-      // Inject <lastmod> from article frontmatter (see buildLastmodMap).
+      // Empty category list pages are noindex — a sitemap must only list
+      // indexable URLs (compare slash-agnostic: filter sees the raw path).
+      filter: (page) => {
+        try {
+          const p = new URL(page).pathname.replace(/\/+$/, '') || '/';
+          return !emptyListPaths.has(p);
+        } catch {
+          return true;
+        }
+      },
+      // Inject <lastmod> from article frontmatter (see buildLastmodMap) and
+      // normalize URLs to the trailing-slash canonical form.
       serialize(item) {
         try {
-          const pagePath = new URL(item.url).pathname;
-          const lm = lastmodMap.get(pagePath);
+          const raw = new URL(item.url);
+          const slashed =
+            raw.pathname === '/' ? '/' : raw.pathname.replace(/\/?$/, '/');
+          item.url = new URL(slashed, raw.origin).href;
+          const lm = lastmodMap.get(slashed);
           if (lm) item.lastmod = lm;
         } catch {
           /* non-URL entries keep default behavior */
