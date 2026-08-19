@@ -1,0 +1,151 @@
+---
+title: "No Man's Sky Nanite Farm: Every Method Ranked by Hourly Rate (2026)"
+description: "How to farm nanites in No Man's Sky: the runaway mould 5:1 refining loop, ship scrapping, suspicious packets, derelict freighters, and every source ranked by yield."
+category: 'guides'
+image: '../../../../assets/covers/guides/nanites-farming.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+tags: ['nanites', 'runaway-mould', 'refining', 'farming', 'currency', 'guides']
+summary: "Runaway Mould refines into nanites at 5:1 — a 9,999 stack is about 2,000 nanites in 20 minutes per refiner. The full curious deposit loop, plus scrapping, packets, derelicts, and every method ranked."
+faq:
+  - question: "What is the fastest way to farm nanites in No Man's Sky?"
+    answer: "For most saves, the runaway mould loop: mine a Curious Deposit, refine the mould at 5:1 across several medium refiners, then teleport away and back to respawn it. With deep unit pockets, scrapping cheap ships or opening suspicious packets converts money into nanites at up to about 30,000 per hour instead."
+  - question: "How many nanites do you get from runaway mould?"
+    answer: "Five Runaway Mould refines into one Nanite Cluster. A full 9,999 stack takes about 20 minutes in a single refiner and yields roughly 2,000 nanites. Run several medium refiners at once beside the deposit and the same clock finishes several stacks."
+  - question: "Can you buy nanites with units?"
+    answer: "Not directly, but two loops convert one into the other. Suspicious Packets at outlaw stations cost about 74,000 units each and open into X-class upgrade modules you sell for nanites, and cheap station ships scrap into modules worth 30 to 1,300 nanites apiece."
+  - question: "Do curious deposits run out of runaway mould?"
+    answer: "No. Teleport off-planet and back to a base at the deposit, or reload a restore point, and the mould balls return in full. Community testing says you need to get more than roughly 600 units away from the deposit for the respawn to trigger."
+  - question: "What refines into nanites in No Man's Sky?"
+    answer: "Runaway Mould at 5:1, Tainted Metal at 1:2, Salvaged Data at 1:15, Platinum at 35:1, and Pugneum at 25:1, plus single-item recipes such as Larval and Hadal Cores at 50, Inverted Mirror at 95, and Hyaline Brain at 230 nanites each."
+  - question: "Did the Cosmos update change nanite farming?"
+    answer: "No. As of August 18, 2026, the staged Cosmos patch notes have not touched refining recipes, module prices, or any nanite source in this guide. The ratios above reflect the live game, and we will revise this page if later notes change anything."
+---
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Units buy ships, freighters, and fleets. Nanites buy power. Every upgrade module worth installing, every blueprint worth owning, and every class upgrade that turns a good hull or multitool into a great one is priced in nanites, and no merchant in the galaxy will sell you nanites for units. If your build has stalled because the technology merchant wants 850 nanites you do not have, you need a farm, not a trade route.
+
+Nanite farming in No Man's Sky splits into seven distinct schools, from a near-afk refiner loop to lawless black-market arbitrage, and they suit completely different saves. This guide covers all of them with the exact refining ratios, ranked by what an hour of each actually returns against its entry barrier and risk. **Last updated: August 18, 2026.** Nothing in the staged Cosmos rollout has changed any mechanic below as of this writing; see the [Cosmos update guide](/cosmos-update/cosmos-update-guide) for what has actually shipped this month.
+
+<StatBar
+  items={[
+    { value: '5:1', label: 'Runaway Mould to nanites in a refiner' },
+    { value: '~2,000', label: 'Nanites per 9,999 mould stack, per refiner' },
+    { value: '30,000/hr', label: 'Community-tested ceiling for ship scrapping' },
+    { value: '~74,000', label: 'Units per suspicious packet at outlaw stations' },
+  ]}
+/>
+
+<Callout type="info" title="Where these numbers come from">
+  Refining ratios and per-item values are documented on the community wikis and have been
+  stable for years. Hourly rates are community-tested estimates rather than official numbers,
+  because Hello Games publishes no economy statistics. Every community-tested figure is
+  flagged inline where it appears, and rates will vary with your playstyle and luck.
+</Callout>
+
+## What Nanites Actually Buy
+
+Before farming, know the sink. Nanites pay for technology merchant stock on every space station, where class-rated upgrade modules for ships, exosuits, and multitools are the staple purchase, with S-class modules carrying the biggest price tags and the best stats. They pay blueprint traders for crafting recipes. They pay the class upgrades that promote a C-class multitool or starship toward S-class at an outfitting terminal, five-figure projects that are the largest nanite sink in most saves. They also cover quieter costs: squadron slots for your freighter, extra companion pet slots, freighter paint options, and the payments Travellers ask for grave locations. If you want the full picture of the units side of the economy, our [money making guide](/guides/money-making-guide) covers it; nanites are the currency that units cannot touch.
+
+## Every Nanite Farm, Ranked
+
+Ranked by realistic hourly return for a mid-game save, with the barrier and risk that come attached:
+
+| Rank | Method | Realistic hourly | Entry barrier | Risk |
+| --- | --- | --- | --- | --- |
+| 1 | Runaway mould refining | 15,000–40,000 (community-tested) | Base building, refiners | None |
+| 2 | Ship scrapping | Up to ~30,000 (community-tested) | 75M+ units bankroll | None |
+| 3 | Suspicious packets | ~20,000–25,000 (community-cited) | Units + outlaw access | None, but stock-limited |
+| 4 | Sentinel hunting | Varies; wiki rates it near scrapping | Combat-ready multitool | High, by design |
+| 5 | Derelict freighters | ~2,500–3,500 per run + units | 5M units per scanner, hazard prep | Moderate |
+| 6 | Nexus missions | A few hundred per mission | Reach the Space Anomaly | None |
+| 7 | Words, scans, discoveries | Passive hundreds to low thousands | None | None |
+
+The top three are production farms; the bottom four are steady income you collect while playing the game normally. Now the detail, starting with the method that out-earns everything per hour of effort at almost no cost.
+
+## The Runaway Mould Loop (Core Method)
+
+Runaway Mould is a junk-tier substance that refines straight into nanite clusters at the best sustained rate of anything you can gather for free. The wiki-documented recipe, unchanged for years:
+
+| Input | Output | Operation | Refiner speed |
+| --- | --- | --- | --- |
+| Runaway Mould ×5 | Nanite Cluster ×1 | Recycle Waste Materials | 0.6 sec per nanite |
+
+Five mould in, one nanite out, one nanite finished every 0.6 seconds. That is 100 nanites a minute, 6,000 an hour, per refiner. Mould stacks to 9,999, so a full stack becomes about 2,000 nanites in roughly 20 minutes per refiner, and the finished nanites convert to currency instantly without occupying inventory slots. Run four refiners at once and the same 20 minutes produces about 8,000 nanites.
+
+The mould comes from Curious Deposits: clusters of glowing spheres sitting on planetary surfaces, visible as a scan target through your Analysis Visor from the air. Land, mine the balls with your mining beam, and the deposit stays empty, until you force a respawn. Here is the complete closed loop:
+
+1. **Find a deposit.** Scan planets from your ship for Curious Deposit markers, or use farm coordinates shared by communities like the Galactic Hub, which publish addresses of dense, tested deposits.
+2. **Build the farm.** Drop a base computer at the deposit, then a Base Teleport Module and as many Medium Refiners as you can place beside the balls. The Medium Refiner blueprint comes from the construction research terminal on the Space Anomaly.
+3. **Mine the first pass.** A rich deposit yields well over 100,000 mould an hour of active mining, community-tested, so 15 to 20 minutes of mining fills every refiner slot and your exosuit.
+4. **Load the refiners.** Each refiner input slot holds a full 9,999 stack. Split your haul across all of them; they run in parallel in real time.
+5. **Force the respawn.** Teleport to a station or another base, then teleport straight back. Community testing says you must be more than roughly 600 units away from the deposit for the respawn to trigger. The balls return in full, ready to mine again while the refiners keep working. Reloading a restore point at a save beacon works too.
+6. **Collect on the cycle.** Every 20 minutes or so, each refiner finishes a stack into about 2,000 nanites. Top them up with freshly mined mould and keep looping.
+
+A one-hour session at a good deposit with three or four refiners running realistically nets 20,000 to 30,000 nanites, and long community sessions with more refiners report past 40,000 an hour during the gathering phase. The refining is the bottleneck, not the mining, which is why the farm design puts refiners at the deposit rather than in your freighter. Because the deposit respawns forever, this is the only top-tier farm with essentially infinite supply and zero inputs beyond your time.
+
+One footnote for the refining database-minded: Runaway Mould is the end of a longer chain. Residual Goop refines to Viscous Fluids to Living Slime to Runaway Mould, each step 1:1, before the final 5:1 into nanites. Buying goop cheap from station vendors and walking it up the chain works, but the chain is slow; the deposit loop exists precisely to skip it.
+
+## Ship Scrapping: Units Into Nanites
+
+Every station has a Starship Outfitting Terminal that dismantles ships you own, and the returns are nanite-denominated. The community-tested rules: scrapping yields one to five upgrade modules, with module grade matching the ship's class, and each module sells to technology merchants for 30 to 1,300 nanites depending on class. You also recover roughly 75 percent of the ship's price in sellable materials, with the caveat that dumping salvage in the same system economy twice crashes its price by as much as 80 percent, so sell across systems.
+
+The loop is simple. Sit in a wealthy 3-star system where better-class ships land, buy cheap arrivals, scrap them, sell the modules, and repeat. With a bankroll of 75 to 200 million units, the community puts this at upwards of 30,000 nanites an hour, the highest verified ceiling of any method. Higher-class ships also roll Storage Augmentations more often; the full scrapping mechanics and how to combine them with an S-class hunt are in our [S-class ships guide](/starships/s-class-ships), which covers that loop end to end.
+
+## Pirate Stations and Suspicious Packets
+
+Outlaw stations in pirate systems run the other great units-to-nanites exchange. The scrap dealer stocks suspicious packets of tech and arms, about five of each per restock, at roughly 74,000 units apiece, or about 320 Tainted Metal. Each packet opens into one random X-class upgrade module. Install the good rolls and sell the rest to technology merchants back on regular stations; unwanted modules convert to nanites on the spot.
+
+The method is fast, safe, and capped only by dealer stock, which restocks on an irregular timer, so serious farmers route between multiple outlaw systems. Community-cited runs put it around 20,000 to 25,000 nanites an hour while stock lasts. You need a Conflict Scanner or galaxy-map filtering to find pirate systems efficiently, plus the unit budget to buy in bulk; the units side of that budget is what our [money making guide](/guides/money-making-guide) is for.
+
+## Derelict Freighters: Loot and Tainted Metal
+
+Procedural horror freighters, boarded using an Emergency Signal Scanner bought from the station scrap dealer for 5 million units (the price climbs with same-day purchases and resets daily; Iteration Helios on the Anomaly gives one free receiver a week), are a nanite farm that also pays units. A typical run yields the equivalent of roughly 2,500 to 3,500 nanites plus 2 to 6 million units in salvage, a Cargo Bulkhead or Salvaged Fleet Unit for your own freighter, and a hold full of Tainted Metal, which refines into nanites at a wiki-documented 1:2.
+
+The nanite sources inside: cargo containers and lockers scattered through the hull, upgrade modules pulled from terminals, and the data logs, which sell to the scrap dealer for nanites or guild standing. Runs take 20 to 30 minutes, hazards and hostile biology included, so the hourly rate lands below the top farms, but nothing else pays nanites, units, and fleet upgrades in the same half hour. Freighter basics are in our [freighter guide](/starships/freighter-guide).
+
+## Nexus Missions: The Steady Drip
+
+The Nexus aboard the Space Anomaly posts rotating missions, and its standard offerings pay out a few hundred nanites each, community reports cluster in the 150 to 400 range, alongside standing. Two mechanical notes make it better than it looks: the reward is randomly nanites or units per mission, so if the board offers units, abandon and re-take until nanite missions appear; and every completion also feeds the daily 400 Quicksilver mission and guild standing, which the [Quicksilver farming guide](/guides/quicksilver-farming) covers separately.
+
+At a few thousand nanites an hour this will never compete with a mould farm, but it is combat-free, system-agnostic income you can run in your first hours of play. When an [expedition](/expeditions/expedition-guide) is live, its milestone tracks have regularly included nanite rewards too, so a returning save can double-dip.
+
+## Sentinel Hunting: Combat Income
+
+Sentinels pay two ways. Destroyed drones drop Combat Supplies, which yield nanites directly alongside Salvaged Glass, and each Salvaged Glass opens into a free upgrade module you can sell. The drops also include Pugneum, which refines at a wiki-documented 25:1, and rare drops like Hyaline Brain, worth 230 nanites refined. In space, Sentinel Interceptors shot down around a station drop nanites outright plus those same brains and glass.
+
+The community wiki rates a well-executed combat loop as rivaling ship scrapping for income. The recipe on the ground: provoke a planet with aggressive sentinels to Wanted level 3, keep the summoner drones alive so waves keep coming, and loot Combat Supplies remotely without breaking position. The barrier is real, a combat-built multitool and comfort under fire, and the risk is the point; this is the farm for players who want the fight to be the content.
+
+## Words, Knowledge Stones, and Discovery Uploads
+
+The faintest school, worth setting straight because it is widely misremembered. Knowledge stones themselves teach vocabulary, not nanites; the wiki is explicit that a stone grants a word of the local language and nothing else. What words actually buy is dialogue: the more of a species' language you know, the more options unlock at monoliths and station NPCs, and those conversations do sometimes pay nanites among their rewards.
+
+The real exploration income is discovery data. Uploading scans pays nanites on every planet, and completing the fauna roster of a planet pays a completion bonus that community testing puts at up to roughly 4,750 nanites, averaging around 2,000, on top of per-creature upload rewards with an upgraded scanner. Add Salvaged Data from buried technology modules, refineable at 1:15, and exploration quietly funds a new save's first module purchases. If you are days one through three of a fresh file, this drip plus Nexus missions is the intended diet; our [beginner guide](/guides/beginner-guide) sequences it.
+
+## Which Farm Fits Your Save
+
+| Your situation | Best farm | Why |
+| --- | --- | --- |
+| First hours, no capital | Nexus missions + discovery uploads + Salvaged Data | Zero barriers, runs from the Anomaly |
+| Mid save, units tight | Runaway mould loop | Free inputs, best rate, one-time setup |
+| Unit millionaire | Ship scrapping or suspicious packets | Convert surplus money at the highest ceilings |
+| Combat build | Sentinel hunting | Income plus the fight itself |
+| Freighter progression | Derelict freighters | Nanites, units, and fleet upgrades together |
+
+Most saves converge on the mould loop eventually, because it is the only farm that scales without consuming anything. Build it once, and every future S-class module is 20 minutes of teleport cycles away.
+
+## Has the 2026 Season Changed Any of This?
+
+Not as of August 18, 2026. The 2026 updates, Remnant, The Swarm, pet battling, and the staged [Cosmos](/cosmos-update/cosmos-update-guide) rollout, have not touched refining recipes, module values, or any farming loop in this guide, per the patch notes published so far. The 2026 timeline is tracked in our [update guide](/guides/new-update-2026), and this page gets revised the moment staged notes change a ratio that matters.
+
+## Related Guides
+
+- [No Man's Sky Money Making Guide: Units for Every Stage](/guides/money-making-guide)
+- [Quicksilver Farming: Every Source Ranked](/guides/quicksilver-farming)
+- [No Man's Sky Beginner Guide: Your First Hours](/guides/beginner-guide)
+- [S-Class Ships: Spawn Odds, Farming & Stats](/starships/s-class-ships)
+- [Freighter Guide: Fleet, Bases, and Upgrades](/starships/freighter-guide)
+- [Expedition Guide: Rewards and Routes](/expeditions/expedition-guide)
+- [Cosmos Update: The Complete Anniversary Guide](/cosmos-update/cosmos-update-guide)
+- [Every No Man's Sky Update in 2026](/guides/new-update-2026)
