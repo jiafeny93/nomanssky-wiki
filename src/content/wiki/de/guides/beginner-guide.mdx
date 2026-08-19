@@ -1,0 +1,148 @@
+---
+title: "No Man's Sky Einsteiger-Guide 2026: Deine ersten 10 Stunden"
+description: "No Man's Sky 2026 für Anfänger: zehn Stunden von der Absturzstelle zum Gratis-Frachter — Reparaturen, erste Basis, frühe Units, erstes Schiff, Warps und Cosmos."
+category: "guides"
+image: '../../../../assets/covers/guides/beginner-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+summary: "Neu in No Man's Sky 2026? Diese Zehn-Stunden-Roadmap deckt die Schiffsreparatur, die erste Basis, die erste Million Units, ein richtiges Raumschiff, Warps und deinen kostenlosen Frachter ab."
+tags: ["beginners", "guides", "getting-started", "2026"]
+faq:
+  - question: "Lohnt sich der Einstieg in No Man's Sky 2026?"
+    answer: "Ja. Das Spiel 2026 ähnelt dem Launch 2016 kaum noch: zehn Jahre und über vierzig kostenlose Updates haben Basenbau, Frachterflotten, Expeditionen, Haustiere und im Mai einen Weltraumkampf-Overhaul gebracht. Das Jubiläumsupdate Cosmos schichtet jetzt interstellaren Freiflug und Sternlandungen obendrauf — Neulinge kommen zum ambitioniertesten Moment des Spiels."
+  - question: "Was soll ich in No Man's Sky zuerst tun?"
+    answer: "Folge der Awakenings-Quest von der Absturzstelle. Sammle Natrium, Sauerstoff, Kohlenstoff, Ferritstaub und Dihydrogen und repariere nur die Starttriebwerke und den Impulsantrieb — Schild und Kanone können warten. Sobald das Schiff fliegt, jage weiter den Questmarkern durch erste Basis und ersten Warp; die Story ist gleichzeitig das Tutorial und zahlt die Baupläne aus, die du brauchst."
+  - question: "Ist es zu spät, 2026 mit No Man's Sky anzufangen?"
+    answer: "Nein. Es gibt kein Rennen, das du verlieren kannst: PvP ist auf normalen Spielständen standardmäßig aus, der Fortschritt von Veteranen konkurriert nie mit deinem, und jeder Planet wird für alle gleich generiert. Alte begrenzte Expeditionen lassen sich vom Terminal der Anomalie nachspielen, und Hello Games wiederholt frühere Expeditionen regelmäßig, damit Neulinge die Exklusivbelohnungen mitnehmen."
+  - question: "Muss ich außer dem Basisspiel etwas kaufen?"
+    answer: "Nein. Es gibt kein DLC, keinen Season Pass und kein Abo — alle über vierzig großen Updates, inklusive Cosmos, sind für jeden gratis, der das Basisspiel besitzt. Kosmetik kaufst du mit Quecksilber, das du im Spiel verdienst, und das Basisspiel selbst geht mehrmals im Jahr stark im Sale."
+  - question: "Welchen Modus soll ein Anfänger wählen: Normal, Kreativ, Überleben oder Permadeath?"
+    answer: "Normal. Das ist die ausgewogene Erfahrung, an der das Spiel getunt ist. Kreativ entfernt alle Kosten und Gefahren, falls du hauptsächlich bauen willst, und die individuellen Schwierigkeitsregler lassen dich jede Herausforderung jederzeit hoch- und runterdrehen — ein Normal-Start verpflichtet dich zu nichts. Überleben und Permadeath hebst du dir für eine spätere Challenge auf."
+  - question: "Kann ich No Man's Sky offline und komplett solo spielen?"
+    answer: "Ja. Das Spiel funktioniert offline, und jedes Mehrspielerelement — andere Reisende sehen, die sozialen Räume der Anomalie, Gruppenmissionen — lässt sich in den Netzwerkeinstellungen abschalten. Alles in diesem Guide, einschließlich der Expeditionen, ist vollständig im Alleingang abschließbar."
+---
+
+import Callout from '~/components/mdx/Callout.astro';
+import StatBar from '~/components/mdx/StatBar.astro';
+
+Du wachst neben einem zerstörten Raumschiff auf einem Planeten, der aktiv versucht, dich zu töten. Das ist die Eröffnungsminute von No Man's Sky seit 2016 — und 2026 begrüßt sie einen größeren Ansturm, als das Spiel seit Jahren gesehen hat: Das zehnjährige Jubiläum fiel auf den 9. August, Hello Games kündigte im selben Atemzug das kostenlose Cosmos-Update an, und zurückkehrende Veteranen und ganz frische Reisende landen Seite an Seite. Mitten darin frisch zu starten ist wirklich ein guter Zeitpunkt — tiefer war das Spiel nie —, aber die ersten Stunden sind genau da, wo neue Spieler straucheln, weil das Tutorial die Knöpfe erklärt und nicht den Plan.
+
+**Zuletzt aktualisiert: 18. August 2026**, aktuell durch die gestaffelten Cosmos-Patchnotes (unser [Cosmos-Jubiläumsguide](/cosmos-update/cosmos-update-guide) trackt jedes bestätigte Detail). Diese Seite ist der Plan: eine Zehn-Stunden-Roadmap von der Absturzstelle zum voll raumfahrenden Spielstand — Schiff reparieren, Basis beanspruchen, erste Million Units verdienen, ein Raumschiff bekommen, das den Namen verdient, warpen lernen und einem Piraten einen Frachter gratis abnehmen. Jede Stufe endet dort, wo unsere Deep-Dive-Guides beginnen — du kannst also jederzeit aus der Roadmap in die Tiefe abzweigen, sobald ein System klick macht.
+
+<StatBar
+  items={[
+    { value: '10', label: 'Stunden von der Absturzstelle zum eigenen Frachter' },
+    { value: '40+', label: 'Kostenlose große Updates in zehn Jahren' },
+    { value: 'Unter 1%', label: 'Des Universums nach einem Jahrzehnt erkundet' },
+    { value: '9. Aug', label: '2026 — Jubiläumsankündigung des Cosmos-Updates' },
+  ]}
+/>
+
+Die Kurzfassung:
+
+1. **Stunde eins:** Folge der Awakenings-Quest und repariere nur, was sie verlangt — Starttriebwerke, Impulsantrieb, genug Gefahrenschutz, um den Weg dazwischen zu überleben.
+2. **Stunden eins bis drei:** Setze irgendwo, wo es dir gefällt, einen Basis-Computer ab, lerne den Analyse-Visor und sammle von jeder Raumstation, an der du andockst, gratis Exo-Anzug-Slots.
+3. **Stunden drei bis sechs**: Verwandle Scans und Oberflächenfunde in deine ersten Millionen Units und gib sie für ein Schiff aus, das sich zu fliegen lohnt, statt für das Wrack, neben dem du aufgewacht bist.
+4. **Stunden sechs bis zehn:** bunker Warp-Zellen, lerne die Weltraumanomalie kennen und errette deinen ersten Frachter aus einem Piratenüberfall — kostenlos.
+5. **Danach:** Expeditionen, Frachterflotten, Exoten und die neuen Cosmos-Features. Der letzte Abschnitt dieses Guides kartiert all das.
+
+## Stunde eins: von der Absturzstelle zum Abheben
+
+Die Eröffnungsmission, Awakenings, ist ein gutes Tutorial in den Klamotten einer Apokalypse. Folg ihr. Sie führt dich durchs Aufladen des Gefahrenschutzes, das Abbauen deiner ersten Ressourcen und die Reparatur des Wracks — und zahlt Baupläne aus, die du den Rest des Spiels nutzt. Der größte Fehler der ersten Stunde ist, den Startplaneten als Zuhause zu behandeln — er ist es nicht, und du sollst nicht bleiben.
+
+Sammle diese fünf Dinge, bevor du dich um irgendetwas anderes kümmerst:
+
+| Ressource | Woher sie kommt | Was sie tut |
+| --- | --- | --- |
+| Natrium | Gelbe Blüten und Kristalle | Lädt den Gefahrenschutz auf |
+| Sauerstoff | Rote Blüten und Pflanzen | Lädt die Lebenserhaltung auf |
+| Kohlenstoff | Bäume, Sträucher und kleine Fauna | Betreibt den Bergestrahl |
+| Ferritstaub | Gestein und große Vorkommen | Wird zu Pure Ferrite und Metal Plating |
+| Dihydrogen | Blaue Kristallcluster | Wird zu Starttreibstoff und Di-Hydrogen Jelly |
+
+**Die Reparaturen, die zählen**, sind die Starttriebwerke und der Impulsantrieb. Die Triebe wollen Pure Ferrite und ein Di-Hydrogen Jelly; der Impulsantrieb will ein Metal Plating und einen Hermetic Seal. Fünfzig Ferritstaub werden zum Pure Ferrite, weitere fünfzig zur Plating, und vierzig Dihydrogen zum Jelly — die Rezept-Hinweise auf dem Bildschirm rechnen das für dich, also ist das vor allem ein Spaziergang durch die Umgebung deiner Absturzstelle. Der Hermetic Seal ist das eine Teil, das du noch nicht craften kannst: Die Quest markiert einen Punkt in der Nähe, wo einer wartet, und der Weg dorthin verdoppelt sich als dein erster echter Marsch über einen Planeten — und möglicherweise deine erste Begegnung mit den Wächtern, der Roboterpolizei, der du die nächsten hundert Stunden ausweichen wirst.
+
+Alles andere am Wrack — Deflektorschild, Photonenkanone — darf kaputt bleiben. Nur das Wesentliche. Crafte Starttreibstoff, bevor du abhebst (oder füttere die Triebe mit Uran, falls der Planet welches hat), steig und verlass die Atmosphäre. In dem Moment, in dem du per Impuls durchs All rauschen kannst, füttert dich Awakenings weiter mit Markern: Folg ihnen. Die Questkette ist das Tutorial, und wer sie abbricht, endet als neuer Spieler ohne Credits, ohne Baupläne und feststeckend.
+
+<Callout type="warn" title="Dein Startplanet ist ein Wartezimmer">
+  Jede Startwelt ist zufällig, und viele sind erbärmlich — Dauerstürme, hyperaktive Wächter, alles
+  giftig. Baue dein Vermächtnis nicht hier. Repariere das Wesentliche, spiel die Eröffnungs-Quest
+  zu Ende und zieh weiter. Das Universum ist nicht klein: Nach Hello Games' eigener Zählung haben
+  zehn Jahre Spieler gut unter einem Prozent davon erkundet. Innerhalb weniger Warps liegt ein
+  Planet, den du behalten willst.
+</Callout>
+
+## Stunden eins bis drei: erste Basis, Analyse-Visor, gratis Anzug-Slots
+
+Kurz nach dem Abheben händigt dir das Questlog einen **Basis-Computer** aus. Pflanz ihn, wo du wohnen willst, nach drei praktischen Kriterien: Wetter, das du erträgst, Terrain, auf dem du bauen kannst, und eine Aussicht, die du nicht sattbekommst — denn du kannst den Rest des Spiels von jeder Raumstation hierher zurückteleportieren. Deine erste Basis muss nicht ehrgeizig sein — vier Wände, eine Tür, ein Speicherpunkt — und die Basis-Computer-Missionsreihe schaltet das komplette Bau-Forschungssystem nach und nach frei.
+
+Die Währung dieses Systems sind **Geborgene Daten**, und sie sind buchstäblich überall vergraben. Nutze den Analyse-Visor auf einer Planetenoberfläche, und im Scanbild erscheinen Stätten Vergrabener Technologie; grab sie mit dem Terrain-Manipulator aus (die frühen Quests geben ihn dir), und jede liefert Geborgene Daten. Gib sie am Bauforschungs-Terminal in deiner eigenen Basis aus, um Bauteile freizuschalten — Räume, Strom, Lager, Farmen. Zwei oder drei Stätten finanzieren alles, was eine erste Basis braucht.
+
+Der **Analyse-Visor** ist zugleich dein erster Einkommensstrom, und die meisten neuen Spieler nutzen ihn den ganzen ersten Tag zu wenig. Scanne jede neue Kreatur, Pflanze und jedes Mineral, das du siehst: Jede Ersterfassung zahlt Units, und das Hochladen deiner Entdeckungen zahlt ein wenig mehr. Der Multiplikator kommt aus Scanner-Upgrades — kauf Scanner-Module beim Multiwerkzeug-Technologiehändler einer Raumstation und setze sie ein. Ein Stapel guter Module verwandelt einzelne Scans in sechsstellige Auszahlungen und finanziert still deine komplette frühe Spielzeit, während du herumläufst und tust, was du ohnehin getan hast.
+
+Drei weitere Systeme öffnen sich in diesem Fenster:
+
+- **Vokabular.** Sprich mit jedem Alien, das du triffst, und aktiviere jeden Wissensstein, an dem du vorbeikommst. Wörter schalten sich einzeln frei, und zu verstehen, was NPCs sagen, verwandelt zufällige Interaktionen in gratis Loot und Ansehen bei den drei Fraktionen des Spiels.
+- **Exo-Anzug-Inventar.** Jede Raumstation verkauft genau eine Inventar-Erweiterung für den Anzug, und der Preis steigt nur mit der Anzahl, die du besitzt — kauf also die auf jeder Station, die du besuchst. Drop-Pods auf Planeten und das Terminal der Weltraumanomalie legen nach. Inventar ist der wahre Engpass des frühen Spiels; Slots sind das Upgrade, das du sofort spürst.
+- **Die Raffinerie.** Die tragbare Raffinerie aus der Questreihe verwandelt Rohmaterial in besseres Material — Ferritstaub in Pure Ferrite, für den Anfang — und ist die Tür zur gesamten Crafting-Ökonomie später.
+
+Wenn Geld das ist, wovon du mehr willst, ist der nächste Abschnitt der Trichter; unser vollständiger [Geld-Guide](/guides/money-making-guide) rankt jede Methode des Spiels nach Aufwand und Auszahlung, von deiner ersten Stunde bis zu voll passiven Endgame-Farmen.
+
+## Stunden drei bis sechs: deine erste Million und ein richtiges Raumschiff
+
+Units sind die erste Mauer des Spiels: Alles, was du willst — Schiffe, Anzug-Slots, Frachtertechnik — ist in Units bepreist, und die Story-Quests zahlen Taschengeld. Drei Methoden tragen neue Spieler über die Mauer, und welche am besten ist, hängt davon ab, wie deine Ecke der Galaxie aussieht:
+
+| Methode | Wo sie funktioniert | Was sie zahlt |
+| --- | --- | --- |
+| Entdeckungs-Scans | Überall, ab Minute eins | Sechsstellig pro Neufund, sobald Scanner-Module gestapelt sind |
+| Alte Knochen | Planeten, ausgewiesen mit Ancient Bones | Seltene Exemplare verkaufen sich für je rund 1,5 Millionen Units |
+| Sturmkristalle | Extremwetter-Planeten, während aktiver Stürme | Über 200.000 Units pro Kristall, 20 und mehr pro gutem Sturm |
+
+Scannen ist die risikofreie Basislinie, die du schon machst. Alte Knochen verwandeln trockene Fossil-Planeten in Grabungsgelände — bring Terrain-Manipulator und leere Frachtplätze mit. Sturmkristalle tauchen nur während eines tobenden Sturms auf, passen also zu Gefahrenschutz-Upgrades und einem Fluchtplan. Alle drei skalieren mit denselben zwei Dingen: Exo-Anzug-Slots (die du auf jeder Station kaufst) und einem Schiff mit Laderaum — die zweite Hälfte dieser Stufe.
+
+**Kauf dein erstes Schiff nicht zum Vollpreis.** Die Wrack-Reparatur-Ökonomie ist der beste Freund des Anfängers, und es gibt drei kluge erste Upgrades:
+
+| Option | Kosten | Warum es funktioniert |
+| --- | --- | --- |
+| Ein Wrackschiff | Nur Reparaturmaterialien | Finde Wracks mit Notsignal-Karten, repariere das Wesentliche, flieg es oder verschrotte es für Units und Teile |
+| Ein Transporter | Ein paar Millionen Units | Günstig, ausgewogen, ohne fatale Schwäche — das [Schiffsklassen-Ranking](/starships/best-ships) nennt es nicht umsonst den vernünftigen Starter |
+| Ein Wächter-Abfangjäger | Kostenlos | Top-Werte, beansprucht statt gekauft auf dissonanten Planeten — Kampf-gated statt Credit-gated |
+
+Der Abfangjäger verdient das Rampenlicht: Er ist wohl der beste frühe Machtsprung im Spiel, weil der Preis ein Kampf ist statt ein Vermögen. Der komplette Loop — dissonante Systeme finden, Dissonante Resonatoren zerstören, das Wrack beanspruchen — steht in unserem [Wächter-Abfangjäger-Guide](/starships/sentinel-interceptor-guide). Und sobald Units aufhören, Angst zu machen, kauf wie die Veteranen: reiche Drei-Sterne-Wirtschaften, wo sich die [S-Klasse-Spawn-Chancen](/starships/s-class-ships) ungefähr auf rund zwei Prozent verdoppeln. Wenn Starttreibstoff die Steuer ist, die dich am meisten nervt, löscht ein [Solarschiff](/starships/solar-ship-guide) sie irgendwann komplett aus deinem Leben — ein Mid-Game-Kauf, aber gut zu wissen, dass der Ausgang existiert.
+
+Zwei kleinere Währungen beginnen jetzt zu zählen. **Naniten** kaufen Upgrade-Module und Baupläne — Stations-Missionsboards und das Verschrotten ungewollter Schiffe sind die Einstiegsquellen, die effizienten Loops stehen in unserem [Naniten-Farming-Guide](/guides/nanites-farming). **Quecksilber** kauft die spezielle Kosmetik und das Leere-Ei, aus dem ein Lebendes Schiff wächst, und kommt fast ausschließlich aus Gruppenmissionen der Nexus — unser [Quecksilber-Farming-Guide](/guides/quicksilver-farming) behandelt den Wochenrhythmus.
+
+## Stunden sechs bis zehn: Warp-Zellen, die Anomalie und ein Gratis-Frachter
+
+Dein Startsystem ist ein Teich; die Galaxie ist der Punkt. Die Story führt dich durch Hyperantrieb, das Antimaterie-Rezept und das Craften von Warp-Zellen — baue einen kleinen Vorrat und halte ihn, weil frühe Quests und spätere Expeditionen beide voraussetzen, dass du auf Abruf springen kannst. In dem Moment, in dem Warps Routine werden, passieren zwei Dinge, die die Form des Spiels verändern.
+
+Erstens: **Nada und Polo funken dich an**, und du wirst der Weltraumanomalie vorgestellt — der reisenden Station, die du nach der Einführung von überall her rufen kannst. Die Anomalie ist der Hub des Spiels: Technologiehändler, der Quecksilber-Synthese-Begleiter, die Nexus mit ihren Koop-Missionen und — still, in einer Ecke — das Expeditionsterminal. Sie ist auch der Ort, an dem der Hyperantrieb wert wird: Die Modul-Stapelregeln und Reichweiten-Mathematik, die aus einem Startantrieb einen Galaxie-Überquerer machen, behandelt unser [Hyperantrieb-Upgrades-Guide](/starships/hyperdrive-upgrades).
+
+Zweitens: **Du gerätst in Kämpfe, die du nicht angefangen hast.** Nach grob drei Spielstunden und fünf Warps seit deiner letzten Rettung kann ein Warp in ein System dich mitten in einen Piratenüberfall auf einen Kapitalfrachter werfen. Gewinn ihn. Der Kapitän übergibt dir die Schlüssel zum Frachter — kostenlos, ohne Bedingungen. Das ist das größte Einzelgeschenk im Spiel, und es ist so getimet, dass es genau ankommt, wenn ein neuer Spieler eine mobile Operationsbasis braucht.
+
+Das Kleingedruckte ist eine Entscheidung: Das erste Gratis-Angebot ist immer ein Standard-Frachter, während Kapitalklassen — die großen Kriegsveteranen mit 34-plus Flottenslots — nur von späteren Rettungsschlachten kommen, und ab der dritten Rettung sind es immer Kapitale. Den gratis Standard-Frachter sofort mitzunehmen ist eine völlig gute Wahl; dein Zukunfts-Ich zieht vielleicht vor, abzulehnen und den Zyklus Richtung Kapitale laufen zu lassen. So oder so ist ein Frachter (Basen, Fregatten-Expeditionen, passives Einkommen) sein eigenes Spiel — der [Frachter-Guide](/starships/freighter-guide) behandelt das Leben an Bord, und der [Kapitalfrachter-Farming-Guide](/starships/capital-freighter-farming) das gezielte Landen einer S-Klasse-Kapitale.
+
+Hier treten auch **Expeditionen** auf die Bühne: saisonale Läufe auf eigenem Spielstand, mit fester Meilensteinliste und exklusiven Schiff- und Rüstungsbelohnungen. Stand 18. August 2026 läuft keine Expedition — Expedition 22, The Swarm, schloss am 19. Juli —, aber vergangene Expeditionen lassen sich jederzeit vom Anomalie-Terminal nachspielen, und das Jubiläumsupdate macht einen neuen Lauf wahrscheinlich. Lern die zwei Startwege in unserem [Expeditions-Starter-Guide](/expeditions/how-to-start-expedition); der Deep Dive auf Systemebene ist der [große Expeditions-Guide](/expeditions/expedition-guide), und unser [Expedition-23-Tracker](/expeditions/expedition-23) trägt die Ankündigung, sobald sie kommt. In Eile, wenn es so weit ist? Der [Schnellabschluss-Guide](/expeditions/expedition-fast-completion) erklärt Phasen-Schwellen und was du überspringen kannst.
+
+## Zehn Anfängerfehler, die Stunden kosten
+
+| Fehler | Warum es wehtut | Mach stattdessen |
+| --- | --- | --- |
+| Den Startplaneten kolonisieren | Dein erstes System ist zufällig und oft schrecklich | Behandle ihn als Tutorial-Zone; alles innerhalb weniger Warps kann besser sein |
+| Das ganze Startschiff reparieren | Schild und Kanone verbrennen Material, das du für Warps brauchst | Repariere Triebe und Impulsantrieb; sonst nichts |
+| Den Analyse-Visor nie benutzen | Erste-Scan-Units und hochgeladene Entdeckungen laufen an dir vorbei | Scanne jede neue Lebensform, Pflanze und jedes Gestein, überall, für immer |
+| Schiffe früh zum Vollpreis kaufen | Wracks und Transporter machen denselben Job für einen Bruchteil | Beanspruche abgestürzte Hüllen, repariere das Wesentliche, verschrotte den Rest |
+| Exo-Anzug-Terminals auf Stationen auslassen | Inventar ist der wahre frühe Engpass | Ein Slot pro Station, jede Station, bis es wehtut |
+| Die ganze Ladung in einem Verkauf kippen | Märkte crashen den Preis, wenn du sie flutest | Verkaufe in Chargen und verteile große Ladungen auf Systeme |
+
+## Was spielen nach Stunde zehn?
+
+Stunde zehn ist das Ende der Auffahrt, nicht das Spiel — diese Seite existiert für alles danach. Ein paar Richtungen, je nachdem, was dich gezogen hat:
+
+**Die Cosmos-Ära.** Du startest No Man's Sky in der Saison, in der seine zwei ältesten Regeln neu geschrieben werden: direkt zwischen Sternensystemen fliegen statt nur zu warpen, und auf den Sternen selbst landen, mit neuer hitzebeständiger Ausrüstung. Die [Cosmos-Neuheiten-Übersicht](/cosmos-update/cosmos-new-features) trackt jede bestätigte Änderung, der [Interstellarflug-Guide](/cosmos-update/interstellar-flight-guide) vergleicht Freiflug mit dem klassischen Warp-Workflow, den du gerade gelernt hast, und der [Sternlandungs-Guide](/cosmos-update/how-to-land-on-stars) behandelt Anflug und Vorbereitungs-Checkliste. Alles andere, was dieses Jahr ausgeliefert wurde, steht im [2026-Update-Tracker](/guides/new-update-2026).
+
+**Schiffe, die der Jagd wert sind.** Exoten spawnen immer in der S-Klasse und werden per Portaladresse gejagt — der [Exoten-Fundort-Guide](/starships/exotic-ship-locations) lehrt die Glyphen-und-Portal-Pipeline. Lebende Schiffe werden gezüchtet, nicht gekauft, durch die Sterngeburt-Questreihe; der [Lebende-Schiff-Guide](/starships/living-ship-guide) begleitet den ganzen Bogen ab dem Leere-Ei.
+
+**Die Expeditions-Strecke.** Sobald Expedition 23 angekündigt ist, zahlt sich alles aus dem Warp-Abschnitt aus: der [Expeditions-Guide](/expeditions/expedition-guide) fürs System, der [Schnellabschluss-Guide](/expeditions/expedition-fast-completion) fürs Routing und die [Expedition-23-Seite](/expeditions/expedition-23) für den Zeitplan.
+
+Wohin du als Nächstes gehst: Die ersten zehn Stunden haben ihre Arbeit getan — du kannst fliegen, dich finanzieren und eine Richtung wählen. Das ist die ganze Kunst von No Man's Sky — der Rest ist die Wahl, was du in einer Galaxie jagst, die nach zehn Jahren niemand auch nur ansatzweise fertig erkundet hat.

@@ -1,0 +1,161 @@
+---
+title: "No Man's Sky Geld-Guide: Die besten Methoden für Units 2026"
+description: "Units-Methoden 2026 im Ranking: Handelsrouten, Abfangjäger-Verschrottung, Schmuggel, passive Fregatten-Flotten, Craft-Farmen und generfte Metas, die noch zahlen."
+category: "guides"
+image: '../../../../assets/covers/guides/money-making-guide.webp'
+date: 2026-08-18
+lastModified: 2026-08-18
+gameVersion: 'Cosmos'
+summary: "Abfangjäger-Verschrottung und Handelsrouten bringen community-getestet 30-100 Mio. Units pro Stunde, Fregattenflotten täglich 50-70 Mio. — Aktiviertes Indium nur noch ein Sechstel des Vor-Nerf-Werts."
+tags: ["units", "money-making", "trading", "smuggling", "economy", "farming"]
+faq:
+  - question: "Wie verdient man 2026 am schnellsten Units in No Man's Sky?"
+    answer: "Community-getestet vorn: Wächter-Abfangjäger verschrotten und optimierte Handelsrouten. An Harmonic-Lagern gratis beanspruchte Abfangjäger bringen nach dem Verschrotten 30-50 Mio. Units in wenigen Minuten, bevor der Ertrag sinkt; per Teleporter verkettete Routen mit Kauf bei -30% und Verkauf bei +80% liegen bei rund 50 Mio. pro halber Stunde."
+  - question: "Was ist das beste passive Einkommen in No Man's Sky?"
+    answer: "Eine maximal ausgebaute Fregattenflotte mit täglichen Expeditionen ist der stärkste Passiveinkommen-Bringer: Spieler berichten von 50-70 Mio. Units pro Tag plus Handwerk-Materialien. Dahinter: Stasisgerät- und Fusionszünder-Farmen mit etwa 15,6 Mio. Units pro gefertigtem Teil sowie das nach dem Nerf langsamer sprudelnde Aktiviertes Indium, das trotzdem täglich Millionen liefert."
+  - question: "Lohnt sich der Bau einer Aktiviertes-Indium-Farm noch?"
+    answer: "Nur noch der Bequemlichkeit halber. Waypoint hat den Preis von Aktiviertes Indium etwa versechsfacht gedrückt — von rund 949 Units auf etwa 165 pro Stück — und die Förderung hat jetzt abnehmenden Ertrag. Ein großer Extraktorstapel fördert weiterhin Tausende pro Stunde, aber die Ära der Einzelfarm, die eine Milliarde Units finanziert, ist vorbei. Fregattenflotten sind passiv besser."
+  - question: "Ist Schmuggel in No Man's Sky wirklich profitabel?"
+    answer: "Ja, wenn du im richtigen System verkaufst. Konterbande, in Gesetzlosen-Systemen mit Rabatt gekauft, verkauft sich in reichen regulierten Wirtschaften mit dokumentierten Aufschlägen von +150% bis +180% über dem Grundwert; ein Community-Lauf über 60 Gesetzlosen-Stationen per Teleporter machte über 50 Mio. Units in unter zwei Stunden. Am falschen Terminal bleiben nur wenige Prozent."
+  - question: "Wie viele Units kann man maximal besitzen?"
+    answer: "Etwa 4,29 Milliarden Units — das Integer-Limit des Spiels —, mit rund 2 Milliarden als praktischem Maximum für einen einzelnen Verkauf, etwa 130 Stasisgeräte auf einmal. Kaum jemand erreicht die Grenze ohne Farmen; wenn doch, heißen die verbleibenden Währungen Naniten und Quecksilber statt weiterer Units."
+  - question: "Hat das Cosmos-Update die Geldwirtschaft geändert?"
+    answer: "Nein, Stand 18. August 2026. Die Cosmos-Patchnotes erscheinen weiter gestaffelt, und nichts bisher Veröffentlichtes berührt Handel, Preise oder Farmerträge. Die bestätigten Sternlandungen und die hitzebeständige Ausrüstung könnten später neue Handelsgüter bringen — deshalb sind gebunkerte Units bis zur vollständigen Auslieferung eine vernünftige Vorbereitung."
+---
+
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Units sind die am wenigsten exklusive Währung in No Man's Sky — und irgendwie trotzdem die, die jedem neuen Spieler ausgeht. Exo-Anzug-Slots kosten je Hunderttausende, ein gutes A-Klasse-Schiff achtstellig, ein Frachter neunstellig, und die Antwort auf „Kann ich mir das leisten?" ist immer dasselbe Verb: farmen. Der Unterschied zwischen pleite und reich ist nicht die Spielzeit — es ist, eine Methode zu wählen, deren Stundenrate zu deiner Ausrüstung passt, statt die erste gefundene Schleife zu grinden.
+
+Dieser Guide deckt jede gängige Art ab, 2026 in No Man's Sky Geld zu verdienen, gerankt nach dem, was tatsächlich zahlt: Units pro Stunde, Einstiegskosten und ob das Einkommen aktiv oder passiv ist. **Zuletzt aktualisiert: 18. August 2026.** Nichts in der gestaffelten [Cosmos](/cosmos-update/cosmos-update-guide)-Einführung hat die Wirtschaft bisher berührt, und wir kennzeichnen direkt im Text, wo eine Zahl community-getestet statt dokumentiert ist. Neue Spieler sollten mit unserem [Einsteiger-Guide](/guides/beginner-guide) beginnen und um Stunde fünf hierher zurückkommen.
+
+<StatBar
+  items={[
+    { value: '15,6 Mio.', label: 'Units pro verkauftem Stasisgerät oder Fusionszünder' },
+    { value: '50-70 Mio.', label: 'Tägliche passive Units einer maximalen Fregattenflotte' },
+    { value: '-30%/+80%', label: 'Ideale Kauf- und Verkaufsraten auf einer Handelsroute' },
+    { value: '~165', label: 'Stückpreis von Aktiviertes Indium nach dem Waypoint-Nerf' },
+  ]}
+/>
+
+<Callout type="info" title="Woher diese Zahlen stammen">
+  Kauf- und Verkaufsratenbänder, Handwerkspreise und Grundwerte der Items unten entsprechen den
+  Community-Wikis und sind stabil. Stundeneinkommen variiert mit Ausrüstung, Inventar und Geduld,
+  deshalb trägt jede Rate dieser Art das Label community-getestet — behandle sie als das, was echte
+  Spieler berichten, nicht als Versprechen. Der Markt für Handelsgüter stürzt in jedem einzelnen
+  System designbedingt ab; verkaufe und zieh weiter.
+</Callout>
+
+## Wie Geld in No Man's Sky funktioniert
+
+Drei Währungen sind im Umlauf, und sie zu verwechseln kostet Stunden. **Units** kaufen alles Physische: Schiffe, Frachter, Fregatten, Slots, Ressourcen und Handelsgüter. **Naniten** kaufen Upgrade-Module und Baupläne — unser [Naniten-Farming-Guide](/guides/nanites-farming) behandelt diese Ökonomie separat, auch wenn sich beide Schleifen füttern, da Verschrotten in beiden Währungen zahlt. **Quecksilber** kauft Kosmetik und Spezialgegenstände beim Anomalie-Händler und kommt größtenteils aus Missionen — siehe den [Quecksilber-Farming-Guide](/guides/quicksilver-farming), inklusive der Änderung vom Februar 2026, die Quecksilber-Drops vom Zerstören von Eis hinzufügte.
+
+Eine strukturelle Tatsache prägt jede Strategie unten: Das Units-Limit liegt bei etwa **4,29 Milliarden**, und eine einzelne Handelsterminal-Transaktion deckelt bei knapp **2 Milliarden** — rund 130 Stasisgeräte. Theoretisch klingt das Limit, bis deine Farm einen Monat lang durchdruckt. Wer es erreicht, hört auf, Units zu farmen, und fängt an, die anderen beiden Währungen zu farmen — ein vernünftiger Lebensplan.
+
+## Die Methoden 2026 im Ranking auf einen Blick
+
+Die Raten unten sind das, was die Community derzeit für einen ausgerüsteten Spieler berichtet. Deine erste Stunde in jeder Methode wird schlechter aussehen; deine zehnte besser.
+
+| Methode | Units pro Stunde | Einstiegskosten | Stil | Urteil |
+| --- | --- | --- | --- | --- |
+| Abfangjäger-Verschrottung | 30-50 Mio.+ (community-getestet) | Kostenlos, braucht Echo Locator | Aktiv | Beste frühe Rate |
+| Handelsrouten-Loops | 15-50 Mio., optimiert bis ~100 Mio. | Frachtplätze + Wirtschaftsscanner | Aktiv | Bester Allrounder |
+| Schmuggel-Läufe | 25 Mio.+ (community-getestet) | Ein Schiff mit Laderaum | Aktiv | Bestes Risikoflair |
+| Fregatten-Expeditionen | 50-70 Mio. pro Tag, passiv | 30-150 Mio.+ Flotte vorab | Passiv | Beste Langfristinvestition |
+| Stasisgerät-Farmen | ~15,6 Mio. pro Item pro Zyklus | Wochen Aufbau, 250-Naniten-Baupläne | Passive Obergrenze | Bestes Endgame |
+| Fauna-Scans | 5-20 Mio. mit gestapelten S/X-Modulen | Günstige Scanner-Upgrades | Aktiv | Am besten für Entdecker |
+| Aktiviertes Indium | Millionen pro Tag, generft | Extraktorfarm-Bau | Passiv | Gefallene Meta |
+| Chlor-Raffination | 10-50 Mio. mit eigener Sauerstofffarm (community-getestet) | Raffinerien + O2-Hotspot | Semi-passiv | Generft, lebendig |
+| Sturmkristall-Läufe | 5-10 Mio. (community-getestet) | Nur Gefahrenschutz | Aktiv | Gutes Burst-Einkommen |
+| Expeditionsbelohnungen | Vernachlässigbare Units | Zeit | Eventbasiert | Keine Units-Farm |
+
+Jede Zeile bekommt unten einen eigenen Abschnitt, auch die ehrlichen.
+
+## Handelsrouten: der klassische Loop
+
+Handel ist die beabsichtigte Geldmaschine des Spiels, und sie funktioniert noch genau wie designt. Jedes System hat einen Wirtschaftstyp — Bergbau, Handel, Produktion, Technologie, Wissenschaft und so weiter — und jede Wirtschaft verkauft ihre eigenen Waren günstig, während sie für die Waren anderer Wirtschaftstypen einen Aufschlag zahlt. Der Loop: günstig in einer Wirtschaft kaufen, warpen oder teleportieren in die Wirtschaft, die es will, teuer verkaufen, die Waren dieses Systems kaufen und weitermachen, bis dein Laderaum genug hat.
+
+Die Zahlen, auf die du an jedem Stationsterminal achtest, sind die **Kauf- und Verkaufs-Prozentmodifikatoren**. Die dokumentierten Sweet Spots: Waren **-20% bis -30%** unter dem Grundwert kaufen und **+70% bis +80%** darüber verkaufen. Baue einen **Wirtschaftsscanner** in dein Schiff, damit die Galaxiekarte nach reichen 3-Sterne-Wirtschaften filtern kann — dasselbe Modul, das die [S-Klasse-Schiffsjagd](/starships/s-class-ships) trägt —, denn reiche Systeme führen teurere Waren und zahlen die besten Verkaufsraten.
+
+Zwei Mechaniken trennen eine 5-Mio.-Stunde von einer 50-Mio.-Stunde. Erstens: **Verkaufen lässt den lokalen Preis abstürzen**. Kipp eine volle Ladung einer Ware in ein System, und der Preis dieses Systems fällt ab — also einmal verkaufen und weiterziehen. Zweitens: **Teleporter schlagen Warps**. Hast du einmal gute Kauf- und Verkaufssysteme besucht, überspringt das Teleportieren zwischen ihren Stationen Treibstoff, Piraten-Interdiktionen und die meiste Reisezeit. Community-getestete Loops, die jede Station in etwa zwei Minuten abarbeiten — verkaufen, kaufen, teleportieren —, berichten **rund 50 Mio. Units pro halber Stunde**; die klassische warp-getriebene Version älterer Guides brachte etwa 1,7 Mio. pro Stunde, was zeigt, wie viel der Teleporter ausmacht.
+
+## Kostenlose Abfangjäger verschrotten: die beste Rate im Spiel
+
+Der schnellste Units-pro-Minute-Loop 2026 kostet nichts zum Start. Auf dissonanten Planeten enthüllt der Kampf gegen Wächter mit einem **Echo Locator** ein **Harmonic-Lager**, und das Terminal jedes Lagers verweist auf einen abgestürzten **Wächter-Abfangjäger**, den du kostenlos beanspruchen kannst — ohne Kauf, ohne nennenswerte Reparaturkosten. Flieg ihn zum Raumschiff-Outfitting-Terminal einer Raumstation und verschrotte ihn: Selbst C-Klasse-Abfangjäger zahlen soliden Schrottwert, und der Absturzstellen-Zustand macht sie zum Reingewinn. Spieler berichten **30-50 Mio. Units in wenigen Minuten** im Beanspruchen-und-Verschrotten-Zyklus (community-getestet), plus Storage Augmentations und Upgrade-Module als Nebenprodukt.
+
+Kenn die zwei Limits. Der Schrottwert hat **abnehmenden Ertrag**: Wiederholte Beanspruchungen in einer Sitzung wurden mit 22 Mio., dann 18 Mio., dann 16,5 Mio. für identische Schiffe beobachtet — der Loop verfällt, also rotiere Aktivitäten, wenn die Auszahlungen nachlassen. Und der Loop braucht dissonante Systeme, weshalb ein Wirtschaftsscanner oder ein Konfliktniveau-Filter hilft, sie zu ketten. Das ist auch der Units-positive Cousin des Kauf-und-Verschrotten-Loops in unserem [S-Klasse-Schiffsguide](/starships/s-class-ships), wo du Millionen für eine Hülle zahlst und in Slots und Modulen statt in Units profitierst.
+
+## Schmuggel und Piraterie: der Gesetzlosen-Lohn
+
+Das Outlaws-Update baute eine komplette Kriminalwirtschaft, und sie bleibt einer der margenstärksten Handelszweige des Spiels. Gesetzlose Stationen — am Totenkopf-Symbol auf der Galaxiekarte erkennbar — haben einen **Contraband Agent**, der verbotene Waren mit Rabatt verkauft. Transportier die Konterbande in den regulierten Raum und verkauf sie in einer **reichen 3-Sterne-Wirtschaft**: Dokumentierte Aufschläge liegen bei **+150% bis +180%** über dem Grundwert auf Waren wie Banned Weapons mit einem Grundpreis von rund 83.000 Units. Die Marge kollabiert auf niedrige einstellige Prozente, wenn du an einer zufälligen armen Station verkaufst — die Wahl der Verkaufswirtschaft zählt also mehr als die des Kaufs.
+
+Die Risikoseite ist dünner, als der Geschmack vermuten lässt. Piratensysteme können dich im Transit abfangen, aber **direktes Teleportieren zu einem Stationsterminal überspringt feindliche Frachtscans vollständig**, weshalb optimierte Schmuggler alles über Teleporternetzwerke routen. Ein community-getesteter Lauf tourte **60 Gesetzlosen-Stationen in etwa zwei Stunden per Teleporter und machte mehr als 50 Mio. Units** — effektiv eine Handelsroute mit Konterbande statt legaler Waren.
+
+Offene Piraterie zahlt weiterhin schlechter als Schmuggel, braucht aber kein Kapital: Raubzüge auf **Frachtbehälter** von Frachtern im All liefern Handelsgüter und Bergungsgut für den Verkauf an der nächsten Station, und Gesetzlosen-Stationen beherbergen zudem **Bounty Master**, deren Piratenmissionen Units und Upgrades zahlen. Behandle Piraterie als Würze obendrauf statt als Ersatz für den Schmuggel-Loop, und sieh dir unser [Beste-Schiffe-Ranking](/starships/best-ships) für die Jäger an, die die Fahndungshitze überstehen.
+
+## Fregattenflotten: der passive Motor
+
+Sobald du einen Frachter besitzt, machen Fregatten Geld zum Hintergrundprozess. Kaufe Fregatten von den Flotten, die Systeme besuchen (je nach Klasse und Typ grob **1,5 bis 12,5 Mio. Units**), und schicke dann Geschwader von bis zu fünf auf zeitgetaktete Expeditionen von der Frachterbrücke. Expeditionen laufen in Echtzeit fertig, ob du spielst oder nicht, und bringen Units, Handelsgüter, Handwerk-Ressourcen und gelegentlich Fregatten-Upgrades zurück. Einzelne Läufe zahlen üblicherweise **über 12 Mio. Units** (community-getestet), und eine große, gut aufgerüstete Flotte mit mehreren gleichzeitigen Expeditionen bringt Spielern **50-70 Mio. Units pro Tag**, praktisch unbeaufsichtigt.
+
+Der Haken ist die Rampe. Eine Flotte, die jeden Expeditionsslot füllt, kostet mehr, als die meisten Spieler in ihren ersten zwanzig Stunden verdienen; Fregattenwerte müssen gepflegt werden — ausgewogene Werte über Kampf, Erkundung, Industrie, Handel und Support schlagen eindimensionale Schiffe — und Missionen scheitern gelegentlich und beschädigen Schiffe, wenn du zu schwach schickst. Die Belohnung: Fregatten verdienen weiter, während du etwas anderes machst, inklusive der anderen Methoden dieses Guides — deshalb betreiben Endgame-Spieler alle gleichzeitig. Unser [Frachter-Guide](/starships/freighter-guide) behandelt die Flottenlogistik, und der [Kapitalfrachter-Farming-Guide](/starships/capital-freighter-farming) das Ergattern der S-Klasse-Kapitale, die alles trägt.
+
+## Stasisgerät- und Fusionszünder-Farmen: die Obergrenze
+
+Die zwei teuersten Craft-Produkte des Spiels verkaufen sich beide für **etwa 15,6 Millionen Units**, und keins kümmert sich darum, wo du es verkaufst — sie sind gefertigte Produkte, keine Handelsgüter, also greift kein Wirtschaftsbonus und kein Markt stürzt ab. Die Baupläne kommen aus Fabriken und Operationszentralen auf Planeten oder aus dem Synthese-Labor an Bord der Weltraumanomalie für je **250 Naniten**.
+
+Der Haken ist der Rezeptbaum. Ein Stasisgerät verkettet Quantum Processors, Cryogenic Chambers und geheime Zutaten; ein Fusionszünder verkettet Thermalkomponenten und angereicherten Kohlenstoff — und unter allem liegen Gas-Extraktoren, die Radon, Stickstoff und Sulphurine ziehen, plus planetare Farmen mit Früchten wie Frostwort, Solanium und Cactus Flesh. Eine vollständige autarke Basis, die rohes Gas und Sonnenlicht in 15,6-Mio.-Items verwandelt, ist Wochen des Bauens — und genau das ist der Punkt: Es ist der Rentenplan des Spiels. Etablierte Farmen berichten Ernten von zehn und mehr Geräten pro Zyklus — **150 Mio.+ Units pro Lauf** (community-getestet) —, die sich ewig wiederholen, mit nur Raffineriezeit dazwischen. Baue das einmal auf, und Units sind für den Rest deines Spielstands keine Einschränkung mehr.
+
+## Frühes Geld, bevor du irgendwas hast
+
+Die Stunden null bis fünf haben eine eigene Leiter, und sie beginnt mit dem **Analyse-Visor**. Staple S-Klasse-Scanner-Upgrade-Module, und jeder Fauna-Scan zahlt dramatisch — dokumentierte Modulboni erreichen **+8.000% bis +10.000%**, community-getestete X-Klasse-Stapel drücken +30.000%, was **130.000-150.000 Units für einen gewöhnlichen Fauna-Scan** ergibt und das 1,5-Fache für ungewöhnliche. Ein Spaziergang über einen ungescannten Planeten mit gestapeltem Visor ist legitim eine Multi-Millionen-Aktivität — und sie rüstet sich selbst auf: Scan-Geld kauft die Frachtplätze, die jede andere Methode beschleunigen.
+
+Auf Planeten füllen drei Sammel-Loops die Lücke. **Alte Knochen und bergbaufähiger Schrott**-Grabungen zahlen grob **1-2 Mio. Units pro Ladung** (community-getestet) für nichts als einen Terrain-Manipulator und Geduld. **Sturmkristalle**, die nur während Stürmen auf Extremwetter-Planeten spawnen, verkaufen sich in Community-Berichten für rund **100.000+ Units pro Stück** — etwa das Dreifache einer **Gravitino Ball** (~40.000 Grundwert) —, und ihr Einsammeln ruft keine Wächter herbei wie Gravitino Balls. Und Whispering Eggs an verlassenen Gebäuden liefern Larval Cores im Wert schneller Zehntausender früh im Spiel. Keins davon konkurriert mit den großen Loops; alle finanzieren den ersten Frachter-Warp.
+
+## Der Nerf-Friedhof: alte Metas, ehrlich bewertet
+
+Die Wirtschaft jedes langlebigen Spiels hat Geister, und das zu leugnen würde diesen Guide in sechs Monaten unbrauchbar machen. Drei verdienen konkrete Ehrlichkeit.
+
+**Aktiviertes-Indium-Farming war die Meta, und sie ist in großem Maßstab tot.** Vor dem Waypoint-Update verkaufte sich Aktiviertes Indium für etwa 949 Units pro Stück — das teuerste Element des Spiels —, und einzelne Farmen druckten passiv Hunderte Millionen. Der Nerf drückte den Preis grob **versechsfacht auf rund 165 Units**, und die Förderraten leiden jetzt unter abnehmendem Ertrag. Große Extraktorstapel ziehen weiterhin Tausende pro Stunde (ein Community-Aufbau berichtet 9.200 pro Stunde), also tröpfelt die Farm weiter täglich Millionen; sie ist nur nicht mehr die Endgame-Antwort, und neue Spieler sollten ihre erste Woche nicht mit ihrem Bau verbringen.
+
+**Der Sauerstoff-kaufen-Chlor-Loop ist weg; die eigene-Sauerstofffarm-Version überlebt.** Chlor-Expansion — 1 Chlor plus 2 Sauerstoff raffiniert zu 6 — koppelte sich einst mit billig von Handelsterminals gekauftem Sauerstoff zu einem Geld-Drucker ohne Ende. Hello Games entfernte Sauerstoff von den meisten Terminals und stutzte Chlors Wert, was die Kauf-Sauerstoff-Version tötete. Mit eigenem O2-Hotspot und Raffineriebank berichten Community-Spieler weiterhin **10-50 Mio. Units pro Stunde** semi-passiven Outputs. Lebendig, generft, und nicht mehr faul.
+
+**Marktabstürze sind kein Nerf, sondern eine Regel.** Verkauf genug von irgendetwas in einem System, und der Preis kollabiert — deshalb sagt oben jede Handelsmethode „einmal verkaufen, weiterziehen". Loops, die das ignorieren, wirken kaputt und sind es nicht.
+
+## Expeditionsbelohnungen sind keine Units-Farm
+
+Expeditionen verdienen ihren Platz auf dieser Liste hauptsächlich, um Erwartungen zu korrigieren. Ihre Meilenstein-Belohnungen sind überwältigend Kosmetik und accountweite Freischaltungen — danach auf jedem Spielstand gratis über den Quecksilber-Synthese-Begleiter auf der Anomalie einlösbar — und die Belohnungsspuren enthalten gelegentlich verkaufbare Items, typischerweise im niedrigen sechsstelligen Units-Bereich. Das ist ein Rundungsfehler neben einer Stunde Abfangjäger-Verschrottung. Spiel Expeditionen für die exklusive Ausrüstung, mit unserem [Schnellabschluss-Guide](/expeditions/expedition-fast-completion), und prüfe die [Liste der Expeditionsbelohnungen](/expeditions/expedition-rewards-list), was sich zu holen lohnt — nicht für Units.
+
+## Welche Methode solltest du wirklich spielen?
+
+Matche den Loop auf die Phase deines Spielstands:
+
+| Karrierephase | Spiel das | Warum |
+| --- | --- | --- |
+| Stunde 0-5 | Gestapelte Scanner-Module, Knochen, Sturmkristalle | Null Kapital, finanziert die ersten Anzug-Slots |
+| Stunde 5-20 | Abfangjäger-Verschrottung, erste Handelsrouten | 30-Mio.-Stunden ohne Flotte |
+| Stunde 20+ | Schmuggel-Loops dazu, erste Fregatten kaufen | Verwandelt aktives in passives Einkommen |
+| Etabliert | Stasisgerät-Farm über einer maximalen Fregattenflotte | Die permanente 4-Milliarden-Maschine |
+
+Die ehrliche Meta-Antwort: Die reichsten Spieler wählen nicht eine. Sie halten ständig eine Fregattenflotte unterwegs, eine Craft-Farm im Hintergrund am Reifen und Verschrotten oder Handelsrouten für jede Session, in der sie in der nächsten Stunde aktiv Units brauchen.
+
+## Ändert das Cosmos-Update die Wirtschaft?
+
+Noch nicht, und womöglich nie direkt. Stand 18. August 2026 veröffentlicht Hello Games die [Cosmos](/cosmos-update/cosmos-update-guide)-Patchnotes weiter gestaffelt, und nichts bisher Veröffentlichtes berührt Preise, Handelsraten, Farmerträge oder Fregattenerträge. Die Tabellen und Raten oben spiegeln das aktuelle Live-Spiel.
+
+Die plausible Wechselwirkung ist neues Angebot. Bestätigte Sternlandungen mit hitzebeständiger Ausrüstung bedeuten neue Orte — und neue Orte bedeuteten historisch irgendwann neue Ressourcen und Handelsgüter. Das ist Spekulation, keine Patchnote — aber es ist der Grund, warum unser [2026-Update-Tracker](/guides/new-update-2026) rät, Units zu bunkern, bevor die vollständige Auslieferung kommt: Neue Technologie hat immer Währung gekostet, und Cosmos nimmt Form an, mehr davon zu liefern.
+
+## Verwandte Guides
+
+- [S-Klasse-Schiffe: Spawn-Chancen, Farming und Werte](/starships/s-class-ships)
+- [Kapitalfrachter-Farming: Sichere dir ein S-Klasse-Kapitalschiff](/starships/capital-freighter-farming)
+- [Frachter-Guide: Flotten-Grundlagen und Expeditionen](/starships/freighter-guide)
+- [Die besten Schiffe in No Man's Sky im Ranking](/starships/best-ships)
+- [Exoten-Fundorte: Portale, Glyphen, Koordinaten](/starships/exotic-ship-locations)
+- [Expeditionsbelohnungen: Alles Anspruchsberechtigte](/expeditions/expedition-rewards-list)
+- [Expeditionen schnell abschließen](/expeditions/expedition-fast-completion)
+- [Naniten-Farming-Guide](/guides/nanites-farming)
+- [Quecksilber-Farming-Guide](/guides/quicksilver-farming)
+- [Einsteiger-Guide: Deine ersten Stunden](/guides/beginner-guide)
+- [Alle No-Man's-Sky-Updates 2026](/guides/new-update-2026)
+- [Cosmos-Update: Der komplette Jubiläums-Guide](/cosmos-update/cosmos-update-guide)
