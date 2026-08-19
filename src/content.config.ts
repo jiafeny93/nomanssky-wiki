@@ -52,7 +52,7 @@ const wiki = defineCollection({
         .array(
           z.object({
             question: z.string().min(1).max(120),
-            answer: z.string().min(1).max(400),
+            answer: z.string().min(1).max(500),
           }),
         )
         .optional(),
