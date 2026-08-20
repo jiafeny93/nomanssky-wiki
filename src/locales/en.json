@@ -13,8 +13,10 @@
     "cosmos-update": "Cosmos Update",
     "expeditions": "Expeditions",
     "starships": "Starships",
+    "codes": "Codes",
     "multitools": "Multitools",
     "base-building": "Base Building",
+    "bosses": "Bosses",
     "guides": "Guides"
   },
   "search": {
@@ -57,20 +59,20 @@
     },
     "codesFaq": [
       {
-        "question": "How do I redeem codes?",
-        "answer": "Open the game, click the settings gear in the top-right, paste your code into the Redeem Code field, and confirm. Codes are case-sensitive."
+        "question": "Does No Man’s Sky have redeem codes?",
+        "answer": "No. Hello Games has never added a redeem-code system to No Man’s Sky. Free items arrive through Twitch Drops campaigns, expedition rewards, Nexus community missions, and weekend events — any site listing “active NMS codes” is outdated or clickbait."
       },
       {
-        "question": "Why do codes stop working?",
-        "answer": "Codes expire on a schedule set by the developer (usually monthly or tied to update milestones), and some are one-per-account. This page is re-tested regularly."
+        "question": "How do I claim Twitch Drops in No Man’s Sky?",
+        "answer": "Link your Twitch and platform accounts on Hello Games’ official drops page, watch drops-enabled No Man’s Sky streams during a campaign, then claim each reward from your Twitch inventory within 24 hours. In game, collect the items from the Quicksilver Synthesis Companion on the Space Anomaly."
       },
       {
-        "question": "How often are new codes released?",
-        "answer": "New codes typically arrive with each major game update. Bookmark this page and check back after every patch."
+        "question": "Where do I collect free rewards in game?",
+        "answer": "Twitch Drop items are picked up from the Quicksilver Synthesis Companion aboard the Space Anomaly, and expedition rewards are claimed at the expedition terminal on the same station."
       },
       {
-        "question": "Do codes expire?",
-        "answer": "Yes — most codes have an expiry date, shown next to each code. Expired codes move to the expired table below."
+        "question": "Can I still get older expedition rewards?",
+        "answer": "Yes. Every past expedition can be replayed from the Space Anomaly terminal, and Hello Games regularly re-runs limited-time expeditions, so their exclusive ships, multitools, and cosmetics can still be earned."
       }
     ],
     "possiblyOutdated": "This guide was last checked on",
@@ -113,6 +115,10 @@
       "overviewTitle": "No Man's Sky Starship Guides",
       "overviewDescription": "S-class hunting, living ships, solar ships, freighter farming, and hyperdrive upgrade guides."
     },
+    "codes": {
+      "overviewTitle": "No Man’s Sky Codes & Free Rewards",
+      "overviewDescription": "Does No Man’s Sky have redeem codes? No — here is every way free items actually arrive: Twitch Drops, expedition rewards, Nexus community missions, and weekend events."
+    },
     "multitools": {
       "overviewTitle": "No Man's Sky Multitool Guides",
       "overviewDescription": "Royal, experimental, and sentinel multitools — where to find them and how to upgrade them."
@@ -120,6 +126,10 @@
     "base-building": {
       "overviewTitle": "No Man's Sky Base Building Guides",
       "overviewDescription": "Base building tips, electrical wiring, storage containers, and the best planets to build on."
+    },
+    "bosses": {
+      "overviewTitle": "No Man’s Sky Boss Guides",
+      "overviewDescription": "How to beat every boss-level fight in No Man’s Sky: Sentinel Walkers, Sentinel Dreadnoughts, pirate freighter rescues, and derelict freighter horrors."
     },
     "guides": {
       "overviewTitle": "No Man's Sky Guides and Tips",

@@ -13,8 +13,10 @@
     "cosmos-update": "Atualização Cosmos",
     "expeditions": "Expedições",
     "starships": "Naves Estelares",
+    "codes": "Códigos",
     "multitools": "Multiferramentas",
     "base-building": "Construção de Bases",
+    "bosses": "Chefes",
     "guides": "Guias"
   },
   "search": {
@@ -57,20 +59,20 @@
     },
     "codesFaq": [
       {
-        "question": "Como resgato códigos?",
-        "answer": "Abra o jogo, clique na engrenagem de configurações no canto superior direito, cole seu código no campo Resgatar Código e confirme. Os códigos diferenciam maiúsculas de minúsculas."
+        "question": "No Man’s Sky tem códigos para resgatar?",
+        "answer": "Não. A Hello Games nunca adicionou um sistema de códigos para resgatar em No Man’s Sky. Os itens grátis chegam por campanhas de Twitch Drops, recompensas de expedições, missões comunitárias do Nexus e eventos de fim de semana; qualquer site que liste “códigos ativos de NMS” está desatualizado ou é isca de cliques."
       },
       {
-        "question": "Por que os códigos param de funcionar?",
-        "answer": "Os códigos expiram conforme um cronograma definido pelo desenvolvedor (geralmente mensal ou ligado a marcos de atualização), e alguns são um por conta. Esta página é retestada regularmente."
+        "question": "Como resgatar os Twitch Drops de No Man’s Sky?",
+        "answer": "Vincule suas contas do Twitch e da plataforma na página oficial de drops da Hello Games, assista a transmissões de No Man’s Sky com drops ativados durante uma campanha e resgate cada recompensa no seu inventário do Twitch em até 24 horas. No jogo, recolha os itens com o Companheiro de Síntese de Prata Veloz na Anomalia."
       },
       {
-        "question": "Com que frequência novos códigos são lançados?",
-        "answer": "Novos códigos normalmente chegam com cada grande atualização do jogo. Salve esta página como favorita e volte após cada patch."
+        "question": "Onde recolho as recompensas grátis dentro do jogo?",
+        "answer": "Os itens de Twitch Drops são recolhidos com o Companheiro de Síntese de Prata Veloz a bordo da Anomalia, e as recompensas de expedição são resgatadas no terminal de expedições da mesma estação."
       },
       {
-        "question": "Os códigos expiram?",
-        "answer": "Sim — a maioria dos códigos tem data de validade, exibida ao lado de cada código. Códigos expirados passam para a tabela de expirados abaixo."
+        "question": "Ainda dá para conseguir as recompensas de expedições antigas?",
+        "answer": "Dá. Todas as expedições passadas podem ser rejogadas no terminal da Anomalia, e a Hello Games reexecuta com frequência as expedições por tempo limitado, então suas naves, multiferramentas e cosméticos exclusivos continuam obtíveis."
       }
     ],
     "possiblyOutdated": "Este guia foi verificado pela última vez em",
@@ -113,6 +115,10 @@
       "overviewTitle": "Guias de Naves Estelares de No Man's Sky",
       "overviewDescription": "Caça a naves classe S, naves vivas, naves solares, farming de cargueiros e guias de melhoria do hiperpropulsor."
     },
+    "codes": {
+      "overviewTitle": "Códigos e recompensas grátis de No Man’s Sky",
+      "overviewDescription": "No Man’s Sky tem códigos para resgatar? Não — estas são todas as formas reais de conseguir itens grátis: Twitch Drops, recompensas de expedições, missões comunitárias do Nexus e eventos de fim de semana."
+    },
     "multitools": {
       "overviewTitle": "Guias de Multiferramentas de No Man's Sky",
       "overviewDescription": "Multiferramentas reais, experimentais e Sentinela — onde encontrá-las e como melhorá-las."
@@ -120,6 +126,10 @@
     "base-building": {
       "overviewTitle": "Guias de Construção de Bases de No Man's Sky",
       "overviewDescription": "Dicas de construção de bases, cabeamento elétrico, contêineres de armazenamento e os melhores planetas para construir."
+    },
+    "bosses": {
+      "overviewTitle": "Guias de chefes de No Man’s Sky",
+      "overviewDescription": "Como vencer todos os combates de chefe de No Man’s Sky: Andarilhos Sentinela, Dreadnoughts Sentinela, resgates de cargueiros piratas e os horrores dos cargueiros abandonados."
     },
     "guides": {
       "overviewTitle": "Guias e Dicas de No Man's Sky",

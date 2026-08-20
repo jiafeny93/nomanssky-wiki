@@ -13,8 +13,10 @@
     "cosmos-update": "Mise à jour Cosmos",
     "expeditions": "Expéditions",
     "starships": "Vaisseaux",
+    "codes": "Codes",
     "multitools": "Multi-outils",
     "base-building": "Construction de bases",
+    "bosses": "Boss",
     "guides": "Guides"
   },
   "search": {
@@ -57,20 +59,20 @@
     },
     "codesFaq": [
       {
-        "question": "Comment utiliser les codes ?",
-        "answer": "Ouvrez le jeu, cliquez sur l'engrenage des paramètres en haut à droite, collez votre code dans le champ Utiliser un code, puis confirmez. Les codes sont sensibles à la casse."
+        "question": "No Man’s Sky a-t-il des codes à échanger ?",
+        "answer": "Non. Hello Games n’a jamais ajouté de système de codes à échanger dans No Man’s Sky. Les objets gratuits arrivent via les campagnes Twitch Drops, les récompenses d’expédition, les missions communautaires du Nexus et les événements du week-end ; tout site listant des « codes NMS actifs » est obsolète ou du clicbait."
       },
       {
-        "question": "Pourquoi les codes cessent-ils de fonctionner ?",
-        "answer": "Les codes expirent selon un calendrier fixé par le développeur (généralement chaque mois ou lié aux jalons de mise à jour), et certains sont à usage unique par compte. Cette page est revérifiée régulièrement."
+        "question": "Comment récupérer les Twitch Drops de No Man’s Sky ?",
+        "answer": "Reliez vos comptes Twitch et plateforme sur la page officielle des drops de Hello Games, regardez des streams de No Man’s Sky avec drops activés pendant une campagne, puis réclamez chaque récompense dans votre inventaire Twitch sous 24 heures. En jeu, récupérez les objets auprès du Compagnon de synthèse de Vif-argent dans l’Anomalie."
       },
       {
-        "question": "À quelle fréquence de nouveaux codes sont-ils publiés ?",
-        "answer": "De nouveaux codes arrivent généralement avec chaque grande mise à jour du jeu. Ajoutez cette page à vos favoris et revenez après chaque patch."
+        "question": "Où récupérer les récompenses gratuites en jeu ?",
+        "answer": "Les objets Twitch Drops se récupèrent auprès du Compagnon de synthèse de Vif-argent à bord de l’Anomalie, et les récompenses d’expédition se réclament au terminal d’expédition de la même station."
       },
       {
-        "question": "Les codes ont-ils une date d'expiration ?",
-        "answer": "Oui — la plupart des codes ont une date d'expiration, indiquée à côté de chaque code. Les codes expirés passent dans le tableau des codes expirés ci-dessous."
+        "question": "Peut-on encore obtenir les récompenses des anciennes expéditions ?",
+        "answer": "Oui. Chaque expédition passée peut être rejouée depuis le terminal de l’Anomalie, et Hello Games relance régulièrement les expéditions à durée limitée : leurs vaisseaux, multi-outils et cosmétiques exclusifs restent donc obtenables."
       }
     ],
     "possiblyOutdated": "Ce guide a été vérifié pour la dernière fois le",
@@ -113,6 +115,10 @@
       "overviewTitle": "Guides des vaisseaux de No Man's Sky",
       "overviewDescription": "Chasse aux vaisseaux de classe S, vaisseaux vivants, vaisseaux solaires, farm de fretteurs et guides d'amélioration de l'hyperpropulseur."
     },
+    "codes": {
+      "overviewTitle": "Codes et récompenses gratuites de No Man’s Sky",
+      "overviewDescription": "No Man’s Sky a-t-il des codes à échanger ? Non — voici toutes les vraies sources d’objets gratuits : Twitch Drops, récompenses d’expédition, missions communautaires du Nexus et événements du week-end."
+    },
     "multitools": {
       "overviewTitle": "Guides des multi-outils de No Man's Sky",
       "overviewDescription": "Multi-outils royaux, expérimentaux et sentinelles — où les trouver et comment les améliorer."
@@ -120,6 +126,10 @@
     "base-building": {
       "overviewTitle": "Guides de construction de bases de No Man's Sky",
       "overviewDescription": "Astuces de construction, câblage électrique, conteneurs de stockage et meilleures planètes pour construire."
+    },
+    "bosses": {
+      "overviewTitle": "Guides des boss de No Man’s Sky",
+      "overviewDescription": "Comment venir à bout de tous les combats de boss de No Man’s Sky : Marcheurs Sentinelle, dreadnoughts Sentinelle, sauvetages de fretteurs attaqués par des pirates et horreurs des fretteurs abandonnés."
     },
     "guides": {
       "overviewTitle": "Guides et astuces de No Man's Sky",

@@ -13,8 +13,10 @@
     "cosmos-update": "Actualización Cosmos",
     "expeditions": "Expediciones",
     "starships": "Naves estelares",
+    "codes": "Códigos",
     "multitools": "Multiherramientas",
     "base-building": "Construcción de bases",
+    "bosses": "Jefes",
     "guides": "Guías"
   },
   "search": {
@@ -57,20 +59,20 @@
     },
     "codesFaq": [
       {
-        "question": "¿Cómo canjeo códigos?",
-        "answer": "Abre el juego, pulsa el engranaje de ajustes en la esquina superior derecha, pega tu código en el campo de canjear código y confirma. Los códigos distinguen mayúsculas de minúsculas."
+        "question": "¿No Man’s Sky tiene códigos canjeables?",
+        "answer": "No. Hello Games nunca ha añadido un sistema de códigos canjeables a No Man’s Sky. Los objetos gratis llegan mediante campañas de Twitch Drops, recompensas de expediciones, misiones comunitarias del Nexus y eventos de fin de semana; cualquier web que liste «códigos activos de NMS» está desactualizada o busca clics."
       },
       {
-        "question": "¿Por qué dejan de funcionar los códigos?",
-        "answer": "Los códigos caducan según un calendario fijado por el desarrollador (normalmente cada mes o ligado a hitos de actualización) y algunos son de uno por cuenta. Esta página se vuelve a comprobar con regularidad."
+        "question": "¿Cómo consigo los Twitch Drops de No Man’s Sky?",
+        "answer": "Vincula tus cuentas de Twitch y de plataforma en la página oficial de drops de Hello Games, mira streams de No Man’s Sky con drops activados durante una campaña y reclama cada recompensa en tu inventario de Twitch en un plazo de 24 horas. En el juego, recoge los objetos con el Compañero de Síntesis de Azogue en la Anomalía."
       },
       {
-        "question": "¿Con qué frecuencia se publican códigos nuevos?",
-        "answer": "Los códigos nuevos suelen llegar con cada gran actualización del juego. Guarda esta página en favoritos y vuelve tras cada parche."
+        "question": "¿Dónde recojo las recompensas gratis dentro del juego?",
+        "answer": "Los objetos de Twitch Drops se recogen con el Compañero de Síntesis de Azogue a bordo de la Anomalía, y las recompensas de expedición se reclaman en el terminal de expediciones de la misma estación."
       },
       {
-        "question": "¿Los códigos caducan?",
-        "answer": "Sí: la mayoría de los códigos tienen fecha de caducidad, indicada junto a cada uno. Los códigos caducados pasan a la tabla de caducados de abajo."
+        "question": "¿Puedo conseguir todavía las recompensas de expediciones antiguas?",
+        "answer": "Sí. Todas las expediciones pasadas se pueden rejugar desde el terminal de la Anomalía, y Hello Games repite con regularidad las expediciones de tiempo limitado, así que sus naves, multiherramientas y cosméticos exclusivos siguen pudiendo conseguirse."
       }
     ],
     "possiblyOutdated": "Esta guía se comprobó por última vez el",
@@ -113,6 +115,10 @@
       "overviewTitle": "Guías de naves estelares de No Man's Sky",
       "overviewDescription": "Caza de naves clase S, naves vivientes, naves solares, farmeo de cargueros y guías de mejora del hiperturbo."
     },
+    "codes": {
+      "overviewTitle": "Códigos y recompensas gratis de No Man’s Sky",
+      "overviewDescription": "¿No Man’s Sky tiene códigos canjeables? No — estas son todas las vías reales de objetos gratis: Twitch Drops, recompensas de expediciones, misiones comunitarias del Nexus y eventos de fin de semana."
+    },
     "multitools": {
       "overviewTitle": "Guías de multiherramientas de No Man's Sky",
       "overviewDescription": "Multiherramientas reales, experimentales y de centinela: dónde encontrarlas y cómo mejorarlas."
@@ -120,6 +126,10 @@
     "base-building": {
       "overviewTitle": "Guías de construcción de bases de No Man's Sky",
       "overviewDescription": "Consejos de construcción, cableado eléctrico, contenedores de almacenamiento y los mejores planetas para construir."
+    },
+    "bosses": {
+      "overviewTitle": "Guías de jefes de No Man’s Sky",
+      "overviewDescription": "Cómo vencer todos los combates de jefe de No Man’s Sky: Caminantes Centinela, Dreadnoughts Centinela, rescates de cargueros piratas y los horrores de los cargueros abandonados."
     },
     "guides": {
       "overviewTitle": "Guías y consejos de No Man's Sky",
