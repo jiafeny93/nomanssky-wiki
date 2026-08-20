@@ -11,8 +11,14 @@
 import ListPage from '~/components/article/ListPage.astro';
 import ArticlePage from '~/components/article/ArticlePage.astro';
 import { CONTENT_TYPES } from '~/config/navigation';
-import { defaultLocale, locales, type Locale } from '~/i18n/routing';
-import { getEntryWithFallback, parseEntryId, type ResolvedEntry } from '~/lib/content';
+import { defaultLocale, type Locale } from '~/i18n/routing';
+import {
+  getEntryWithFallback,
+  localesForCategory,
+  localesForEntry,
+  parseEntryId,
+  type ResolvedEntry,
+} from '~/lib/content';
 import { detailPath, languageAlternates, listPath } from '~/lib/url';
 
 export async function getStaticPaths() {
@@ -68,13 +74,21 @@ if (view === 'not-found') {
   return new Response('Not Found', { status: 404 });
 }
 
-// Build hreflang alternates for this page.
+// Build hreflang alternates for this page — ONLY for locales that actually
+// have the page's content (mirrors localesForTag on tag pages). Declaring
+// hreflang for a locale whose version doesn't exist points Google at a
+// fallback URL serving English, which breaks the hreflang contract and
+// creates duplicate-content clusters around untranslated articles.
 // List page: /<category> for default locale, /<locale>/<category> otherwise.
 // Article page: /<category>/<slug> (default) or /<locale>/<category>/<slug>.
+const altLocales =
+  view === 'list'
+    ? await localesForCategory(category)
+    : await localesForEntry(category, articleSlug);
 const alternates =
   view === 'list'
-    ? languageAlternates((loc) => listPath(category, loc), locales)
-    : languageAlternates((loc) => detailPath(category, articleSlug, loc), locales);
+    ? languageAlternates((loc) => listPath(category, loc), altLocales)
+    : languageAlternates((loc) => detailPath(category, articleSlug, loc), altLocales);
 ---
 
 {view === 'list' && <ListPage locale={locale} category={category} alternates={alternates} />}

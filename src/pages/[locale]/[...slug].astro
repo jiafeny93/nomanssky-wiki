@@ -12,7 +12,13 @@ import ListPage from '~/components/article/ListPage.astro';
 import ArticlePage from '~/components/article/ArticlePage.astro';
 import { CONTENT_TYPES } from '~/config/navigation';
 import { isLocale, defaultLocale, locales, type Locale } from '~/i18n/routing';
-import { getEntryWithFallback, parseEntryId, type ResolvedEntry } from '~/lib/content';
+import {
+  getEntryWithFallback,
+  localesForCategory,
+  localesForEntry,
+  parseEntryId,
+  type ResolvedEntry,
+} from '~/lib/content';
 import { detailPath, languageAlternates, listPath } from '~/lib/url';
 
 export async function getStaticPaths() {
@@ -96,11 +102,19 @@ if (view === 'not-found') {
   return new Response('Not Found', { status: 404 });
 }
 
-// Build hreflang alternates for this page (same URL shape, varying locale).
+// Build hreflang alternates for this page — ONLY for locales that actually
+// have the page's content (mirrors localesForTag on tag pages). On a
+// fallback URL (English served under this locale's prefix) the requested
+// locale is intentionally absent from the set: that page is noindexed and
+// must not join the hreflang cluster of real translations.
+const altLocales =
+  view === 'list'
+    ? await localesForCategory(category)
+    : await localesForEntry(category, articleSlug);
 const alternates =
   view === 'list'
-    ? languageAlternates((loc) => listPath(category, loc), locales)
-    : languageAlternates((loc) => detailPath(category, articleSlug, loc), locales);
+    ? languageAlternates((loc) => listPath(category, loc), altLocales)
+    : languageAlternates((loc) => detailPath(category, articleSlug, loc), altLocales);
 ---
 
 {view === 'list' && <ListPage locale={locale} category={category} alternates={alternates} />}

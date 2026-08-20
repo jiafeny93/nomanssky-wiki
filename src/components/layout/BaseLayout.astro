@@ -12,7 +12,7 @@
  */
 import '~/styles/globals.css';
 import { site, siteUrl } from '~/config/site';
-import { locales } from '~/i18n/routing';
+import { locales, defaultLocale, OG_LOCALE_MAP } from '~/i18n/routing';
 import { organizationJsonLd, pageTitle } from '~/lib/seo';
 import JsonLd from '~/components/seo/JsonLd.astro';
 import CookieConsent from './CookieConsent.astro';
@@ -101,7 +101,12 @@ const consentLabels = {
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={site.name}
+      href={locale === defaultLocale ? '/rss.xml' : `/${locale}/rss.xml`}
+    />
     <meta name="generator" content={Astro.generator} />
 
     <title>{fullTitle}</title>
@@ -122,7 +127,15 @@ const consentLabels = {
     <meta property="og:image:height" content={String(site.ogImageHeight)} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content={site.name} />
-    <meta property="og:locale" content={locale} />
+    <meta property="og:locale" content={OG_LOCALE_MAP[locale] ?? locale} />
+    {alternates
+      .filter((alt) => alt.hreflang !== 'x-default' && alt.hreflang !== locale)
+      .map((alt) => (
+        <meta
+          property="og:locale:alternate"
+          content={OG_LOCALE_MAP[alt.hreflang as keyof typeof OG_LOCALE_MAP] ?? alt.hreflang}
+        />
+      ))}
 
     {/* Twitter */}
     <meta name="twitter:card" content={article ? 'summary_large_image' : 'summary'} />

@@ -12,6 +12,8 @@ export {
   getEntriesByCategory,
   getAllEntriesByCategory,
   localesForEntry,
+  localesForCategory,
+  categoryCountsByLocale,
   getRecentEntries,
   getRelatedEntries,
   getTagsWithCounts,

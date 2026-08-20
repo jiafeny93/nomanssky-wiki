@@ -138,7 +138,7 @@ const jsonLd = [
   alternates={alternates}
   article={true}
   jsonLd={jsonLd}
-  noindex={entry.data.noindex}
+  noindex={entry.data.noindex || isFallback}
 >
   {/* Reading progress bar (top edge) */}
   <div class="pointer-events-none fixed inset-x-0 top-0 z-50 h-0.5" aria-hidden="true">

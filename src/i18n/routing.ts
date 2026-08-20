@@ -28,6 +28,20 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   pt: 'Português',
 };
 
+/**
+ * Open Graph locale tags (og:locale / og:locale:alternate) require the
+ * `language_TERRITORY` format (e.g. "es_ES") — a bare "es" is malformed and
+ * some social crawlers ignore it. Territory picks the largest audience for
+ * each language (pt → pt_BR).
+ */
+export const OG_LOCALE_MAP: Record<Locale, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  pt: 'pt_BR',
+};
+
 /** Whether the given locale is the default (English, no URL prefix). */
 export function isDefaultLocale(locale: string): boolean {
   return locale === defaultLocale;

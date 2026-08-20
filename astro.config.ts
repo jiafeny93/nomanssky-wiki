@@ -46,6 +46,11 @@ function buildLastmodMap(): Map<string, string> {
       const rel = path.relative(base, p).replace(/\.mdx$/, '');
       const [loc, cat, ...rest] = rel.split(path.sep);
       const slugPath = rest.join('/');
+      // Track which locales have a real file for this article (used to
+      // exclude English-fallback URLs from the sitemap below).
+      const key = `${cat}/${slugPath}`;
+      if (!articleLocales.has(key)) articleLocales.set(key, new Set());
+      articleLocales.get(key)!.add(loc);
       // Trailing-slash keys — canonical URLs on this site end with "/".
       const articlePath =
         loc === defaultLocale ? `/${cat}/${slugPath}/` : `/${loc}/${cat}/${slugPath}/`;
@@ -83,9 +88,30 @@ function buildEmptyListPaths(): Set<string> {
 }
 
 const publishedCounts = new Map<string, number>();
+/** article key (`category/slug`) → locales that have a real published file. */
+const articleLocales = new Map<string, Set<string>>();
 
 const lastmodMap = buildLastmodMap();
 const emptyListPaths = buildEmptyListPaths();
+
+/**
+ * English-fallback article URLs. A default-locale article with no translated
+ * file still renders at /<locale>/<category>/<slug>/ (English fallback, see
+ * i18n fallback rules) — noindexed at render time, excluded from hreflang,
+ * and dropped here so the sitemap only lists indexable URLs.
+ */
+function buildFallbackPaths(): Set<string> {
+  const fallback = new Set<string>();
+  for (const [key, locs] of articleLocales) {
+    if (!locs.has(defaultLocale)) continue;
+    for (const loc of locales) {
+      if (loc === defaultLocale || locs.has(loc)) continue;
+      fallback.add(`/${loc}/${key}`);
+    }
+  }
+  return fallback;
+}
+const fallbackPaths = buildFallbackPaths();
 
 // https://astro.build/config
 export default defineConfig({
@@ -119,12 +145,13 @@ export default defineConfig({
         defaultLocale,
         locales: Object.fromEntries(locales.map((l) => [l, l])),
       },
-      // Empty category list pages are noindex — a sitemap must only list
-      // indexable URLs (compare slash-agnostic: filter sees the raw path).
+      // Empty category list pages and English-fallback article URLs are
+      // noindex — a sitemap must only list indexable URLs (compare
+      // slash-agnostic: filter sees the raw path).
       filter: (page) => {
         try {
           const p = new URL(page).pathname.replace(/\/+$/, '') || '/';
-          return !emptyListPaths.has(p);
+          return !emptyListPaths.has(p) && !fallbackPaths.has(p);
         } catch {
           return true;
         }

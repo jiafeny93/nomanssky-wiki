@@ -135,6 +135,37 @@ export async function localesForEntry(category: string, slug: string): Promise<L
 }
 
 /**
+ * All locales with at least one published article in a category.
+ * Used for list-page hreflang alternates, mirroring localesForTag() —
+ * a locale with zero articles renders a noindexed empty list page, and
+ * hreflang must never point at a noindex URL.
+ */
+export async function localesForCategory(category: string): Promise<Locale[]> {
+  const all = await getCollection('wiki');
+  const found = new Set<Locale>();
+  for (const e of all) {
+    const parsed = parseEntryId(e.id);
+    if (isPublished(e) && parsed?.category === category) found.add(parsed.locale);
+  }
+  return Array.from(found);
+}
+
+/**
+ * Published article count per category for ONE locale (used by the header
+ * nav to hide categories that would only lead to the empty state).
+ */
+export async function categoryCountsByLocale(locale: Locale): Promise<Record<string, number>> {
+  const all = await getCollection('wiki');
+  const counts: Record<string, number> = {};
+  for (const e of all) {
+    const parsed = parseEntryId(e.id);
+    if (!isPublished(e) || parsed?.locale !== locale) continue;
+    counts[parsed.category] = (counts[parsed.category] ?? 0) + 1;
+  }
+  return counts;
+}
+
+/**
  * Recent articles for a locale (for homepage "Recent Updates").
  */
 export async function getRecentEntries(locale: Locale, limit = 6): Promise<WikiEntry[]> {

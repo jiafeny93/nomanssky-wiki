@@ -9,6 +9,7 @@ import { site } from '~/config/site';
 import { type Locale, defaultLocale, locales, LOCALE_LABELS } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { localizePath } from '~/lib/url';
+import { categoryCountsByLocale } from '~/lib/content';
 import ThemeToggle from './ThemeToggle.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import SearchButton from './SearchButton.astro';
@@ -29,6 +30,14 @@ const ui = getUi(locale);
 const nav: Record<string, string> = ui.nav as Record<string, string>;
 
 const headerLocales = availableLocales ?? locales;
+
+// Hide categories this locale has no articles for — a nav link must not
+// lead to the noindexed empty state. (In dev, drafts count, so previewing
+// a draft category keeps it visible.)
+const categoryCounts = await categoryCountsByLocale(locale);
+const navItems = NAVIGATION_CONFIG.filter(
+  (item) => (categoryCounts[item.key] ?? 0) > 0,
+);
 
 // Normalize the request path to the canonical trailing-slash form before
 // comparing or re-prefixing (Astro.url.pathname may be slashless).
@@ -58,7 +67,7 @@ const samePagePathFor = (loc: Locale) => {
     {/* Desktop nav */}
     <nav class="hidden flex-1 items-center gap-1 md:flex">
       {
-        NAVIGATION_CONFIG.map((item) => {
+        navItems.map((item) => {
           const path = localizePath(item.path, locale);
           const isActive = normPath === path || normPath.startsWith(path);
           return (
@@ -112,7 +121,7 @@ const samePagePathFor = (loc: Locale) => {
             <span>{nav.search ?? 'Search'}</span>
           </button>
           {
-            NAVIGATION_CONFIG.map((item) => (
+            navItems.map((item) => (
               <a
                 href={localizePath(item.path, locale)}
                 class="block px-3 py-2 text-sm transition hover:bg-muted"
