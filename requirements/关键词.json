@@ -1,0 +1,110 @@
+{
+  "game": "No Man's Sky",
+  "locale": "en",
+  "totalKeywords": 54,
+  "note": "按SOP规则分类：互斥且穷尽、英文小写文件夹名、剔除'游戏名+wiki'类词、无作弊风险词。定位=更新新词窗口+长尾攻略词。Similarweb/Trends人工源未用，以领域知识+2026-08搜索调研构建。2026-08-17 增补 6 个热点词（十周年/Cosmos 窗口 SERP+社区信号调研）：worth-playing-2026 / switch-2-performance / crossplay-guide / fly-between-solar-systems / no-mans-sky-2 / expedition-23。player-count-record、sale/price 并入现有页段落，不单开；light-no-fire P2 再议。",
+  "categories": [
+    {
+      "name": "cosmos-update",
+      "folder": "cosmos-update",
+      "priority": 1,
+      "comment": "十周年更新新鲜窗口，最高优先级，抢时间上线",
+      "keywords": [
+        {"kw": "no man's sky cosmos update", "slug": "cosmos-update-guide"},
+        {"kw": "no man's sky cosmos new features", "slug": "cosmos-new-features"},
+        {"kw": "no man's sky land on stars", "slug": "how-to-land-on-stars"},
+        {"kw": "no man's sky interstellar flight", "slug": "interstellar-flight-guide"},
+        {"kw": "no man's sky fly between solar systems", "slug": "fly-between-solar-systems"},
+        {"kw": "no man's sky heat resistant gear", "slug": "heat-resistant-gear"},
+        {"kw": "no man's sky cosmos patch notes", "slug": "cosmos-patch-notes"},
+        {"kw": "no man's sky 10th anniversary rewards", "slug": "10th-anniversary-rewards"},
+        {"kw": "no man's sky new update 2026", "slug": "new-update-2026"}
+      ]
+    },
+    {
+      "name": "expeditions",
+      "folder": "expeditions",
+      "priority": 2,
+      "comment": "长青流量主力：每次新远征都有新搜索波峰",
+      "keywords": [
+        {"kw": "no man's sky expedition guide", "slug": "expedition-guide"},
+        {"kw": "no man's sky expedition 21 remnant", "slug": "expedition-21-remnant-guide"},
+        {"kw": "no man's sky expedition rewards", "slug": "expedition-rewards-list"},
+        {"kw": "no man's sky redux expeditions schedule", "slug": "redux-expeditions-schedule"},
+        {"kw": "no man's sky expedition quick completion", "slug": "expedition-fast-completion"},
+        {"kw": "no man's sky how to start expedition", "slug": "how-to-start-expedition"},
+        {"kw": "no man's sky colossus parts unlock", "slug": "colossus-parts-unlock"},
+        {"kw": "no man's sky expedition 22", "slug": "expedition-22"},
+        {"kw": "no man's sky expedition 23", "slug": "expedition-23"}
+      ]
+    },
+    {
+      "name": "starships",
+      "folder": "starships",
+      "priority": 3,
+      "comment": "长青大类：搜'best ship'的意图极强",
+      "keywords": [
+        {"kw": "no man's sky best ship", "slug": "best-ships"},
+        {"kw": "no man's sky s class ship", "slug": "s-class-ships"},
+        {"kw": "no man's sky living ship", "slug": "living-ship-guide"},
+        {"kw": "no man's sky solar ship", "slug": "solar-ship-guide"},
+        {"kw": "no man's sky exotic ship locations", "slug": "exotic-ship-locations"},
+        {"kw": "no man's sky freighter guide", "slug": "freighter-guide"},
+        {"kw": "no man's sky capital freighter farming", "slug": "capital-freighter-farming"},
+        {"kw": "no man's sky hyperdrive upgrades", "slug": "hyperdrive-upgrades"}
+      ]
+    },
+    {
+      "name": "multitools",
+      "folder": "multitools",
+      "priority": 4,
+      "comment": "长青大类",
+      "keywords": [
+        {"kw": "no man's sky best multitool", "slug": "best-multitools"},
+        {"kw": "no man's sky royal multitool", "slug": "royal-multitool"},
+        {"kw": "no man's sky experimental multitool", "slug": "experimental-multitool"},
+        {"kw": "no man's sky sentinel multitool", "slug": "sentinel-multitool"},
+        {"kw": "no man's sky multitool upgrades", "slug": "multitool-upgrades"},
+        {"kw": "no man's sky weapon modes", "slug": "weapon-modes-guide"},
+        {"kw": "no man's sky mining beam upgrades", "slug": "mining-beam-upgrades"}
+      ]
+    },
+    {
+      "name": "base-building",
+      "folder": "base-building",
+      "priority": 5,
+      "comment": "长青大类，创意型玩家搜索多",
+      "keywords": [
+        {"kw": "no man's sky base building guide", "slug": "base-building-guide"},
+        {"kw": "no man's sky base building tips", "slug": "base-building-tips"},
+        {"kw": "no man's sky electrical wiring", "slug": "electrical-wiring-guide"},
+        {"kw": "no man's sky storage containers", "slug": "storage-containers"},
+        {"kw": "no man's sky best base planets", "slug": "best-base-planets"},
+        {"kw": "no man's sky base parts unlock", "slug": "base-parts-unlock"},
+        {"kw": "no man's sky base computer placement", "slug": "base-computer-placement"}
+      ]
+    },
+    {
+      "name": "guides",
+      "folder": "guides",
+      "priority": 6,
+      "comment": "新手+资源+新玩法杂项攻略",
+      "keywords": [
+        {"kw": "no man's sky beginner guide", "slug": "beginner-guide"},
+        {"kw": "no man's sky starter tips", "slug": "starter-tips"},
+        {"kw": "no man's sky money making", "slug": "money-making-guide"},
+        {"kw": "no man's sky units farming", "slug": "units-farming"},
+        {"kw": "no man's sky quicksilver farming", "slug": "quicksilver-farming"},
+        {"kw": "no man's sky nanites farming", "slug": "nanites-farming"},
+        {"kw": "no man's sky refining recipes", "slug": "refining-recipes"},
+        {"kw": "no man's sky pet battling", "slug": "pet-battling-guide"},
+        {"kw": "no man's sky swarm battles", "slug": "swarm-battles-guide"},
+        {"kw": "no man's sky tips and tricks 2026", "slug": "tips-and-tricks-2026"},
+        {"kw": "no man's sky worth it 2026", "slug": "worth-playing-2026"},
+        {"kw": "no man's sky crossplay", "slug": "crossplay-guide"},
+        {"kw": "no man's sky switch 2 performance", "slug": "switch-2-performance"},
+        {"kw": "no man's sky 2", "slug": "no-mans-sky-2"}
+      ]
+    }
+  ]
+}
