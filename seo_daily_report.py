@@ -11,8 +11,8 @@ nomanssky.wiki 每日 SEO 日报
   2. suggest  — 谷歌联想词挖掘(en+es+pt+fr+de),与快照 diff 出新长尾词(无需任何凭证)
   3. sitemaps — 自家站掉页预警 + 官方 nomanssky.com / 社区资源站 nomansskyresources.com 新页 diff
                 (fandom 站被 Cloudflare 盾拦 403,无法监控,不列入)
-  4. rank     — 谷歌可编程搜索(CSE) 核心词实际排名抽查,前 30 名定位 nomanssky.wiki
-                (需本目录 seo_config.json 里 cse_id + cse_api_key)
+  4. rank     — 核心词排名: GSC searchAnalytics 真实排名(数据晚 2~3 天;无展示≈未进前 100)
+                (复用 gsc-secret.json;2026-08-20 弃用 CSE——谷歌要求项目绑结算卡,大陆无法绑)
 
 输出: seo-reports/YYYY-MM-DD.md + snapshots/ 下历史快照
 用法: python3 seo_daily_report.py [--modules gsc,suggest,sitemaps,rank] [--verbose]
@@ -61,6 +61,27 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, sort_keys=True)
 
 
+def _gsc_api(creds):
+    """webmasters 客户端。httplib2 不读系统代理,缺 PySocks 时还会静默直连→墙外超时,
+    这里显式探测本机 7897(Clash),在线则走代理。2026-08-21 踩坑记录。"""
+    import httplib2
+    from google_auth_httplib2 import AuthorizedHttp
+    from googleapiclient.discovery import build
+    http_args = {"timeout": 25}
+    try:
+        import socket
+        s = socket.create_connection(("127.0.0.1", 7897), timeout=0.6)
+        s.close()
+        http_args["proxy_info"] = httplib2.ProxyInfo(  # 3 = PROXY_TYPE_HTTP
+            proxy_type=3, proxy_host="127.0.0.1", proxy_port=7897)
+        log("GSC 走本机代理 127.0.0.1:7897")
+    except Exception:
+        log("GSC 直连(7897 代理不在线)")
+    return build("webmasters", "v3",
+                 http=AuthorizedHttp(creds, http=httplib2.Http(**http_args)),
+                 cache_discovery=False)
+
+
 # ---------------------------------------------------------------- GSC 模块
 def gsc_fetch():
     """返回 (报告段落[str], 是否成功)。数据滞后 2-3 天,取最新可得日为窗口末。"""
@@ -71,7 +92,7 @@ def gsc_fetch():
     creds = service_account.Credentials.from_service_account_file(
         GSC_KEY, scopes=["https://www.googleapis.com/auth/webmasters.readonly"]
     )
-    api = build("webmasters", "v3", credentials=creds, cache_discovery=False)
+    api = _gsc_api(creds)
 
     # 探测资源类型: 域名资源 or URL 前缀资源
     site_url = None
@@ -340,65 +361,81 @@ def sitemaps_fetch():
 
 # ------------------------------------------------------------- 排名模块
 def rank_fetch(verbose=False):
-    cfg = load_json(SEO_CONFIG, {})
-    cx, key = cfg.get("cse_id"), cfg.get("cse_api_key")
-    if not cx or not key:
-        return "## 4. 核心词排名抽查\n\n⏳ 等待配置 seo_config.json (cse_id / cse_api_key)\n", False
+    """核心词排名: GSC searchAnalytics 真实排名。2026-08-20 弃用 CSE(谷歌要求项目绑
+    结算账户,大陆无法绑卡)。GSC 数据晚 2~3 天;核心词无展示 ≈ 未进前 100。"""
+    if not os.path.exists(GSC_KEY):
+        return "## 4. 核心词排名\n\n⏳ 等待 `gsc-secret.json`\n", False
     kws = [l.strip() for l in open(KW_FILE, encoding="utf-8")
            if l.strip() and not l.strip().startswith("#")]
+    if not kws:
+        return "## 4. 核心词排名\n\n⚠️ seo_rank_keywords.txt 为空\n", False
+
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
+
+    creds = service_account.Credentials.from_service_account_file(
+        GSC_KEY, scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
+    api = _gsc_api(creds)
+
+    site_url = None
+    for cand in ["sc-domain:%s" % SITE, "https://%s/" % SITE]:
+        try:
+            api.sites().get(siteUrl=cand).execute()
+            site_url = cand
+            break
+        except HttpError:
+            continue
+    if not site_url:
+        return "## 4. 核心词排名\n\n❌ 服务账号在 GSC 里看不到 %s\n" % SITE, False
+
+    daily = api.searchanalytics().query(siteUrl=site_url, body={
+        "startDate": str(dt.date.today() - dt.timedelta(days=35)),
+        "endDate": str(dt.date.today()), "dimensions": ["date"], "rowLimit": 500,
+    }).execute().get("rows", [])
+    if not daily:
+        return "## 4. 核心词排名\n\n⚠️ GSC 尚无搜索数据(新站正常,过几天再看)\n", True
+    latest = max(r["keys"][0] for r in daily)
+    rows = api.searchanalytics().query(siteUrl=site_url, body={
+        "startDate": str(dt.date.fromisoformat(latest) - dt.timedelta(days=6)),
+        "endDate": latest, "dimensions": ["query"], "rowLimit": 25000,
+    }).execute().get("rows", [])
+    by_q = {r["keys"][0].lower(): r for r in rows}
+    log("排名数据源: GSC 截至 %s,近 7 天共 %d 个查询词" % (latest, len(rows)))
+
     snap_path = os.path.join(SNAP_DIR, "rank_history.json")
     prev_rank = load_json(snap_path, {})
 
-    cur_rank, rows, budget = {}, [], 100  # 谷歌免费 100 次/天,留余量
+    cur_rank = {}
     for kw in kws:
-        pos, hit_url = None, None
-        for start in (1, 11, 21):  # 前 30 名
-            if budget <= 0:
-                break
-            budget -= 1
-            try:
-                r = requests.get(
-                    "https://www.googleapis.com/customsearch/v1",
-                    params={"key": key, "cx": cx, "q": kw, "num": 10, "start": start},
-                    timeout=10,
-                ).json()
-            except Exception:
-                break
-            if "error" in r:
-                log("CSE 错误: %s" % r["error"].get("message", "")[:120])
-                budget = 0
-                break
-            items = r.get("items", [])
-            if not items:
-                break
-            for i, it in enumerate(items):
-                if SITE in it.get("link", ""):
-                    pos, hit_url = start + i, it["link"]
-                    break
-            if pos or budget <= 0:
-                break
-        cur_rank[kw] = {"pos": pos, "url": hit_url, "date": today_str()}
-        time.sleep(0.3)
+        r = by_q.get(kw.lower())
+        cur_rank[kw] = {
+            "pos": round(r["position"], 1) if r else None,
+            "imp": r.get("impressions", 0) if r else 0,
+            "clk": r.get("clicks", 0) if r else 0,
+            "date": latest,
+        }
 
     top10 = sum(1 for v in cur_rank.values() if v["pos"] and v["pos"] <= 10)
-    top30 = sum(1 for v in cur_rank.values() if v["pos"])
-    lines = ["## 4. 核心词实际排名(CSE 实查,前 30 名)",
-             "\n**%d 个核心词: %d 个进前 10,%d 个进前 30**\n" % (len(cur_rank), top10, top30)]
-    out = ["| 关键词 | 今天 | 上次 | 变化 | 命中页面 |", "|---|---|---|---|---|"]
+    top30 = sum(1 for v in cur_rank.values() if v["pos"] and v["pos"] <= 30)
+    lines = ["## 4. 核心词排名(GSC 真实数据,截至 %s)" % latest,
+             "\n**%d 个核心词: %d 个进前 10,%d 个进前 30;其余无展示(≈未进前 100)**\n"
+             % (len(cur_rank), top10, top30)]
+    out = ["| 关键词 | 近7天排名 | 上次 | 变化 | 7天展示 | 7天点击 |", "|---|---|---|---|---|---|"]
     for kw, v in cur_rank.items():
         p_old = prev_rank.get(kw, {}).get("pos")
         chg = ""
         if v["pos"] and p_old:
             d = p_old - v["pos"]
-            chg = ("↑%d" % d) if d > 0 else (("↓%d" % -d) if d < 0 else "–")
+            chg = ("↑%g" % d) if d > 0 else (("↓%g" % -d) if d < 0 else "–")
         elif v["pos"] and not p_old:
             chg = "new"
-        out.append("| %s | %s | %s | %s | %s |" % (
+        out.append("| %s | %s | %s | %s | %s | %s |" % (
             kw,
-            ("#" + str(v["pos"])) if v["pos"] else ">30",
-            ("#" + str(p_old)) if p_old else "-",
+            ("#" + ("%g" % v["pos"])) if v["pos"] else "无展示",
+            ("#" + ("%g" % p_old)) if p_old else "-",
             chg,
-            (v["url"] or "").replace("https://nomanssky.wiki", "") or "-",
+            "%d" % v["imp"], "%d" % v["clk"],
         ))
     lines += out
     save_json(snap_path, cur_rank)
