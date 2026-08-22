@@ -26,16 +26,14 @@ export interface AdUnit {
 export type AdPosition = 'sticky' | 'incontent' | 'sidebar' | 'leaderboard';
 
 export const AD_UNITS: Partial<Record<AdPosition, AdUnit>> = {
-  // ⏸️ DISABLED 2026-08-18 — Adsterra site review is still pending, so the
-  // invoke.js loader serves nothing and each slot renders as a labeled empty
-  // box (sticky strip + leaderboard + sidebar + incontent), which reads as a
-  // broken page. Re-enable by uncommenting AFTER the approval email arrives;
-  // until then ads earn nothing either way.
-  // sticky: { key: 'a47ed3ef99530ee68295b268d3509729', width: 320, height: 50 },
-  // incontent: { key: 'cc6eb9b1a88952fb32fe7e68a45c5222', width: 300, height: 250 },
-  // sidebar: { key: '87b58c6d154186b93752ebcfb4f5148f', width: 160, height: 600 },
-  // leaderboard: { key: '0a62cd0f0120163d088663c1fcaaba23', width: 728, height: 90 },
+  // ✅ RE-ENABLED 2026-08-22 — Adsterra site review approved (dashboard shows
+  // nomanssky.wiki as Active). Slots load inside the sandboxed slot.html
+  // iframe (lazy), so main-page rendering is unaffected.
+  sticky: { key: 'a47ed3ef99530ee68295b268d3509729', width: 320, height: 50 },
+  incontent: { key: 'cc6eb9b1a88952fb32fe7e68a45c5222', width: 300, height: 250 },
+  sidebar: { key: '87b58c6d154186b93752ebcfb4f5148f', width: 160, height: 600 },
+  leaderboard: { key: '0a62cd0f0120163d088663c1fcaaba23', width: 728, height: 90 },
 };
 
-/** Loader host for Adsterra banner units. */
-export const AD_SCRIPT_HOST = 'https://www.highperformanceformat.com';
+/** Loader host for Adsterra banner units (matches the current dashboard snippet — Adsterra rotates these domains). */
+export const AD_SCRIPT_HOST = 'https://www.highrevenueformat.com';
