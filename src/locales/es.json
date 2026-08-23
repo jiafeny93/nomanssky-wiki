@@ -160,20 +160,20 @@
       "title": "Más leídos",
       "quickLinks": [
         {
-          "label": "Actualización Cosmos",
-          "href": "/cosmos-update"
+          "label": "Xeno Arena: batallas de criaturas",
+          "href": "/guides/pet-battling-guide"
         },
         {
-          "label": "Expediciones",
-          "href": "/expeditions"
+          "label": "Batallas The Swarm y abordajes",
+          "href": "/guides/swarm-battles-guide"
         },
         {
-          "label": "Naves estelares",
-          "href": "/starships"
+          "label": "Volar entre sistemas solares",
+          "href": "/cosmos-update/fly-between-solar-systems"
         },
         {
-          "label": "Ganar dinero",
-          "href": "/guides"
+          "label": "¿Habrá No Man's Sky 2?",
+          "href": "/guides/no-mans-sky-2"
         }
       ]
     },

@@ -160,20 +160,20 @@
       "title": "Am meisten gelesen",
       "quickLinks": [
         {
-          "label": "Cosmos-Update",
-          "href": "/cosmos-update"
+          "label": "Xeno Arena: Kreaturenkämpfe",
+          "href": "/guides/pet-battling-guide"
         },
         {
-          "label": "Expeditionen",
-          "href": "/expeditions"
+          "label": "Swarm-Schlachten & Piraten-Frachter",
+          "href": "/guides/swarm-battles-guide"
         },
         {
-          "label": "Raumschiffe",
-          "href": "/starships"
+          "label": "Zwischen Sonnensystemen fliegen",
+          "href": "/cosmos-update/fly-between-solar-systems"
         },
         {
-          "label": "Geld verdienen",
-          "href": "/guides"
+          "label": "Kommt No Man's Sky 2?",
+          "href": "/guides/no-mans-sky-2"
         }
       ]
     },
