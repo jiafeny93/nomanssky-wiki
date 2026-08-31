@@ -3,7 +3,7 @@
   "site": {
     "name": "No Man's Sky Wiki",
     "shortName": "NMS Wiki",
-    "description": "No Man's Sky Guides und Wiki: alles zum Cosmos-Update, Expeditions-Walkthroughs, Raumschiff- und Multiwerkzeug-Guides, Basisbau und Farming-Tipps.",
+    "description": "No Man's Sky Guides und Wiki auf nomanssky.wiki: Cosmos-Update, Expeditions-Walkthroughs, Raumschiff- und Multiwerkzeug-Guides, Basisbau und Farming-Tipps.",
     "tagline": "Guides zu jedem Update, jeder Expedition und jedem Raumschiff",
     "legalNotice": "Das No Man's Sky Wiki ist eine von Fans betriebene Community-Seite. Nicht mit dem Spieleentwickler verbunden oder von ihm unterstützt."
   },
@@ -85,6 +85,8 @@
     "relatedVideos": "Verwandte Videos",
     "gallery": "Galerie",
     "gameVersion": "Spielversion",
+    "verifiedFor": "Geprüft für",
+    "explore": "Entdecken",
     "allTags": "Alle Tags",
     "tagsIndexDescription": "Alle Artikel nach Thema durchsuchen.",
     "articlesCount": "Artikel",
@@ -140,7 +142,7 @@
     "meta": {
       "watermark": "No Man's Sky",
       "title": "No Man's Sky Wiki: Cosmos-Update, Expeditionen & Schiffs-Guides",
-      "description": "No Man's Sky Guides und Wiki: alles zum Cosmos-Update, Expeditions-Walkthroughs, Raumschiff- und Multiwerkzeug-Guides, Basisbau und Farming-Tipps."
+      "description": "No Man's Sky Guides und Wiki auf nomanssky.wiki: Cosmos-Update, Expeditions-Walkthroughs, Raumschiff- und Multiwerkzeug-Guides, Basisbau und Farming-Tipps."
     },
     "updates": {
       "badge": "Neu",
@@ -217,7 +219,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Wiki-Guides und mehr"
+          "label": "Guides in 5 Sprachen"
         }
       ]
     },

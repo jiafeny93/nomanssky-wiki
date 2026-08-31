@@ -3,7 +3,7 @@
   "site": {
     "name": "No Man's Sky Wiki",
     "shortName": "Wiki NMS",
-    "description": "Guias e wiki de No Man's Sky: cobertura da atualização Cosmos, guias de expedições, guias de naves estelares e multiferramentas, construção de bases e dicas de farming.",
+    "description": "Wiki e guias de No Man's Sky no nomanssky.wiki: atualização Cosmos, expedições, naves estelares, multiferramentas, construção de bases e farm de unidades.",
     "tagline": "Guias para cada atualização, expedição e nave estelar",
     "legalNotice": "O No Man's Sky Wiki é um site comunitário feito por fãs. Sem afiliação ou endosso do desenvolvedor do jogo."
   },
@@ -85,6 +85,8 @@
     "relatedVideos": "Vídeos relacionados",
     "gallery": "Galeria",
     "gameVersion": "Versão do jogo",
+    "verifiedFor": "Verificado para",
+    "explore": "Explorar",
     "allTags": "Todas as Tags",
     "tagsIndexDescription": "Navegue por todos os artigos por tópico.",
     "articlesCount": "artigos",
@@ -140,7 +142,7 @@
     "meta": {
       "watermark": "No Man's Sky",
       "title": "No Man's Sky Wiki: Atualização Cosmos, Expedições e Guias de Naves",
-      "description": "Guias e wiki de No Man's Sky: cobertura da atualização Cosmos, guias de expedições, guias de naves estelares e multiferramentas, construção de bases e dicas de farming."
+      "description": "Wiki e guias de No Man's Sky no nomanssky.wiki: atualização Cosmos, expedições, naves estelares, multiferramentas, construção de bases e farm de unidades."
     },
     "updates": {
       "badge": "Novo",
@@ -217,7 +219,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guias da wiki e contando"
+          "label": "Guias em 5 idiomas"
         }
       ]
     },

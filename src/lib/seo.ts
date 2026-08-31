@@ -32,6 +32,9 @@ export function websiteJsonLd(locale: Locale = defaultLocale) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: site.name,
+    // alternateName carries the bare domain so brand queries for the domain
+    // itself ("nomanssky.wiki") associate with this site in the knowledge graph.
+    alternateName: site.domain,
     url: siteUrl,
     description: site.description,
     inLanguage: locale,

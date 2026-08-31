@@ -4,7 +4,7 @@
  * Mobile menu uses native <details> (zero JS).
  */
 import { Icon } from 'astro-icon/components';
-import { NAVIGATION_CONFIG } from '~/config/navigation';
+import { NAVIGATION_CONFIG, NAV_MIN_ARTICLES } from '~/config/navigation';
 import { site } from '~/config/site';
 import { type Locale, defaultLocale, locales, LOCALE_LABELS } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
@@ -31,12 +31,13 @@ const nav: Record<string, string> = ui.nav as Record<string, string>;
 
 const headerLocales = availableLocales ?? locales;
 
-// Hide categories this locale has no articles for — a nav link must not
-// lead to the noindexed empty state. (In dev, drafts count, so previewing
-// a draft category keeps it visible.)
+// Hide categories below NAV_MIN_ARTICLES for this locale — a nav link must
+// not lead to the noindexed empty state, and a 1-article entry reads as a
+// thin site. (In dev, drafts count, so previewing a draft category keeps it
+// visible.) Still reachable via the sidebar tree, tags, and search.
 const categoryCounts = await categoryCountsByLocale(locale);
 const navItems = NAVIGATION_CONFIG.filter(
-  (item) => (categoryCounts[item.key] ?? 0) > 0,
+  (item) => (categoryCounts[item.key] ?? 0) >= NAV_MIN_ARTICLES,
 );
 
 // Normalize the request path to the canonical trailing-slash form before

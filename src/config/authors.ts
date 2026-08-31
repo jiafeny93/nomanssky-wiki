@@ -16,6 +16,9 @@ export interface AuthorInfo {
 }
 
 export const authors: Record<string, AuthorInfo> = {
+  // Editorial team byline (site.defaultAuthor) — links to the about page so
+  // the author meta line and Article JSON-LD resolve to a real page on-site.
+  'NMS Wiki Team': { url: '/about' },
   // Example:
   // 'Yuan Ruiqin': { url: 'https://yuanruiqin.dev', sameAs: ['https://github.com/PNGTRID'] },
 };

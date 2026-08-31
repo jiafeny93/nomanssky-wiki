@@ -36,7 +36,7 @@ import { categoryHue } from '~/lib/categoryTheme';
 import LazyYouTube from '~/components/video/LazyYouTube.astro';
 import SponsorCard from '~/components/article/SponsorCard.astro';
 import { articleJsonLd, breadcrumbJsonLd, pageTitle, videoObjectJsonLd, imageObjectJsonLd, faqPageJsonLd } from '~/lib/seo';
-import { listPath, detailPath, tagPath } from '~/lib/url';
+import { listPath, detailPath, tagPath, localizePath } from '~/lib/url';
 import { site } from '~/config/site';
 import { getAuthor } from '~/config/authors';
 
@@ -75,7 +75,20 @@ const { Content, headings } = await render(entry);
 
 const author = entry.data.author ?? site.defaultAuthor;
 const authorInfo = getAuthor(author);
+// Author URL may be on-site (localize it) or external (leave as-is).
+const authorHref = authorInfo?.url
+  ? authorInfo.url.startsWith('/')
+    ? localizePath(authorInfo.url, locale)
+    : authorInfo.url
+  : undefined;
 const summary = entry.data.summary;
+// Freshness chip: green "verified for the current version" badge when the
+// article's gameVersion matches the current update — the inverse of
+// competitors whose reference pages carry stale version banners. Older
+// gameVersion values keep the plain neutral chip.
+const isCurrentGameVersion =
+  entry.data.gameVersion != null &&
+  [site.game.currentVersion, site.game.currentUpdateName].includes(entry.data.gameVersion);
 const outdated = isPossiblyOutdated(category, entry.data.lastModified, entry.data.date);
 
 // Reading time estimate: ~200 wpm for space-separated languages,
@@ -102,7 +115,7 @@ const jsonLd = [
     category,
     slug,
     locale,
-    authorName: entry.data.author,
+    authorName: author,
     authorSameAs: authorInfo?.sameAs,
   }),
   breadcrumbJsonLd({
@@ -170,7 +183,15 @@ const jsonLd = [
           {navItem && <Icon name={navItem.icon} class="h-3 w-3" />}
           {categoryLabel}
         </span>
-        {entry.data.gameVersion && (
+        {entry.data.gameVersion && isCurrentGameVersion ? (
+          <span
+            class="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-400"
+            title={`${shared.verifiedFor} ${site.game.currentUpdateName} ${site.game.currentVersion}`}
+          >
+            <Icon name="lucide:badge-check" class="h-3 w-3" />
+            {shared.verifiedFor} {site.game.currentUpdateName} {site.game.currentVersion}
+          </span>
+        ) : entry.data.gameVersion ? (
           <span
             class="inline-flex items-center gap-1 rounded-full border border-nav/40 bg-nav/10 px-2 py-0.5 text-[11px] font-medium text-foreground"
             title={shared.gameVersion}
@@ -178,7 +199,7 @@ const jsonLd = [
             <Icon name="lucide:git-branch" class="h-3 w-3" />
             {entry.data.gameVersion}
           </span>
-        )}
+        ) : null}
       </div>
       <h1 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl" data-pagefind-meta={`title:${entry.data.title}`}>{entry.data.title}</h1>
       <p class="mt-3 text-muted-foreground">{entry.data.description}</p>
@@ -190,12 +211,12 @@ const jsonLd = [
         {author && (
           <span class="inline-flex items-center gap-1">
             <Icon name="lucide:user" class="h-3.5 w-3.5" />
-            {authorInfo?.url ? (
+            {authorHref ? (
               <a
-                href={authorInfo.url}
+                href={authorHref}
                 rel="author noopener"
                 class="hover:text-nav"
-                target={authorInfo.url.startsWith('http') ? '_blank' : undefined}
+                target={authorHref.startsWith('http') ? '_blank' : undefined}
               >{author}</a>
             ) : (
               author

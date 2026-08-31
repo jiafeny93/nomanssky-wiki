@@ -43,6 +43,14 @@ export interface SiteConfig {
     genre: string;
     /** ISO release date (optional). */
     releaseDate?: string;
+    /**
+     * Current game version number + update name (e.g. "6.50" / "Cosmos").
+     * Articles whose frontmatter `gameVersion` matches either value render a
+     * "verified for the current version" chip — a freshness signal that
+     * outranks competitors whose reference pages carry stale version banners.
+     */
+    currentVersion?: string;
+    currentUpdateName?: string;
   };
   /**
    * Dimensions of the default OG/Twitter share image (public/images/hero.webp).
@@ -58,7 +66,7 @@ export interface SiteConfig {
 export const site: SiteConfig = {
   name: "No Man's Sky Wiki",
   shortName: 'NMS Wiki',
-  description: 'No Man\'s Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.',
+  description: 'No Man\'s Sky guides and wiki on nomanssky.wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.',
   domain: 'nomanssky.wiki',
   tagline: 'Guides for every update, expedition, and starship',
   legalNotice: 'No Man\'s Sky Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer.',
@@ -74,9 +82,14 @@ export const site: SiteConfig = {
     developer: 'Hello Games',
     genre: 'Action-adventure, survival, space exploration',
     releaseDate: '2016-08-09',
+    currentVersion: '6.50',
+    currentUpdateName: 'Cosmos',
   },
   ogImageWidth: 1200,
   ogImageHeight: 630,
+  // Editorial byline for articles without an explicit `author` in frontmatter.
+  // Linked to /about via the authors registry (E-E-A-T signal).
+  defaultAuthor: 'NMS Wiki Team',
 };
 
 /** Absolute site URL (no trailing slash). Falls back to the Astro `site` config. */

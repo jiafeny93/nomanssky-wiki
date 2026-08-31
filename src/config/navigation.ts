@@ -42,6 +42,15 @@ export const NAVIGATION_CONFIG: NavigationItem[] = [
 /** Derived list of content type slugs (e.g. ['bosses', 'guides', 'items', 'codes']). */
 export const CONTENT_TYPES: string[] = NAVIGATION_CONFIG.map((n) => n.key);
 
+/**
+ * Minimum published-article count for a category to appear in the HEADER nav.
+ * Categories below the bar stay reachable via the sidebar tree, tag pages,
+ * and search — they just don't occupy prime nav real estate while thin
+ * (a 1-article nav entry reads as an empty site). Raise the bar (or bump the
+ * category's content) to re-admit a category.
+ */
+export const NAV_MIN_ARTICLES = 2;
+
 /** Lookup map for quick access by key. */
 export const NAV_BY_KEY: Record<string, NavigationItem> = Object.fromEntries(
   NAVIGATION_CONFIG.map((n) => [n.key, n]),

@@ -3,7 +3,7 @@
   "site": {
     "name": "No Man's Sky Wiki",
     "shortName": "NMS Wiki",
-    "description": "Guides et wiki No Man's Sky : couverture de la mise à jour Cosmos, guides des expéditions, vaisseaux et multi-outils, construction de bases et astuces de farm.",
+    "description": "Wiki et guides No Man's Sky sur nomanssky.wiki : mise à jour Cosmos, expéditions, vaisseaux, multi-outils, construction de bases et farm d'unités.",
     "tagline": "Des guides pour chaque mise à jour, expédition et vaisseau",
     "legalNotice": "No Man's Sky Wiki est un site communautaire créé par des fans. Sans affiliation avec ni approbation du développeur du jeu."
   },
@@ -85,6 +85,8 @@
     "relatedVideos": "Vidéos associées",
     "gallery": "Galerie",
     "gameVersion": "Version du jeu",
+    "verifiedFor": "Vérifié pour",
+    "explore": "Explorer",
     "allTags": "Tous les tags",
     "tagsIndexDescription": "Parcourez tous les articles par sujet.",
     "articlesCount": "articles",
@@ -140,7 +142,7 @@
     "meta": {
       "watermark": "No Man's Sky",
       "title": "No Man's Sky Wiki : mise à jour Cosmos, expéditions et guides de vaisseaux",
-      "description": "Guides et wiki No Man's Sky : couverture de la mise à jour Cosmos, guides des expéditions, vaisseaux et multi-outils, construction de bases et astuces de farm."
+      "description": "Wiki et guides No Man's Sky sur nomanssky.wiki : mise à jour Cosmos, expéditions, vaisseaux, multi-outils, construction de bases et farm d'unités."
     },
     "updates": {
       "badge": "Nouveau",
@@ -217,7 +219,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guides et ça continue"
+          "label": "Guides en 5 langues"
         }
       ]
     },

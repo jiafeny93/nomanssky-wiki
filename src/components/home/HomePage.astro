@@ -27,7 +27,7 @@ import { site } from '~/config/site';
 import { NAVIGATION_CONFIG, NAV_BY_KEY } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
-import { getRecentEntries, parseEntryId, getAllEntriesByCategory } from '~/lib/content';
+import { getRecentEntries, parseEntryId, categoryCountsByLocale } from '~/lib/content';
 import { categoryHue, starField } from '~/lib/categoryTheme';
 import { localizePath, listPath, detailPath } from '~/lib/url';
 
@@ -45,12 +45,15 @@ const navLabels = ui.nav as Record<string, string>;
 
 const recent = await getRecentEntries(locale, 6);
 
-// Total published guides across all categories — feeds the hero stats bar
-// ("value": "dynamic" slot), so the number grows with the wiki automatically.
-const perCategoryCounts = await Promise.all(
-  NAVIGATION_CONFIG.map((n) => getAllEntriesByCategory(n.key).then((es) => es.length)),
+// Published guides in THIS locale across all categories — feeds the hero
+// stats bar ("value": "dynamic" slot), so the number grows with the wiki
+// automatically. Locale-filtered: counting all locales would 5× the number
+// (60 guides, not 300) — an honest stat that reads as curation, not inflation.
+const localeCategoryCounts = await categoryCountsByLocale(locale);
+const totalGuides = NAVIGATION_CONFIG.reduce(
+  (sum, n) => sum + (localeCategoryCounts[n.key] ?? 0),
+  0,
 );
-const totalGuides = perCategoryCounts.reduce((a, b) => a + b, 0);
 
 // Hero star layers — two independent fields twinkling out of phase so the
 // sky reads as having depth. Fixed seeds = stable HTML across builds.

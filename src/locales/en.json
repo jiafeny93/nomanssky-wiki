@@ -3,7 +3,7 @@
   "site": {
     "name": "No Man's Sky Wiki",
     "shortName": "NMS Wiki",
-    "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.",
+    "description": "No Man's Sky wiki and guides on nomanssky.wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips.",
     "tagline": "Guides for every update, expedition, and starship",
     "legalNotice": "No Man's Sky Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer."
   },
@@ -85,6 +85,8 @@
     "relatedVideos": "Related videos",
     "gallery": "Gallery",
     "gameVersion": "Game version",
+    "verifiedFor": "Verified for",
+    "explore": "Explore",
     "allTags": "All Tags",
     "tagsIndexDescription": "Browse all articles by topic.",
     "articlesCount": "articles",
@@ -140,7 +142,7 @@
     "meta": {
       "watermark": "No Man's Sky",
       "title": "No Man's Sky Wiki: Cosmos Update, Expeditions & Ship Guides",
-      "description": "No Man's Sky guides and wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips."
+      "description": "No Man's Sky wiki and guides on nomanssky.wiki: Cosmos update coverage, expedition walkthroughs, starship and multitool guides, base building, and farming tips."
     },
     "updates": {
       "badge": "Fresh",
@@ -217,7 +219,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Wiki guides & counting"
+          "label": "Guides in 5 languages"
         }
       ]
     },
