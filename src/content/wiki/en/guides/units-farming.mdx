@@ -1,67 +1,93 @@
 ---
-title: "No Man's Sky Units Farming: The Best Unit Loops Ranked (2026)"
-description: "The best units farming loops in No Man's Sky ranked: activated indium farms, chlorine expansion, scanning, crafting chains, and what each one pays."
+title: "No Man's Sky Units Farming: Best Money Loops Ranked (2026)"
+description: "Every No Man's Sky units farming loop ranked with 2026 numbers: scanners, chlorine, craft chains, frigates, and the honest post-nerf verdict on activated indium."
 category: "guides"
 image: '../../../../assets/covers/guides/units-farming.webp'
 date: 2026-08-22
-lastModified: 2026-08-22
+lastModified: 2026-08-31
 gameVersion: "6.50"
-summary: "Units farming is a solved problem: passive activated indium farms, chlorine expansion, craft chains, and scanning loops, ranked by setup cost, upkeep, and payout."
+summary: "The honest 2026 units farming ranking: scanners fund hour one, chlorine and craft chains print mid-game, and activated indium — nerfed to a sixth of its old price — is still the best idle build."
 tags: ["units", "farming", "economy", "guide", "money"]
 faq:
   - question: "What is the fastest way to farm units in No Man's Sky?"
-    answer: "For raw speed with zero setup, scanning: a multitool with three S-class scanner modules pays six figures across a planet's flora and fauna. For lasting income, an activated indium hotspot farm outpaces everything passively — build it once and collect millions per harvest cycle forever."
-  - question: "How much does an activated indium farm make?"
-    answer: "It scales with the hotspot class and extractor count: a single strong hotspot with a full extractor-and-storage build produces millions of units per collection run, and the deposit never depletes. The limiting factor is your patience for the build, not the yield."
+    answer: "For zero setup, scanning: three S-class scanner modules pay six figures across a planet's flora and fauna. For real money, the speed meta has moved to Sentinel interceptor scrapping and trade routes — community-tested at 30-50M per run — which our money making guide ranks in detail."
+  - question: "How much does an activated indium farm make after the nerf?"
+    answer: "Far less than it used to. The Waypoint update cut activated indium's sell price from 949 to 165 units, and extraction now tapers on oversized builds. A farm that sold around 220M units per harvest before the nerf sells roughly 35M of it today — still passive millions, no longer billions."
+  - question: "What replaced activated indium farming?"
+    answer: "Frigate fleets first: a maxed fleet pays a community-reported 50-70M units per day for zero effort. Then interceptor scrapping and teleporter trade routes for active speed, and Stasis Device or Fusion Ignitor craft farms at about 15.6M units per item for players who like logistics."
   - question: "Is the chlorine expansion loop still worth it?"
-    answer: "Yes — oxygen plus chlorine refining into more chlorine remains a pure multiplication loop needing only refiners and an oxygen supply. It is the best units-per-hour for players who prefer active play over base logistics, and it needs no hotspot luck."
+    answer: "Yes, with one patch of history attached. The old trick of buying cheap terminal oxygen died when terminals stopped selling it and chlorine's value was trimmed — so farm your own oxygen instead. Oxygen plus chlorine refining into more chlorine remains a pure multiplication loop, and with an oxygen hotspot it still community-tests at 10-50M units per hour."
   - question: "Do I need a base to farm units?"
-    answer: "Not for the active loops — scanning, chlorine, and trade runs need only a ship and refiners. The passive loops — activated indium, frost crystal glass, stasis device farms — are base builds, which is exactly what makes them passive: the base does the farming while you play elsewhere."
-  - question: "What should I spend my first million units on?"
-    answer: "Exosuit inventory slots until comfortable, then a working multitool and the materials for a farm foundation. Units buy freedom from grinding — the correct purchase is whatever stops you farming: slots, storage, and the infrastructure that prints the next million on its own."
+    answer: "Not for the active loops — scanning, chlorine, and trade runs need only a ship and refiners. The passive loops — activated indium, frost crystal glass, stasis device farms — are base builds, which is exactly what makes them passive: the base farms while you play elsewhere."
   - question: "Is unit farming still necessary in 2026?"
-    answer: "Less than it used to be and more than players expect. The 2026 updates added new sinks — Xeno Arena genetics, Swarm expedition gear, Cosmos travel prep — and the old loops all still work. A single passive farm funds essentially every unit need in the game now."
+    answer: "Less than it used to be and more than players expect. The 2026 updates added new sinks — Xeno Arena genetics, Swarm expedition gear, Cosmos travel prep — and the loops below all still work. One decent income stream funds essentially every unit need in the game now."
 ---
 
-Ask a No Man's Sky player what they farm and you learn their whole save. Hour ten: scanning money. Hour fifty: chlorine in a refiner. Hour two hundred: a grid of extractors on a hell-planet nobody visits, quietly minting more units than they can spend. Unit farming in this game has a tech tree of its own — each loop cheaper per unit than the last, until the problem inverts and the question becomes what to buy. This guide ranks the loops that matter in 2026, from the first scan to the farm that outlives your interest.
+import StatBar from '~/components/mdx/StatBar.astro';
 
-**Last updated: August 22, 2026**, current through patch 6.50. For the strategy overview, see [money making](/guides/money-making-guide/); this page is the farming-loops companion — the builds, the upkeep, and what each one pays.
+Ask a No Man's Sky player what they farm and you learn their whole save. Hour ten: scanning money. Hour fifty: chlorine in a refiner. Hour two hundred: a grid of extractors on a hell-planet nobody visits, quietly minting more units than they can spend. Unit farming in this game has a tech tree of its own — but the tree was pruned in the Waypoint update, when the old king took a nerf it never recovered from. This guide ranks the loops that matter in 2026 with honest numbers, from the first scan to the farm that still pays while you sleep.
+
+**Last updated: August 31, 2026**, current through patch 6.50. This page is the farming-loops guide — builds, upkeep, and what each one pays. For the full speed meta (interceptor scrapping, smuggling, trade routes), see the ranked [money making guide](/guides/money-making-guide/); the two pages share the same numbers.
+
+<StatBar
+  items={[
+    { value: '949 → 165', label: 'Activated Indium unit price, before vs. after the Waypoint nerf' },
+    { value: '~220M → ~35M', label: 'One large indium farm\'s harvest, community-reported' },
+    { value: '50-70M', label: 'Daily units from a maxed frigate fleet, community-reported' },
+    { value: '15.6M', label: 'Units per Stasis Device or Fusion Ignitor crafted' },
+  ]}
+/>
 
 ## The Loop Ranking at a Glance
 
-| Loop | Setup | Upkeep | Payout character |
-|------|-------|--------|------------------|
-| Scanner modules | Buy 3 modules | None | Instant, active, early-king |
-| Chlorine expansion | Refiners + oxygen | Feed refiners | Active printing, cheap setup |
-| Craft chains | Refiners + blueprints | Material logistics | High ceiling, semi-passive |
-| Activated indium farm | Hotspot + base build | Almost none | Passive millions |
-| Expedition rewards | None | Time-limited | Burst income + assets |
+| Loop | Setup | Active? | What it pays in 2026 |
+|------|-------|---------|----------------------|
+| Scanner modules | Buy 3 modules | Active | Six figures per planet; early-game king |
+| Chlorine expansion | Refiners + own oxygen | Active | Nerfed, alive; steady mid-game print |
+| Craft chains | Refiners + blueprints | Semi-passive | ~15.6M per endgame item; logistics-heavy |
+| Activated indium farm | Hotspot + base build | Passive | Post-nerf: millions per cycle, not billions |
+| Frigate fleet | Freighter + frigates | Passive | 50-70M per day at max, community-reported |
+| Expedition rewards | None | Time-boxed | Burst income + free assets |
 
 ## 1. The Scanner Loop: First Money, Still Good Money
 
 The humblest loop and the best early one: install three S-class Scanner Upgrade modules on any multitool, and every creature, plant, and mineral scan pays sums that make the early game trivial. Completing a planet's full fauna set stacks a bonus on top.
 
-Why it tops the early ranking: zero upkeep, works everywhere, and the [module discipline](/multitools/multitool-upgrades/) costs a station or two of shopping. A fresh traveler with a upgraded scanner can fund their first real purchases from one planet's wildlife. It never scales to megabase money — but it buys the tools that do.
+Why it tops the early ranking: zero upkeep, works everywhere, and the [module discipline](/multitools/multitool-upgrades/) costs a station or two of shopping. A fresh traveler with an upgraded scanner can fund their first real purchases from one planet's wildlife. It never scales to megabase money — but it buys the tools that do.
 
 ## 2. Chlorine Expansion: The Active Printer
 
 The classic multiplication loop: salt and oxygen refine into chlorine, and chlorine plus more oxygen refines into *more* chlorine. Inputs are cheap and abundant — oxygen harvests in fat red plants everywhere and refines from kelp sacs and cave fodder — and the loop needs only a bank of refiners on base power.
 
-Its character is active income: the refiners do the multiplying while you feed them, and a stocked [refining base](/guides/refining-recipes/) turns an hour of oxygen gathering into a stack of chlorine worth selling in any three-star system. Best ratio of setup cost to return in the game for players who prefer playing to building.
+Its character is active income: the refiners do the multiplying while you feed them, and a stocked [refining base](/guides/refining-recipes/) turns an hour of oxygen gathering into a stack of chlorine worth selling in any three-star system. One caveat from the patch history: the buy-oxygen version of this loop is gone — Hello Games removed oxygen from most trade terminals and trimmed chlorine's value — so the modern loop farms its own oxygen. With a hotspot and a refiner bank, community players still report 10-50M units per hour: the best ratio of setup cost to return among the active loops.
 
 ## 3. Craft Chains: The Ceiling Raiser
 
-Raw materials sell as raw materials forever; walked down a recipe chain they multiply at every step. The veteran shape: refiners converting ore and gas into components, crafters turning components into high-value trade goods, storage buffering the pipeline. The famous endgame chains — the stasis-device-and-living-glass family — require scattered blueprints and rare materials, and pay accordingly.
+Raw materials sell as raw materials forever; walked down a recipe chain they multiply at every step. The veteran shape: refiners converting ore and gas into components, crafters turning components into high-value trade goods, storage buffering the pipeline. The endgame chains — the Stasis Device and Living Glass family — require scattered blueprints and rare materials, and pay accordingly: about 15.6 million units per Stasis Device or Fusion Ignitor from a fully grown resource base.
 
-The character is semi-passive and fiddly: the [refining guide](/guides/refining-recipes/) covers the machine side, but the chain's throughput lives on logistics — gas collectors, frost crystal cultivation, and a [storage hub](/base-building/storage-containers/) that keeps stages separated. Highest skill ceiling in the units game; the loops below out-earn it for less thought.
+The character is semi-passive and fiddly: the [refining guide](/guides/refining-recipes/) covers the machine side, but the chain's throughput lives on logistics — gas collectors, frost crystal cultivation, and a [storage hub](/base-building/storage-containers/) that keeps stages separated. Highest skill ceiling in the units game.
 
-## 4. The Activated Indium Farm: Passive King
+## 4. The Activated Indium Farm: The Retired King
 
-The endgame answer and the loop that retires the question. On an extreme-weather planet with an **activated indium hotspot**, a base of electromagnetic generators, mineral extractors, and supply depots harvests the deposit into storage continuously. You teleport in on any cadence, collect, and teleport out; the deposit never depletes.
+Here is the verdict most guides won't tell you, because their guides stopped being updated in 2021: **the activated indium farm was nerfed, hard, and it is no longer the best money in the game — but it is still the best set-and-forget build you can make.**
 
-The build is the whole cost: a survey for the [hotspot pair](/base-building/best-base-planets/), the power and extractor grid ([electrical guide](/base-building/electrical-wiring-guide/)), and the patience to wire it. After that it is a money faucet with no moving parts — millions per collection cycle at full scale, running while you are offline. Every other loop on this page is what you did *before* you built one.
+The history, briefly. Before the Waypoint update, activated indium sold for 949 units per piece, and a serious extractor stack on a strong hotspot was a money printer without equal. Waypoint cut the sell price to 165 — roughly a sixth of its old value — and added diminishing returns to oversized extraction. Community-reported consequence: one well-known large farm that sold around 220 million units per harvest sells about 35 million of it now.
 
-## 5. Expeditions and Events: The Burst
+What that means in practice:
+
+- **It still works.** The deposit never depletes, extraction is free after the build, and millions of passive units per collection cycle is more money than most players will spend.
+- **It no longer rules.** A maxed [frigate fleet](/starships/freighter-guide/) out-earns it passively at 50-70M per day, and active methods — [interceptor scrapping, trade routes](/guides/money-making-guide/) — beat its hourly rate by an order of magnitude.
+- **Build it for the right reason.** Build an indium farm when you want income that requires zero play — not because a 2021 guide called it the meta.
+
+The build is still the whole cost: a survey for the [hotspot](/base-building/best-base-planets/), the power and extractor grid ([electrical guide](/base-building/electrical-wiring-guide/)), and the patience to wire it. After that it is a money faucet with no moving parts — just a smaller faucet than the legends say.
+
+## 5. Frigates: The Passive King Now
+
+If the crown moved, it moved here. A [freighter](/starships/freighter-guide/) with a full frigate fleet sends squads on expeditions while you play, and they come back with units and tradeables at a community-reported 50-70M per day once fully leveled. Setup is money and time rather than construction — buy decent frigates, run them constantly, staff out the fleet — and the income survives you not logging in for a week better than any refiner does.
+
+Pair it with the craft chains above and the fleet's material bonuses feed the very recipes that pay 15.6M per item.
+
+## 6. Expeditions and Events: The Burst
 
 Time-limited expeditions hand out ships, multitools, cosmetics, and stacks of tradeable rewards at rates the permanent game never offers — a single [expedition run](/expeditions/expedition-guide/) can drop assets worth millions plus pure cash rewards. Nexus missions and weekend events fill the gaps between expeditions with steady unit payouts and the community-currency side income ([Quicksilver](/guides/quicksilver-farming/)).
 
@@ -70,7 +96,7 @@ Not a farm in the steady sense — a harvest calendar. But a returning player wh
 ## Choosing by Save Stage
 
 - **First 10 hours:** scanner loop, plus the [starter tips](/guides/starter-tips/) economy habits. Buy suit slots.
-- **Hours 10–50:** chlorine expansion and first craft chains; begin the base ([building guide](/base-building/base-building-guide/)) that later loops assume.
-- **Hours 50+:** survey for the indium farm, build it, and let it fund [S-class ship hunting](/starships/s-class-ships/), freighter fleets, and everything after.
+- **Hours 10–50:** chlorine expansion and first craft chains; begin the base ([building guide](/base-building/base-building-guide/)) that later loops assume; buy your first freighter and start the fleet.
+- **Hours 50+:** max the frigate fleet first, then build the indium farm if you want truly idle income — and let both fund [S-class ship hunting](/starships/s-class-ships/) and everything after.
 
-The quiet truth: units stop mattering. A working farm makes every price in the game a rounding error, and the game's real currencies become time and attention — which is the point at which you are free to play whatever you actually enjoy. The farm is not the goal; the farm is what buys the goal.
+The quiet truth: units stop mattering. A working income stream makes every price in the game a rounding error, and the game's real currencies become time and attention — which is the point at which you are free to play whatever you actually enjoy. The farm is not the goal; the farm is what buys the goal.
