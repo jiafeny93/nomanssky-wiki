@@ -1,8 +1,15 @@
 ---
 /**
- * Recent-updates page — all articles in a locale, newest first.
- * High-intent entry point ("x patch notes", "update wiki" queries);
- * pairs with sitemap lastmod for crawl-freshness signals.
+ * Recent-updates page — the wiki's update-history hub (/recent).
+ *
+ * Section 1: the version timeline (src/data/updateHistory.ts) — every major
+ * update from Voyagers 6.0 to Cosmos 6.50 with verified dates, patch lists,
+ * our own coverage links, and the official release page. This is the
+ * "x patch notes / update history" entry point competitors leave stale.
+ *
+ * Section 2: the freshest wiki guides, newest first (capped — the full
+ * catalogue lives in the category hubs), paired with sitemap lastmod for
+ * crawl-freshness signals.
  */
 import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
@@ -11,8 +18,9 @@ import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getRecentEntries, parseEntryId } from '~/lib/content';
 import { pageTitle, simpleBreadcrumbJsonLd, urlListJsonLd } from '~/lib/seo';
-import { detailPath, recentPath } from '~/lib/url';
+import { detailPath, listPath, recentPath } from '~/lib/url';
 import { siteUrl } from '~/config/site';
+import { UPDATE_HISTORY, formatUpdateDate } from '~/data/updateHistory';
 
 interface Props {
   locale: Locale;
@@ -25,8 +33,15 @@ const shared = ui.shared as unknown as Record<string, any>;
 
 const title = shared.recentTitle as string;
 const description = shared.recentDescription as string;
+const timelineTitle = (shared.timelineTitle as string) ?? 'Update timeline';
+const patchesLabel = (shared.patches as string) ?? 'Patches';
+const rollingOut = (shared.rollingOut as string) ?? 'Rolling out now';
+const officialSite = (shared.officialSite as string) ?? 'Official notes';
+const gridTitle = (shared.gridTitle as string) ?? 'Freshly updated guides';
 
-const entries = await getRecentEntries(locale, 200);
+// Capped: the timeline is the headliner; the full catalogue lives in the
+// category hubs. 12 cards keep the page focused (and the ItemList honest).
+const entries = await getRecentEntries(locale, 12);
 
 const jsonLd = [
   urlListJsonLd({
@@ -50,7 +65,7 @@ const jsonLd = [
   alternates={alternates}
   jsonLd={jsonLd}
 >
-  <div class="space-y-6">
+  <div class="space-y-10">
     <header>
       <nav class="text-sm text-muted-foreground" aria-label="breadcrumb">
         <a href="/" class="hover:text-nav">{nav.home}</a>
@@ -64,22 +79,81 @@ const jsonLd = [
       <p class="mt-2 max-w-2xl text-muted-foreground">{description}</p>
     </header>
 
-    {
-      entries.length === 0 ? (
-        <div class="rounded-lg border border-dashed bg-card p-12 text-center">
-          <Icon name="lucide:inbox" class="mx-auto h-10 w-10 text-muted-foreground" />
-          <p class="mt-3 text-muted-foreground">{shared.noArticles}</p>
-        </div>
-      ) : (
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {entries.map((entry) => {
+    {/* ─────────────────────── Version timeline ─────────────────────── */}
+    <section aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="text-2xl font-bold tracking-tight">{timelineTitle}</h2>
+      <ol class="mt-6 space-y-4">
+        {
+          UPDATE_HISTORY.map((row) => (
+            <li class="card p-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="cat-chip" style="--chip-h:265;">
+                  <Icon name="lucide:git-branch" class="h-3 w-3" />
+                  {row.version}
+                </span>
+                <span class="text-base font-bold">{row.name}</span>
+                {!row.live && (
+                  <span class="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-400">
+                    <Icon name="lucide:badge-check" class="h-3 w-3" />
+                    {rollingOut}
+                  </span>
+                )}
+                <span class="text-sm text-muted-foreground">
+                  {formatUpdateDate(row.date, locale)}
+                </span>
+              </div>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{row.summary[locale]}</p>
+              <div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                {row.related?.map((r) => (
+                  <a
+                    href={detailPath(r.category, r.slug, locale)}
+                    class="inline-flex items-center gap-1 font-medium text-nav hover:underline"
+                  >
+                    <Icon name="lucide:book-open" class="h-3.5 w-3.5" />
+                    {nav[r.category] ?? r.category}
+                  </a>
+                ))}
+                {row.patches && row.patches.length > 0 && (
+                  <span class="text-xs text-muted-foreground">
+                    {patchesLabel}: {row.patches.join(' · ')}
+                  </span>
+                )}
+                {row.official && (
+                  <a
+                    href={row.official}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-nav hover:underline"
+                  >
+                    <Icon name="lucide:external-link" class="h-3 w-3" />
+                    {officialSite}
+                  </a>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    {/* ──────────────────── Freshest wiki guides ────────────────────── */}
+    <section aria-labelledby="grid-heading">
+      <div class="flex items-baseline justify-between">
+        <h2 id="grid-heading" class="text-2xl font-bold tracking-tight">{gridTitle}</h2>
+        <a href={listPath('guides', locale)} class="text-sm text-foreground hover:text-nav hover:underline"
+          >{shared.browseAll}</a
+        >
+      </div>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          entries.map((entry) => {
             const parsed = parseEntryId(entry.id);
             const category = parsed?.category ?? '';
             return (
               <a href={detailPath(category, parsed?.slug ?? '', locale)} class="card p-5">
                 {entry.data.image && <ArticleCover src={entry.data.image} />}
                 <p class="text-xs uppercase tracking-wider text-muted-foreground">{category}</p>
-                <h2 class="mt-1 font-semibold leading-snug">{entry.data.title}</h2>
+                <h3 class="mt-1 font-semibold leading-snug">{entry.data.title}</h3>
                 <p class="mt-1 line-clamp-2 text-sm text-muted-foreground">
                   {entry.data.description}
                 </p>
@@ -90,9 +164,9 @@ const jsonLd = [
                 </p>
               </a>
             );
-          })}
-        </div>
-      )
-    }
+          })
+        }
+      </div>
+    </section>
   </div>
 </LocaleLayout>

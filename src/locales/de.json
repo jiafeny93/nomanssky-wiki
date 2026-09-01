@@ -91,8 +91,8 @@
     "allTags": "Alle Tags",
     "tagsIndexDescription": "Alle Artikel nach Thema durchsuchen.",
     "articlesCount": "Artikel",
-    "recentTitle": "Neueste Updates",
-    "recentDescription": "Die neuesten Artikel und Updates im Wiki, sortiert von neu nach alt.",
+    "recentTitle": "No Man's Sky: Patch-Notes & Update-Verlauf",
+    "recentDescription": "Alle Updates und Patches von No Man's Sky, von Voyagers 6.0 bis Cosmos 6.50: die Versions-Chronologie erklärt, dazu die frischesten Guides des Wikis.",
     "sponsorTitle": "Unterstütze dieses Wiki",
     "sponsorText": "Wenn dir diese Guides geholfen haben, unterstütze gerne die Seite.",
     "sponsorButton": "Uns unterstützen",
@@ -103,7 +103,12 @@
       "prev": "Vorheriges Bild",
       "next": "Nächstes Bild"
     },
-    "quickAnswer": "Schnellantwort"
+    "quickAnswer": "Schnellantwort",
+    "timelineTitle": "Die Versions-Chronik, neueste zuerst",
+    "patches": "Patches",
+    "rollingOut": "Wird gerade ausgerollt",
+    "officialSite": "Offizielle Patch-Notes",
+    "gridTitle": "Frisch aktualisierte Guides"
   },
   "overview": {
     "cosmos-update": {

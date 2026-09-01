@@ -91,8 +91,8 @@
     "allTags": "Todas as Tags",
     "tagsIndexDescription": "Navegue por todos os artigos por tópico.",
     "articlesCount": "artigos",
-    "recentTitle": "Atualizações Recentes",
-    "recentDescription": "Os artigos e atualizações mais recentes da wiki, do mais novo ao mais antigo.",
+    "recentTitle": "Patches e histórico de atualizações de No Man's Sky",
+    "recentDescription": "Todas as atualizações e patches de No Man's Sky, de Voyagers 6.0 a Cosmos 6.50: a cronologia das versões explicada, com os guias mais frescos do wiki abaixo.",
     "sponsorTitle": "Apoie esta wiki",
     "sponsorText": "Se estes guias ajudaram você, considere apoiar o site.",
     "sponsorButton": "Apoie-nos",
@@ -103,7 +103,12 @@
       "prev": "Imagem anterior",
       "next": "Próxima imagem"
     },
-    "quickAnswer": "Resposta Rápida"
+    "quickAnswer": "Resposta Rápida",
+    "timelineTitle": "A cronologia das versões, da mais recente",
+    "patches": "Patches",
+    "rollingOut": "Sendo lançada agora",
+    "officialSite": "Notas oficiais",
+    "gridTitle": "Guias recém-atualizados"
   },
   "overview": {
     "cosmos-update": {
