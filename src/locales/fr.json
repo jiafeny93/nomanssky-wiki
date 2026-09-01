@@ -11,6 +11,7 @@
     "search": "Rechercher",
     "language": "Langue",
     "cosmos-update": "Mise à jour Cosmos",
+    "data": "Données",
     "expeditions": "Expéditions",
     "starships": "Vaisseaux",
     "codes": "Codes",
@@ -108,6 +109,10 @@
     "cosmos-update": {
       "overviewTitle": "Guides de la mise à jour No Man's Sky Cosmos",
       "overviewDescription": "Tout sur la mise à jour Cosmos — vol interstellaire libre, atterrissages sur les étoiles, équipement résistant à la chaleur, notes de mise à jour et récompenses du 10e anniversaire."
+    },
+    "data": {
+      "overviewTitle": "Pages de données No Man's Sky",
+      "overviewDescription": "Bases de données de référence : toutes les recettes de raffinage et les chiffres de l'économie du jeu."
     },
     "expeditions": {
       "overviewTitle": "Guides des expéditions de No Man's Sky",

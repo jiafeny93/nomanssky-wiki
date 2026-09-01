@@ -1,0 +1,456 @@
+---
+title: "Base de datos de recetas de refinado de No Man's Sky: las 358 recetas"
+description: "Las 358 recetas de refinado de No Man's Sky en una tabla: bucles de dinero, nanitos, aleaciones, gases, ferrita y más, agrupadas por uso. Verificado en 6.50."
+category: "data"
+image: '../../../../assets/covers/data/refining.webp'
+date: 2026-09-01
+lastModified: 2026-09-01
+gameVersion: "6.50"
+tags: ['refinado', 'base de datos', 'nanitos', 'unidades', 'economía', 'datos']
+summary: "Base de datos completa de refinado de No Man's Sky: todas las recetas del juego, agrupadas en bucles de dinero, nanitos, aleaciones, gases, ferrita y cultivos, con la refinadora que pide cada una."
+faq:
+  - question: "¿Cuántas recetas de refinado hay en No Man's Sky?"
+    answer: "Los datos actuales del juego contienen 358 recetas de refinado, y las 369 están tabuladas en esta página. La mayoría son pasos intermedios hacia las que importan: los bucles multiplicadores, las conversiones a nanitos y la tabla comercial de aleaciones. Las proporciones son datos exactos del juego y el despliegue escalonado de Cosmos no ha cambiado ninguna a septiembre de 2026."
+  - question: "¿Cuál es la mejor receta de refinado para conseguir unidades?"
+    answer: "El bucle de expansión de cloro: Cloro x1 más Oxígeno x2 se refina en Cloro x6, así que cada pasada multiplica tu stock por seis. La misma estructura funciona para Cobalto Ionizado y Carbono Condensado. Pon un banco de refinadoras grandes con un hotspot de oxígeno y vende en economías de 3 estrellas — la guía de farmeo de unidades cubre el montaje completo y la matemática por hora."
+  - question: "¿Qué objetos se refinan en nanitos en No Man's Sky?"
+    answer: "Quince objetos se convierten directamente: Núcleo Larvario y Núcleo Hadal a 50 nanitos cada uno, Cerebro Hialino a 230, Espejo Invertido a 95, Fragmento Radiante, Vile Spawn y Flesh Rope a 50, Salvaged Data a 15, Moho Fugitivo a uno por cada cinco, Metal Contaminado a dos por uno, Pugneum a uno por 25, Corrupted Ichor a uno por cinco, más platino y dos recetas de emergencia de varios objetos. La guía de nanitos los ordena por rendimiento real por hora."
+  - question: "¿Por qué las tablas no muestran tiempos de refinado?"
+    answer: "Porque los tiempos publicados no cuadran con los ritmos medidos por la comunidad — la misma receta se cita desde segundos hasta minutos según la clase de refinadora y el montaje. Las proporciones son datos duros del juego; las duraciones son mediciones. Publicamos los hechos que se mantienen ciertos y dejamos las pruebas de velocidad a las guías de farmeo, que ordenan métodos por rendimiento horario verificado."
+  - question: "¿Cambió la actualización Cosmos alguna receta de refinado?"
+    answer: "No. A 1 de septiembre de 2026, las notas escalonadas de Cosmos no han tocado ni una receta de refinado, precio de módulo ni proporción de esta página. Reverificamos con cada lanzamiento escalonado y actualizamos esta base de datos el mismo día en que cambie una proporción."
+---
+
+import StatBar from '~/components/mdx/StatBar.astro';
+import Callout from '~/components/mdx/Callout.astro';
+
+Esta es la página de referencia: **las 358 recetas de refinado de los datos actuales de No Man's Sky**, en una sola página, agrupadas por para qué sirve cada conversión — no repartidas en subpáginas ni ordenadas alfabéticamente. Cuando quieras saber si X se refina en Y y en qué proporción, la respuesta está aquí.
+
+Úsala como consulta y deja la interpretación a la capa de análisis: nuestra [guía de recetas de refinado](/guides/refining-recipes/) explica las recetas que de verdad importan, la [guía de farmeo de unidades](/guides/units-farming/) convierte los bucles multiplicadores en ingresos y la [guía de nanitos](/guides/nanites-farming/) ordena cada fuente de nanitos en la práctica.
+
+**Última actualización: 1 de septiembre de 2026.**
+
+<StatBar
+  items={[
+    { value: '358', label: 'Recetas de refinado en los datos actuales del juego' },
+    { value: 'x6', label: 'Mejor multiplicador por pasada (cloro / cobalto / carbono + oxígeno)' },
+    { value: '230', label: 'Nanitos de un Cerebro Hialino' },
+    { value: '250', label: 'Plata de un Herox decodificado' },
+  ]}
+/>
+
+<Callout type="info" title="De dónde salen estos números">
+  Las cantidades y proporciones vienen de la tabla de recetas de refinado de los datos del juego, catalogada por bases de datos comunitarias y contrastada con wikis comunitarias y nuestras propias tablas probadas. Los tiempos de refinado se omiten a propósito: los ritmos medidos varían según refinadora y montaje, mientras que las proporciones son estables. El despliegue escalonado de Cosmos (comprobado en septiembre de 2026) no ha cambiado ninguna receta de abajo.
+</Callout>
+
+Cómo leer las tablas: **las recetas de una entrada funcionan en cualquier refinadora, incluida la portátil. Las de dos entradas necesitan una refinadora mediana y las de tres (aleaciones, componentes comerciales, fotosíntesis de oxígeno) una grande.** Las refinadoras se pausan — nunca destruyen su contenido — así que una refinadora apagada es ingreso perdido, no un objeto perdido. Las cantidades son datos exactos del juego. Las duraciones se omiten a propósito: los tiempos medidos por la comunidad varían según el montaje, mientras que las proporciones son hechos estables.
+
+## Bucles de dinero (36 recetas)
+
+Todas las recetas que multiplican un stock que ya tienes. Estos bucles de seis por uno y cinco por uno son los motores de la economía de unidades; el truco del platino y las filas de fotosíntesis existen para alimentarlos de oxígeno.
+
+| Entradas | Salida |
+| --- | --- |
+| Di-hydrogen Jelly x1 | Di-hydrogen x40 |
+| Platinum x1 + Oxygen x1 | Magnetised Ferrite x10 |
+| Fungal Mould x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Frost Crystal x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Cactus Flesh x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Solanium x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Gamma Root x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Star Bulb x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 |
+| Condensed Carbon x1 + Oxygen x2 | Condensed Carbon x6 |
+| Chlorine x1 + Oxygen x2 | Chlorine x6 |
+| Ionised Cobalt x1 + Oxygen x2 | Ionised Cobalt x6 |
+| Carbon x2 + Oxygen x2 | Condensed Carbon x5 |
+| Salt x2 + Oxygen x2 | Chlorine x5 |
+| Cobalt x2 + Oxygen x2 | Ionised Cobalt x5 |
+| Faecium x1 + Condensed Carbon x1 | Condensed Carbon x3 |
+| Ionised Cobalt x1 | Cobalt x2 |
+| Uranium x1 + Di-hydrogen x1 | Condensed Carbon x2 |
+| Marrow Bulb x1 + Oxygen x1 | Ionised Cobalt x2 |
+| Kelp Sac x1 + Oxygen x1 | Chlorine x2 |
+| Marrow Bulb x1 + Pugneum x1 | Ionised Cobalt x2 |
+| Kelp Sac x1 + Pugneum x1 | Chlorine x2 |
+| Kelp Sac x1 + Carbon x1 | Oxygen x2 |
+| Faecium x1 + Carbon x2 | Condensed Carbon x2 |
+| Kelp Sac x1 + Condensed Carbon x1 | Oxygen x2 |
+| Marrow Bulb x1 + Cobalt x1 | Ionised Cobalt x2 |
+| Kelp Sac x1 + Salt x1 | Chlorine x2 |
+| Marrow Bulb x1 + Ionised Cobalt x1 | Ionised Cobalt x2 |
+| Kelp Sac x1 + Chlorine x1 | Chlorine x2 |
+| Faecium x1 + Mordite x1 | Condensed Carbon x2 |
+| Cyto-phosphate x1 | Condensed Carbon x1 |
+| Di-hydrogen x30 | Di-hydrogen Jelly x1 |
+| Cobalt x2 | Ionised Cobalt x1 |
+| Carbon x2 | Condensed Carbon x1 |
+| Salt x2 | Chlorine x1 |
+| Tritium x5 | Di-hydrogen x1 |
+| Kelp Sac x1 | Oxygen x1 |
+
+## Conversiones a nanitos (15 recetas)
+
+La lista completa de conversiones. Los núcleos larvarios y hadales pagan mejor por objeto y el moho fugitivo escala mejor por hora — la [guía de nanitos](/guides/nanites-farming/) compara las rutas de farmeo.
+
+| Entradas | Salida |
+| --- | --- |
+| Hyaline Brain x1 | Nanite Cluster x230 |
+| Inverted Mirror x1 | Nanite Cluster x95 |
+| Hadal Core x1 | Nanite Cluster x50 |
+| Larval Core x1 | Nanite Cluster x50 |
+| Vile Spawn x1 | Nanite Cluster x50 |
+| Flesh Rope x1 | Nanite Cluster x50 |
+| Radiant Shard x1 | Nanite Cluster x50 |
+| Salvaged Data x1 | Nanite Cluster x15 |
+| Tainted Metal x1 | Nanite Cluster x2 |
+| Platinum x35 | Nanite Cluster x1 |
+| Pugneum x25 | Nanite Cluster x1 |
+| Runaway Mould x5 | Nanite Cluster x1 |
+| Corrupted Ichor x5 | Nanite Cluster x1 |
+| Faecium x1 + Hexite x1 | Nanite Cluster x1 |
+| Silver x15 + Gold x15 + Platinum x25 | Nanite Cluster x1 |
+
+## Metal Cromático y la escalera de minerales (30 recetas)
+
+Del mineral al Metal Cromático, los atajos activados, la mejora con ferrita pura y el bucle de expansión que duplica mineral gratis.
+
+| Entradas | Salida |
+| --- | --- |
+| Silver x1 + Gold x1 + Indium x1 | Chromatic Metal x30 |
+| Silver x1 + Gold x1 + Quartzite x1 | Chromatic Metal x30 |
+| Silver x1 + Gold x1 + Emeril x1 | Chromatic Metal x20 |
+| Silver x1 + Gold x1 + Cadmium x1 | Chromatic Metal x10 |
+| Activated Indium x1 + Pure Ferrite x1 | Chromatic Metal x8 |
+| Activated Quartzite x1 + Pure Ferrite x1 | Chromatic Metal x8 |
+| Activated Emeril x1 + Pure Ferrite x1 | Chromatic Metal x6 |
+| Silver x1 + Gold x1 + Copper x1 | Chromatic Metal x5 |
+| Indium x2 | Chromatic Metal x4 |
+| Activated Indium x1 | Chromatic Metal x4 |
+| Activated Quartzite x1 | Chromatic Metal x4 |
+| Quartzite x2 | Chromatic Metal x4 |
+| Indium x1 + Pure Ferrite x1 | Chromatic Metal x4 |
+| Activated Cadmium x1 + Pure Ferrite x1 | Chromatic Metal x4 |
+| Quartzite x1 + Pure Ferrite x1 | Chromatic Metal x4 |
+| Emeril x2 | Chromatic Metal x3 |
+| Activated Emeril x1 | Chromatic Metal x3 |
+| Emeril x1 + Pure Ferrite x1 | Chromatic Metal x3 |
+| Activated Cadmium x1 | Chromatic Metal x2 |
+| Cadmium x1 + Chromatic Metal x1 | Cadmium x2 |
+| Indium x1 + Chromatic Metal x1 | Indium x2 |
+| Emeril x1 + Chromatic Metal x1 | Emeril x2 |
+| Copper x1 + Chromatic Metal x1 | Copper x2 |
+| Cadmium x1 + Pure Ferrite x1 | Chromatic Metal x2 |
+| Activated Copper x1 + Pure Ferrite x1 | Chromatic Metal x2 |
+| Quartzite x1 + Chromatic Metal x1 | Quartzite x2 |
+| Cadmium x2 | Chromatic Metal x1 |
+| Copper x2 | Chromatic Metal x1 |
+| Activated Copper x1 | Chromatic Metal x1 |
+| Copper x1 + Pure Ferrite x1 | Chromatic Metal x1 |
+
+## Aleaciones (56 recetas)
+
+Seis familias de aleaciones a partir de elementos locales. El hueco de cobalto/ferrita y el de combustible aceptan alternativas — cada fila familiar cubre ocho recetas del juego. Decodificar una aleación en metal precioso paga de 125 a 250 por unidad.
+
+**Fabricar aleaciones — refinadora grande, 8 recetas por familia; el hueco de combustible acepta una cualquiera de las cuatro opciones**
+
+| Entradas (cualquier opción de combustible) | Salida |
+| --- | --- |
+| Ammonia x30 + Ionised Cobalt x30 (or Cobalt x60) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Herox x1 |
+| Paraffinium x30 + Ionised Cobalt x30 (or Cobalt x60) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Aronium x1 |
+| Pyrite x30 + Pure Ferrite x60 (or Ferrite Dust x120) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Dirty Bronze x1 |
+| Uranium x30 + Pure Ferrite x60 (or Ferrite Dust x120) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Lemmium x1 |
+| Phosphorus x30 + Ionised Cobalt x30 (or Cobalt x60) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Magno-gold x1 |
+| Dioxite x30 + Ionised Cobalt x30 (or Cobalt x60) + Tritium x20 (or Silver x20 / Gold x10 / Platinum x5) | Grantine x1 |
+
+**Desmontar aleaciones**
+
+| Entrada | Salida |
+| --- | --- |
+| Aronium x1 | Silver x250 |
+| Dirty Bronze x1 | Silver x250 |
+| Herox x1 | Silver x250 |
+| Geodesite x1 | Platinum x250 |
+| Iridesite x1 | Platinum x250 |
+| Lemmium x1 | Gold x125 |
+| Magno-gold x1 | Gold x125 |
+| Grantine x1 | Gold x125 |
+
+## Gases y componentes comerciales (31 recetas)
+
+Los tres gases atmosféricos (más el metano y el helio cristalizado) se intercambian libremente, y gas más consumibles fabrica los componentes comerciales que consumen las cadenas de fabricación.
+
+| Entradas | Salida |
+| --- | --- |
+| Activated Quartzite x1 + Lithium x1 | Crystallised Helium x2 |
+| Sulphurine x3 | Radon x1 |
+| Radon x3 | Nitrogen x1 |
+| Nitrogen x3 | Sulphurine x1 |
+| Methane x3 | Nitrogen x1 |
+| Sulphurine x1 + Oxygen x1 | Radon x1 |
+| Radon x1 + Oxygen x1 | Nitrogen x1 |
+| Nitrogen x1 + Oxygen x1 | Sulphurine x1 |
+| Sulphurine x1 + Chromatic Metal x1 | Radon x1 |
+| Radon x1 + Chromatic Metal x1 | Nitrogen x1 |
+| Nitrogen x1 + Chromatic Metal x1 | Sulphurine x1 |
+| Quartzite x1 + Lithium x1 | Crystallised Helium x1 |
+| Methane x1 + Oxygen x1 | Nitrogen x1 |
+| Methane x1 + Chromatic Metal x1 | Nitrogen x1 |
+| Oxygen x10 + Ferrite Dust x20 + Carbon x20 | Unstable Plasma x1 |
+| Oxygen x10 + Ferrite Dust x20 + Condensed Carbon x10 | Unstable Plasma x1 |
+| Oxygen x10 + Pure Ferrite x20 + Carbon x20 | Unstable Plasma x1 |
+| Oxygen x10 + Condensed Carbon x10 + Pure Ferrite x20 | Unstable Plasma x1 |
+| Sulphurine x100 + Carbon x20 + Salt x10 | Thermic Condensate x1 |
+| Radon x100 + Carbon x20 + Salt x10 | Enriched Carbon x1 |
+| Nitrogen x100 + Carbon x20 + Salt x10 | Nitrogen Salt x1 |
+| Sulphurine x100 + Condensed Carbon x10 + Salt x10 | Thermic Condensate x1 |
+| Radon x100 + Condensed Carbon x10 + Salt x10 | Enriched Carbon x1 |
+| Nitrogen x100 + Condensed Carbon x10 + Salt x10 | Nitrogen Salt x1 |
+| Sulphurine x100 + Carbon x20 + Chlorine x5 | Thermic Condensate x1 |
+| Radon x100 + Carbon x20 + Chlorine x5 | Enriched Carbon x1 |
+| Nitrogen x100 + Carbon x20 + Chlorine x5 | Nitrogen Salt x1 |
+| Sulphurine x100 + Condensed Carbon x10 + Chlorine x5 | Thermic Condensate x1 |
+| Radon x100 + Condensed Carbon x10 + Chlorine x5 | Enriched Carbon x1 |
+| Nitrogen x100 + Condensed Carbon x10 + Chlorine x5 | Nitrogen Salt x1 |
+| Sulphurine x3 + Radon x3 + Nitrogen x3 | Methane x1 |
+
+## Ferrita y metales refinados (37 recetas)
+
+La escalera de ferrita del polvo a la magnetizada, más todas las rutas que convierten mineral y curiosidades en stock de metal refinado.
+
+| Entradas | Salida |
+| --- | --- |
+| Ferrite Dust x1 + Pure Ferrite x1 + Platinum x1 | Magnetised Ferrite x12 |
+| Activated Indium x1 + Ferrite Dust x1 | Magnetised Ferrite x8 |
+| Activated Quartzite x1 + Ferrite Dust x1 | Magnetised Ferrite x8 |
+| Ferrite Dust x1 + Pure Ferrite x1 + Gold x1 | Magnetised Ferrite x8 |
+| Activated Emeril x1 + Ferrite Dust x1 | Magnetised Ferrite x6 |
+| Ferrite Dust x1 + Pure Ferrite x1 + Silver x1 | Magnetised Ferrite x5 |
+| Magnetised Ferrite x3 + Pugneum x1 | Magnetised Ferrite x4 |
+| Indium x1 + Ferrite Dust x1 | Magnetised Ferrite x4 |
+| Activated Cadmium x1 + Ferrite Dust x1 | Magnetised Ferrite x4 |
+| Quartzite x1 + Ferrite Dust x1 | Magnetised Ferrite x4 |
+| Pure Ferrite x1 + Condensed Carbon x1 | Magnetised Ferrite x3 |
+| Ferrite Dust x2 + Pugneum x1 | Pure Ferrite x3 |
+| Pure Ferrite x2 + Pugneum x1 | Magnetised Ferrite x3 |
+| Emeril x1 + Ferrite Dust x1 | Magnetised Ferrite x3 |
+| Magnetised Ferrite x1 | Pure Ferrite x2 |
+| Rusted Metal x1 | Ferrite Dust x2 |
+| Polished Stone x1 | Pure Ferrite x2 |
+| Ferrite Dust x1 + Condensed Carbon x1 | Magnetised Ferrite x2 |
+| Pure Ferrite x1 + Carbon x1 | Magnetised Ferrite x2 |
+| Pure Ferrite x1 + Oxygen x1 | Rusted Metal x2 |
+| Cadmium x1 + Ferrite Dust x1 | Magnetised Ferrite x2 |
+| Activated Copper x1 + Ferrite Dust x1 | Magnetised Ferrite x2 |
+| Phosphorus x1 + Magnetised Ferrite x1 | Basalt x2 |
+| Ferrite Dust x1 | Pure Ferrite x1 |
+| Pure Ferrite x2 | Magnetised Ferrite x1 |
+| Paraffinium x1 | Ferrite Dust x1 |
+| Pyrite x1 | Ferrite Dust x1 |
+| Ammonia x1 | Ferrite Dust x1 |
+| Uranium x1 | Ferrite Dust x1 |
+| Dioxite x1 | Ferrite Dust x1 |
+| Phosphorus x1 | Ferrite Dust x1 |
+| Crystallised Helium x1 | Ferrite Dust x1 |
+| Lithium x1 | Ferrite Dust x1 |
+| Ferrite Dust x1 + Carbon x1 | Magnetised Ferrite x1 |
+| Ferrite Dust x1 + Oxygen x1 | Rusted Metal x1 |
+| Copper x1 + Ferrite Dust x1 | Magnetised Ferrite x1 |
+| Pyrite x1 + Magnetised Ferrite x1 | Basalt x1 |
+
+## Sodio, sal y Nitrato de Sodio (32 recetas)
+
+Sodio, sal y Nitrato de Sodio se convierten entre sí en ambas direcciones — una familia pequeña, pero alimenta las recetas de combustible de lanzamiento y nitrato.
+
+| Entradas | Salida |
+| --- | --- |
+| Crystal Sulphide x1 | Sodium Nitrate x50 |
+| Sodium Nitrate x1 + Pugneum x1 | Sodium Nitrate x3 |
+| Nitrogen x1 + Magnetised Ferrite x1 | Sodium Nitrate x3 |
+| Methane x1 + Magnetised Ferrite x1 | Sodium Nitrate x3 |
+| Sodium Nitrate x1 | Sodium x2 |
+| Chlorine x1 | Salt x2 |
+| Sodium Nitrate x1 + Oxygen x1 | Sodium Nitrate x2 |
+| Condensed Carbon x1 + Sodium x1 | Sodium Nitrate x2 |
+| Nitrogen x1 + Sodium Nitrate x1 | Sodium Nitrate x2 |
+| Marrow Bulb x1 + Carbon x1 | Sodium x2 |
+| Marrow Bulb x1 + Sodium x1 | Sodium Nitrate x2 |
+| Kelp Sac x1 + Sodium x1 | Sodium Nitrate x2 |
+| Faecium x1 + Sodium x1 | Sodium Nitrate x2 |
+| Marrow Bulb x1 + Condensed Carbon x1 | Sodium x2 |
+| Marrow Bulb x1 + Sodium Nitrate x1 | Sodium Nitrate x2 |
+| Kelp Sac x1 + Sodium Nitrate x1 | Sodium Nitrate x2 |
+| Faecium x1 + Sodium Nitrate x1 | Sodium Nitrate x2 |
+| Nitrogen x1 + Pure Ferrite x1 | Sodium Nitrate x2 |
+| Methane x1 + Sodium Nitrate x1 | Sodium Nitrate x2 |
+| Methane x1 + Pure Ferrite x1 | Sodium Nitrate x2 |
+| Activated Quartzite x1 + Crystallised Helium x1 + Methane x1 | Sodium Nitrate x2 |
+| Activated Quartzite x1 + Lithium x1 + Methane x1 | Sodium Nitrate x2 |
+| Sodium x2 | Sodium Nitrate x1 |
+| Marrow Bulb x1 | Sodium x1 |
+| Di-hydrogen x1 + Oxygen x1 | Salt x1 |
+| Sodium x1 + Oxygen x1 | Sodium Nitrate x1 |
+| Carbon x1 + Sodium x1 | Sodium Nitrate x1 |
+| Sodium x1 + Pugneum x1 | Sodium Nitrate x1 |
+| Nitrogen x1 + Sodium x1 | Sodium Nitrate x1 |
+| Nitrogen x1 + Ferrite Dust x1 | Sodium Nitrate x1 |
+| Methane x1 + Sodium x1 | Sodium Nitrate x1 |
+| Methane x1 + Ferrite Dust x1 | Sodium Nitrate x1 |
+
+## Elementos locales (38 recetas)
+
+Los seis elementos locales de planeta sobre los que se construyen cada aleación y componente comercial, todos refinables desde cultivos, gases o vecinos.
+
+| Entradas | Salida |
+| --- | --- |
+| Sulphurine x1 + Magnetised Ferrite x1 | Paraffinium x3 |
+| Radon x1 + Magnetised Ferrite x1 | Uranium x3 |
+| Crystallised Helium x1 + Magnetised Ferrite x1 | Uranium x3 |
+| Lithium x1 + Magnetised Ferrite x1 | Pyrite x3 |
+| Condensed Carbon x1 + Sodium Nitrate x1 | Dioxite x2 |
+| Silver x1 + Oxygen x1 | Paraffinium x2 |
+| Gold x1 + Oxygen x1 | Pyrite x2 |
+| Sulphurine x1 + Pure Ferrite x1 | Paraffinium x2 |
+| Radon x1 + Pure Ferrite x1 | Uranium x2 |
+| Crystallised Helium x1 + Pure Ferrite x1 | Uranium x2 |
+| Lithium x1 + Pure Ferrite x1 | Pyrite x2 |
+| Gold x1 | Pyrite x1 |
+| Radon x1 + Di-hydrogen x1 | Uranium x1 |
+| Nitrogen x1 + Di-hydrogen x1 | Ammonia x1 |
+| Carbon x1 + Sodium Nitrate x1 | Dioxite x1 |
+| Paraffinium x2 + Ferrite Dust x1 | Ammonia x1 |
+| Pyrite x2 + Ferrite Dust x1 | Paraffinium x1 |
+| Ammonia x2 + Ferrite Dust x1 | Dioxite x1 |
+| Uranium x2 + Ferrite Dust x1 | Pyrite x1 |
+| Dioxite x2 + Ferrite Dust x1 | Phosphorus x1 |
+| Phosphorus x2 + Ferrite Dust x1 | Uranium x1 |
+| Paraffinium x2 + Pure Ferrite x1 | Ammonia x1 |
+| Pyrite x2 + Pure Ferrite x1 | Paraffinium x1 |
+| Ammonia x2 + Pure Ferrite x1 | Dioxite x1 |
+| Uranium x2 + Pure Ferrite x1 | Pyrite x1 |
+| Dioxite x2 + Pure Ferrite x1 | Phosphorus x1 |
+| Phosphorus x2 + Pure Ferrite x1 | Uranium x1 |
+| Fungal Mould x2 + Salt x1 | Ammonia x1 |
+| Frost Crystal x2 + Salt x1 | Dioxite x1 |
+| Gamma Root x2 + Salt x1 | Uranium x1 |
+| Cactus Flesh x2 + Salt x1 | Pyrite x1 |
+| Solanium x2 + Salt x1 | Phosphorus x1 |
+| Star Bulb x2 + Salt x1 | Paraffinium x1 |
+| Sulphurine x1 + Ferrite Dust x1 | Paraffinium x1 |
+| Ferrite Dust x1 + Radon x1 | Uranium x1 |
+| Crystallised Helium x1 + Ferrite Dust x1 | Uranium x1 |
+| Lithium x1 + Ferrite Dust x1 | Pyrite x1 |
+| Methane x1 + Di-hydrogen x1 | Phosphorus x1 |
+
+## Cultivos, orgánicos y la cadena del moho (56 recetas)
+
+Todo lo cultivable u orgánico: cultivos a carbono, el ciclo mordita-fecio y la cadena de sustancia residual a moho fugitivo que alimenta la economía de nanitos.
+
+| Entradas | Salida |
+| --- | --- |
+| Hypnotic Eye x1 | Living Slime x50 |
+| Condensed Carbon x1 + Mordite x1 | Faecium x4 |
+| Sodium Nitrate x1 + Mordite x1 | Marrow Bulb x4 |
+| Carbon x2 + Mordite x1 | Faecium x3 |
+| Sodium x2 + Mordite x1 | Marrow Bulb x3 |
+| Faecium x1 + Oxygen x1 | Faecium x3 |
+| Atlantideum x1 + Pugneum x1 | Runaway Mould x3 |
+| Condensed Carbon x1 | Carbon x2 |
+| Fungal Mould x1 | Carbon x2 |
+| Gamma Root x1 | Carbon x2 |
+| Cactus Flesh x1 | Carbon x2 |
+| Solanium x1 | Carbon x2 |
+| Star Bulb x1 | Carbon x2 |
+| Faecium x3 | Mordite x2 |
+| Condensed Carbon x1 + Pugneum x1 | Mordite x2 |
+| Paraffinium x1 + Star Bulb x1 | Star Bulb x2 |
+| Pyrite x1 + Cactus Flesh x1 | Cactus Flesh x2 |
+| Ammonia x1 + Fungal Mould x1 | Fungal Mould x2 |
+| Uranium x1 + Gamma Root x1 | Gamma Root x2 |
+| Dioxite x1 + Frost Crystal x1 | Frost Crystal x2 |
+| Phosphorus x1 + Solanium x1 | Solanium x2 |
+| Mordite x3 | Faecium x1 |
+| Oxygen x1 | Carbon x1 |
+| Residual Goop x1 | Viscous Fluids x1 |
+| Living Slime x1 | Runaway Mould x1 |
+| Viscous Fluids x1 | Living Slime x1 |
+| Cursed Dust x2 | Residual Goop x1 |
+| Sulphurine x1 + Di-hydrogen x1 | Solanium x1 |
+| Di-hydrogen x1 + Carbon x1 | Faecium x1 |
+| Di-hydrogen x1 + Condensed Carbon x1 | Mordite x1 |
+| Carbon x1 + Pugneum x1 | Mordite x1 |
+| Paraffinium x2 + Oxygen x1 | Star Bulb x1 |
+| Pyrite x2 + Oxygen x1 | Cactus Flesh x1 |
+| Ammonia x2 + Oxygen x1 | Fungal Mould x1 |
+| Uranium x2 + Oxygen x1 | Gamma Root x1 |
+| Dioxite x2 + Oxygen x1 | Frost Crystal x1 |
+| Phosphorus x2 + Oxygen x1 | Solanium x1 |
+| Ammonia x1 + Nitrogen x1 | Fungal Mould x1 |
+| Dioxite x1 + Radon x1 | Frost Crystal x1 |
+| Uranium x1 + Radon x1 | Gamma Root x1 |
+| Pyrite x1 + Sulphurine x1 | Cactus Flesh x1 |
+| Phosphorus x1 + Sulphurine x1 | Solanium x1 |
+| Paraffinium x1 + Nitrogen x1 | Star Bulb x1 |
+| Cobalt x1 + Nitrogen x1 | Marrow Bulb x1 |
+| Salt x1 + Nitrogen x1 | Kelp Sac x1 |
+| Sulphurine x1 + Nitrogen x1 | Faecium x1 |
+| Atlantideum x5 + Mordite x5 | Living Slime x1 |
+| Methane x1 + Ammonia x1 | Fungal Mould x1 |
+| Methane x1 + Dioxite x1 | Frost Crystal x1 |
+| Methane x1 + Uranium x1 | Gamma Root x1 |
+| Methane x1 + Pyrite x1 | Cactus Flesh x1 |
+| Methane x1 + Phosphorus x1 | Solanium x1 |
+| Methane x1 + Paraffinium x1 | Star Bulb x1 |
+| Methane x1 + Crystallised Helium x1 | Marrow Bulb x1 |
+| Methane x1 + Lithium x1 | Kelp Sac x1 |
+| Methane x1 + Mordite x1 | Faecium x1 |
+
+## Consumibles tecnológicos fabricados (13 recetas)
+
+Las recetas de refinado de los consumibles diarios: celdas de warp, combustible de lanzamiento, gel de soporte vital, baterías de iones y cristal.
+
+| Entradas | Salida |
+| --- | --- |
+| Frost Crystal x40 | Glass x1 |
+| Silicate Powder x40 | Glass x1 |
+| Cyto-phosphate x50 + Salt x50 | Glass x1 |
+| Di-hydrogen x1 + Tritium x1 | Deuterium x1 |
+| Di-hydrogen x1 + Silicate Powder x1 | Deuterium x1 |
+| Condensed Carbon x25 + Sodium x10 + Chromatic Metal x250 | Warp Cell x1 |
+| Carbon x50 + Sodium Nitrate x5 + Chromatic Metal x250 | Warp Cell x1 |
+| Condensed Carbon x25 + Sodium Nitrate x5 + Chromatic Metal x250 | Warp Cell x1 |
+| Oxygen x10 + Condensed Carbon x10 + Di-hydrogen x10 | Life Support Gel x1 |
+| Di-hydrogen x10 + Ferrite Dust x20 + Sodium Nitrate x5 | Starship Launch Fuel x1 |
+| Di-hydrogen x10 + Pure Ferrite x20 + Sodium x10 | Starship Launch Fuel x1 |
+| Di-hydrogen x10 + Magnetised Ferrite x10 + Sodium Nitrate x5 | Starship Launch Fuel x1 |
+| Ferrite Dust x10 + Silver x10 + Sodium x10 | Ion Battery x1 |
+
+## Curiosidades y metales preciosos (14 recetas)
+
+Curiosidades, transmutaciones de metales preciosos y las recetas más raras. Las últimas filas son conversiones puras de beneficio que casi nadie encuentra.
+
+| Entradas | Salida |
+| --- | --- |
+| Living Pearl x1 | Gold x100 |
+| Ferrite Dust x1 + Oxygen x1 + Emeril x1 | Gold x10 |
+| Ferrite Dust x1 + Oxygen x1 + Chromatic Metal x250 | Platinum x10 |
+| Atlantideum x1 | Pugneum x2 |
+| Faecium x1 + Pugneum x1 | Gold x2 |
+| Activated Quartzite x1 + Crystallised Helium x1 | Lithium x2 |
+| Hexite x1 | Gold x1 |
+| Faecium x1 + Residual Goop x1 | Gold x1 |
+| Gold x1 + Silver x1 | Platinum x1 |
+| Mordite x1 + Pugneum x1 | Gold x1 |
+| Quartzite x1 + Crystallised Helium x1 | Lithium x1 |
+| Activated Quartzite x1 + Carbon x1 | Quartzite x1 |
+| Quartzite x1 + Crystallised Helium x1 + Methane x1 | Activated Quartzite x1 |
+| Quartzite x1 + Lithium x1 + Methane x1 | Activated Quartzite x1 |
+
+Cada receta de arriba está en los datos de refinado del juego actual — nada recortado, nada de relleno. Cuando una actualización futura toque el refinado, esta página cambia el mismo día en que nuestra [guía de la actualización Cosmos](/cosmos-update/cosmos-update-guide/) lo reporte.
+
+## Guías relacionadas
+
+- [Guía de recetas de refinado: las que importan](/guides/refining-recipes/)
+- [Farmeo de unidades: cada bucle de dinero ordenado](/guides/units-farming/)
+- [Farmeo de nanitos: cada fuente ordenada](/guides/nanites-farming/)
+- [Cómo hacer dinero: la guía completa de la economía](/guides/money-making-guide/)
+- [Cableado eléctrico: alimenta tu sala de refinadoras](/base-building/electrical-wiring-guide/)

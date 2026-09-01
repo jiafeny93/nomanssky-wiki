@@ -11,6 +11,7 @@
     "search": "Suche",
     "language": "Sprache",
     "cosmos-update": "Cosmos-Update",
+    "data": "Daten",
     "expeditions": "Expeditionen",
     "starships": "Raumschiffe",
     "codes": "Codes",
@@ -108,6 +109,10 @@
     "cosmos-update": {
       "overviewTitle": "No Man's Sky Cosmos-Update: Guides",
       "overviewDescription": "Alles zum Cosmos-Update – interstellarer Freiflug, Landungen auf Sternen, hitzebeständige Ausrüstung, Patchnotes und die Belohnungen zum 10-jährigen Jubiläum."
+    },
+    "data": {
+      "overviewTitle": "No Man's Sky Daten-Seiten",
+      "overviewDescription": "Referenz-Datenbanken: alle Raffinations-Rezepte und die Zahlen hinter der Spielwirtschaft."
     },
     "expeditions": {
       "overviewTitle": "No Man's Sky Expeditions-Guides",

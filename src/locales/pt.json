@@ -11,6 +11,7 @@
     "search": "Buscar",
     "language": "Idioma",
     "cosmos-update": "Atualização Cosmos",
+    "data": "Dados",
     "expeditions": "Expedições",
     "starships": "Naves Estelares",
     "codes": "Códigos",
@@ -108,6 +109,10 @@
     "cosmos-update": {
       "overviewTitle": "Guias da Atualização Cosmos de No Man's Sky",
       "overviewDescription": "Tudo sobre a atualização Cosmos — voo interestelar livre, pouso em estrelas, equipamento resistente ao calor, notas de patch e recompensas do 10º aniversário."
+    },
+    "data": {
+      "overviewTitle": "Páginas de dados de No Man's Sky",
+      "overviewDescription": "Bancos de dados de referência: todas as receitas de refinação e os números da economia do jogo."
     },
     "expeditions": {
       "overviewTitle": "Guias de Expedições de No Man's Sky",

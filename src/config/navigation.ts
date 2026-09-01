@@ -30,13 +30,14 @@ export interface NavigationItem {
 
 export const NAVIGATION_CONFIG: NavigationItem[] = [
   { key: 'cosmos-update', path: '/cosmos-update', icon: 'lucide:orbit', isContentType: true, order: 1 },
-  { key: 'expeditions', path: '/expeditions', icon: 'lucide:flag', isContentType: true, order: 2 },
-  { key: 'starships', path: '/starships', icon: 'lucide:rocket', isContentType: true, order: 3 },
-  { key: 'codes', path: '/codes', icon: 'lucide:ticket', isContentType: true, order: 4 },
-  { key: 'multitools', path: '/multitools', icon: 'lucide:wrench', isContentType: true, order: 5 },
-  { key: 'base-building', path: '/base-building', icon: 'lucide:hammer', isContentType: true, order: 6 },
-  { key: 'bosses', path: '/bosses', icon: 'lucide:skull', isContentType: true, order: 7 },
-  { key: 'guides', path: '/guides', icon: 'lucide:book-open', isContentType: true, order: 8 },
+  { key: 'data', path: '/data', icon: 'lucide:database', isContentType: true, order: 2 },
+  { key: 'expeditions', path: '/expeditions', icon: 'lucide:flag', isContentType: true, order: 3 },
+  { key: 'starships', path: '/starships', icon: 'lucide:rocket', isContentType: true, order: 4 },
+  { key: 'codes', path: '/codes', icon: 'lucide:ticket', isContentType: true, order: 5 },
+  { key: 'multitools', path: '/multitools', icon: 'lucide:wrench', isContentType: true, order: 6 },
+  { key: 'base-building', path: '/base-building', icon: 'lucide:hammer', isContentType: true, order: 7 },
+  { key: 'bosses', path: '/bosses', icon: 'lucide:skull', isContentType: true, order: 8 },
+  { key: 'guides', path: '/guides', icon: 'lucide:book-open', isContentType: true, order: 9 },
 ];
 
 /** Derived list of content type slugs (e.g. ['bosses', 'guides', 'items', 'codes']). */
