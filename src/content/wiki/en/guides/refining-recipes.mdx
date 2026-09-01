@@ -1,77 +1,177 @@
 ---
-title: "No Man's Sky Refining Recipes: How Refiners Work and What to Refine"
-description: "No Man's Sky refining explained: portable, medium and large refiners, fuel and power needs, the recipe families worth knowing, and nanite and unit refining loops."
+title: "No Man's Sky Refining Recipes: Every Recipe That Matters (2026)"
+description: "Every No Man's Sky refining recipe that matters: the x6 chlorine loop, chromatic metal yields, all 15 nanite ratios, and alloy breaking — charted for patch 6.50."
 category: "guides"
 image: '../../../../assets/covers/guides/refining-recipes.webp'
 date: 2026-08-22
-lastModified: 2026-08-22
+lastModified: 2026-08-31
 gameVersion: "6.50"
-summary: "Refiners turn cheap materials into expensive ones while you play: the three sizes, fuel and power needs, and the recipe families worth knowing — chromatic metal, glass, nanites, unit chains."
+summary: "The charts behind No Man's Sky's hidden economy: multiplier loops that turn oxygen into sixfold chlorine, cobalt, and carbon, every nanite ratio, and the alloy trades worth refiner time."
 tags: ["refining", "guide", "units", "nanites", "economy"]
 faq:
   - question: "How does refining work in No Man's Sky?"
     answer: "Place a refiner, load inputs, and it converts them over time into the output — no player attention needed once it runs. Portable refiners need carbon-based fuel, while medium and large refiners run on base power and unlock multi-input recipes. Outputs collect in the refiner until you retrieve them."
-  - question: "What is the best thing to refine for units?"
-    answer: "The classic chains: refine chromatic metal from copper-family ores and craft it upward; expand chlorine with oxygen in a loop; and grow frost crystal into glass for advanced craft goods. The highest unit rates come from combining refining with crafting — refine raw materials into components, then craft the components into trade goods."
+  - question: "What is the most profitable refining recipe?"
+    answer: "The chlorine expansion loop: one Chlorine plus two Oxygen refines into six Chlorine, so every run multiplies the stock sixfold. With an oxygen hotspot and a bank of refiners, community players report 10-50M units per hour selling the output. Breaking crafted alloys back into precious metals (one Herox into 250 Silver) is the second engine."
+  - question: "What is the chlorine expansion recipe?"
+    answer: "Chlorine x1 + Oxygen x2 = Chlorine x6, in a medium or large refiner. Salt x2 + Oxygen x2 = Chlorine x5 makes starter chlorine without buying any. Since stations stopped selling oxygen, the loop's fuel comes from an oxygen hotspot, red oxide plants, or kelp sacs — the units farming guide covers the full money math."
   - question: "How do I refine nanites from runaway mould?"
-    answer: "Collect runaway mould — it grows on dissonant and corrupted planets and clusters in the wild — and load it into any refiner: it converts at a fixed ratio into nanite clusters, slowly but unattended. Park a medium or large refiner near a mould patch and it turns a loot stop into a passive nanite income."
+    answer: "Five Runaway Mould refine into one Nanite Cluster, and community testing puts a single refiner at roughly 100 nanites per minute — a full 9,999 mould stack becomes about 2,000 nanites. Park a bank of medium refiners next to a Curious Deposit and it becomes a passive nanite income; the nanites guide ranks every source."
+  - question: "What is the difference between portable, medium, and large refiners?"
+    answer: "Portable: one input to one output, fuel-fed, deployable anywhere — the field tool. Medium: base-powered with two input slots, unlocking the oxygen-catalyst loops. Large: base-powered with three input slots and the biggest throughput for factory-scale production. A large refiner runs every recipe below; a portable only runs the one-input rows."
   - question: "Do refiners need power or fuel?"
     answer: "Portable refiners need fuel — carbon or condensed carbon — added to their fuel slot. Medium and large refiners draw base power instead, so at a base they run free of consumables. An unpowered or unfueled refiner simply pauses; nothing inside is lost."
-  - question: "Can you lose items left in a refiner?"
-    answer: "Contents persist with the refiner, but the safe habit is to collect outputs before logging off or leaving the area, and never leave irreplaceable quantities sitting in a portable you are about to pack up. Refiners pause without fuel or power — they do not delete — but retrieving before you travel removes all risk."
-  - question: "What is the difference between portable, medium, and large refiners?"
-    answer: "Portable: one input to one output, fuel-fed, deployable anywhere — the field tool. Medium: base-powered with two input slots, unlocking combination recipes. Large: base-powered with multiple inputs and the biggest throughput for factory-scale production. Progression is portable at first, then medium and large at your base as power allows."
 ---
 
-No Man's Sky has two economies. The one you can see — units, ships, shopping — and the one that runs underneath: refining. Every serious unit or nanite income in the game passes through a refiner at some point, because refiners convert the cheap and abundant into the scarce and valuable while you are off doing something more interesting. It is the closest thing the game has to passive income, and the recipe list is deep enough that whole playthroughs are built around it. This guide covers the machine, the recipes that matter, and the loops worth automating.
+import StatBar from '~/components/mdx/StatBar.astro';
 
-**Last updated: August 22, 2026**, current through patch 6.50. For the broader unit economy, see [money making](/guides/money-making-guide/); for nanites specifically, [nanites farming](/guides/nanites-farming/).
+No Man's Sky has two economies. The one you can see — units, ships, shopping — and the one that runs underneath: refining. Every serious unit or nanite income in the game passes through a refiner at some point, because refiners convert the cheap and abundant into the scarce and valuable while you are off doing something more interesting. The game currently ships with **358 refining recipes** in its data, and almost all of them are intermediate steps. The ones with real leverage fit on this page.
+
+**Last updated: August 31, 2026**, current through patch 6.50. The staged Cosmos rollout has not touched any recipe below. For what the money numbers mean, see [money making](/guides/money-making-guide/); for nanites end to end, [nanites farming](/guides/nanites-farming/); for the farm loops that feed off these tables, [units farming](/guides/units-farming/).
+
+<StatBar
+  items={[
+    { value: 'x6', label: 'Per run of the chlorine, cobalt, and condensed-carbon expansion loops' },
+    { value: '358', label: 'Refining recipes in the current game data' },
+    { value: '5:1', label: 'Runaway Mould to Nanite Cluster' },
+    { value: 'x100', label: 'Gold from one refined Living Pearl' },
+  ]}
+/>
 
 ## The Three Refiners
 
 | Refiner | Power | Inputs | Role |
 |---------|-------|--------|------|
 | Portable | Carbon fuel slot | 1 input → 1 output | The field tool — deploy anywhere |
-| Medium | Base power | 2 input slots | Combination recipes at your base |
+| Medium | Base power | 2 input slots | The oxygen-catalyst loops |
 | Large | Base power | 3 input slots | Factory throughput |
 
-The portable refiner is a backpack appliance: craft it from modest materials, drop it on any surface, feed it carbon, and it works through your input while you mine the next deposit. Medium and large refiners are base infrastructure — they need a powered base ([the electrical guide](/base-building/electrical-wiring-guide/) covers that side) — and their extra input slots are what unlock the real recipe book, because the best conversions combine two materials into something better than either.
+The portable refiner is a backpack appliance: craft it, drop it anywhere, feed it carbon, and it works through your input while you mine the next deposit. Medium and large refiners are base infrastructure — they need a powered base ([the electrical guide](/base-building/electrical-wiring-guide/) covers that side) — and their extra slots unlock the real recipe book, because the strongest conversions **use oxygen as a catalyst**, and those all need two inputs.
 
-Two mechanical notes worth knowing before the recipes. First, refiners have **input capacity limits per slot** — load them in batches and top up as they consume. Second, refiners **pause, not fail**: out of fuel or power they simply stop, contents intact, and resume when fed. Refining is forgiving by design.
+Two mechanical notes before the tables. Refiners have **input capacity limits per slot** — load in batches and top up as they consume. And refiners **pause, not fail**: out of fuel or power they simply stop, contents intact, and resume when fed. A large refiner runs every recipe on this page; a portable only runs the one-input rows.
 
-## The Recipe Families That Matter
+## The Multiplier Loops
 
-### Chromatic Metal: The Backbone
+These are the recipes the whole refining economy hangs on. Each one returns more than it consumes, which means a stocked input grows every cycle:
 
-The game's central refinement: **copper-family ores into chromatic metal** — the material half of all technology, including the [Base Computer](/base-building/base-computer-placement/) itself. Cadmium, emeril, and indium refine into chromatic metal at increasingly generous yields, with the activated variants richest of all. Every long session chews through chromatic metal, and every veteran keeps a refiner working ore into it as a background process.
+| Recipe | Output | The play |
+|--------|--------|----------|
+| Chlorine x1 + Oxygen x2 | Chlorine x6 | The chlorine expansion loop — the classic unit printer |
+| Ionised Cobalt x1 + Oxygen x2 | Ionised Cobalt x6 | Same loop, cobalt flavour — cobalt is in every cave |
+| Condensed Carbon x1 + Oxygen x2 | Condensed Carbon x6 | Free fuel, sixfold — ends carbon mining forever |
+| Carbon x2 + Oxygen x2 | Condensed Carbon x5 | The entry version, before you hold a stock |
+| Salt x2 + Oxygen x2 | Chlorine x5 | Makes starter chlorine from beach salt |
+| Cobalt x2 + Oxygen x2 | Ionised Cobalt x5 | Same, for cobalt |
+| Di-hydrogen x30 | Di-hydrogen Jelly x1 | Half of the di-hydrogen cycle… |
+| Di-hydrogen Jelly x1 | Di-hydrogen x40 | …and the other half: 30 in, 40 out, +10 free launch fuel per cycle |
+| Platinum x1 + Oxygen x1 | Magnetised Ferrite x10 | The platinum trick — the best ore multiplier in the game |
+| Any ore x1 + Chromatic Metal x1 | Ore x2 | Chromatic expansion duplicates copper, cadmium, emeril, indium, quartzite |
+| Any plant x1 + Kelp Sac x1 + Condensed Carbon x1 | Oxygen x10 | Artificial photosynthesis — the refiner farms its own catalyst |
 
-### Glass: The Craft Chain Starter
+The common thread: **oxygen is the catalyst of the entire economy**. Every x5/x6 loop burns it, so the real setup cost is an oxygen supply — a hotspot, the red oxide plants that grow everywhere, or kelp sacs refined with anything. Since stations stopped selling the stuff, the loops that farm their own oxygen are the ones that survive. What the output sells for per hour is the [units farming](/guides/units-farming/) question; the recipe never changed.
 
-**Frost crystal refines into glass**, and glass feeds the advanced crafting chains — the crafted-goods economy starts at this conversion. Frost crystal grows abundantly on cold worlds and in cultivation, which is why so many farm bases are cold-weather bases: the [planet choice](/base-building/best-base-planets/) and the recipe list are the same decision.
+## Nanite Refining: Every Source
 
-### Precious Metals Down the Chain
+One input each, so all of them run in a portable refiner. The ratios below are the complete list of nanite sources:
 
-Silver, gold, and platinum refine **downward into each other** — gold into silver, silver onward — the standard way to convert a mining glut of one metal into the specific metal a craft recipe wants. It is the exchange desk of the periodic table: not a profit engine, but the tool that turns "I have the wrong precious metal" into "I have the right one."
+| Input | Nanites out | Notes |
+|-------|-------------|-------|
+| Runaway Mould x5 | 1 | ~100 nanites/min/refiner community-tested; the mould loop is the passive king |
+| Salvaged Data x1 | 15 | From buried technology modules |
+| Tainted Metal x1 | 2 | From dissonant and corrupted worlds |
+| Pugneum x25 | 1 | From killing sentinels |
+| Platinum x35 | 1 | The slow way to spend a platinum surplus |
+| Corrupted Ichor x5 | 1 | From corrupted worlds |
+| Larval Core x1 | 50 | From derelict freighter eggs — they expire, refine fast |
+| Hadal Core x1 | 50 | The underwater twin of the larval core |
+| Vile Spawn x1 | 50 | Harmonic camp loot |
+| Flesh Rope x1 | 50 | Abandoned building loot |
+| Radiant Shard x1 | 50 | From crystalline entities |
+| Inverted Mirror x1 | 95 | Corrupted sentinel drops |
+| Hyaline Brain x1 | 230 | The harmonic brain — the biggest single refined payout |
+| Silver x15 + Gold x15 + Platinum x25 | 1 | An emergency valve, not a strategy |
+| Faecium x1 + Hexite x1 | 1 | Niche — only if you already hold both |
 
-### Gases Into Components
+The mould loop deserves its reputation: a full 9,999 mould stack becomes roughly 2,000 nanites per refiner, mould respawns when you teleport away and back, and the whole thing runs unattended. The [nanites guide](/guides/nanites-farming/) ranks refining against scrapping, packets, and derelicts; the [sentinel multitool loop](/multitools/sentinel-multitool/) is where the corrupted-world inputs come from.
 
-The atmospheric gases — nitrogen, sulphurine, radon, harvested with collectors or gathered from the right planets — combine in refiners into the components that advanced crafting consumes. This is where refining stops being a side activity and becomes a factory: gas collectors feeding refiners feeding crafters, all on one powered base.
+## Alloys, Pearls, and Exotics Into Metals
 
-### The Nanite Loop: Runaway Mould
+The trade-desk section: turning crafted or looted valuables into base metals a recipe actually wants.
 
-**Runaway mould refines into nanite clusters** — slowly, at a fixed ratio, but unattended. The mould grows in patches on corrupted and dissonant planets (the same loop that produces [sentinel multitools](/multitools/sentinel-multitool/)), and the play is logistical: drop a medium refiner near a patch, load the harvest, and the nanites accrue while you do anything else. It is not the fastest nanite income — the [nanites guide](/guides/nanites-farming/) ranks the methods — but it is the most passive.
+**Breaking alloys** — every latticed alloy refines back down into its precious-metal components at aggressive ratios:
 
-### Fuel and Utility Conversions
+| Alloy | Refines into |
+|-------|--------------|
+| Herox x1 | Silver x250 |
+| Dirty Bronze x1 | Silver x250 |
+| Aronium x1 | Silver x250 |
+| Lemmium x1 | Gold x125 |
+| Magno-gold x1 | Gold x125 |
+| Grantine x1 | Gold x125 |
+| Geodesite x1 | Platinum x250 |
+| Iridesite x1 | Platinum x250 |
 
-The small stuff that smooths every session: **carbon refines into condensed carbon** for denser fuel; oxygen and carbon combine into the fuels your life support and engines actually want; dioxite and other processed elements refine from their raw components when a station trader is out of stock. Utility conversions rarely make money — they save trips.
+**Making alloys** — the same trades in reverse, all large-refiner recipes. One row stands for the family (the third slot takes Tritium x20, Silver x20, Gold x10, or Platinum x5 interchangeably):
+
+| Alloy | Cheapest recipe |
+|-------|-----------------|
+| Herox | Ammonia x30 + Ionised Cobalt x30 + Tritium x20 |
+| Aronium | Paraffinium x30 + Ionised Cobalt x30 + Tritium x20 |
+| Dirty Bronze | Pyrite x30 + Pure Ferrite x60 + Tritium x20 |
+| Lemmium | Uranium x30 + Pure Ferrite x60 + Tritium x20 |
+| Magno-gold | Phosphorus x30 + Ionised Cobalt x30 + Tritium x20 |
+| Grantine | Dioxite x30 + Ionised Cobalt x30 + Tritium x20 |
+
+Geodesite and Iridesite sit at the top of the tree, built from the alloys above. When a station terminal sells alloys below their refined-metal value, the break-down table is arbitrage; when you hold surplus local elements, the make-up table turns them into tradeable metal. Either direction, the refiner is the exchange desk.
+
+**The exotic conversions** — looted valuables into base metals:
+
+| Input | Output |
+|-------|--------|
+| Living Pearl x1 | Gold x100 |
+| Crystal Sulphide x1 | Sodium Nitrate x50 |
+| Hypnotic Eye x1 | Living Slime x50 |
+
+## Gases: The Exchange and the Components
+
+The three atmospheric gases interconvert freely, which means no gas is ever the wrong one:
+
+| Recipe | Output | Notes |
+|--------|--------|-------|
+| Any gas x3 | Next gas x1 | Sulphurine → Radon → Nitrogen → Sulphurine, in a wheel |
+| Any gas x1 + Oxygen x1 | Next gas x1 | Oxygen halves the cost of the exchange |
+| Any gas x1 + Chromatic Metal x1 | Next gas x1 | The chromatic-catalyst version |
+| Any gas x100 + Carbon x20 + Salt x10 | 1 component | Enriched Carbon, Thermic Condensate, Nitrogen Salt — the craft-chain components |
+
+That last row is where refined gases leave the refiner and enter the crafting economy: one gas per trade good, consumed by the high-end craft chains in the [money making guide](/guides/money-making-guide/).
+
+## The Everyday Conversions
+
+The small stuff that smooths every session — all one-input rows, all portable-able:
+
+| Recipe | Output | Notes |
+|--------|--------|-------|
+| Ferrite Dust x1 | Pure Ferrite x1 | The most-used conversion in the game |
+| Carbon x2 | Condensed Carbon x1 | Denser fuel — before you run the x6 loop |
+| Copper x2 | Chromatic Metal x1 | The metal that builds everything, [including the Base Computer](/base-building/base-computer-placement/) |
+| Cadmium x2 | Chromatic Metal x1 | From red-star systems |
+| Emeril x2 | Chromatic Metal x3 | From green-star systems — better yield |
+| Indium x2 | Chromatic Metal x4 | From blue-star systems — best yield |
+| Activated Copper / Cadmium / Emeril / Indium x1 | Chromatic Metal x1 / x2 / x3 / x4 | The activated variants are self-sufficient |
+| Frost Crystal x40 | Glass x1 | The cold-planet crop's whole purpose |
+| Silicate Powder x40 | Glass x1 | Same ratio, diggable on any planet — no cold world needed |
+| Any farmed plant x1 | Carbon x2 | Star bulb, gamma root, cactus flesh, solanium, fungal mould — all burn alike |
+| Di-hydrogen x30 | Di-hydrogen Jelly x1 | Compress for storage, cycle for profit (see multipliers) |
+
+Yield note: the farther down the star-colour ladder your ore comes from, the more chromatic metal each refined batch pays. Ore never depletes, so an [indigo/blue-star mining claim](/base-building/best-base-planets/) compounds forever.
 
 ## Turning Recipes Into Units
 
-Refining alone is a decent income. Refining **feeding crafting** is the real one: raw materials → refined components → crafted trade goods, each step multiplying value. The classic loops all follow the shape:
+Refining alone is a decent income. Refining **feeding crafting** is the real one: raw materials → refined components → crafted trade goods, each step multiplying value. The three classic loops all ride the tables above:
 
-1. **Chromatic-metal chains** — mine copper-family ore, refine to chromatic metal, craft upward into technology and goods.
-2. **Glass chains** — grow frost crystal, refine to glass, craft the advanced goods that consume it.
-3. **Chlorine expansion** — the old standby: chlorine plus oxygen refining into more chlorine, a pure multiplication loop for unit printing.
+1. **The chlorine loop** — salt to starter chlorine, then the x6 expansion until the refiner bank is full; sell in three-star systems.
+2. **The chromatic ladder** — blue-star ore into chromatic metal, chromatic expansion to double the ore, ore into metal again.
+3. **The component factory** — gas collectors feeding sublimation components feeding the stasis-device chains.
 
 The consistent theme: never sell what a refiner can upgrade first. Raw ore sells as raw ore forever; the same ore walked two steps down a recipe chain sells as technology. The full strategy, with the farm-base setups that feed it, is in [money making](/guides/money-making-guide/).
 
@@ -82,6 +182,7 @@ The refinery base has a shape, and it is the same for everyone:
 - **A powered room** — medium and large refiners on the grid ([power guide](/base-building/electrical-wiring-guide/)).
 - **Storage adjacency** — inputs and outputs beside the machines, in the [numbered containers](/base-building/storage-containers/): ores in one number, refined goods in the next.
 - **A teleporter at the door** — the base is a stop on your loop, in and out in minutes.
+- **An oxygen hotspot nearby** — the catalyst for every multiplier loop on this page, piped in through supply pipes if you can.
 - **Optional: cultivation** — frost crystal and other growable inputs within walking distance of the refiners.
 
 Three large refiners, a teleporter, and a full storage wall is the entire factory, and it fits in one cuboid room. The returns compound for the rest of the save.
@@ -92,6 +193,6 @@ Three large refiners, a teleporter, and a full storage wall is the entire factor
 - **Refine before selling, always** — the two-step rule that separates rich saves from busy ones.
 - **Batch, top up, collect** — respect the slot limits; top up inputs as they drain rather than babysitting.
 - **Collect before you log off** — refiners pause safely, but the habit removes the risk entirely.
-- **Portables are for the field** — anything worth doing twice belongs on base power in a medium or large.
+- **Run the multiplier loops before the mine runs out** — a x6 loop doubles down on itself; a deposit does not.
 
 Refining is No Man's Sky's quiet answer to "how do I afford all of this": a system that works while you don't. Set up the room once, keep the machines fed, and the unit and nanite problems quietly solve themselves in the background of every expedition.
