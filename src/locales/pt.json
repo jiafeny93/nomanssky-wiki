@@ -262,6 +262,12 @@
         }
       ]
     },
+    "portal": {
+      "badge": "Mapa do wiki",
+      "title": "Todas as seções, a um clique",
+      "newBadge": "Novo",
+      "dataTagline": "As 358 receitas de refinação"
+    },
     "explore": {
       "title": "Explore a wiki",
       "description": "Atualizado para 2026",

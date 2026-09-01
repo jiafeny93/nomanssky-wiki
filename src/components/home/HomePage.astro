@@ -6,11 +6,12 @@
  * touching this component.
  *
  * Sections (top to bottom):
- *   1. Hero          — title, description, CTAs (strong visual anchor)
- *   2. QuickStart    — 4 large icon cards (Codes / Bosses / Guides / Tier)
- *   3. Recent Updates + Trending links (two columns)
- *   4. Explore       — 4 content modules with displayTypes
- *   5. ClosingCta      — bottom call-to-action
+ *   1. Hero            — title, description, CTAs (strong visual anchor)
+ *   2. QuickStart      — 4 large icon cards (Update / Expeditions / Ships / Money)
+ *   3. CategoryPortal  — slim icon band mapping every content category
+ *   4. Recent Updates + Trending links (two columns)
+ *   5. Explore         — 4 content modules with displayTypes
+ *   6. ClosingCta      — bottom call-to-action
  *
  * v0.2 refactor: trimmed from 8 sections to 5. Removed GameInfo (info
  * duplicated Hero stats), FAQ (moved to /faq), standalone TrendingNow
@@ -21,6 +22,7 @@ import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import VideoSection from '~/components/home/VideoSection.astro';
 import QuickStart from '~/components/home/QuickStart.astro';
+import CategoryPortal from '~/components/home/CategoryPortal.astro';
 import ExpeditionStatus from '~/components/home/ExpeditionStatus.astro';
 import ExploreModules from '~/components/home/ExploreModules.astro';
 import { site } from '~/config/site';
@@ -65,6 +67,7 @@ const hero = home.hero ?? {};
 const updates = home.updates ?? { title: 'Recent Updates' };
 const expeditionStatus = home.expeditionStatus ?? {};
 const start = home.start ?? { cards: [] };
+const portal = home.portal ?? {};
 const popular = home.popular ?? { title: 'Trending Now', quickLinks: [] };
 const explore = home.explore ?? { modules: [] };
 const closingCta = home.closingCta ?? {};
@@ -239,6 +242,16 @@ function linkHref(href: string): string {
     badge={start.badge}
     title={start.title}
     cards={start.cards}
+  />
+
+  {/* ─────────────────────── Category portal band ─────────────────────── */}
+  <CategoryPortal
+    locale={locale}
+    badge={portal.badge}
+    title={portal.title}
+    newBadge={portal.newBadge}
+    dataTagline={portal.dataTagline}
+    counts={localeCategoryCounts}
   />
 
   {/* ─────────────────────── Expedition status ────────────────────────── */}

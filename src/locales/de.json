@@ -262,6 +262,12 @@
         }
       ]
     },
+    "portal": {
+      "badge": "Wiki-Karte",
+      "title": "Jeder Bereich, ein Klick entfernt",
+      "newBadge": "Neu",
+      "dataTagline": "Alle 358 Raffinerie-Rezepte"
+    },
     "explore": {
       "title": "Erkunde das Wiki",
       "description": "Aktualisiert für 2026",

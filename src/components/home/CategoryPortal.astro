@@ -1,0 +1,86 @@
+---
+/**
+ * CategoryPortal — slim icon band mapping EVERY content category.
+ *
+ * QuickStart curates 4 cards for new players; this band is the full map:
+ * all NAVIGATION_CONFIG categories with their live per-locale article
+ * count, so every category hub (including thin ones the header nav hides
+ * via NAV_MIN_ARTICLES) gets a crawlable homepage link and first-visit
+ * wayfinding.
+ *
+ * The `data` category is the featured tile: instead of a bare "1 article"
+ * count it carries the localized NEW badge + tagline hook ("All 358
+ * refiner recipes") — the count would undersell a database page whose
+ * value is its row total, not its page total.
+ */
+import { Icon } from 'astro-icon/components';
+import { NAVIGATION_CONFIG } from '~/config/navigation';
+import { type Locale } from '~/i18n/routing';
+import { getUi } from '~/i18n/ui';
+import { listPath } from '~/lib/url';
+import { categoryHue } from '~/lib/categoryTheme';
+
+interface Props {
+  locale: Locale;
+  badge?: string;
+  title?: string;
+  /** Localized "New" badge label for the featured data tile. */
+  newBadge?: string;
+  /** Localized hook line shown under the data tile instead of its count. */
+  dataTagline?: string;
+  /** Per-locale published-article counts (from categoryCountsByLocale). */
+  counts: Record<string, number>;
+}
+const { locale, badge, title, newBadge, dataTagline, counts } = Astro.props;
+const navLabels = getUi(locale).nav as Record<string, string>;
+---
+
+{
+  title && (
+    <section class="section border-t border-border">
+      <p class="text-sm font-semibold uppercase tracking-wider text-foreground">{badge}</p>
+      <h2 class="mt-1 text-2xl font-bold tracking-tight md:text-3xl">{title}</h2>
+      <nav class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 md:mt-8" aria-label={title}>
+        {NAVIGATION_CONFIG.map((item) => {
+          const n = counts[item.key] ?? 0;
+          const isFeatured = item.key === 'data';
+          const hue = categoryHue(item.key);
+          return (
+            <a
+              href={listPath(item.key, locale)}
+              class="card group flex flex-col p-4"
+              aria-label={navLabels[item.key] ?? item.key}
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-xl"
+                  style={`background:hsl(${hue} 70% 50% / 0.12);color:hsl(${hue} 70% 42%);`}
+                >
+                  <Icon name={item.icon} class="h-5 w-5" />
+                </span>
+                {isFeatured && newBadge ? (
+                  <span
+                    class="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white"
+                    style={`background:hsl(${hue} 70% 45%);`}
+                  >
+                    {newBadge}
+                  </span>
+                ) : (
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {n}
+                  </span>
+                )}
+              </div>
+              <span class="mt-3 text-sm font-semibold leading-snug">
+                {navLabels[item.key] ?? item.key}
+              </span>
+              {isFeatured && dataTagline && (
+                <span class="mt-1 line-clamp-2 text-xs text-muted-foreground">{dataTagline}</span>
+              )}
+            </a>
+          );
+        })}
+      </nav>
+    </section>
+  )
+}

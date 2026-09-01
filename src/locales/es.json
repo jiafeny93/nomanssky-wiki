@@ -262,6 +262,12 @@
         }
       ]
     },
+    "portal": {
+      "badge": "Mapa del wiki",
+      "title": "Todas las secciones, a un clic",
+      "newBadge": "Nuevo",
+      "dataTagline": "Las 358 recetas de refinado"
+    },
     "explore": {
       "title": "Explora la wiki",
       "description": "Actualizado para 2026",

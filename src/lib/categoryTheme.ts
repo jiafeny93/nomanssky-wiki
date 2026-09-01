@@ -11,6 +11,7 @@
  *   cosmos-update 265 (violet)    expeditions 38 (amber)
  *   starships 190 (cyan)          multitools 150 (green)
  *   base-building 22 (warm clay)  guides 220 (blue)
+ *   data 320 (magenta)            bosses 355 (red)     codes 95 (lime)
  */
 export const CATEGORY_HUES: Record<string, number> = {
   'cosmos-update': 265,
@@ -19,6 +20,9 @@ export const CATEGORY_HUES: Record<string, number> = {
   multitools: 150,
   'base-building': 22,
   guides: 220,
+  data: 320,
+  bosses: 355,
+  codes: 95,
 };
 
 /** Fallback hue — the brand orange. */

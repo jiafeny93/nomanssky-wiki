@@ -262,6 +262,12 @@
         }
       ]
     },
+    "portal": {
+      "badge": "Wiki map",
+      "title": "Every section, one click away",
+      "newBadge": "New",
+      "dataTagline": "All 358 refiner recipes"
+    },
     "explore": {
       "title": "Explore the wiki",
       "description": "Updated for 2026",
