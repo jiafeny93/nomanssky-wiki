@@ -70,7 +70,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       zh: "蜂群敌舰伏击、可登船夺取的海盗货船，以及以 Hive of Glass 决战收尾的远征 22。",
     },
     related: [
-      { category: 'guides', slug: 'swarm-battles-guide' },
+      { category: 'guides', slug: 'swarm-update' },
       { category: 'expeditions', slug: 'expedition-22' },
     ],
     official: 'https://www.nomanssky.com/swarm-update/',
