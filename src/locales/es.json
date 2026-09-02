@@ -229,7 +229,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guías en 5 idiomas"
+          "label": "Guías en 6 idiomas"
         }
       ]
     },
@@ -294,8 +294,8 @@
               "detail": "Parche de corrección de errores (junio de 2026)"
             },
             {
-              "label": "6.36",
-              "detail": "Llegan los combates de mascotas (junio de 2026)"
+              "label": "6.30",
+              "detail": "Llegan los combates de criaturas de Xeno Arena (abril de 2026)"
             },
             {
               "label": "The Swarm",

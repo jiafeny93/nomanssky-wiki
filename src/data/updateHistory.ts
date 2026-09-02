@@ -48,6 +48,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       de: "Das Update zum 10. Jubiläum: direkter Flug zwischen Sonnensystemen und Landung auf Sternen mit neuer hitzebeständiger Ausrüstung. Wird in Phasen ausgerollt.",
       fr: "La mise à jour du 10e anniversaire : vol direct entre systèmes solaires et atterrissage sur les étoiles avec de nouveaux équipements résistants à la chaleur. Déploiement par étapes.",
       pt: "A atualização do 10º aniversário: voo direto entre sistemas solares e pouso em estrelas com novo equipamento resistente ao calor. Sendo lançada em etapas.",
+      zh: "十周年更新：星系之间直接飞行，并穿上新耐热装备登陆恒星。正在分阶段推送。",
     },
     related: [
       { category: 'cosmos-update', slug: 'cosmos-update-guide' },
@@ -66,6 +67,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       de: "Hinterhalte der Schwärmer, enternbare Piratenfrachter und Expedition 22 mit dem Hive-of-Glass-Finale.",
       fr: "Embuscades de vaisseaux essaims, fretteurs pirates abordables et l'Expédition 22 avec la Ruche de verre en point d'orgue.",
       pt: "Embuscas de swarmers, cargueiros piratas que podem ser abordados e a Expedição 22 com a Colmeia de Vidro como final.",
+      zh: "蜂群敌舰伏击、可登船夺取的海盗货船，以及以 Hive of Glass 决战收尾的远征 22。",
     },
     related: [
       { category: 'guides', slug: 'swarm-battles-guide' },
@@ -85,6 +87,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       de: "Kreaturenkämpfe: Begleiter adoptieren, rundenbasiert kämpfen, Oceanus' tägliche Globalaufgabe jagen und mit Retroviral Pellets die Genetik bearbeiten.",
       fr: "Combats de créatures : adoptez des compagnons, combattez au tour par tour, relevez le défi quotidien mondial d'Oceanus et modifiez la génétique avec les Retroviral Pellets.",
       pt: "Batalhas de criaturas: adote companheiros, lute por turnos, persiga o desafio diário mundial de Oceanus e edite a genética com Retroviral Pellets.",
+      zh: "生物对战：领养同伴、回合制战斗、追逐 Oceanus 的每日全球挑战，并用 Retroviral Pellets 改造基因。",
     },
     related: [
       { category: 'guides', slug: 'pet-battling-guide' },
@@ -103,6 +106,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       de: "Schwerkraft-Upgrades fürs Multiwerkzeug: Industrialschrott magnetisieren, tragen und abschießen, dazu neue Colossus-Module und Expedition 21.",
       fr: "Améliorations gravitationnelles du multi-outil : aimanter, porter et propulser des déchets industriels, plus de nouveaux modules de Colossus et l'Expédition 21.",
       pt: "Melhorias de gravidade para o multiferramenta: magnetizar, carregar e lançar sucata industrial, além de novos módulos do Colossus e a Expedição 21.",
+      zh: "多功能工具的引力升级：磁化、搬运、发射工业废料，外加新 Colossus 模块与远征 21。",
     },
     related: [{ category: 'guides', slug: 'new-update-2026' }],
     official: 'https://www.nomanssky.com/remnant-update/',
@@ -118,6 +122,7 @@ export const UPDATE_HISTORY: UpdateRow[] = [
       de: "Schiffsbau der Corvette-Klasse: aus hunderten Modulen ein komplett eigenes Mehrmann-Raumschiff zusammenbauen.",
       fr: "Construction de vaisseaux de classe Corvette : assemblez un vaisseau entièrement personnalisable et multijoueur à partir de centaines de modules.",
       pt: "Construção de naves classe Corvette: monte uma nave estelar totalmente personalizada para vários jogadores a partir de centenas de módulos.",
+      zh: "Corvette 级飞船建造：用数百个模块组装一艘完全自定义的多乘员星舰。",
     },
     official: 'https://www.nomanssky.com/voyagers-update/',
   },

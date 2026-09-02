@@ -229,7 +229,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guias em 5 idiomas"
+          "label": "Guias em 6 idiomas"
         }
       ]
     },
@@ -294,8 +294,8 @@
               "detail": "Patch de correção de bugs (junho de 2026)"
             },
             {
-              "label": "6.36",
-              "detail": "Batalhas de mascotes chegam (junho de 2026)"
+              "label": "6.30",
+              "detail": "Xeno Arena traz batalhas de criaturas (abril de 2026)"
             },
             {
               "label": "The Swarm",

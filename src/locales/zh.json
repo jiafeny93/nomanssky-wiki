@@ -1,0 +1,406 @@
+{
+  "$schema": "../../docs/home.schema.json",
+  "site": {
+    "name": "无人深空 Wiki（No Man's Sky Wiki）",
+    "shortName": "NMS Wiki",
+    "description": "nomanssky.wiki 无人深空（No Man's Sky）中文 wiki 与攻略：Cosmos 更新解读、远征流程、星舰与多功能工具指南、基地建设、刷钱路线，持续跟进 2026 最新版本。",
+    "tagline": "每个更新、远征和星舰都有中文攻略",
+    "legalNotice": "No Man's Sky Wiki 是玩家自发建立的社区站点，与游戏开发商无隶属或背书关系。"
+  },
+  "nav": {
+    "search": "搜索",
+    "language": "语言",
+    "cosmos-update": "Cosmos 更新",
+    "data": "数据",
+    "expeditions": "远征",
+    "starships": "星舰",
+    "codes": "兑换码",
+    "multitools": "多功能工具",
+    "base-building": "基地建设",
+    "bosses": "首领",
+    "guides": "攻略"
+  },
+  "search": {
+    "placeholder": "搜索 wiki…",
+    "noResults": "没有找到匹配结果",
+    "open": "打开搜索"
+  },
+  "shared": {
+    "readMore": "阅读全文",
+    "lastUpdated": "最后更新",
+    "publishedOn": "发布于",
+    "noArticles": "暂无文章，敬请期待！",
+    "relatedArticles": "相关文章",
+    "onThisPage": "本页目录",
+    "backToCategory": "返回",
+    "browseAll": "浏览全部",
+    "viewAll": "查看全部",
+    "commentsHeading": "评论",
+    "share": "分享",
+    "copyLink": "复制链接",
+    "copied": "已复制！",
+    "consentText": "我们使用 Cookie 用于统计与广告，以维持本站免费运营。",
+    "accept": "接受",
+    "decline": "拒绝",
+    "consentTitle": "Cookie",
+    "bossCard": {
+      "title": "首领一览",
+      "hp": "生命值",
+      "weakness": "弱点",
+      "resistant": "抗性",
+      "location": "出没位置",
+      "level": "推荐等级"
+    },
+    "codesTable": {
+      "active": "有效兑换码",
+      "expired": "过期兑换码",
+      "reward": "奖励",
+      "expires": "到期时间",
+      "code": "兑换码"
+    },
+    "codesFaq": [
+      {
+        "question": "《无人深空》有兑换码吗？",
+        "answer": "没有。Hello Games 从未在《无人深空》中加入兑换码系统。免费物品通过 Twitch 掉宝活动、远征奖励、Nexus 社区任务和周末活动发放——任何列出“NMS 有效兑换码”的网站要么过时，要么是标题党。"
+      },
+      {
+        "question": "如何领取《无人深空》的 Twitch 掉宝？",
+        "answer": "先在 Hello Games 官方掉宝页面绑定 Twitch 与平台账号，活动期间观看开启了掉宝的《无人深空》直播，然后在 24 小时内到 Twitch 物品栏领取奖励。进游戏后，在空间异常号的快银合成伴侣处领取物品。"
+      },
+      {
+        "question": "游戏内在哪里领取免费奖励？",
+        "answer": "Twitch 掉宝物品在空间异常号上的快银合成伴侣处领取，远征奖励在同一座空间站上的远征终端处领取。"
+      },
+      {
+        "question": "还能拿到往期远征的奖励吗？",
+        "answer": "可以。每一期往期远征都可以在空间异常号终端重玩，而且 Hello Games 会定期复刻限时远征，那些专属星舰、多功能工具和外观依然可以赚到。"
+      }
+    ],
+    "possiblyOutdated": "本攻略最后核对于",
+    "outdatedNote": "——此后游戏可能已有改动，部分细节或许过时。",
+    "prevArticle": "上一篇",
+    "nextArticle": "下一篇",
+    "minuteRead": "分钟读完",
+    "wasThisHelpful": "这篇有帮助吗？",
+    "feedbackThanks": "感谢你的反馈！",
+    "relatedVideos": "相关视频",
+    "gallery": "图集",
+    "gameVersion": "游戏版本",
+    "verifiedFor": "已核对至",
+    "explore": "探索",
+    "allTags": "全部标签",
+    "tagsIndexDescription": "按主题浏览全部文章。",
+    "articlesCount": "篇文章",
+    "recentTitle": "无人深空更新日志与补丁说明（2026）",
+    "recentDescription": "从 Voyagers 6.0 到 Cosmos 6.50 的《无人深空》全部更新与补丁一览——版本时间轴逐一解读，下方附 wiki 最新攻略。",
+    "sponsorTitle": "支持本 wiki",
+    "sponsorText": "如果这些攻略帮到了你，欢迎支持一下本站。",
+    "sponsorButton": "支持我们",
+    "notFoundSearchHint": "试试搜索 wiki。",
+    "notFoundPopular": "热门页面",
+    "galleryLabels": {
+      "close": "关闭",
+      "prev": "上一张图",
+      "next": "下一张图"
+    },
+    "quickAnswer": "快速答案",
+    "timelineTitle": "版本时间轴（从最新开始）",
+    "patches": "补丁",
+    "rollingOut": "正在分阶段推送",
+    "officialSite": "官方说明",
+    "gridTitle": "最新更新的攻略"
+  },
+  "overview": {
+    "cosmos-update": {
+      "overviewTitle": "《无人深空》Cosmos 更新攻略",
+      "overviewDescription": "Cosmos 更新的一切：星际自由飞行、登陆恒星、耐热装备、补丁说明与十周年奖励。"
+    },
+    "data": {
+      "overviewTitle": "《无人深空》数据页",
+      "overviewDescription": "参考数据库：全部精炼配方与游戏经济背后的数字。"
+    },
+    "expeditions": {
+      "overviewTitle": "《无人深空》远征攻略",
+      "overviewDescription": "每期远征的流程攻略与奖励清单，包括 Redux 复刻与速通路线。"
+    },
+    "starships": {
+      "overviewTitle": "《无人深空》星舰攻略",
+      "overviewDescription": "S 级飞船蹲点、活体飞船、太阳帆飞船、货船 farming 与超光速引擎升级指南。"
+    },
+    "codes": {
+      "overviewTitle": "《无人深空》兑换码与免费奖励",
+      "overviewDescription": "《无人深空》有兑换码吗？没有——这里是免费物品真正的全部来源：Twitch 掉宝、远征奖励、Nexus 社区任务与周末活动。"
+    },
+    "multitools": {
+      "overviewTitle": "《无人深空》多功能工具攻略",
+      "overviewDescription": "皇家、实验型与哨兵多功能工具——哪里找、怎么升。"
+    },
+    "base-building": {
+      "overviewTitle": "《无人深空》基地建设攻略",
+      "overviewDescription": "基地建设技巧、电路布线、储物容器，以及最值得安家的星球。"
+    },
+    "bosses": {
+      "overviewTitle": "《无人深空》首领攻略",
+      "overviewDescription": "打赢《无人深空》每一场首领级战斗：哨兵行者、哨兵无畏舰、海盗货船救援与废弃货船恐怖体。"
+    },
+    "guides": {
+      "overviewTitle": "《无人深空》攻略与技巧",
+      "overviewDescription": "新手指南、赚钱方法、farming 路线、宠物对战与 2026 年通用技巧。"
+    }
+  },
+  "home": {
+    "meta": {
+      "watermark": "No Man's Sky",
+      "title": "无人深空 Wiki：Cosmos 更新、远征与星舰中文攻略",
+      "description": "nomanssky.wiki 无人深空（No Man's Sky）中文 wiki 与攻略：Cosmos 更新解读、远征流程、星舰与多功能工具指南、基地建设、刷钱路线，持续跟进 2026 最新版本。"
+    },
+    "updates": {
+      "badge": "最新",
+      "title": "近期更新"
+    },
+    "expeditionStatus": {
+      "badge": "远征状态",
+      "title": "当前没有进行中的限时远征",
+      "detail": "远征 22（The Swarm）已于 2026 年 7 月 19 日结束。按照 Hello Games 的惯例，Redux 复刻通常从 10 月下旬起陆续回归——目前尚无官宣，一旦公布本页当天即更新。",
+      "cta": {
+        "label": "远征攻略",
+        "href": "/expeditions"
+      }
+    },
+    "popular": {
+      "badge": "热门",
+      "title": "最多人看",
+      "quickLinks": [
+        {
+          "label": "Xeno Arena：宠物对战系统",
+          "href": "/guides/pet-battling-guide"
+        },
+        {
+          "label": "蜂群战斗与海盗货船",
+          "href": "/guides/swarm-battles-guide"
+        },
+        {
+          "label": "如何在星系之间自由飞行",
+          "href": "/cosmos-update/fly-between-solar-systems"
+        },
+        {
+          "label": "会有《无人深空 2》吗？",
+          "href": "/guides/no-mans-sky-2"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "飞行注意安全，旅行者",
+      "description": "收藏本 wiki，每次更新后回来看看——每次补丁上线后几天内就有新攻略。",
+      "primary": {
+        "label": "浏览全部攻略",
+        "href": "/guides"
+      },
+      "secondary": {
+        "label": "官方网站",
+        "href": "https://www.nomanssky.com/"
+      }
+    },
+    "hero": {
+      "badge": "十周年更新",
+      "title": "无人深空 Wiki",
+      "description": "紧跟 Cosmos 时代的《无人深空》中文攻略——更新解读、远征、星舰、多功能工具与刷钱路线。",
+      "ctaPrimary": {
+        "label": "Cosmos 更新攻略",
+        "href": "/cosmos-update"
+      },
+      "ctaSecondary": {
+        "label": "全部攻略",
+        "href": "/guides"
+      },
+      "videoId": "c-KoLySxccY",
+      "stats": [
+        {
+          "value": "10",
+          "label": "年免费更新"
+        },
+        {
+          "value": "40+",
+          "label": "个大版本更新"
+        },
+        {
+          "value": "18Q",
+          "label": "颗星球等你探索"
+        },
+        {
+          "value": "dynamic",
+          "label": "6 种语言的攻略库"
+        }
+      ]
+    },
+    "start": {
+      "badge": "快速上手",
+      "title": "第一次来？从这里开始",
+      "cards": [
+        {
+          "title": "Cosmos 更新",
+          "description": "星际飞行、登陆恒星与耐热装备",
+          "icon": "lucide:orbit",
+          "href": "/cosmos-update",
+          "number": "01"
+        },
+        {
+          "title": "远征",
+          "description": "流程攻略、奖励清单与 Redux 复刻时间",
+          "icon": "lucide:flag",
+          "href": "/expeditions",
+          "number": "02"
+        },
+        {
+          "title": "星舰",
+          "description": "S 级蹲点、活体飞船与货船 farming",
+          "icon": "lucide:rocket",
+          "href": "/starships",
+          "number": "03"
+        },
+        {
+          "title": "赚钱攻略",
+          "description": "单位、纳米体与水银的 farming 路线",
+          "icon": "lucide:book-open",
+          "href": "/guides",
+          "number": "04"
+        }
+      ]
+    },
+    "portal": {
+      "badge": "Wiki 地图",
+      "title": "每个版块，一键直达",
+      "newBadge": "新",
+      "dataTagline": "全部 358 条精炼配方"
+    },
+    "explore": {
+      "title": "探索 wiki",
+      "description": "2026 年持续更新",
+      "modules": [
+        {
+          "order": 1,
+          "name": "2026 更新时间轴",
+          "description": "今年每个大版本，从最新开始。",
+          "href": "/cosmos-update",
+          "displayType": "timeline",
+          "highlights": [
+            {
+              "label": "Cosmos",
+              "detail": "十周年更新：星际自由飞行与登陆恒星",
+              "badge": "最新"
+            },
+            {
+              "label": "6.45",
+              "detail": "修复补丁（2026 年 6 月）"
+            },
+            {
+              "label": "6.30",
+              "detail": "Xeno Arena 宠物对战上线（2026 年 4 月）"
+            },
+            {
+              "label": "The Swarm",
+              "detail": "大规模太空战斗（2026 年 5 月）"
+            },
+            {
+              "label": "Remnant",
+              "detail": "Colossus 模组与远征 21（2026 年 2 月）"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "远征奖励",
+          "description": "每期远征都能拿到什么。",
+          "href": "/expeditions",
+          "displayType": "labeled-cards",
+          "highlights": [
+            {
+              "label": "远征 21：Remnant",
+              "detail": "Colossus 部件、迷彩装甲与传家宝套装"
+            },
+            {
+              "label": "Redux 复刻",
+              "detail": "往期远征每季度回归几周"
+            },
+            {
+              "label": "速通",
+              "detail": "大多数远征一个晚上就能打完"
+            },
+            {
+              "label": "全部奖励",
+              "detail": "逐件追踪每次复刻的奖励"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "新玩家路线",
+          "description": "从坠机点到主力舰。",
+          "href": "/guides",
+          "displayType": "steps",
+          "highlights": [
+            {
+              "label": "第 1 步",
+              "detail": "在第一颗星球上活下来，修好你的初始飞船",
+              "badge": "1-2 小时"
+            },
+            {
+              "label": "第 2 步",
+              "detail": "建基地，搭起被动收入",
+              "badge": "一个晚上"
+            },
+            {
+              "label": "第 3 步",
+              "detail": "加入当期远征",
+              "badge": "一个周末"
+            },
+            {
+              "label": "第 4 步",
+              "detail": "蹲 S 级飞船，升级你的货船",
+              "badge": "长期"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "关于游戏和本站的快速解答。",
+      "items": [
+        {
+          "question": "Cosmos 更新是什么？",
+          "answer": "Cosmos 是《无人深空》的十周年更新，于 2026 年 8 月 9 日公布。它加入了自由的星际飞行——不靠曲速引擎直接在星系之间飞行——以及使用新耐热装备登陆恒星的能力。"
+        },
+        {
+          "question": "《无人深空》能登陆恒星吗？",
+          "answer": "能——登陆恒星是 Cosmos 更新的招牌特性。你需要新的耐热装备才能在接近过程中存活。我们的登陆恒星攻略汇总了目前确认的全部细节。"
+        },
+        {
+          "question": "《无人深空》免费吗？",
+          "answer": "不免费。它是一款买断制游戏，登陆 PC（Steam、GOG、Epic）、PlayStation、Xbox、Nintendo Switch 和 Mac。所有大版本更新（包括 Cosmos）对已购玩家全部免费。"
+        },
+        {
+          "question": "远征持续多久？",
+          "answer": "大多数远征持续约六周。往期远征会以 Redux 复刻的形式回归，通常在节假日前后，所以稀有奖励永远不会彻底错过。"
+        },
+        {
+          "question": "这个 wiki 是官方的吗？",
+          "answer": "不是。这是玩家自发建立的社区站点，与 Hello Games 无隶属或背书关系。官方新闻请访问 nomanssky.com。"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "playGame": "购买《无人深空》",
+    "officialDiscord": "官方 Discord",
+    "officialYoutube": "官方 YouTube",
+    "officialTwitter": "官方 Twitter",
+    "officialReddit": "官方 Reddit",
+    "about": "关于",
+    "faq": "常见问题",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "copyright": "版权",
+    "copyrightText": "© 2026 No Man's Sky Wiki（无人深空 Wiki），保留所有权利。"
+  }
+}

@@ -229,7 +229,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guides in 5 Sprachen"
+          "label": "Guides in 6 Sprachen"
         }
       ]
     },
@@ -294,8 +294,8 @@
               "detail": "Bugfix-Patch (Juni 2026)"
             },
             {
-              "label": "6.36",
-              "detail": "Haustier-Kämpfe kommen (Juni 2026)"
+              "label": "6.30",
+              "detail": "Xeno-Arena-Kreaturenkämpfe kommen (April 2026)"
             },
             {
               "label": "The Swarm",

@@ -229,7 +229,7 @@
         },
         {
           "value": "dynamic",
-          "label": "Guides in 5 languages"
+          "label": "Guides in 6 languages"
         }
       ]
     },
@@ -294,8 +294,8 @@
               "detail": "Bug-fix patch (June 2026)"
             },
             {
-              "label": "6.36",
-              "detail": "Pet battling arrives (June 2026)"
+              "label": "6.30",
+              "detail": "Xeno Arena pet battling arrives (April 2026)"
             },
             {
               "label": "The Swarm",
